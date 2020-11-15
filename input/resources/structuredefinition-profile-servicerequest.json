@@ -6,7 +6,7 @@
   "title": "ServiceRequest Profile for Results Reporting",
   "status": "draft",
   "date": "2020-10-06",
-  "publisher": "Canada Health Infoway",
+  "publisher": "HL7 Canada",
   "description": "Proposed constraints on the ServiceRequest resource for the minimal set of data required to request for service such as diagnostic investigations, treatments, or operations to be performed",
   "jurisdiction": [
     {

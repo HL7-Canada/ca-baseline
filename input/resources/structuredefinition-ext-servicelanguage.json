@@ -7,7 +7,7 @@
   "title": "Extension: ServiceLanguage",
   "status": "draft",
   "date": "2019-03-08",
-  "publisher": "TBD",
+  "publisher": "HL7 Canada",
   "description": "Indentifies languages that that services are provided in.",
   "kind": "complex-type",
   "abstract": false,

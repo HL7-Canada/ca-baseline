@@ -7,7 +7,7 @@
   "title": "Extension: RoleStatus",
   "status": "draft",
   "date": "2020-03-09",
-  "publisher": "Canada Health Infoway",
+  "publisher": "HL7 Canada",
   "description": "This extension applies to the PractitionerRole resource and indicates the possible states of the Role, as defined by the HL7v3 Role class state machine.",
   "jurisdiction": [
     {

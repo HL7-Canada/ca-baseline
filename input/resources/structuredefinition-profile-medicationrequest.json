@@ -7,8 +7,8 @@
   "title": "MedicationRequest Profile",
   "status": "draft",
   "date": "2019-03-31",
-  "publisher": "TBD",
-  "description": "Proposed constraints and extensions on the MedicationRequest resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
+  "publisher": "HL7 Canada",
+  "description": "Proposed constraints and extensions on the MedicationRequest resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles.",
   "kind": "resource",
   "abstract": false,
   "type": "MedicationRequest",
@@ -20,7 +20,7 @@
         "id": "MedicationRequest",
         "path": "MedicationRequest",
         "short": "MedicationRequest Profile",
-        "definition": "The Canadian Core MedicationRequest Profile is based upon the core FHIR MedicationRequest Resource"
+        "definition": "The Canadian Baseline MedicationRequest Profile is based upon the core FHIR MedicationRequest Resource"
       },
       {
         "id": "MedicationRequest.status",

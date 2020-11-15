@@ -7,7 +7,7 @@
   "title": "Location Profile",
   "status": "draft",
   "date": "2020-03-16",
-  "publisher": "Canada Health Infoway",
+  "publisher": "HL7 Canada",
   "description": "Proposed constraints and extensions on the Location resource",
   "jurisdiction": [
     {

@@ -7,7 +7,7 @@
   "title": "AllergyIntolerance Profile",
   "status": "draft",
   "date": "2020-09-08",
-  "publisher": "Canada Health Infoway",
+  "publisher": "HL7 Canada",
   "description": "Proposed constraints and extensions on the AllergyIntolerance Resource",
   "jurisdiction": [
     {

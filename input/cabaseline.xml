@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input/schemas/fhir-single.xsd">
-  <id value="cabaseline"/>
-  <url value="http://hl7.org/fhir/ca/baseline/ImplementationGuide/cabaseline"/>
+  <id value="ca-baseline"/>
+  <url value="http://hl7.org/fhir/ca/baseline/ImplementationGuide/CanadianBaseline"/>
   <version value="0.1.0"/>
-  <name value="cabaseline"/>
-  <title value="Canadian Core"/>
+  <name value="CanadianBaseline"/>
+  <title value="Canadian Baseline"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <publisher value="Canadian FHIR Implementor Working Group"/>
+  <publisher value="HL7 Canada - FHIR Implementation Work Group"/>
   <contact>
     <telecom>
-      <system value="other"/>
-      <value value="http://tbd"/>
+      <system value="url"/>
+      <value value="https://infocentral.infoway-inforoute.ca/en/collaboration/wg/fhir-implementations"/>
     </telecom>
   </contact>
   <description value="provides basic interoperability expectations for human-patient systems in the Canadian space.  Modeled after the US-Core implementation guide"/>

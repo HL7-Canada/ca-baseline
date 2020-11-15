@@ -7,7 +7,7 @@
   "title": "Extension: individual is deceased flag or date",
   "status": "draft",
   "date": "2020-02-19",
-  "publisher": "Canada Health Infoway",
+  "publisher": "HL7 Canada",
   "description": "This extension indicates if the individual is deceased or not",
   "jurisdiction": [
     {

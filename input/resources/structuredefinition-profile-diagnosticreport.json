@@ -6,7 +6,7 @@
   "title": "DiagnosticReport Profile for Results Reporting",
   "status": "draft",
   "date": "2020-09-21",
-  "publisher": "Canada Health Infoway",
+  "publisher": "HL7 Canada",
   "description": "Proposed constraints on the DiagnosticReport resource for the minimal set of data to query and retrieve diagnostic reports associated with laboratory and other results",
   "jurisdiction": [
     {

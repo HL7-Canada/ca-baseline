@@ -7,7 +7,7 @@
   "title": "Extension: Identifier Version",
   "status": "draft",
   "date": "2019-03-08",
-  "publisher": "TBD",
+  "publisher": "HL7 Canada",
   "description": "A version string indicating the currency/validity of an identifier",
   "kind": "complex-type",
   "abstract": false,

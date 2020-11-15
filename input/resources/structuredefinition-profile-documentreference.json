@@ -6,7 +6,7 @@
   "title": "DocumentReference Profile for metadata about the document",
   "status": "draft",
   "date": "2020-10-21",
-  "publisher": "Canada Health Infoway",
+  "publisher": "HL7 Canada",
   "description": "Proposed constraints on the DocumentReference resource for the minimal set of data required to reference to a document of any kind for any purpose.",
   "jurisdiction": [
     {

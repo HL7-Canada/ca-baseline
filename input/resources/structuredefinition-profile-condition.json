@@ -7,7 +7,7 @@
   "title": "Condition Profile",
   "status": "draft",
   "date": "2020-07-21",
-  "publisher": "Canada Health Infoway",
+  "publisher": "HL7 Canada",
   "description": "Proposed constraints and extensions on the Condition Resource",
   "jurisdiction":  [
     {

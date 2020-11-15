@@ -7,8 +7,8 @@
     "title": "ImmunizationRecommendation Profile",
     "status": "draft",
     "date": "2020-03-26",
-    "publisher": "TBD",
-    "description": "Proposed constraints and extensions on the ImmunizationRecommendation resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
+    "publisher": "HL7 Canada",
+    "description": "Proposed constraints and extensions on the ImmunizationRecommendation resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles.",
     "kind": "resource",
     "abstract": false,
     "type": "ImmunizationRecommendation",
@@ -116,4 +116,3 @@
       ]
     }
   }
-  

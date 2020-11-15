@@ -7,7 +7,7 @@
   "title": "Observation Profile (Laboratory Results)",
   "status": "draft",
   "date": "2020-11-02",
-  "publisher": "Canada Health Infoway",
+  "publisher": "HL7 Canada",
   "description": "Proposed constraints on the Observation Resource to represent results produced by laboratory tests or panels/studies",
   "jurisdiction": [
     {

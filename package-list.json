@@ -2,7 +2,7 @@
  "package-id" : "hl7.fhir.ca.baseline",
  "title" : "Canadian Baseline",
  "canonical" : "http://hl7.org/fhir/ca/baseline",
- "introduction" : "An initial proposal for a Canadian core set of profiles, aligned with US Core",
+ "introduction" : "An initial proposal for a Canadian set of baseline FHIR profiles",
  "list" : [{
   "version" : "current",
   "desc" : "Continuous Integration Build (latest in version control)",

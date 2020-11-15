@@ -7,7 +7,7 @@
   "title": "Extension: Aboriginal Identity Indicator",
   "status": "draft",
   "date": "2020-09-23",
-  "publisher": "Canada Health Infoway",
+  "publisher": "HL7 Canada",
   "description": "A code classifying the person's self identity as an aboriginal person",
   "jurisdiction": [
     {

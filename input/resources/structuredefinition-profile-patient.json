@@ -7,7 +7,7 @@
   "title": "Patient Profile",
   "status": "draft",
   "date": "2020-09-29",
-  "publisher": "Canada Health Infoway",
+  "publisher": "HL7 Canada",
   "description": "Proposed constraints and extensions on the Patient Resource",
   "kind": "resource",
   "abstract": false,

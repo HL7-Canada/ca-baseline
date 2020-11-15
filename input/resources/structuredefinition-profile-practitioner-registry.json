@@ -7,7 +7,7 @@
   "title": "Practitioner Profile (Provider Registry)",
   "status": "draft",
   "date": "2020-07-31",
-  "publisher": "Canada Health Infoway",
+  "publisher": "HL7 Canada",
   "description": "Proposed constraints and extensions on the Practitioner Resource for use by Provider Registry systems",
   "fhirVersion": "4.0.0",
   "kind": "resource",

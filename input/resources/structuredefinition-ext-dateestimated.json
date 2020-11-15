@@ -7,7 +7,7 @@
   "title": "Extension: Date Estimated Flag",
   "status": "draft",
   "date": "2019-03-08",
-  "publisher": "TBD",
+  "publisher": "HL7 Canada",
   "description": "If true, indicates that information entered is an estimate and may not be precise",
   "kind": "complex-type",
   "abstract": false,

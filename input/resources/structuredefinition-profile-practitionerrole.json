@@ -7,7 +7,7 @@
   "title": "PractitionerRole Profile (General)",
   "status": "draft",
   "date": "2020-03-09",
-  "publisher": "Canada Health Infoway",
+  "publisher": "HL7 Canada",
   "description": "Proposed constraints and extensions on the PractitionerRole Resource for general use.",
   "jurisdiction": [
     {

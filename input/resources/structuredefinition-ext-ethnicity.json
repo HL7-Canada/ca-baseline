@@ -7,7 +7,7 @@
   "title": "Extension: Ethnicity",
   "status": "draft",
   "date": "2019-12-18",
-  "publisher": "Canada Health Infoway",
+  "publisher": "HL7 Canada",
   "description": "A code classifying the person's ethnic group or ethnicity as the category of people who identify with each other, usually on the basis of a presumed common genealogy or ancestry or on other similarities. This should not be confused with citizenship or nationality.",
   "jurisdiction": [
     {

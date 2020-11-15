@@ -7,7 +7,7 @@
   "title": "Observation Profile (General Use)",
   "status": "draft",
   "date": "2020-06-08",
-  "publisher": "Canada Health Infoway",
+  "publisher": "HL7 Canada",
   "description": "Proposed constraints on the Observation Resource for general use",
   "jurisdiction": [
     {
@@ -147,4 +147,3 @@
     ]
   }
 }
-

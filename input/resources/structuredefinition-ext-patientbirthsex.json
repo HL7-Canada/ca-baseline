@@ -7,7 +7,7 @@
   "title": "Extension: Birth Sex",
   "status": "draft",
   "date": "2019-12-10",
-  "publisher": "TBD",
+  "publisher": "HL7 Canada",
   "description": "A code classifying the person's sex assigned at birth. Replicates the birthsex extension in US-Core-R4 for interoperability.",
   "kind": "complex-type",
   "abstract": false,

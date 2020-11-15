@@ -29,6 +29,7 @@ Published baseline profiles offer vendors a stepping stone to begin aligning the
 The Baseline is not a silver bullet to Interoperability in Canada, but it is a critical stepping stone in reducing the siloes and improving the consistency across the Canadian Landscape.
 
 There is appetite in Canada's standards and governance community to establish a Canadian Core with stricter conformance that would be enforceable through contractual agreements and jurisdictional procurement practices.
+
 While the Canadian Baseline will likely evolve into or offset a large portion of this work, a larger governance structure is needed to accomplish this goal.
 
 The Canadian Baseline can begin encouraging consistency among various Canadian implementation guides in parallel to the efforts to convene jurisdictional governing bodies and stakeholders to come to a consensus on the set of core use cases and contractual obligations.
