@@ -19,7 +19,7 @@ In addition to that, some optional elements (e.g., PractitionerRole.telecom) hav
 In situations where the minimum cardinality of an element or attribute is **1** and information is missing and the Responder knows the precise reason for the absence of data, Responders SHALL send the reason for the missing information using values (such as [NullFlavor](https://www.hl7.org/fhir/extension-iso21090-nullflavor.html)) from the value set where they exist or using the [DataAbsentReason](http://hl7.org/fhir/StructureDefinition/data-absent-reason) extension.
 
 ## Must Support Data Elements
-Some elements are labeled as MustSupport meaning that implementations that produce or consume resources SHALL provide "support" for the element in some meaningful way (see [Must Support](https://build.fhir.org/ig/scratch-fhir-profiles/ca-baseline/general-guidance.html#must-support) definition).
+Some elements are labeled as MustSupport meaning that implementations that produce or consume resources SHALL provide "support" for the element in some meaningful way (see [Must Support](https://build.fhir.org/ig/HL7-Canada/ca-baseline/general-guidance.html#must-support) definition).
 
 Following elements are marked as Must Support in the PractitionerRole profile to aid record matching in databases with many pediatric records.
 
@@ -30,11 +30,11 @@ Following elements are marked as Must Support in the PractitionerRole profile to
 * speciality
 
 ## Extensions
-This PractitionerRole profile contains optional [RoleStatus]( https://build.fhir.org/ig/scratch-fhir-profiles/ca-baseline/extension-ext-rolestatus.html) [modifier extension](https://www.hl7.org/fhir/extensibility.html#modifierExtension) to indicate the possible states of the Role as defined by the [HL7v3 Role]( https://www.hl7.org/fhir/v3/RoleStatus/cs.html) class state machine.
+This PractitionerRole profile contains optional [RoleStatus]( https://build.fhir.org/ig/HL7-Canada/ca-baseline/extension-ext-rolestatus.html) [modifier extension](https://www.hl7.org/fhir/extensibility.html#modifierExtension) to indicate the possible states of the Role as defined by the [HL7v3 Role]( https://www.hl7.org/fhir/v3/RoleStatus/cs.html) class state machine.
 
 This extension is labeled as modifier because the status code may provide additional knowledge about the PractitionerRole resource that modifies its meaning or interpretation.
 
-In conjunction to the RoleStatus extension, this PractitionerRole profile includes an optional [StatusReason]( https://build.fhir.org/ig/scratch-fhir-profiles/ca-baseline/extension-ext-statusreason.html) extension to provides a textual description for the status.
+In conjunction to the RoleStatus extension, this PractitionerRole profile includes an optional [StatusReason]( https://build.fhir.org/ig/HL7-Canada/ca-baseline/extension-ext-statusreason.html) extension to provides a textual description for the status.
 
 Note: Role status effective from/to dates go to _PractitionerRole.period_ element.
 

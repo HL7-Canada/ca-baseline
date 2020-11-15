@@ -16,7 +16,7 @@ Most elements in the FHIR specification have a minimum cardinality of 0, so most
 * subject of the encounter (Encounter.subject)
 
 ## Must Support Data Elements
-Some elements are marked as Must Support. This means that implementations generating, receiving, or otherwise using resources with Must Support elements SHALL provide support for those elements in some meaningful way (see [Must Support](https://build.fhir.org/ig/scratch-fhir-profiles/ca-baseline/general-guidance.html#cardinality-and-mustsupport-definitions) definition).
+Some elements are marked as Must Support. This means that implementations generating, receiving, or otherwise using resources with Must Support elements SHALL provide support for those elements in some meaningful way (see [Must Support](https://build.fhir.org/ig/HL7-Canada/ca-baseline/general-guidance.html#cardinality-and-mustsupport-definitions) definition).
 
 The following elements are marked as Must Support in the Encounter profile:
 

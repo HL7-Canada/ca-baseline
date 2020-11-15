@@ -26,7 +26,7 @@ If the minimum cardinality of an element or attribute is 1 AND information is mi
 An Observation without a value, SHALL include a reason why the data is absent unless there are component observations, or references to other Observations that are grouped within it, i.e., unless there are component observations, or references to other Observations that are grouped within it then either ONE of _Observation.value_ OR _Observation.dataAbsentReason_ but NOT both SHALL be present.
 
 ## Must Support Data Elements
-Some elements are marked as Must Support. This means that implementations generating, receiving, or otherwise using resources with Must Support elements SHALL provide support for those elements in some meaningful way (see [Must Support](https://build.fhir.org/ig/scratch-fhir-profiles/ca-baseline/general-guidance.html#must-support) definition).
+Some elements are marked as Must Support. This means that implementations generating, receiving, or otherwise using resources with Must Support elements SHALL provide support for those elements in some meaningful way (see [Must Support](https://build.fhir.org/ig/HL7-Canada/ca-baseline/general-guidance.html#must-support) definition).
 
 The following elements are marked as Must Support in the Observation (Laboratory Results) profile:
 

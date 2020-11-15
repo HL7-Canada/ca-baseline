@@ -20,8 +20,8 @@ The following principles were applied when creating the profiles:
 - *Only* impose constraints when strictly necessary
 
 
-The [CI build for this repository can be found here](https://build.fhir.org/ig/scratch-fhir-profiles/ca-baseline/).
+The [CI build for this repository can be found here](https://build.fhir.org/ig/HL7-Canada/ca-baseline/).
 
 #### Want to contribute?
 
-[Visit the wiki getting started page!](https://github.com/scratch-fhir-profiles/ca-baseline/wiki/Getting-Started)
+[Visit the wiki getting started page!](https://github.com/HL7-Canada/ca-baseline/wiki/Getting-Started)

@@ -11,7 +11,7 @@ Most elements in FHIR specification have a minimum cardinality of 0, which means
 In this Canadian Baseline Location Profile all elements are optional, i.e., there is no element with a minimum cardinality of 1. However, some optional elements (e.g., identifier) have required components that MUST be present if that optional element is provided.
 
 ## Must Support Data Elements
-Some elements are labeled as MustSupport meaning that implementations that produce or consume resources SHALL provide "support" for the element in some meaningful way (see [Must Support](https://build.fhir.org/ig/scratch-fhir-profiles/ca-baseline/general-guidance.html#must-support) definition).
+Some elements are labeled as MustSupport meaning that implementations that produce or consume resources SHALL provide "support" for the element in some meaningful way (see [Must Support](https://build.fhir.org/ig/HL7-Canada/ca-baseline/general-guidance.html#must-support) definition).
 
 Following elements are marked as Must Support in the Canadian Location profile to aid record matching in databases with many pediatric records.
 

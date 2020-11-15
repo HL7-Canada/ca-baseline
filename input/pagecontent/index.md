@@ -21,7 +21,7 @@ More context on the profiling, governance and review process can be found on the
 
 For information on where we are at in the working group review follow our progress in the [Infocentral FHIR Implementation Working Group page](https://infocentral.infoway-inforoute.ca/en/collaboration/wg/fhir-implementations)
 
-The [GitHub repository for this CI build be found here](https://github.com/scratch-fhir-profiles/ca-baseline).
+The [GitHub repository for this CI build be found here](https://github.com/HL7-Canada/ca-baseline).
 
 ### Principles
 

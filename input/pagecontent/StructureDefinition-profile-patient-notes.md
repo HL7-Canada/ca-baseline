@@ -85,7 +85,7 @@ The full list of identifiers can be found on [Canadian URI Registry](https://sim
 
 **Version Code**
 
-The [Version Code](https://build.fhir.org/ig/scratch-fhir-profiles/ca-baseline/extension-ext-identifierversion.html) extension is added to indicate the currency/validity of an identifier.
+The [Version Code](https://build.fhir.org/ig/HL7-Canada/ca-baseline/extension-ext-identifierversion.html) extension is added to indicate the currency/validity of an identifier.
 
 The rational is that the version code is current captured separately from the JHN because, in Ontario at least, the JHN is a stable identifier whereas the version code changes over time.
 - The working assumption is that it is useful to have this stable identifier but not all of the Ontario specs reviewed stored it as a separate field.  In one case, it appears to be an Patient.identifier.coding.value instead of the identifier ...
@@ -142,7 +142,7 @@ A hyphen SHOULD NOT be used (example of UNacceptable format: T0L-1K0).
 The Patient.address MAY have a [Preferred](http://hl7.org/fhir/StructureDefinition/iso21090-preferred) extension. This is the FHIR standard defined extension used as a flag denoting whether parent address item is preferred.
 
 ### No Fixed Address
-The Patient.address MAY have a [No Fixed Address](https://build.fhir.org/ig/scratch-fhir-profiles/ca-baseline/extension-ext-nofixedaddress.html) extension. This extension is to indicate that there is an assertion that there is no fixed address (e.g., homeless).
+The Patient.address MAY have a [No Fixed Address](https://build.fhir.org/ig/HL7-Canada/ca-baseline/extension-ext-nofixedaddress.html) extension. This extension is to indicate that there is an assertion that there is no fixed address (e.g., homeless).
 
 ## Marital Status
 The binding for the Patient.maritalStatus element is [extensible](https://www.hl7.org/fhir/terminologies.html#extensible) meaning that to be conformant, codes in this element SHALL be from the specified value set if any of the codes within the value set can apply to the concept being communicated.
