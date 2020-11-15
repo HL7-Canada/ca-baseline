@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-observation-results",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-observation-results",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "name": "ObservationProfile (Laboratory Results)",
   "title": "Observation Profile (Laboratory Results)",
   "status": "draft",
-  "date": "2020-10-26",
+  "date": "2020-11-02",
   "publisher": "Canada Health Infoway",
   "description": "Proposed constraints on the Observation Resource to represent results produced by laboratory tests or panels/studies",
   "jurisdiction": [
@@ -43,7 +43,7 @@
         "path": "Observation.basedOn",
         "min": 1,
         "mustSupport": true
-      },      
+      },
       {
         "id": "Observation.category",
         "path": "Observation.category",
@@ -138,6 +138,23 @@
         "mustSupport": true
       },
       {
+         "id": "Observation.issued",
+         "path": "Observation.issued",
+         "mustSupport": true
+       }, {
+         "id": "Observation.performer",
+         "path": "Observation.performer",
+         "type": [
+           {
+             "code": "Reference",
+             "targetProfile": [
+               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitioner", "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitionerrole", "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-organization", "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient"
+             ]
+           }
+         ],
+         "mustSupport": true
+       },
+       {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
         "slicing": {
