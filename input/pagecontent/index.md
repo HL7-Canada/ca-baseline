@@ -10,12 +10,9 @@ The Canadian Baseline Profiles are not expected to be implemented "out-of-the-bo
 
 Existing Canadian and International implementation guides (e.g., Canadian eReferral, Ontario PPR, US Core, IPS, etc.) were used as an initial frame of reference that the Canadian Baseline profiles further relaxed / constrained / extended to make sense in the Canadian context.
 
-
-
-
 ### Status
 
-This guide is a **living document** that includes **scratch** notes and profiles that continue to evolve as they undergo a working group review process in the Summer/Fall of 2020 before being exposed to the larger FHIR community for further maturation through feedback and testing.
+This guide is a **living document** that includes notes and profiles that continue to evolve as they undergo a working group review process in the Summer/Fall of 2020 before being exposed to the larger FHIR community for further maturation through feedback and testing.
 
 More context on the profiling, governance and review process can be found on the [**here**](developmentprocess.html).
 
@@ -53,7 +50,5 @@ Each profile defines the minimum mandatory elements, extensions and terminology 
 
 Guidance, Capability Statements, and other have not yet been reviewed and added.
 
-
-
 -----
-Contact: [Russ Buchanan](mailto:rbuchanan@gevityinc.com)
+Contact: [FHIR-CA-Baseline@infoway-inforoute.ca](mailto:FHIR-CA-Baseline@infoway-inforoute.ca)
