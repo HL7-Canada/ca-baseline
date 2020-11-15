@@ -1,0 +1,180 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-condition",
+  "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-condition",
+  "version": "0.2",
+  "name": "ConditionProfile",
+  "title": "Condition Profile",
+  "status": "draft",
+  "date": "2020-07-21",
+  "publisher": "Canada Health Infoway",
+  "description": "Proposed constraints and extensions on the Condition Resource",
+  "jurisdiction":  [
+    {
+      "coding":  [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "CA",
+          "display": "Canada"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Condition",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Condition",
+  "derivation": "constraint",
+  "differential": {
+    "element":  [
+      {
+        "id": "Condition",
+        "path": "Condition",
+        "short": "Condition Profile",
+        "definition": "The Condition Profile is based upon the core FHIR Condition Resource"
+      },
+      {
+        "id": "Condition.clinicalStatus",
+        "path": "Condition.clinicalStatus",
+        "min": 0,
+        "mustSupport": true,
+        "isModifier": true,
+        "isModifierReason": "This element is labeled as a modifier because the status contains codes that mark the condition as no longer active."
+      },
+      {
+        "id": "Condition.verificationStatus",
+        "path": "Condition.verificationStatus",
+        "min": 0,
+        "mustSupport": true,
+        "isModifier": true,
+        "isModifierReason": "This element is labeled as a modifier because the status contains the code refuted and entered-in-error that mark the Condition as not currently valid."
+      },
+      {
+        "id": "Condition.category",
+        "path": "Condition.category",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code",
+        "path": "Condition.code",
+        "definition": "Identification of the patient's relevant condition, problem or diagnosis or recording of 'problem absent' or of 'problems unknown', as interpreted by the provider.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding",
+        "path": "Condition.code.coding",
+        "slicing": {
+          "discriminator":  [
+            {
+              "type": "value",
+              "path": "binding.valueSet"
+            }
+          ],
+          "rules": "open"
+        },
+        "definition": "Identification of the patient's relevant condition, problem or diagnosis or recording of 'problem absent' or of 'problems unknown', as interpreted by the provider.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:HealthConcernCode",
+        "path": "Condition.code.coding",
+        "sliceName": "HealthConcernCode",
+        "short": "CHI identification of the condition, problem or diagnosis",
+        "definition": "The code that represents relevant clinical problems, conditions, diagnoses, symptoms, findings and complaints, as interpreted by the provider shall be taken from [CHI Health Concern Code](https://fhir.infoway-inforoute.ca/ValueSet/healthconcerncode)",
+        "comment": "The binding strength of this element is [Required](https://www.hl7.org/fhir/terminologies.html#strength), meaning that codes come from the Canada Health Infoway Health Concern Code value set for interoperability purposes",
+        "min": 1,
+        "max": "1",
+        "type":  [
+          {
+            "code": "Coding"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "Represents the patient's relevant clinical problems, conditions, diagnoses, symptoms, findings and complaints, as interpreted by the provider.",
+          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/healthconcerncode"
+        }
+      },
+      {
+        "id": "Condition.code.coding:@default",
+        "path": "Condition.code.coding",
+        "sliceName": "@default",
+        "short": "Other identifications of the condition, problem or diagnosis",
+        "definition": "Other identifications of the patient's relevant condition, problem or diagnosis or recording of 'problem absent' or of 'problems unknown', as interpreted by the provider.",
+        "max": "1",
+        "type":  [
+          {
+            "code": "Coding"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "valueSet": "http://hl7.org/fhir/ValueSet/condition-code"
+        }
+      },
+      {
+        "id": "Condition.subject",
+        "path": "Condition.subject",
+        "type":  [
+          {
+            "code": "Reference",
+            "targetProfile":  [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.encounter",
+        "path": "Condition.encounter",
+        "type":  [
+          {
+            "code": "Reference",
+            "targetProfile":  [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-encounter"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Condition.recorder",
+        "path": "Condition.recorder",
+        "type":  [
+          {
+            "code": "Reference",
+            "targetProfile":  [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitioner",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitionerrole",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Condition.asserter",
+        "path": "Condition.asserter",
+        "type":  [
+          {
+            "code": "Reference",
+            "targetProfile":  [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitioner",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitionerrole",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Condition.onset[x]",
+        "path": "Condition.onset[x]",
+        "mustSupport": true
+      }
+    ]
+  }
+}

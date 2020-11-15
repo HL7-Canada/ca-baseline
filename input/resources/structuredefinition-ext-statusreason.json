@@ -1,0 +1,59 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-statusreason",
+  "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-statusreason",
+  "version": "0.1.0",
+  "name": "ExtensionStatusReason",
+  "title": "Extension: StatusReason",
+  "status": "draft",
+  "date": "2020-03-09",
+  "publisher": "Canada Health Infoway",
+  "description": "Provides a textual description (reason) for a status.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "CA"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.0",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "PractitionerRole"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "StatusReason extension",
+        "definition": "Provides a textual description (reason) for a status.",
+        "max": "1"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-statusreason"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

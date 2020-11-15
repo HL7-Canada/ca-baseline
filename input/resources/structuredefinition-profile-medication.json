@@ -1,0 +1,85 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-medication",
+  "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-medication",
+  "version": "0.0.0",
+  "name": "MedicationProfile",
+  "title": "Medication Profile",
+  "status": "draft",
+  "date": "2019-03-31",
+  "publisher": "TBD",
+  "description": "Proposed constraints and extensions on the Medication resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Medication",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Medication",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Medication",
+        "path": "Medication",
+        "short": "Medication Profile",
+        "definition": "The Medication Profile is based upon the core FHIR Medication Resource"
+      },
+      {
+        "id": "Medication.code",
+        "path": "Medication.code",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "preferred",
+          "description": "TBD. This is a placeholder for a comprehensive valueset, consisting of all Manufactured Product (MP), Non-proprietary Therapeutic Product (NTP) and Therapeutic Moiety (TM) codes, which would be created and maintained by Canada Health Infoway. Medicinal products for prescribing and dispensing in Canada. The content of this subset only contains commonly used medicinal products that are available for prescribing and dispensing in Canada. This content will expand to include all human medicinal products over time.",
+          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/prescriptionmedicinalproduct"
+        }
+      },
+      {
+        "id": "Medication.code.coding",
+        "path": "Medication.code.coding",
+        "comment": "CA Core Usage Notes: either text or at least one coding or both have to be present",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.code.coding.system",
+        "path": "Medication.code.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.code.coding.code",
+        "path": "Medication.code.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.code.text",
+        "path": "Medication.code.text",
+        "comment": "CA Core Usage Notes: either text or at least one coding or both have to be present",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.manufacturer",
+        "path": "Medication.manufacturer",
+        "comment": "CA Core Usage Notes: This is a reference to an organization that manufactures the medication. TBD: if there is a need to refernce a 'DPD Company', a new extension should be created and used. A 'DPD Company' name, as used in the Health Canada DPF, indicates the organisation (company) that holds the authorization to place the product on the market in Canada. This may not be the company that has manufactured the product, but it is the company that holds the legal responsibility for the use of the product in Canada and should be the same as the company named on the product label/packaging.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-organization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Medication.form",
+        "path": "Medication.form",
+        "comment": "CA Core Usage Notes: The prescription drug form is required in some provinces in order to meet the prescribing standards set out by the College of Physicians and Surgeons.",
+        "binding": {
+          "strength": "preferred",
+          "description": "TBD. This is a placeholder for a comprehensive valueset, which would be created and maintained by Canada Health Infoway.",
+          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/dispensabledrugform"
+        }
+      }
+    ]
+  }
+}

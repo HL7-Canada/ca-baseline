@@ -1,0 +1,66 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "ext-nofixedaddress",
+	"url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-nofixedaddress",
+	"version": "0.1.0",
+	"name": "ExtensionNoFixedAddress",
+	"title": "Extension: No fixed address flag",
+	"status": "draft",
+	"date": "2020-01-03",
+	"publisher": "Canada Health Infoway",
+	"description": "This extension applies to the Address datatype and indicates that there is an assertion that there is no fixed address.",
+	"jurisdiction": [
+		{
+			"coding": [
+				{
+					"system": "urn:iso:std:iso:3166",
+					"code": "CA",
+					"display": "Canada"
+				}
+			]
+		}
+	],
+	"kind": "complex-type",
+	"abstract": false,
+	"context": [
+		{
+			"type": "element",
+			"expression": "Address"
+		}
+	],
+	"type": "Extension",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Extension",
+				"path": "Extension",
+				"definition": "No Fixed Address indicator",
+				"comment": "An assertion that there is no fixed address",
+				"min": 0,
+				"max": "1",
+				"isModifier": false
+			}, {
+				"id": "Extension.url",
+				"path": "Extension.url",
+				"min": 1,
+				"max": "1",
+				"fixedUri": "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-nofixedaddress"
+			}, {
+				"id": "Extension.value[x]:valueBoolean",
+				"path": "Extension.value[x]",
+				"sliceName": "valueBoolean",
+				"definition": "Boolean flag representing an assertion",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "boolean"
+					}
+				],
+				"fixedBoolean": true
+			}
+		]
+	}
+}

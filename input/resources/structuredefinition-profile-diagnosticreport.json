@@ -1,0 +1,300 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-diagnosticreport",
+  "version": "0.0.2",
+  "name": "DiagnosticReportProfile",
+  "title": "DiagnosticReport Profile for Results Reporting",
+  "status": "draft",
+  "date": "2020-09-21",
+  "publisher": "Canada Health Infoway",
+  "description": "Proposed constraints on the DiagnosticReport resource for the minimal set of data to query and retrieve diagnostic reports associated with laboratory and other results",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "CA",
+          "display": "Canada"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "DiagnosticReport",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DiagnosticReport",
+        "path": "DiagnosticReport",
+        "short": "DiagnosticReport Profile",
+        "definition": "Diagnostic Report Profile is based upon the core FHIR DiagnosticReport resource and created to meet the Laboratory test(s) and Laboratory value(s)/result(s) requirements."
+      }, {
+        "id": "DiagnosticReport.category",
+        "path": "DiagnosticReport.category",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true
+      }, {
+        "id": "DiagnosticReport.category:LabResult",
+        "path": "DiagnosticReport.category",
+        "sliceName": "LabResult",
+        "definition": "A code that classifies the Laboratory test(s) and Laboratory result(s). This is used for searching, sorting and display purposes.",
+        "comment": "Multiple categories are allowed using various categorization schemes but at least one SHALL come from the FHIR defined value set that includes codes from HL7v2 Table 0074",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      }, {
+        "id": "DiagnosticReport.category.coding:LabResult.system",
+        "path": "DiagnosticReport.category.coding.system",
+        "min": 1,
+        "fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0074"
+      }, {
+        "id": "DiagnosticReport.code",
+        "path": "DiagnosticReport.code",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true
+      }, {
+        "id": "DiagnosticReport.code:LabResult",
+        "path": "DiagnosticReport.code",
+        "sliceName": "LabResult",
+        "definition": "A code that classifies the Laboratory test(s) and Laboratory result(s). This is used for searching, sorting and display purposes.",
+        "comment": "The code SHALL be LOINC 11502-2 'Laboratory report' code",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      }, {
+        "id": "DiagnosticReport.code.coding:LabResult.system",
+        "path": "DiagnosticReport.code.coding.system",
+        "min": 1,
+        "max": "1",
+        "fixedUri": "http://loinc.org"
+      }, {
+        "id": "DiagnosticReport.code.coding:LabResult.system",
+        "path": "DiagnosticReport.code.coding.code",
+        "min": 1,
+        "max": "1",
+        "fixedCode": "11502-2"
+      }, {
+        "id": "DiagnosticReport.code:@default",
+        "path": "DiagnosticReport.code",
+        "sliceName": "@default",
+        "definition": "A code that classifies the report(s) or result(s). This is used for searching, sorting and display purposes.",
+        "comment": "The code is preferrable comes from LOINC code system",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      }, {
+        "id": "DiagnosticReport.code.coding:@default.system",
+        "path": "DiagnosticReport.code.coding.system",
+        "min": 1,
+        "max": "1"
+      }, {
+        "id": "DiagnosticReport.code.coding:@default.system",
+        "path": "DiagnosticReport.code.coding.code",
+        "min": 1,
+        "max": "1"
+      }, {
+        "id": "DiagnosticReport.subject",
+        "path": "DiagnosticReport.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient", "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-device", "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-location"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }, {
+        "id": "DiagnosticReport.encounter",
+        "path": "DiagnosticReport.encounter",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-encounter"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }, {
+        "id": "DiagnosticReport.effective[x]",
+        "path": "DiagnosticReport.effective[x]",
+        "short": "Time of the report or note",
+        "definition": "This is the Datetime or Period when the report or note was written.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }, {
+            "code": "Period"
+          }
+        ],
+        "mustSupport": true
+      }, {
+        "id": "DiagnosticReport.performer",
+        "path": "DiagnosticReport.performer",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitioner", "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitionerrole", "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-organization"
+            ]
+          }
+        ]
+      }, {
+        "id": "DiagnosticReport.resultsInterpreter",
+        "path": "DiagnosticReport.resultsInterpreter",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitioner", "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitionerrole", "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-organization"
+            ]
+          }
+        ]
+      }, {
+        "id": "DiagnosticReport.specimen",
+        "path": "DiagnosticReport.specimen",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Specimen"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }, {
+        "id": "DiagnosticReport.specimen:LabResult",
+        "path": "DiagnosticReport.specimen",
+        "sliceName": "LabResult",
+        "comment": "Details about the specimen(s) on which this laboratory report is based on.",
+        "min": 1,
+        "max": "*"
+      }, {
+        "id": "DiagnosticReport.specimen:@default",
+        "path": "DiagnosticReport.specimen",
+        "sliceName": "@default",
+        "comment": "Details about specimen(s) on which this report is based on.",
+        "min": 0,
+        "max": "*"
+      }, {
+        "id": "DiagnosticReport.result",
+        "path": "DiagnosticReport.result",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "profile",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      }, {
+        "id": "DiagnosticReport.result:LabResult",
+        "path": "DiagnosticReport.result",
+        "sliceName": "LabResult",
+        "comment": "Observations that represent results produced by laboratory tests or panels/studies",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-observation-results"
+            ]
+          }
+        ]
+      }, {
+        "id": "DiagnosticReport.result:@default",
+        "path": "DiagnosticReport.result",
+        "sliceName": "@default",
+        "comment": "Observations that represent results produced for report",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-observation"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }, {
+        "id": "DiagnosticReport.conclusionCode",
+        "path": "DiagnosticReport.conclusionCode",
+        "short": "CHI identification of the condition, problem or diagnosis",
+        "definition": "The code that represents relevant clinical problems, conditions, diagnoses, symptoms, findings and complaints taken from [CHI Health Concern Code](https://fhir.infoway-inforoute.ca/ValueSet/healthconcerncode)",
+        "comment": "The binding strength of this element is [Example](https://www.hl7.org/fhir/terminologies.html#strength), meaning that the Canada Health Infoway Health Concern Code value set provides examples of the types of concepts intended to be included",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "description": "Represents the patient's relevant clinical problems, conditions, diagnoses, symptoms, findings and complaints, as interpreted by the provider.",
+          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/healthconcerncode"
+        }
+      }
+    ]
+  }
+}

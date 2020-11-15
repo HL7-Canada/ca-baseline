@@ -1,0 +1,2991 @@
+{
+	"resourceType": "ValueSet",
+	"id": "ethnicitycode",
+	"url": "https://fhir.infoway-inforoute.ca/ValueSet/ethnicitycode",
+	"version": "20190930",
+	"name": "EthnicityCode",
+	"status": "draft",
+	"date": "2019-09-30",
+	"publisher": "Canada Health Infoway",
+	"description": "Codes representing a self-reported ethnic group. This should not be confused with citizenship or nationality.",
+	"jurisdiction": [
+		{
+			"coding": [
+				{
+					"system": "urn:iso:std:iso:3166",
+					"code": "CA",
+					"display": "Canada"
+				}
+			]
+		}
+	],
+	"compose": {
+		"include": [
+			{
+				"system": "http://snomed.info/sct",
+				"version": "20190731",
+				"concept": [
+					{
+						"code": "88790004",
+						"display": "Abyssinians (Amharas) (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Abyssinians (Amharas)"
+							}, {
+								"language": "fr",
+								"value": "Abyssiniens (Amharas)"
+							}
+						]
+					}, {
+						"code": "25750005",
+						"display": "Admiralty Islanders (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Admiralty Islanders"
+							}, {
+								"language": "fr",
+								"value": "insulaires de l'Amiraut�"
+							}
+						]
+					}, {
+						"code": "15086000",
+						"display": "African American (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "African American"
+							}, {
+								"language": "fr",
+								"value": "Afro-Am�ricain"
+							}
+						]
+					}, {
+						"code": "413465009",
+						"display": "Afro-Caribbean (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Afro-Caribbean"
+							}, {
+								"language": "fr",
+								"value": "afro-antillais"
+							}
+						]
+					}, {
+						"code": "413466005",
+						"display": "Afro-Caucasian (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Afro-Caucasian"
+							}, {
+								"language": "fr",
+								"value": "afro-caucasien"
+							}
+						]
+					}, {
+						"code": "89026003",
+						"display": "Alacaluf (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Alacaluf"
+							}, {
+								"language": "fr",
+								"value": "Alakaluf"
+							}
+						]
+					}, {
+						"code": "21047009",
+						"display": "Aleuts (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Aleuts"
+							}, {
+								"language": "fr",
+								"value": "Al�outes"
+							}
+						]
+					}, {
+						"code": "66920001",
+						"display": "Amerind (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Amerind"
+							}, {
+								"language": "fr",
+								"value": "am�rindiens"
+							}
+						]
+					}, {
+						"code": "42632009",
+						"display": "Andamanese (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Andamanese"
+							}, {
+								"language": "fr",
+								"value": "Andamanais"
+							}
+						]
+					}, {
+						"code": "74302004",
+						"display": "Apache (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Apache"
+							}, {
+								"language": "fr",
+								"value": "Apache"
+							}
+						]
+					}, {
+						"code": "90027003",
+						"display": "Arabs (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Arabs"
+							}, {
+								"language": "fr",
+								"value": "arabes"
+							}
+						]
+					}, {
+						"code": "113169009",
+						"display": "Armenians (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Armenians"
+							}, {
+								"language": "fr",
+								"value": "arm�niens"
+							}
+						]
+					}, {
+						"code": "315280000",
+						"display": "Asian - ethnic group (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Asian - ethnic group"
+							}, {
+								"language": "fr",
+								"value": "asiatique : groupe ethnique"
+							}
+						]
+					}, {
+						"code": "77502007",
+						"display": "Atacamenos (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Atacamenos"
+							}, {
+								"language": "fr",
+								"value": "Atacamenos"
+							}
+						]
+					}, {
+						"code": "38144004",
+						"display": "Athabascans (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Athabascans"
+							}, {
+								"language": "fr",
+								"value": "Athabascans"
+							}
+						]
+					}, {
+						"code": "43608005",
+						"display": "Australian Aborigines (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Australian Aborigines"
+							}, {
+								"language": "fr",
+								"value": "aborig�nes de l'Australie"
+							}
+						]
+					}, {
+						"code": "68486007",
+						"display": "Austrians (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Austrians"
+							}, {
+								"language": "fr",
+								"value": "autrichiens"
+							}
+						]
+					}, {
+						"code": "113170005",
+						"display": "Aymara (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Aymara"
+							}, {
+								"language": "fr",
+								"value": "Aymaras"
+							}
+						]
+					}, {
+						"code": "67931002",
+						"display": "Aztec (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Aztec"
+							}, {
+								"language": "fr",
+								"value": "Azt�que"
+							}
+						]
+					}, {
+						"code": "46723002",
+						"display": "Badagas (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Badagas"
+							}, {
+								"language": "fr",
+								"value": "Badagas"
+							}
+						]
+					}, {
+						"code": "704390004",
+						"display": "Bajau (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Bajau"
+							}
+						]
+					}, {
+						"code": "186003008",
+						"display": "Bangladeshi (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Bangladeshi"
+							}, {
+								"language": "fr",
+								"value": "Bangladais"
+							}
+						]
+					}, {
+						"code": "39764005",
+						"display": "Bantu (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Bantu"
+							}, {
+								"language": "fr",
+								"value": "Bantou"
+							}
+						]
+					}, {
+						"code": "58047002",
+						"display": "Barundi (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Barundi"
+							}, {
+								"language": "fr",
+								"value": "Barundi"
+							}
+						]
+					}, {
+						"code": "45465003",
+						"display": "Basques (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Basques"
+							}, {
+								"language": "fr",
+								"value": "basques"
+							}
+						]
+					}, {
+						"code": "23922002",
+						"display": "Batutsi (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Batutsi"
+							}, {
+								"language": "fr",
+								"value": "Batutsi"
+							}
+						]
+					}, {
+						"code": "56056003",
+						"display": "Belgians (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Belgians"
+							}, {
+								"language": "fr",
+								"value": "belges"
+							}
+						]
+					}, {
+						"code": "704391000",
+						"display": "Bidayuh (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Bidayuh"
+							}
+						]
+					}, {
+						"code": "315240009",
+						"display": "Black - ethnic group (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Black - ethnic group"
+							}, {
+								"language": "fr",
+								"value": "noir : groupe ethnique"
+							}
+						]
+					}, {
+						"code": "185993005",
+						"display": "Black - other African country (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Black - other African country"
+							}, {
+								"language": "fr",
+								"value": "Noir d'un autre pays africain"
+							}
+						]
+					}, {
+						"code": "185996002",
+						"display": "Black - other Asian (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Black - other Asian"
+							}, {
+								"language": "fr",
+								"value": "Noir ou autre Asiatique"
+							}
+						]
+					}, {
+						"code": "185998001",
+						"display": "Black - other, mixed (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Black - other, mixed"
+							}, {
+								"language": "fr",
+								"value": "Noir ou autre d'origine m�tiss�e"
+							}
+						]
+					}, {
+						"code": "18167009",
+						"display": "Black African (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Black African"
+							}, {
+								"language": "fr",
+								"value": "Africain noir"
+							}
+						]
+					}, {
+						"code": "275587000",
+						"display": "Black Arab (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Black Arab"
+							}
+						]
+					}, {
+						"code": "185990008",
+						"display": "Black British (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Black British"
+							}, {
+								"language": "fr",
+								"value": "Britannique noir"
+							}
+						]
+					}, {
+						"code": "185988007",
+						"display": "Black Caribbean (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Black Caribbean"
+							}, {
+								"language": "fr",
+								"value": "Carib�en noir"
+							}
+						]
+					}, {
+						"code": "270460000",
+						"display": "Black Caribbean/West India/Guyana (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Black Caribbean/W.I./Guyana"
+							}, {
+								"language": "fr",
+								"value": "Noir des Cara�bes ou des Antilles ou de la Guyane"
+							}
+						]
+					}, {
+						"code": "275589002",
+						"display": "Black East African Asian (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Black East African Asian"
+							}
+						]
+					}, {
+						"code": "270462008",
+						"display": "Black East African Asian/Indo-Caribbean (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Black East African Asian/Indo-Caribbean"
+							}, {
+								"language": "fr",
+								"value": "Noir asiatique est-africain ou Indo-Cara�be"
+							}
+						]
+					}, {
+						"code": "309644006",
+						"display": "Black Guyana (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Black Guyana"
+							}
+						]
+					}, {
+						"code": "185995003",
+						"display": "Black Indian sub-continent (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Black Indian sub-continent"
+							}, {
+								"language": "fr",
+								"value": "Noir du sous-continent indien"
+							}
+						]
+					}, {
+						"code": "275590006",
+						"display": "Black Indo-Caribbean (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Black Indo-Caribbean"
+							}
+						]
+					}, {
+						"code": "275588005",
+						"display": "Black Iranian (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Black Iranian"
+							}
+						]
+					}, {
+						"code": "39007007",
+						"display": "Black Jews (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Black Jews"
+							}, {
+								"language": "fr",
+								"value": "Juifs noirs"
+							}
+						]
+					}, {
+						"code": "270461001",
+						"display": "Black N African/Arab/Iranian (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Black N African/Arab/Iranian"
+							}, {
+								"language": "fr",
+								"value": "Noir nord-africain ou Arabe ou Iranien"
+							}
+						]
+					}, {
+						"code": "275586009",
+						"display": "Black North African (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Black North African"
+							}
+						]
+					}, {
+						"code": "309643000",
+						"display": "Black West Indian (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Black West Indian"
+							}, {
+								"language": "fr",
+								"value": "Antillais noir"
+							}
+						]
+					}, {
+						"code": "185989004",
+						"display": "Black, other, non-mixed origin (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Black, other, non-mixed origin"
+							}, {
+								"language": "fr",
+								"value": "Noir ou autre d'origine non m�tiss�e"
+							}
+						]
+					}, {
+						"code": "65776006",
+						"display": "Blackfeet (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Blackfeet"
+							}, {
+								"language": "fr",
+								"value": "Pieds-Noirs"
+							}
+						]
+					}, {
+						"code": "32873005",
+						"display": "Bloods (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Bloods"
+							}, {
+								"language": "fr",
+								"value": "Gens-du-Sang"
+							}
+						]
+					}, {
+						"code": "38750003",
+						"display": "Bororo (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Bororo"
+							}, {
+								"language": "fr",
+								"value": "Bororo"
+							}
+						]
+					}, {
+						"code": "72337002",
+						"display": "Brazilian Indians (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Brazilian Indians"
+							}, {
+								"language": "fr",
+								"value": "am�rindiens du Br�sil"
+							}
+						]
+					}, {
+						"code": "186006000",
+						"display": "British ethnic minority specified (NMO) (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "British ethnic minority specified (NMO)"
+							}, {
+								"language": "fr",
+								"value": "minorit� ethnique britannique sp�cifi�e (origine non m�tiss�e)"
+							}
+						]
+					}, {
+						"code": "186007009",
+						"display": "British ethnic minority unspecified (NMO) (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "British ethnic minority unspecified (NMO)"
+							}, {
+								"language": "fr",
+								"value": "minorit� ethnique britannique non sp�cifi�e (origine non m�tiss�e)"
+							}
+						]
+					}, {
+						"code": "29343004",
+						"display": "Bulgarian (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Bulgarian"
+							}, {
+								"language": "fr",
+								"value": "bulgare"
+							}
+						]
+					}, {
+						"code": "772857241000087105",
+						"display": "Burgher (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Burgher"
+							}
+						]
+					}, {
+						"code": "85371009",
+						"display": "Bushmen (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Bushmen"
+							}, {
+								"language": "fr",
+								"value": "Bochimans"
+							}
+						]
+					}, {
+						"code": "73524008",
+						"display": "Caingang (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Caingang"
+							}, {
+								"language": "fr",
+								"value": "Caingang"
+							}
+						]
+					}, {
+						"code": "733446001",
+						"display": "Canadian (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Canadian"
+							}
+						]
+					}, {
+						"code": "270463003",
+						"display": "Caribbean I./W.I./Guyana (NMO) (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Caribbean I./W.I./Guyana (NMO)"
+							}, {
+								"language": "fr",
+								"value": "insulaire des Cara�bes ou des Antilles ou de la Guyane (origine non m�tiss�e)"
+							}
+						]
+					}, {
+						"code": "275591005",
+						"display": "Caribbean Island (NMO) (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Caribbean Island (NMO)"
+							}, {
+								"language": "fr",
+								"value": "�le cara�b�enne (origine non m�tiss�e)"
+							}
+						]
+					}, {
+						"code": "41798002",
+						"display": "Caroline Islanders (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Caroline Islanders"
+							}, {
+								"language": "fr",
+								"value": "insulaires des Carolines"
+							}
+						]
+					}, {
+						"code": "14045001",
+						"display": "Caucasian (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Caucasian"
+							}, {
+								"language": "fr",
+								"value": "caucasien"
+							}
+						]
+					}, {
+						"code": "57405008",
+						"display": "Chenchu (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Chenchu"
+							}, {
+								"language": "fr",
+								"value": "Chenchus"
+							}
+						]
+					}, {
+						"code": "33897005",
+						"display": "Chinese (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Chinese"
+							}, {
+								"language": "fr",
+								"value": "Chinois"
+							}
+						]
+					}, {
+						"code": "71949006",
+						"display": "Chippewa (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Chippewa"
+							}, {
+								"language": "fr",
+								"value": "Chippewas"
+							}
+						]
+					}, {
+						"code": "6373008",
+						"display": "Choco (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Choco"
+							}, {
+								"language": "fr",
+								"value": "Choco"
+							}
+						]
+					}, {
+						"code": "52075006",
+						"display": "Congolese (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Congolese"
+							}, {
+								"language": "fr",
+								"value": "Congolais"
+							}
+						]
+					}, {
+						"code": "186040000",
+						"display": "Cook Island Maori (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Cook Island Maori"
+							}, {
+								"language": "fr",
+								"value": "maori des �les Cook"
+							}
+						]
+					}, {
+						"code": "113171009",
+						"display": "Coushatta (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Coushatta"
+							}, {
+								"language": "fr",
+								"value": "Coushattas"
+							}
+						]
+					}, {
+						"code": "43056000",
+						"display": "Cuna (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Cuna"
+							}, {
+								"language": "fr",
+								"value": "Cunas"
+							}
+						]
+					}, {
+						"code": "286009",
+						"display": "Czech (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Czech"
+							}, {
+								"language": "fr",
+								"value": "tch�que"
+							}
+						]
+					}, {
+						"code": "43890005",
+						"display": "Dieguenos (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Dieguenos"
+							}, {
+								"language": "fr",
+								"value": "Dieguenos"
+							}
+						]
+					}, {
+						"code": "9533000",
+						"display": "Dutch (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Dutch"
+							}, {
+								"language": "fr",
+								"value": "n�erlandais"
+							}
+						]
+					}, {
+						"code": "270465005",
+						"display": "E Afric Asian/Indo-Carib (NMO) (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "E Afric Asian/Indo-Carib (NMO)"
+							}, {
+								"language": "fr",
+								"value": "Asiatique est-africain ou Indo-Caribb�en (origine non m�tiss�e)"
+							}
+						]
+					}, {
+						"code": "275596000",
+						"display": "East African Asian (NMO) (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "East African Asian (NMO)"
+							}, {
+								"language": "fr",
+								"value": "Asiatique est-africain (origine non m�tiss�e)"
+							}
+						]
+					}, {
+						"code": "24171000087107",
+						"display": "East Asian or Southeast Asian (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "East Asian or Southeast Asian"
+							}
+						]
+					}, {
+						"code": "28821007",
+						"display": "Easter Islanders (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Easter Islanders"
+							}, {
+								"language": "fr",
+								"value": "insulaires de P�ques"
+							}
+						]
+					}, {
+						"code": "1919006",
+						"display": "Egyptians (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Egyptians"
+							}, {
+								"language": "fr",
+								"value": "�gyptiens"
+							}
+						]
+					}, {
+						"code": "60157000",
+						"display": "Ellice Islanders (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Ellice Islanders"
+							}, {
+								"language": "fr",
+								"value": "insulaires d'Ellice"
+							}
+						]
+					}, {
+						"code": "25804004",
+						"display": "English (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "English"
+							}, {
+								"language": "fr",
+								"value": "anglais"
+							}
+						]
+					}, {
+						"code": "85515006",
+						"display": "Eskimo (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Eskimo"
+							}, {
+								"language": "fr",
+								"value": "Esquimaux"
+							}
+						]
+					}, {
+						"code": "18583004",
+						"display": "Estonians (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Estonians"
+							}, {
+								"language": "fr",
+								"value": "estoniens"
+							}
+						]
+					}, {
+						"code": "365455004",
+						"display": "Ethnic groups (1991 census) (United Kingdom) (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Ethnic groups (1991 census) (UK)"
+							}, {
+								"language": "fr",
+								"value": "Ethnic groups (1991 census) (UK)"
+							}
+						]
+					}, {
+						"code": "414152003",
+						"display": "European (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "European"
+							}, {
+								"language": "fr",
+								"value": "europ�en"
+							}
+						]
+					}, {
+						"code": "10008004",
+						"display": "Ewe (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Ewe"
+							}, {
+								"language": "fr",
+								"value": "Ew�"
+							}
+						]
+					}, {
+						"code": "69865008",
+						"display": "Fijian (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Fijian"
+							}, {
+								"language": "fr",
+								"value": "Fidjiens"
+							}
+						]
+					}, {
+						"code": "10117001",
+						"display": "Finns (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Finns"
+							}, {
+								"language": "fr",
+								"value": "Finlandais"
+							}
+						]
+					}, {
+						"code": "665323461000087104",
+						"display": "First Nations (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "First Nations"
+							}
+						]
+					}, {
+						"code": "13233008",
+						"display": "Flathead (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Flathead"
+							}, {
+								"language": "fr",
+								"value": "t�te-plate"
+							}
+						]
+					}, {
+						"code": "19434008",
+						"display": "French (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "French"
+							}, {
+								"language": "fr",
+								"value": "fran�ais"
+							}
+						]
+					}, {
+						"code": "37843006",
+						"display": "Fulani (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Fulani"
+							}, {
+								"language": "fr",
+								"value": "Foulani"
+							}
+						]
+					}, {
+						"code": "90822005",
+						"display": "Gambians (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Gambians"
+							}, {
+								"language": "fr",
+								"value": "Gambiens"
+							}
+						]
+					}, {
+						"code": "32045009",
+						"display": "Georgians (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Georgians"
+							}, {
+								"language": "fr",
+								"value": "g�orgiens"
+							}
+						]
+					}, {
+						"code": "7695005",
+						"display": "Germans (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Germans"
+							}, {
+								"language": "fr",
+								"value": "allemands"
+							}
+						]
+					}, {
+						"code": "37474002",
+						"display": "Ghanaians (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Ghanaians"
+							}, {
+								"language": "fr",
+								"value": "Ghan�ens"
+							}
+						]
+					}, {
+						"code": "49202008",
+						"display": "Gilbertese (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Gilbertese"
+							}, {
+								"language": "fr",
+								"value": "Gilbertiens"
+							}
+						]
+					}, {
+						"code": "275599007",
+						"display": "Greek (NMO) (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Greek (NMO)"
+							}, {
+								"language": "fr",
+								"value": "Grec (origine non m�tiss�e)"
+							}
+						]
+					}, {
+						"code": "275600005",
+						"display": "Greek Cypriot (NMO) (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Greek Cypriot (NMO)"
+							}, {
+								"language": "fr",
+								"value": "Chypriote grec (origine non m�tiss�e)"
+							}
+						]
+					}, {
+						"code": "270466006",
+						"display": "Greek/Greek Cypriot (NMO) (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Greek/Greek Cypriot (NMO)"
+							}, {
+								"language": "fr",
+								"value": "Grec ou Chypriote grec (origine non m�tiss�e)"
+							}
+						]
+					}, {
+						"code": "1451003",
+						"display": "Greeks (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Greeks"
+							}, {
+								"language": "fr",
+								"value": "grecs"
+							}
+						]
+					}, {
+						"code": "10292001",
+						"display": "Guamians (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Guamians"
+							}, {
+								"language": "fr",
+								"value": "Guamiens"
+							}
+						]
+					}, {
+						"code": "275593008",
+						"display": "Guyana (NMO) (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Guyana (NMO)"
+							}, {
+								"language": "fr",
+								"value": "Guyane (origine non m�tiss�e)"
+							}
+						]
+					}, {
+						"code": "40182006",
+						"display": "Gypsies (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Gypsies"
+							}, {
+								"language": "fr",
+								"value": "tsigans"
+							}
+						]
+					}, {
+						"code": "20140003",
+						"display": "Hawaiians (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Hawaiians"
+							}, {
+								"language": "fr",
+								"value": "Hawa�ens"
+							}
+						]
+					}, {
+						"code": "72201005",
+						"display": "Hobe (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Hobe"
+							}, {
+								"language": "fr",
+								"value": "Hobe"
+							}
+						]
+					}, {
+						"code": "51750002",
+						"display": "Hottentot (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Hottentot"
+							}, {
+								"language": "fr",
+								"value": "Hottentot"
+							}
+						]
+					}, {
+						"code": "66406004",
+						"display": "Huasteco (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Huasteco"
+							}, {
+								"language": "fr",
+								"value": "Huaxt�que"
+							}
+						]
+					}, {
+						"code": "76883002",
+						"display": "Huichol (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Huichol"
+							}, {
+								"language": "fr",
+								"value": "Huichol"
+							}
+						]
+					}, {
+						"code": "64693008",
+						"display": "Hungarian (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Hungarian"
+							}, {
+								"language": "fr",
+								"value": "hongrois"
+							}
+						]
+					}, {
+						"code": "2720008",
+						"display": "Hututu (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Hututu"
+							}, {
+								"language": "fr",
+								"value": "Hutu"
+							}
+						]
+					}, {
+						"code": "704392007",
+						"display": "Iban (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Iban"
+							}
+						]
+					}, {
+						"code": "59366001",
+						"display": "Ibo (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Ibo"
+							}, {
+								"language": "fr",
+								"value": "Ibo"
+							}
+						]
+					}, {
+						"code": "72809004",
+						"display": "Icelanders (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Icelanders"
+							}, {
+								"language": "fr",
+								"value": "islandais"
+							}
+						]
+					}, {
+						"code": "55990000",
+						"display": "Inca (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Inca"
+							}, {
+								"language": "fr",
+								"value": "Inca"
+							}
+						]
+					}, {
+						"code": "186001005",
+						"display": "Indian (East Indian) (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Indian (East Indian)"
+							}, {
+								"language": "fr",
+								"value": "Indian (Indien d'Asie)"
+							}
+						]
+					}, {
+						"code": "186012005",
+						"display": "Indian sub-continent (NMO) (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Indian sub-continent (NMO)"
+							}, {
+								"language": "fr",
+								"value": "sous-continent indien (origine non m�tiss�e)"
+							}
+						]
+					}, {
+						"code": "64483007",
+						"display": "Indians (Hindi-speaking) (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Indians (Hindi-speaking)"
+							}, {
+								"language": "fr",
+								"value": "Indiens de langue hindi"
+							}
+						]
+					}, {
+						"code": "275597009",
+						"display": "Indo-Caribbean (NMO) (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Indo-Caribbean (NMO)"
+							}, {
+								"language": "fr",
+								"value": "Indo-Cara�be (origine non m�tiss�e)"
+							}
+						]
+					}, {
+						"code": "107036091000087107",
+						"display": "Inuit (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Inuit"
+							}
+						]
+					}, {
+						"code": "69983001",
+						"display": "Irani (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Irani"
+							}, {
+								"language": "fr",
+								"value": "Iraniens"
+							}
+						]
+					}, {
+						"code": "275595001",
+						"display": "Iranian (NMO) (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Iranian (NMO)"
+							}, {
+								"language": "fr",
+								"value": "Iranien (origine non m�tiss�e)"
+							}
+						]
+					}, {
+						"code": "27700004",
+						"display": "Iraqi (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Iraqi"
+							}, {
+								"language": "fr",
+								"value": "Iraquien"
+							}
+						]
+					}, {
+						"code": "186014006",
+						"display": "Irish (NMO) (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Irish (NMO)"
+							}, {
+								"language": "fr",
+								"value": "Irlandais (origine non m�tiss�e)"
+							}
+						]
+					}, {
+						"code": "83939006",
+						"display": "Irula (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Irula"
+							}, {
+								"language": "fr",
+								"value": "Irulas"
+							}
+						]
+					}, {
+						"code": "31637002",
+						"display": "Italians (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Italians"
+							}, {
+								"language": "fr",
+								"value": "italiens"
+							}
+						]
+					}, {
+						"code": "414551003",
+						"display": "Japanese (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Japanese"
+							}, {
+								"language": "fr",
+								"value": "Japonais"
+							}
+						]
+					}, {
+						"code": "704387005",
+						"display": "Kadazan (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Kadazan"
+							}
+						]
+					}, {
+						"code": "15801006",
+						"display": "Kapingas (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Kapingas"
+							}, {
+								"language": "fr",
+								"value": "Kapingas"
+							}
+						]
+					}, {
+						"code": "11794009",
+						"display": "Kenyans (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Kenyans"
+							}, {
+								"language": "fr",
+								"value": "K�nyans"
+							}
+						]
+					}, {
+						"code": "72248007",
+						"display": "Kikuyu (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Kikuyu"
+							}, {
+								"language": "fr",
+								"value": "Kikuyu"
+							}
+						]
+					}, {
+						"code": "77686000",
+						"display": "Kwakiutl (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Kwakiutl"
+							}, {
+								"language": "fr",
+								"value": "Kwakiutl"
+							}
+						]
+					}, {
+						"code": "75326007",
+						"display": "Labradors (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Labradors"
+							}, {
+								"language": "fr",
+								"value": "Labradors"
+							}
+						]
+					}, {
+						"code": "20291009",
+						"display": "Lacandon (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Lacandon"
+							}, {
+								"language": "fr",
+								"value": "Lacandon"
+							}
+						]
+					}, {
+						"code": "9158000",
+						"display": "Liberians (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Liberians"
+							}, {
+								"language": "fr",
+								"value": "Lib�riens"
+							}
+						]
+					}, {
+						"code": "83584002",
+						"display": "Luo (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Luo"
+							}, {
+								"language": "fr",
+								"value": "Luo"
+							}
+						]
+					}, {
+						"code": "21868006",
+						"display": "Madagascans (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Madagascans"
+							}, {
+								"language": "fr",
+								"value": "Malgaches"
+							}
+						]
+					}, {
+						"code": "73736004",
+						"display": "Maori (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Maori"
+							}, {
+								"language": "fr",
+								"value": "Maori"
+							}
+						]
+					}, {
+						"code": "75301003",
+						"display": "Mapuche (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Mapuche"
+							}, {
+								"language": "fr",
+								"value": "Mapuche"
+							}
+						]
+					}, {
+						"code": "4299001",
+						"display": "Marathas (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Marathas"
+							}, {
+								"language": "fr",
+								"value": "Marathes"
+							}
+						]
+					}, {
+						"code": "59597001",
+						"display": "Marshallese (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Marshallese"
+							}, {
+								"language": "fr",
+								"value": "Marshallais"
+							}
+						]
+					}, {
+						"code": "63457007",
+						"display": "Maya (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Maya"
+							}, {
+								"language": "fr",
+								"value": "Maya"
+							}
+						]
+					}, {
+						"code": "704388000",
+						"display": "Melanau (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Melanau"
+							}
+						]
+					}, {
+						"code": "414661004",
+						"display": "Melanesian (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Melanesian"
+							}, {
+								"language": "fr",
+								"value": "m�lan�sien"
+							}
+						]
+					}, {
+						"code": "23534002",
+						"display": "Melanesians (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Melanesians"
+							}, {
+								"language": "fr",
+								"value": "M�lan�siens"
+							}
+						]
+					}, {
+						"code": "74159009",
+						"display": "Melanuans (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Melanuans"
+							}, {
+								"language": "fr",
+								"value": "Melan�ens"
+							}
+						]
+					}, {
+						"code": "47327008",
+						"display": "Mexican Indians (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Mexican Indians"
+							}, {
+								"language": "fr",
+								"value": "Am�rindiens du Mexique"
+							}
+						]
+					}, {
+						"code": "3698008",
+						"display": "Micronesians (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Micronesians"
+							}, {
+								"language": "fr",
+								"value": "Micron�siens"
+							}
+						]
+					}, {
+						"code": "24181000087109",
+						"display": "Middle Eastern (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Middle Eastern"
+							}
+						]
+					}, {
+						"code": "315239007",
+						"display": "Mixed ethnic census group (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Mixed ethnic census group"
+							}, {
+								"language": "fr",
+								"value": "groupe ethnique mixte selon le recensement"
+							}
+						]
+					}, {
+						"code": "24812003",
+						"display": "Mongol (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Mongol"
+							}, {
+								"language": "fr",
+								"value": "mongolo�de"
+							}
+						]
+					}, {
+						"code": "134214211000087107",
+						"display": "Moor (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Moor"
+							}
+						]
+					}, {
+						"code": "41076003",
+						"display": "Mozambiquans (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Mozambiquans"
+							}, {
+								"language": "fr",
+								"value": "Mozambicains"
+							}
+						]
+					}, {
+						"code": "67439005",
+						"display": "Msutu (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Msutu"
+							}, {
+								"language": "fr",
+								"value": "Msutu"
+							}
+						]
+					}, {
+						"code": "704389008",
+						"display": "Murut (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Murut"
+							}
+						]
+					}, {
+						"code": "243284401000087108",
+						"display": "M�tis (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "M�tis"
+							}
+						]
+					}, {
+						"code": "270464009",
+						"display": "N African Arab/Iranian (NMO) (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "N African Arab/Iranian (NMO)"
+							}, {
+								"language": "fr",
+								"value": "Arabe nord-africain ou Iranien (origine non m�tiss�e)"
+							}
+						]
+					}, {
+						"code": "81846005",
+						"display": "Naiars (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Naiars"
+							}, {
+								"language": "fr",
+								"value": "Naiars"
+							}
+						]
+					}, {
+						"code": "57539009",
+						"display": "Navaho (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Navaho"
+							}, {
+								"language": "fr",
+								"value": "Navahos"
+							}
+						]
+					}, {
+						"code": "91488008",
+						"display": "New Britons (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "New Britons"
+							}, {
+								"language": "fr",
+								"value": "N�o-Britanniques"
+							}
+						]
+					}, {
+						"code": "34334001",
+						"display": "New Caledonians (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "New Caledonians"
+							}, {
+								"language": "fr",
+								"value": "N�o-Cal�doniens"
+							}
+						]
+					}, {
+						"code": "63732001",
+						"display": "New Hebrideans (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "New Hebrideans"
+							}, {
+								"language": "fr",
+								"value": "N�o-H�bridais"
+							}
+						]
+					}, {
+						"code": "186035008",
+						"display": "New Zealand ethnic groups (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "New Zealand ethnic groups"
+							}, {
+								"language": "fr",
+								"value": "groupes ethniques de la Nouvelle-Z�lande"
+							}
+						]
+					}, {
+						"code": "186036009",
+						"display": "New Zealand European (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "New Zealand European"
+							}, {
+								"language": "fr",
+								"value": "Europ�en de la Nouvelle-Z�lande"
+							}
+						]
+					}, {
+						"code": "186039002",
+						"display": "New Zealand Maori (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "New Zealand Maori"
+							}, {
+								"language": "fr",
+								"value": "Maori de la Nouvelle-Z�lande"
+							}
+						]
+					}, {
+						"code": "87323008",
+						"display": "Nez Perc� (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Nez Perc�"
+							}, {
+								"language": "fr",
+								"value": "Nez Perc�"
+							}
+						]
+					}, {
+						"code": "88934004",
+						"display": "Nigerians (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Nigerians"
+							}, {
+								"language": "fr",
+								"value": "Nig�rians"
+							}
+						]
+					}, {
+						"code": "186041001",
+						"display": "Niuean (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Niuean"
+							}, {
+								"language": "fr",
+								"value": "Niou�en"
+							}
+						]
+					}, {
+						"code": "275594002",
+						"display": "North African Arab (NMO) (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "North African Arab (NMO)"
+							}, {
+								"language": "fr",
+								"value": "Arabe nord-africain (origine non m�tiss�e)"
+							}
+						]
+					}, {
+						"code": "18575005",
+						"display": "Oceanian (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Oceanian"
+							}, {
+								"language": "fr",
+								"value": "oc�anien"
+							}
+						]
+					}, {
+						"code": "10432001",
+						"display": "Onge (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Onge"
+							}, {
+								"language": "fr",
+								"value": "Onges"
+							}
+						]
+					}, {
+						"code": "704386001",
+						"display": "Orang asli (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Orang asli"
+							}
+						]
+					}, {
+						"code": "91191002",
+						"display": "Oraons (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Oraons"
+							}, {
+								"language": "fr",
+								"value": "Oraons"
+							}
+						]
+					}, {
+						"code": "414978006",
+						"display": "Oriental (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Oriental"
+							}, {
+								"language": "fr",
+								"value": "oriental"
+							}
+						]
+					}, {
+						"code": "51827000",
+						"display": "Oriental Jews (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Oriental Jews"
+							}, {
+								"language": "fr",
+								"value": "juifs orientaux"
+							}
+						]
+					}, {
+						"code": "186010002",
+						"display": "Other African countries (NMO) (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Other African countries (NMO)"
+							}, {
+								"language": "fr",
+								"value": "autres pays africains (origine non m�tiss�e)"
+							}
+						]
+					}, {
+						"code": "186013000",
+						"display": "Other Asian (NMO) (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Other Asian (NMO)"
+							}, {
+								"language": "fr",
+								"value": "autre Asiatique (origine non m�tiss�e)"
+							}
+						]
+					}, {
+						"code": "315281001",
+						"display": "Other Asian ethnic group (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Other Asian ethnic group"
+							}, {
+								"language": "fr",
+								"value": "autre groupe ethnique asiatique"
+							}
+						]
+					}, {
+						"code": "186000006",
+						"display": "Other Black - Black/Asian orig (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Other Black - Black/Asian orig"
+							}, {
+								"language": "fr",
+								"value": "autre Noir d'origine noire ou asiatique"
+							}
+						]
+					}, {
+						"code": "185999009",
+						"display": "Other Black - Black/White orig (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Other Black - Black/White orig"
+							}, {
+								"language": "fr",
+								"value": "autre Noir d'origine noire ou blanche"
+							}
+						]
+					}, {
+						"code": "315279003",
+						"display": "Other black ethnic group (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Other black ethnic group"
+							}, {
+								"language": "fr",
+								"value": "autre groupe ethnique noir"
+							}
+						]
+					}, {
+						"code": "186005001",
+						"display": "Other ethnic non-mixed (NMO) (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Other ethnic non-mixed (NMO)"
+							}, {
+								"language": "fr",
+								"value": "autre ethnie non m�tiss�e"
+							}
+						]
+					}, {
+						"code": "186017004",
+						"display": "Other European (NMO) (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Other European (NMO)"
+							}, {
+								"language": "fr",
+								"value": "autre Europ�en (origine non m�tiss�e)"
+							}
+						]
+					}, {
+						"code": "186037000",
+						"display": "Other European in New Zealand (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Other European in New Zealand"
+							}, {
+								"language": "fr",
+								"value": "autre Europ�en en Nouvelle-Z�lande"
+							}
+						]
+					}, {
+						"code": "401214002",
+						"display": "Other white British ethnic group (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Other white British ethnic group"
+							}, {
+								"language": "fr",
+								"value": "autre groupe ethnique britannique blanc"
+							}
+						]
+					}, {
+						"code": "27301002",
+						"display": "Paez (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Paez"
+							}, {
+								"language": "fr",
+								"value": "Paez"
+							}
+						]
+					}, {
+						"code": "186002003",
+						"display": "Pakistani (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Pakistani"
+							}, {
+								"language": "fr",
+								"value": "Pakistanais"
+							}
+						]
+					}, {
+						"code": "4073004",
+						"display": "Palauans (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Palauans"
+							}, {
+								"language": "fr",
+								"value": "Palaosiens"
+							}
+						]
+					}, {
+						"code": "17789004",
+						"display": "Papuans (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Papuans"
+							}, {
+								"language": "fr",
+								"value": "Papous"
+							}
+						]
+					}, {
+						"code": "81653003",
+						"display": "Pehuenches (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Pehuenches"
+							}, {
+								"language": "fr",
+								"value": "Pehuenches"
+							}
+						]
+					}, {
+						"code": "28562006",
+						"display": "Poles (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Poles"
+							}, {
+								"language": "fr",
+								"value": "polonais"
+							}
+						]
+					}, {
+						"code": "23517005",
+						"display": "Polynesians (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Polynesians"
+							}, {
+								"language": "fr",
+								"value": "Polyn�siens"
+							}
+						]
+					}, {
+						"code": "80208004",
+						"display": "Portuguese (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Portuguese"
+							}, {
+								"language": "fr",
+								"value": "portugais"
+							}
+						]
+					}, {
+						"code": "3353005",
+						"display": "Pueblo (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Pueblo"
+							}, {
+								"language": "fr",
+								"value": "Pueblo"
+							}
+						]
+					}, {
+						"code": "704385002",
+						"display": "Punjabi (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Punjabi"
+							}
+						]
+					}, {
+						"code": "71176007",
+						"display": "Pygmies (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Pygmies"
+							}, {
+								"language": "fr",
+								"value": "Pygm�es"
+							}
+						]
+					}, {
+						"code": "79434006",
+						"display": "Quechua (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Quechua"
+							}, {
+								"language": "fr",
+								"value": "Quechua"
+							}
+						]
+					}, {
+						"code": "718958002",
+						"display": "Roma (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Roma"
+							}
+						]
+					}, {
+						"code": "445343003",
+						"display": "Romanian (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Romanian"
+							}
+						]
+					}, {
+						"code": "85163001",
+						"display": "Russians (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Russians"
+							}, {
+								"language": "fr",
+								"value": "russes"
+							}
+						]
+					}, {
+						"code": "19085009",
+						"display": "Saipanese (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Saipanese"
+							}, {
+								"language": "fr",
+								"value": "Saipanais"
+							}
+						]
+					}, {
+						"code": "86275006",
+						"display": "Samoan (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Samoan"
+							}, {
+								"language": "fr",
+								"value": "Samoan"
+							}
+						]
+					}, {
+						"code": "735001008",
+						"display": "Scandinavian (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Scandinavian"
+							}
+						]
+					}, {
+						"code": "48375000",
+						"display": "Seminole (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Seminole"
+							}, {
+								"language": "fr",
+								"value": "S�minole"
+							}
+						]
+					}, {
+						"code": "3818007",
+						"display": "Senegalese (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Senegalese"
+							}, {
+								"language": "fr",
+								"value": "S�n�galais"
+							}
+						]
+					}, {
+						"code": "53460002",
+						"display": "Serbs (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Serbs"
+							}, {
+								"language": "fr",
+								"value": "serbes"
+							}
+						]
+					}, {
+						"code": "82174001",
+						"display": "Shona (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Shona"
+							}, {
+								"language": "fr",
+								"value": "Shona"
+							}
+						]
+					}, {
+						"code": "22007004",
+						"display": "Shoshone (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Shoshone"
+							}, {
+								"language": "fr",
+								"value": "Shoshone"
+							}
+						]
+					}, {
+						"code": "231697211000087107",
+						"display": "Sinhalese (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Sinhalese"
+							}
+						]
+					}, {
+						"code": "36329002",
+						"display": "Slovak (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Slovak"
+							}, {
+								"language": "fr",
+								"value": "slovaque"
+							}
+						]
+					}, {
+						"code": "48294008",
+						"display": "Solomon Islanders (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Solomon Islanders"
+							}, {
+								"language": "fr",
+								"value": "Salomonais"
+							}
+						]
+					}, {
+						"code": "46110004",
+						"display": "Somalis (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Somalis"
+							}, {
+								"language": "fr",
+								"value": "Somaliens"
+							}
+						]
+					}, {
+						"code": "24191000087106",
+						"display": "South Asian (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "South Asian"
+							}
+						]
+					}, {
+						"code": "26215007",
+						"display": "South Asian Aborigine (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "South Asian Aborigine"
+							}, {
+								"language": "fr",
+								"value": "aborig�ne de l'Asie du Sud"
+							}
+						]
+					}, {
+						"code": "108342005",
+						"display": "South Asian AND/OR Australian aborigine (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "South Asian AND/OR Australian aborigine"
+							}, {
+								"language": "fr",
+								"value": "aborig�ne de l'Asie du Sud et/ou de l'Australie"
+							}
+						]
+					}, {
+						"code": "186044009",
+						"display": "South East Asian (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "South East Asian"
+							}, {
+								"language": "fr",
+								"value": "Asiatique du Sud-Est"
+							}
+						]
+					}, {
+						"code": "28409002",
+						"display": "Spaniards (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Spaniards"
+							}, {
+								"language": "fr",
+								"value": "espagnols"
+							}
+						]
+					}, {
+						"code": "88839008",
+						"display": "Sudanese (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Sudanese"
+							}, {
+								"language": "fr",
+								"value": "Soudanais"
+							}
+						]
+					}, {
+						"code": "76574004",
+						"display": "Swiss (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Swiss"
+							}, {
+								"language": "fr",
+								"value": "suisses"
+							}
+						]
+					}, {
+						"code": "59487007",
+						"display": "Syrians (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Syrians"
+							}, {
+								"language": "fr",
+								"value": "syriens"
+							}
+						]
+					}, {
+						"code": "12556008",
+						"display": "Tamils (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Tamils"
+							}, {
+								"language": "fr",
+								"value": "Tamouls"
+							}
+						]
+					}, {
+						"code": "13440006",
+						"display": "Tanganyikans (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Tanganyikans"
+							}, {
+								"language": "fr",
+								"value": "Tanzaniens"
+							}
+						]
+					}, {
+						"code": "75704009",
+						"display": "Toba (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Toba"
+							}, {
+								"language": "fr",
+								"value": "Toba"
+							}
+						]
+					}, {
+						"code": "81283004",
+						"display": "Todas (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Todas"
+							}, {
+								"language": "fr",
+								"value": "Todas"
+							}
+						]
+					}, {
+						"code": "186042008",
+						"display": "Tokelauan (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Tokelauan"
+							}, {
+								"language": "fr",
+								"value": "Tokelauan"
+							}
+						]
+					}, {
+						"code": "81560001",
+						"display": "Tongan (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Tongan"
+							}, {
+								"language": "fr",
+								"value": "Tongan"
+							}
+						]
+					}, {
+						"code": "2688009",
+						"display": "Tristan da Cunhans (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Tristan da Cunhans"
+							}, {
+								"language": "fr",
+								"value": "originaires de Tristan da Cunha"
+							}
+						]
+					}, {
+						"code": "33182009",
+						"display": "Trukese (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Trukese"
+							}, {
+								"language": "fr",
+								"value": "Trukois"
+							}
+						]
+					}, {
+						"code": "275601009",
+						"display": "Turkish (NMO) (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Turkish (NMO)"
+							}, {
+								"language": "fr",
+								"value": "Turc (origine non m�tiss�e)"
+							}
+						]
+					}, {
+						"code": "275602002",
+						"display": "Turkish Cypriot (NMO) (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Turkish Cypriot (NMO)"
+							}, {
+								"language": "fr",
+								"value": "Chypriote turc (origine non m�tiss�e)"
+							}
+						]
+					}, {
+						"code": "270467002",
+						"display": "Turkish/Turkish Cypriot (NMO) (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Turkish/Turkish Cypriot (NMO)"
+							}, {
+								"language": "fr",
+								"value": "Turc ou Chypriote turc (origine non m�tiss�e)"
+							}
+						]
+					}, {
+						"code": "14470009",
+						"display": "Tutsi (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Tutsi"
+							}, {
+								"language": "fr",
+								"value": "Tutsi"
+							}
+						]
+					}, {
+						"code": "76775001",
+						"display": "Ugandans (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Ugandans"
+							}, {
+								"language": "fr",
+								"value": "Ougandais"
+							}
+						]
+					}, {
+						"code": "733078003",
+						"display": "Ukrainian (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Ukrainian"
+							}
+						]
+					}, {
+						"code": "35007000",
+						"display": "Utes (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Utes"
+							}, {
+								"language": "fr",
+								"value": "Utes"
+							}
+						]
+					}, {
+						"code": "62598008",
+						"display": "Venezuelan Indians (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Venezuelan Indians"
+							}, {
+								"language": "fr",
+								"value": "am�rindiens du Venezuela"
+							}
+						]
+					}, {
+						"code": "312859007",
+						"display": "Vietnamese (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Vietnamese"
+							}, {
+								"language": "fr",
+								"value": "Vietnamien"
+							}
+						]
+					}, {
+						"code": "14999008",
+						"display": "Welsh (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Welsh"
+							}, {
+								"language": "fr",
+								"value": "gallois"
+							}
+						]
+					}, {
+						"code": "8124001",
+						"display": "West Africans (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "West Africans"
+							}, {
+								"language": "fr",
+								"value": "Ouest-Africains"
+							}
+						]
+					}, {
+						"code": "275592003",
+						"display": "West Indian (NMO) (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "West Indian (NMO)"
+							}, {
+								"language": "fr",
+								"value": "Antillais (origine non m�tiss�e)"
+							}
+						]
+					}, {
+						"code": "185984009",
+						"display": "White - ethnic group (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "White - ethnic group"
+							}, {
+								"language": "fr",
+								"value": "blanc : groupe ethnique"
+							}
+						]
+					}, {
+						"code": "315236000",
+						"display": "White British (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "White British"
+							}, {
+								"language": "fr",
+								"value": "Britannique blanc"
+							}
+						]
+					}, {
+						"code": "315237009",
+						"display": "White Irish (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "White Irish"
+							}, {
+								"language": "fr",
+								"value": "Irlandais blanc"
+							}
+						]
+					}, {
+						"code": "401213008",
+						"display": "White Scottish (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "White Scottish"
+							}, {
+								"language": "fr",
+								"value": "�cossais blanc"
+							}
+						]
+					}, {
+						"code": "18664001",
+						"display": "Xavante (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Xavante"
+							}, {
+								"language": "fr",
+								"value": "Xavantes"
+							}
+						]
+					}, {
+						"code": "80528001",
+						"display": "Xosa (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Xosa"
+							}, {
+								"language": "fr",
+								"value": "Xhosa"
+							}
+						]
+					}, {
+						"code": "76460008",
+						"display": "Yanomama (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Yanomama"
+							}, {
+								"language": "fr",
+								"value": "Yanomamis"
+							}
+						]
+					}, {
+						"code": "48118002",
+						"display": "Yapese (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Yapese"
+							}, {
+								"language": "fr",
+								"value": "Yapois"
+							}
+						]
+					}, {
+						"code": "76253004",
+						"display": "Zulu (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Zulu"
+							}, {
+								"language": "fr",
+								"value": "Zoulou"
+							}
+						]
+					}, {
+						"code": "14176005",
+						"display": "Danes (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Danes"
+							}
+						]
+					}, {
+						"code": "315283003",
+						"display": "Irish traveller (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Irish traveller"
+							}
+						]
+					}, {
+						"code": "17095009",
+						"display": "Norwegians (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Norwegians"
+							}
+						]
+					}, {
+						"code": "81035008",
+						"display": "Pakistani (Urduspeakers) (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Pakistani (Urduspeakers)"
+							}
+						]
+					}, {
+						"code": "81403004",
+						"display": "Swede (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "Swedes"
+							}
+						]
+					}, {
+						"code": "160531006",
+						"display": "race: West indian (ethnic group)",
+						"designation": [
+							{
+								"language": "en-CA",
+								"value": "race: West indian"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+}

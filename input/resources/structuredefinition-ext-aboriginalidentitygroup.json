@@ -1,0 +1,86 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-aboriginalidentitygroup",
+  "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-aboriginalidentitygroup",
+  "version": "0.1",
+  "name": "ExtensionAboriginalIdentityGroup",
+  "title": "Extension: Aboriginal Identity Group",
+  "status": "draft",
+  "date": "2020-09-23",
+  "publisher": "Canada Health Infoway",
+  "description": "A code classifying the person's aboriginal identity",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "CA",
+          "display": "Canada"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Patient"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "definition": "A code classifying the person's aboriginal identity",
+        "min": 0,
+        "max": "1",
+        "isModifier": false
+      }, {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1",
+        "fixedUri": "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-aboriginalidentitygroup"
+      }, {
+        "id": "Extension.value[x]:valueCoding",
+        "path": "Extension.value[x]",
+        "sliceName": "valueCoding",
+        "definition": "Concepts classifying the person's aboriginal identity sharing common history, traits or geographical origin",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "description": "One of [aboriginal identity codes](https://fhir.infoway-inforoute.ca/ValueSet/aboriginalidentitygroup)",
+          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/aboriginalidentitygroup"
+        }
+      }, {
+        "id": "Extension.value[x]:valueCoding.system",
+        "path": "Extension.value[x].system",
+        "short": "Identity of the terminology system",
+        "min": 1
+      }, {
+        "id": "Extension.value[x]:valueCoding.code",
+        "path": "Extension.value[x].code",
+        "short": "Code defining aboriginal identity concept",
+        "definition": "One of [aboriginal identity codes](https://fhir.infoway-inforoute.ca/ValueSet/aboriginalidentitygroup)",
+        "min": 1
+      }, {
+        "id": "Extension.value[x]:valueCoding.display",
+        "path": "Extension.value[x].display",
+        "short": "Optional description of the aboriginal identity code",
+        "definition": "Plain text representation of the aboriginal identity concept"
+      }
+    ]
+  }
+}

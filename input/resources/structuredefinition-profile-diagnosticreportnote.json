@@ -1,0 +1,132 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-diagnosticreportnote",
+  "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-diagnosticreportnote",
+  "version": "0.0.0",
+  "name": "DiagnosticReportNoteProfile",
+  "title": "Diagnostic Report for Report and Note Exchange Profile",
+  "status": "draft",
+  "publisher": "TBD",
+  "description": "Proposed constraints and extensions on the Diagnostic Report Resource to support collection of diagnostic report information for reports and notes.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
+  "kind": "resource",
+  "abstract": false,
+  "type": "DiagnosticReport",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DiagnosticReport",
+        "path": "DiagnosticReport",
+        "short": "DiagnosticReport for Report and Note Profile",
+        "definition": "The DiagnosticReport Profile is based upon the core FHIR DiagnosticReport Resource"
+      },
+      {
+        "id": "DiagnosticReport.status",
+        "path": "DiagnosticReport.status",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Codes providing the status of a DiagnosticReport.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/diagnostic-report-status"
+        }
+      },
+      {
+        "id": "DiagnosticReport.category",
+        "path": "DiagnosticReport.category",
+        "short": "CA Core Category Code",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "description": "The CA Core Diagnostic Report Cateogy Value Set is a 'starter set' of categories supported for fetching and Diagnostic Reports and Notes.",
+          "valueSet": "http://hl7.org/fhir/ca/baseline/ValueSet/ca-baseline-diagnosticreport-category"
+        }
+      },
+      {
+        "id": "DiagnosticReport.code",
+        "path": "DiagnosticReport.code",
+        "short": "CA Core Report Code",
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "description": "CA Core Diagnostic Report and Note Codes",
+          "valueSet": "http://hl7.org/fhir/ca/baseline/ValueSet/ca-baseline-diagnosticreport-report-and-note-codes"
+        }
+      },
+      {
+        "id": "DiagnosticReport.subject",
+        "path": "DiagnosticReport.subject",
+        "short": "The patient that the diagnostic report refers to",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.encounter",
+        "path": "DiagnosticReport.encounter",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-encounter"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.effective[x]",
+        "path": "DiagnosticReport.effective[x]",
+        "short": "Time of report or note",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.issued",
+        "path": "DiagnosticReport.issued",
+        "short": "Date/Time this version of the DiagnosticReport was made available",
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.performer",
+        "path": "DiagnosticReport.performer",
+        "short": "Responsible Diagnostic Service",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitioner"
+            ]
+          },
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-organization"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.media",
+        "path": "DiagnosticReport.media",
+        "short": "Key images associated with this report",
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.presentedForm",
+        "path": "DiagnosticReport.presentedForm",
+        "short": "Entire report as issued",
+        "mustSupport": true
+      }
+    ]
+  }
+}

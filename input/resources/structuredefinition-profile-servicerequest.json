@@ -1,0 +1,224 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-servicerequest",
+  "version": "0.0.2",
+  "name": "ServiceRequestProfile",
+  "title": "ServiceRequest Profile for Results Reporting",
+  "status": "draft",
+  "date": "2020-10-06",
+  "publisher": "Canada Health Infoway",
+  "description": "Proposed constraints on the ServiceRequest resource for the minimal set of data required to request for service such as diagnostic investigations, treatments, or operations to be performed",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "CA",
+          "display": "Canada"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "ServiceRequest",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "ServiceRequest",
+        "path": "ServiceRequest",
+        "short": "ServiceRequest Profile",
+        "definition": "Service Request Profile is based upon the core FHIR ServiceRequest resource and created to define the minimal set of data required to request for service such as diagnostic investigations, treatments, or operations to be performed."
+      }, {
+        "id": "ServiceRequest.identifier",
+        "path": "ServiceRequest.identifier",
+        "mustSupport": true
+      }, {
+        "id": "ServiceRequest.basedOn",
+        "path": "ServiceRequest.basedOn",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-servicerequest", "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-medicationrequest"
+            ]
+          }
+        ]
+      }, {
+        "id": "ServiceRequest.replaces",
+        "path": "ServiceRequest.replaces",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-servicerequest"
+            ]
+          }
+        ]
+      }, {
+        "id": "ServiceRequest.requisition",
+        "path": "ServiceRequest.requisition",
+        "mustSupport": true
+      }, {
+        "id": "ServiceRequest.status",
+        "path": "ServiceRequest.status",
+        "mustSupport": true
+      }, {
+        "id": "ServiceRequest.intent",
+        "path": "ServiceRequest.intent",
+        "mustSupport": true
+      }, {
+        "id": "ServiceRequest.category",
+        "path": "ServiceRequest.category",
+        "short": "Classification of service",
+        "definition": "A code that classifies the service for searching, sorting and display purposes (e.g. Surgical Procedure).",
+        "mustSupport": true,
+        "binding": {
+          "strength": "preferred"
+        }
+      }, {
+        "id": "ServiceRequest.code.coding",
+        "path": "ServiceRequest.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 0,
+        "mustSupport": true
+      }, {
+        "id": "ServiceRequest.code.coding:LabOrder",
+        "path": "ServiceRequest.code.coding",
+        "sliceName": "LabOrder",
+        "short": "Laboratory procedure code",
+        "definition": "A code that identifies a laboratory procedure that have been requested",
+        "comment": "The binding strength of this element is [Preferred](https://www.hl7.org/fhir/terminologies.html#strength), meaning that codes are encouraged to draw from the pCLOCD value set for interoperability purposes but are not required to do so to be considered conformant.",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "description": "The pan Canadian LOINC Observation Code Database (pCLOCD) is the Canadian version of the LOINC(tm) database. It was created using the LOINC(tm) records and attributes that were constrained for Canadian use and supplemented to specifically meet Canadian requirements. It contains the core LOINC(tm) attributes as required by Regenstrief copyright rules. The LOINC(tm) Component has been customized to meet Canadian requirements and is displayed as the pan Canadian Component Name. This component name is the basis for the pan Canadian Display Name. Core attributes are include both English and Canadian French.",
+          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/pCLOCD"
+        }
+      }, {
+        "id": "ServiceRequest.code.coding:LabOrder.system",
+        "path": "ServiceRequest.code.coding.system",
+        "min": 1,
+        "max": "1"
+      }, {
+        "id": "ServiceRequest.code.coding:LabOrder.code",
+        "path": "ServiceRequest.code.coding.code",
+        "min": 1,
+        "max": "1"
+      }, {
+        "id": "ServiceRequest.code.coding:@default",
+        "path": "ServiceRequest.code.coding",
+        "sliceName": "@default"
+      }, {
+        "id": "ServiceRequest.code.coding:@default.system",
+        "path": "ServiceRequest.code.coding.system",
+        "min": 1,
+        "max": "1"
+      }, {
+        "id": "ServiceRequest.code.coding:@default.code",
+        "path": "ServiceRequest.code.coding.code",
+        "min": 1,
+        "max": "1"
+      }, {
+        "id": "ServiceRequest.subject",
+        "path": "ServiceRequest.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient", "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-location", "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-device"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }, {
+        "id": "ServiceRequest.encounter",
+        "path": "ServiceRequest.encounter",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-encounter"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }, {
+        "id": "ServiceRequest.authoredOn",
+        "path": "ServiceRequest.authoredOn",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      }, {
+        "id": "ServiceRequest.requester",
+        "path": "ServiceRequest.requester",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitioner", "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitionerrole", "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-organization", "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient", "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-device"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }, {
+        "id": "ServiceRequest.performer",
+        "path": "ServiceRequest.performer",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitioner", "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitionerrole", "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-organization", "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient", "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-device"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }, {
+        "id": "ServiceRequest.locationReference",
+        "path": "ServiceRequest.locationReference",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-location"
+            ]
+          }
+        ]
+      }, {
+        "id": "ServiceRequest.reasonCode",
+        "path": "ServiceRequest.reasonCode",
+        "binding": {
+          "strength": "preferred"
+        }
+      }, {
+        "id": "ServiceRequest.reasonReference",
+        "path": "ServiceRequest.reasonReference",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-condition", "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-observation", "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-diagnosticreport", "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-documentreference"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

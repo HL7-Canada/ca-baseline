@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input/schemas/fhir-single.xsd">
+  <id value="cabaseline"/>
+  <url value="http://hl7.org/fhir/ca/baseline/ImplementationGuide/cabaseline"/>
+  <version value="0.1.0"/>
+  <name value="cabaseline"/>
+  <title value="Canadian Core"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <publisher value="Canadian FHIR Implementor Working Group"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://tbd"/>
+    </telecom>
+  </contact>
+  <description value="provides basic interoperability expectations for human-patient systems in the Canadian space.  Modeled after the US-Core implementation guide"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="CA"/>
+    </coding>
+  </jurisdiction>
+  <packageId value="hl7.fhir.ca.baseline"/>
+  <fhirVersion value="4.0.1"/>
+  <definition>
+    <!--    <grouping id="conformance">
+      <name value="Capability Statements"/>
+      <description value="Capabilities of systems claiming to be conformant to the CA-Baseline implementation guide"/>
+    </grouping>-->
+    <grouping id="profiles">
+      <name value="Profiles"/>
+      <description value="Constraints on FHIR resources to be adhered to as part of the CA-Baseline implementation guide"/>
+    </grouping>
+    <grouping id="extensions">
+      <name value="Extensions"/>
+      <description value="Extensions defined as part of the CA-Baseline implementation guide"/>
+    </grouping>
+    <grouping id="terminology">
+      <name value="Terminology"/>
+      <description value="ValueSets (and Code Systems) defined for use within the CA-Baseline implementation guide"/>
+    </grouping>
+    <!--    <grouping id="operations">
+      <name value="Operation Definitions"/>
+      <description value="Additional operations defined for use within the CA-Baseline implementation guide"/>
+    </grouping>
+    <grouping id="search">
+      <name value="Search Parameters"/>
+      <description value="Additional search parameters defined for use within the CA-Baseline implementation guide"/>
+    </grouping>
+    <grouping id="examples">
+      <name value="Example(s)"/>
+      <description value="Example(s) showing the use of the CA-Baseline profiles"/>
+    </grouping>-->
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ext-aboriginalidentitygroup"/>
+      </reference>
+      <name value="Aboriginal Identity Group"/>
+      <description value="A code classifying the person&#39;s aboriginal identity"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="extensions"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ext-aboriginalidentityindicator"/>
+      </reference>
+      <name value="Aboriginal Identity Indicator"/>
+      <description value="A code classifying the person&#39;s self identity as an aboriginal person"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="extensions"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ext-patientbirthsex"/>
+      </reference>
+      <name value="Birth Sex"/>
+      <description value="A code classifying the person's sex assigned at birth. Replicates the birthsex extension in US-Core-R4 for interoperability."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="extensions"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ext-dataabsentreason"/>
+      </reference>
+      <name value="Data Absent Reason"/>
+      <description value="Provides a reason why the expected value or elements in the element that is extended are missing."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="extensions"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ext-deceased"/>
+      </reference>
+      <name value="Deceased"/>
+      <description value="Flag or date indicating that an individual is deceased."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="extensions"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ext-ethnicity"/>
+      </reference>
+      <name value="Ethnicity"/>
+      <description value="A code classifying the person's ethnic group or ethnicity as the category of people who identify with each other, usually on the basis of a presumed common genealogy or ancestry or on other similarities."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="extensions"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ext-dateestimated"/>
+      </reference>
+      <name value="Date Estimated Flag"/>
+      <description value="If true, indicates that information entered is an estimate and may not be precise."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="extensions"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ext-identifierversion"/>
+      </reference>
+      <name value="Identifier Version"/>
+      <description value="A version string indicating the currency/validity of an identifier."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="extensions"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ext-nofixedaddress"/>
+      </reference>
+      <name value="No Fixed Address"/>
+      <description value="This extension applies to the Address datatype and indicates that there is an assertion that there is no fixed address."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="extensions"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ext-rolestatus"/>
+      </reference>
+      <name value="Role Status"/>
+      <description value="Represents the status of the Role, as defined by the HL7v3 Role class state machine."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="extensions"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ext-servicelanguage"/>
+      </reference>
+      <name value="Service Language"/>
+      <description value="Indentifies languages that that services are provided in."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="extensions"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ext-statusreason"/>
+      </reference>
+      <name value="Status Reason"/>
+      <description value="Provides a textual description (reason) for a status."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="extensions"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-allergyintolerance"/>
+      </reference>
+      <name value="AllergyIntolerance Profile"/>
+      <description value="Proposed constraints and extensions on the AllergyIntolerance Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-condition"/>
+      </reference>
+      <name value="Condition Profile"/>
+      <description value="Proposed constraints and extensions on the Condition Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-device"/>
+      </reference>
+      <name value="Device Profile"/>
+      <description value="Proposed constraints and extensions on the Device Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-diagnosticreport"/>
+      </reference>
+      <name value="DiagnosticReport Profile"/>
+      <description value="Proposed constraints on the DiagnosticReport resource to set minimum expectations to laboratory and similar results reporting."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+<!--	Exceluded as per Issue #158 but retained for the historical purpose
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-diagnosticreportnote"/>
+      </reference>
+      <name value="DiagnosticReport for Report and Note Profile"/>
+      <description value="Proposed constraints and extensions on the DiagnosticReport Resource to support collection of diagnostic report information for reports and notes.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+-->
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-documentreference"/>
+      </reference>
+      <name value="Document Reference Profile"/>
+      <description value="Proposed constraints and extensions on the DocumentReference Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-encounter"/>
+      </reference>
+      <name value="Encounter Profile"/>
+      <description value="Proposed constraints and extensions on the Encounter Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-goal"/>
+      </reference>
+      <name value="Goal Profile"/>
+      <description value="Proposed constraints and extensions on the Goal Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-immunization"/>
+      </reference>
+      <name value="Immunization Profile"/>
+      <description value="Proposed constraints and extensions on the Immunization Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-immunizationrecommendation"/>
+      </reference>
+      <name value="ImmunizationRecommendation Profile"/>
+      <description value="Proposed constraints and extensions on the ImmunizationRecommendation Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-location"/>
+      </reference>
+      <name value="Location Profile"/>
+      <description value="Proposed constraints and extensions on the Location Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-medication"/>
+      </reference>
+      <name value="Medication Profile"/>
+      <description value="Proposed constraints and extensions on the Medication Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-medicationadministration"/>
+      </reference>
+      <name value="MedicationAdministration Profile"/>
+      <description value="Proposed constraints and extensions on the MedicationAdministration Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-medicationdispense"/>
+      </reference>
+      <name value="MedicationDispense Profile"/>
+      <description value="Proposed constraints and extensions on the MedicationDispense Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-medicationrequest"/>
+      </reference>
+      <name value="MedicationRequest Profile"/>
+      <description value="Proposed constraints and extensions on the MedicationRequest Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-medicationstatement"/>
+      </reference>
+      <name value="MedicationStatement Profile"/>
+      <description value="Proposed constraints and extensions on the MedicationStatement Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-observation"/>
+      </reference>
+      <name value="Observation Profile (General)"/>
+      <description value="Proposed constraints and extensions on the Observation Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-observation-results"/>
+      </reference>
+      <name value="Observation Profile (Laboratory Results)"/>
+      <description value="Proposed constraints and extensions on the Observation Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-organization"/>
+      </reference>
+      <name value="Organization Profile"/>
+      <description value="Proposed constraints and extensions on the Organization Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <!--    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-organizationaffiliation"/>
+      </reference>
+      <name value="OrganizationAffiliation Profile"/>
+      <description value="Proposed constraints and extensions on the OrganizationAffiliation Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource> -->
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-patient"/>
+      </reference>
+      <name value="Patient Profile"/>
+      <description value="Proposed constraints and extensions on the Patient Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-practitioner"/>
+      </reference>
+      <name value="Practitioner Profile (General)"/>
+      <description value="Proposed constraints and extensions on the Practitioner Resource for general use."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-practitioner-registry"/>
+      </reference>
+      <name value="Practitioner Profile (Provider Registry)"/>
+      <description value="Proposed constraints and extensions on the Practitioner Resource for use by Provider Registry systems."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-practitionerrole"/>
+      </reference>
+      <name value="PractitionerRole Profile (General)"/>
+      <description value="Proposed constraints and extensions on the PractitionerRole Resource for general use."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-practitionerrole-registry"/>
+      </reference>
+      <name value="PractitionerRole Profile (Provider Registry)"/>
+      <description value="Proposed constraints and extensions on the PractitionerRole Resource for use by Provider Registry systems."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-procedure"/>
+      </reference>
+      <name value="Procedure Profile"/>
+      <description value="Proposed constraints and extensions on the Procedure Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-servicerequest"/>
+      </reference>
+      <name value="ServiceRequest Profile"/>
+      <description value="Proposed constraints on the ServiceRequest resource for the minimal set of data required to request for service such as diagnostic investigations, treatments, or operations to be performed."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-smokingstatus"/>
+      </reference>
+      <name value="SmokingStatus Profile"/>
+      <description value="Proposed constraints and extensions on the Observation Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CodeSystem/aboriginalidentitytype"/>
+      </reference>
+      <name value="Aboriginal Identity Type"/>
+      <description value="Represents codes for Aboriginal Identity"/>
+      <exampleBoolean value="false"/>
+      <!-- groupingId is not used to exclude from rendering to a page -->
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/aboriginalidentitygroup"/>
+      </reference>
+      <name value="Aboriginal Identity Group"/>
+      <description value="Represents codes for Aboriginal Identity"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="terminology"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/aboriginalidentityindicator"/>
+      </reference>
+      <name value="Aboriginal Identity Indicator"/>
+      <description value="Represents the self identity as an Aboriginal Person"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="terminology"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/birthsex"/>
+      </reference>
+      <name value="Birth Sex"/>
+      <description value="Codes for documenting sex at birth. (Replicates the birthsex ValueSet in US-Core-R4 for interoperability.)"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="terminology"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/encountertype"/>
+      </reference>
+      <name value="Encounter Type"/>
+      <description value="The type of encounter: a specific code indicating type of service provided. This value set includes codes from SNOMED CT decending from the concept 308335008 (Patient encounter procedure (procedure))"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="terminology"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/ethnicitycode"/>
+      </reference>
+      <name value="Ethnicity Code"/>
+      <description value="Codes representing a self-reported ethnic group. This should not be confused with citizenship or nationality."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="terminology"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/healthconcerncode"/>
+      </reference>
+      <name value="Health Concern Codes"/>
+      <description value="Clinical problems, conditions, diagnoses, symptoms, findings and complaints, as interpreted by the provider."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="terminology"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/prescriptiondrugform"/>
+      </reference>
+      <name value="Prescription Drug Form"/>
+      <description value="The list of forms in which compounded drugs or active ingredients can be dispensed to the patient."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="terminology"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/prescriptionmedicinalproduct"/>
+      </reference>
+      <name value="Prescription Medicinal Product"/>
+      <description value="The list of commonly used Medicinal products used for prescribing and dispensing in Canada."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="terminology"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/vaccinecodes"/>
+      </reference>
+      <name value="Vaccine Codes"/>
+      <description value="**Placeholder**\nCurrent and historical vaccines are published as separate lists by Canada Health Infoway."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="terminology"/>
+    </resource>
+    <page>
+      <nameUrl value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+      <page>
+        <nameUrl value="index.html"/>
+        <title value="Home"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="general-guidance.html"/>
+        <title value="General Guidance"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="developmentprocess.html"/>
+        <title value="Development Process"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="security.html"/>
+        <title value="Security"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="downloads.html"/>
+        <title value="Downloads"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+				<nameUrl value="allartifacts.html"/>
+				<title value="FHIR Artifacts"/>
+				<generation value="markdown"/>
+				<page>
+					<nameUrl value="artifacts.html"/>
+					<title value="Artifact List"/>
+					<generation value="html"/>
+				</page>
+        <page>
+					<nameUrl value="vitalsigns-profiles.html"/>
+					<title value="Vital Signs"/>
+					<generation value="markdown"/>
+				</page>
+			</page>
+    </page>
+		<parameter>
+			<code value="copyrightyear"/>
+			<value value="2019+"/>
+		</parameter>
+		<parameter>
+			<code value="releaselabel"/>
+			<value value="CI Build"/>
+		</parameter>
+		<parameter>
+			<code value="find-other-resources"/>
+			<value value="true"/>
+		</parameter>
+		<parameter>
+      <code value="show-reference-messages"/>
+      <value value="true"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>

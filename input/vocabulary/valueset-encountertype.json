@@ -1,0 +1,42 @@
+{
+  "resourceType": "ValueSet",
+  "id": "encountertype",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <h2>CA Core Encounter Type</h2>\n      <div>\n        <p>The type of encounter: a specific code indicating type of service provided. This value set includes codes from SNOMED CT decending from the concept 308335008 (Patient encounter procedure (procedure))</p>\n      </div>\n      <p>\n        <b>Copyright Statement:</b> This value set includes content from SNOMED CT, which is copyright &copy; 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.</p>\n      <p>This value set includes codes from the following code system:</p>\n      <ul>\n        <li>Include codes from <a href=\"http://www.snomed.org/\">\n            <code>http://snomed.info/sct</code>\n          </a> where concept  is-a  308335008 (Patient encounter procedure)</li>\n      </ul>\n    </div>"
+  },
+  "url": "https://fhir.infoway-inforoute.ca/ValueSet/encountertype",
+  "version": "0.1.0",
+  "name": "EncounterType",
+  "title": "Encounter Type",
+  "status": "active",
+  "date": "2020-07-23",
+  "publisher": "Canada Health Infoway",
+  "description": "The type of encounter: a specific code indicating type of service provided. This value set includes codes from SNOMED CT decending from the concept 308335008 (Patient encounter procedure (procedure))",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "CA",
+          "display": "Canada"
+        }
+      ]
+    }
+  ],
+  "copyright": "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "308335008"
+          }
+        ]
+      }
+    ]
+  }
+}

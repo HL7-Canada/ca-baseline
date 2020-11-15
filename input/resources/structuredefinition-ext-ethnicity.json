@@ -1,0 +1,136 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-ethnicity",
+  "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-ethnicity",
+  "version": "0.1.0",
+  "name": "ExtensionEthnicity",
+  "title": "Extension: Ethnicity",
+  "status": "draft",
+  "date": "2019-12-18",
+  "publisher": "Canada Health Infoway",
+  "description": "A code classifying the person's ethnic group or ethnicity as the category of people who identify with each other, usually on the basis of a presumed common genealogy or ancestry or on other similarities. This should not be confused with citizenship or nationality.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "CA",
+          "display": "Canada"
+        }
+      ]
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Patient"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "definition": "A code classifying the person's ethnic group or ethnicity as the category of people who identify with each other, usually on the basis of a presumed common genealogy or ancestry or on other similarities.",
+        "comment": "This attribute is based on the belief of the person or the person reporting the attribute, not on any formal analysis of genetic, geneological or historical relationships as these would need to be captured as observations.",
+        "min": 0,
+        "max": "1",
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "HL7v2",
+            "map": "PID.22 [Ethnic Group]",
+            "comment": "This field further defines the patient's ancestry.  Refer to User-defined Table 0189 - Ethnic Group in Chapter 2C, Code Tables, for suggested values."
+          },
+          {
+            "identity": "rim",
+            "map": "Person.ethnicGroupCode",
+            "comment": "A code classifying the person into a named category of humans sharing a common real or presumed heritage"
+          },
+          {
+            "identity": "CDA",
+            "map": "/ClinicalDocument/recordTarget/patientRole/patient/sdtc:ethnicGroupCode",
+            "comment": "This CDA R2 SDTC ethnicGroupCode extension is used to record additional ethnicity groups for the recordTarget or subjectPerson"
+          }
+        ]
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1",
+        "fixedUri": "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-ethnicity"
+      },
+      {
+        "id": "Extension.value[x]:valueCoding",
+        "path": "Extension.value[x]",
+        "sliceName": "valueCoding",
+        "definition": "Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "example": [
+          {
+            "label": "Example of the Ethnicity extension",
+            "valueCoding": {
+              "system": "http://snomed.info/sct",
+              "code": "733446001",
+              "display": "Canadian (ethnic group)"
+            }
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "description": "One of [self-reported ethnic group codes](https://tgateway.infoway-inforoute.ca/vs/ethnicitycode) representing the ethnicity concept and should not be confused with citizenship or nationality.",
+          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/ethnicitycode"
+        },
+        "mapping": [
+          {
+            "identity": "HL7v2",
+            "map": "PID.22 [Ethnic Group]",
+            "comment": "This field further defines the patient's ancestry.  Refer to User-defined Table 0189 - Ethnic Group in Chapter 2C, Code Tables, for suggested values."
+          },
+          {
+            "identity": "rim",
+            "map": "Person.ethnicGroupCode",
+            "comment": "A code classifying the person into a named category of humans sharing a common real or presumed heritage"
+          },
+          {
+            "identity": "CDA",
+            "map": "/ClinicalDocument/recordTarget/patientRole/patient/sdtc:ethnicGroupCode",
+            "comment": "This CDA R2 SDTC ethnicGroupCode extension is used to record additional ethnicity groups for the recordTarget or subjectPerson"
+          }
+        ]
+      },
+      {
+        "id": "Extension.value[x]:valueCoding.system",
+        "path": "Extension.value[x].system",
+        "short": "Identity of the terminology system",
+        "comment": "Expected URI is one of the following: SNOMED CT International (http://snomed.info/sct) or SNOMED CT CA Edition (https://fhir.infoway-inforoute.ca/CodeSystem/snomedctcaextension)",
+        "min": 1
+      },
+      {
+        "id": "Extension.value[x]:valueCoding.code",
+        "path": "Extension.value[x].code",
+        "short": "Code defining ethnicity concept",
+        "definition": "One of [self-reported ethnic group codes](https://tgateway.infoway-inforoute.ca/vs/ethnicitycode) representing the ethnicity concept and should not be confused with citizenship or nationality.",
+        "min": 1
+      },
+      {
+        "id": "Extension.value[x]:valueCoding.display",
+        "path": "Extension.value[x].display",
+        "short": "Optional description of the ethnicity code",
+        "definition": "Plain text representation of the ethnicity concept"
+      }
+    ]
+  }
+}

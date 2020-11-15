@@ -1,0 +1,228 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-encounter",
+  "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-encounter",
+  "version": "0.3.0",
+  "name": "EncounterProfile",
+  "title": "Encounter Profile",
+  "status": "draft",
+  "date": "2020-07-29",
+  "publisher": "Canada Health Infoway",
+  "description": "Proposed constraints and extensions on the Encounter Resource",
+  "jurisdiction":  [
+    {
+      "coding":  [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "CA",
+          "display": "Canada"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Encounter",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Encounter",
+  "derivation": "constraint",
+  "differential": {
+    "element":  [
+      {
+        "id": "Encounter",
+        "path": "Encounter",
+        "short": "Encounter Profile",
+        "definition": "The Encounter Profile is based upon the core FHIR Encounter Resource"
+      },
+      {
+        "id": "Encounter.identifier",
+        "path": "Encounter.identifier",
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.status",
+        "path": "Encounter.status",
+        "mustSupport": true
+      },
+      {
+				"id": "Encounter.class",
+				"path": "Encounter.class",
+				"mustSupport": true
+			},
+      {
+        "id": "Encounter.type",
+        "path": "Encounter.type",
+        "comment": "The binding strength of this element is [Preferred](https://www.hl7.org/fhir/terminologies.html#strength), meaning that codes are encouraged to draw from the SNOMED CT code system for interoperability purposes but are not required to do so to be considered conformant.",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],        
+        "mustSupport": true,
+        "binding": {
+          "strength": "preferred",
+          "description": "Valueset to describe the Encounter Type",
+          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/encountertype"
+        }
+      },
+      {
+        "id": "Encounter.subject",
+        "path": "Encounter.subject",
+        "short": "The patient present at the encounter",
+        "min": 1,
+        "type":  [
+          {
+            "code": "Reference",
+            "targetProfile":  [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.participant",
+        "path": "Encounter.participant",
+        "short": "A list of Practitioners participating in the encounter",
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.participant.individual",
+        "path": "Encounter.participant.individual",
+        "type":  [
+          {
+            "code": "Reference",
+            "targetProfile":  [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitioner",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitionerrole"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Encounter.reasonCode",
+        "path": "Encounter.reasonCode",
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.reasonReference",
+        "path": "Encounter.reasonReference",
+        "type":  [
+          {
+            "code": "Reference",
+            "targetProfile":  [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-condition",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-procedure",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-observation",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-immunizationrecommendation"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Encounter.diagnosis",
+        "path": "Encounter.diagnosis",
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.diagnosis.condition",
+        "path": "Encounter.diagnosis.condition",
+        "type":  [
+          {
+            "code": "Reference",
+            "targetProfile":  [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-condition",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-procedure"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Encounter.diagnosis.rank",
+        "path": "Encounter.diagnosis.rank",
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.hospitalization",
+        "path": "Encounter.hospitalization",
+        "mustSupport": true
+      },
+      {
+        "id": "Encounter.hospitalization.origin",
+        "path": "Encounter.hospitalization.origin",
+        "type":  [
+          {
+            "code": "Reference",
+            "targetProfile":  [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-location",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-organization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Encounter.hospitalization.destination",
+        "path": "Encounter.hospitalization.destination",
+        "type":  [
+          {
+            "code": "Reference",
+            "targetProfile":  [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-location",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-organization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Encounter.hospitalization.dischargeDisposition",
+        "path": "Encounter.hospitalization.dischargeDisposition",
+        "type":  [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "description": "Discharge Disposition.",
+          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/encounterdischargedisposition"
+        }
+      },
+      {
+        "id": "Encounter.location.location",
+        "path": "Encounter.location.location",
+        "type":  [
+          {
+            "code": "Reference",
+            "targetProfile":  [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-location"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Encounter.serviceProvider",
+        "path": "Encounter.serviceProvider",
+        "type":  [
+          {
+            "code": "Reference",
+            "targetProfile":  [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-organization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Encounter.partOf",
+        "path": "Encounter.partOf",
+        "type":  [
+          {
+            "code": "Reference",
+            "targetProfile":  [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-encounter"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

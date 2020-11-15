@@ -1,0 +1,177 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-medicationstatement",
+  "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-medicationstatement",
+  "version": "0.0.0",
+  "name": "MedicationStatementProfile",
+  "title": "MedicationStatement Profile",
+  "status": "draft",
+  "date": "2019-03-31",
+  "publisher": "TBD",
+  "description": "Proposed constraints and extensions on the MedicationStatement resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
+  "kind": "resource",
+  "abstract": false,
+  "type": "MedicationStatement",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationStatement",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "MedicationStatement",
+        "path": "MedicationStatement",
+        "short": "MedicationStatement Profile",
+        "definition": "The MedicationStatement Profile is based upon the core FHIR MedicationStatement Resource"
+      },
+      {
+        "id": "MedicationStatement.basedOn",
+        "path": "MedicationStatement.basedOn",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-medicationrequest",
+              "http://hl7.org/fhir/StructureDefinition/CarePlan",
+              "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement.partOf",
+        "path": "MedicationStatement.partOf",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-medicationadministration",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-medicationdispense",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-medicationstatement",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-procedure",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-observation"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement.status",
+        "path": "MedicationStatement.status",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.medication[x]",
+        "path": "MedicationStatement.medication[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-medication"
+            ]
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "preferred",
+          "description": "TBD. This is a placeholder for a comprehensive valueset, consisting of all Manufactured Product (MP), Non-proprietary Therapeutic Product (NTP) and Therapeutic Moiety (TM) codes, which would be created and maintained by Canada Health Infoway. Medicinal products for prescribing and dispensing in Canada. The content of this subset only contains commonly used medicinal products that are available for prescribing and dispensing in Canada. This content will expand to include all human medicinal products over time.",
+          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/prescriptionmedicinalproduct"
+        }
+      },
+      {
+        "id": "MedicationStatement.subject",
+        "path": "MedicationStatement.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.context",
+        "path": "MedicationStatement.context",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile" : [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-encounter",
+              "http://hl7.org/fhir/StructureDefinition/EpisodeOfCare"
+            ]
+          }
+        ]
+      },
+       {
+        "id": "MedicationStatement.effective[x]",
+        "path": "MedicationStatement.effective[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.dateAsserted",
+        "path": "MedicationStatement.dateAsserted",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.informationSource",
+        "path": "MedicationStatement.informationSource",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile" : [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitioner",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitionerrole",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-organization"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.derivedFrom",
+        "path": "MedicationStatement.derivedFrom",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile" : [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-medicationrequest",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-medicationdispense",
+              "http://hl7.org/fhir/StructureDefinition/Claim",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-observation",
+              "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.reasonReference",
+        "path": "MedicationStatement.reasonReference",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile" : [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-condition",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-observation",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-diagnosticreport"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement.dosage",
+        "path": "MedicationStatement.dosage",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.dosage.text",
+        "path": "MedicationStatement.dosage.text",
+        "mustSupport": true
+      }
+    ]
+  }
+}

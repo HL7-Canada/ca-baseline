@@ -1,0 +1,216 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-procedure",
+  "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-procedure",
+  "version": "0.2",
+  "name": "ProcedureProfile",
+  "title": "Procedure Profile",
+  "status": "draft",
+  "date": "2020-07-21",
+  "publisher": "Canada Health Infoway",
+  "description": "Proposed constraints and extensions on the Procedure Resource",
+  "jurisdiction":  [
+    {
+      "coding":  [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "CA",
+          "display": "Canada"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Procedure",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Procedure",
+  "derivation": "constraint",
+  "differential": {
+    "element":  [
+      {
+        "id": "Procedure",
+        "path": "Procedure",
+        "short": "Procedure Profile",
+        "definition": "The Procedure Profile is based upon the core FHIR Procedure Resource"
+      },
+      {
+        "id": "Procedure.partOf",
+        "path": "Procedure.partOf",
+        "type":  [
+          {
+            "code": "Reference",
+            "targetProfile":  [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-procedure",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-observation",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-medicationadministration"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Procedure.status",
+        "path": "Procedure.status",
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.code",
+        "path": "Procedure.code",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "example",
+          "description": "Represents the Operating Room procedures performed by a Provider",
+          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/interventioncodesubsetoperatingroomprocedure"
+        }
+      },
+      {
+        "id": "Procedure.subject",
+        "path": "Procedure.subject",
+        "definition": "The person on which the procedure was performed.",
+        "min": 1,
+        "type":  [
+          {
+            "code": "Reference",
+            "targetProfile":  [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.encounter",
+        "path": "Procedure.encounter",
+        "type":  [
+          {
+            "code": "Reference",
+            "targetProfile":  [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-encounter"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Procedure.performed[x]",
+        "path": "Procedure.performed[x]",
+        "min": 1,
+        "type":  [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.recorder",
+        "path": "Procedure.recorder",
+        "type":  [
+          {
+            "code": "Reference",
+            "targetProfile":  [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitioner",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitionerrole"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Procedure.asserter",
+        "path": "Procedure.asserter",
+        "type":  [
+          {
+            "code": "Reference",
+            "targetProfile":  [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitioner",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitionerRole"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Procedure.performer.actor",
+        "path": "Procedure.performer.actor",
+        "type":  [
+          {
+            "code": "Reference",
+            "targetProfile":  [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitioner",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitionerRole",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-organization",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-device"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Procedure.location",
+        "path": "Procedure.location",
+        "type":  [
+          {
+            "code": "Reference",
+            "targetProfile":  [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-location"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Procedure.reasonReference",
+        "path": "Procedure.reasonReference",
+        "type":  [
+          {
+            "code": "Reference",
+            "targetProfile":  [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-condition",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-observation",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-procedure",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-diagnosticreport",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-documentreference"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Procedure.bodySite",
+        "path": "Procedure.bodySite",
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.complicationDetail",
+        "path": "Procedure.complicationDetail",
+        "type":  [
+          {
+            "code": "Reference",
+            "targetProfile":  [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-condition"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Procedure.usedReference",
+        "path": "Procedure.usedReference",
+        "type":  [
+          {
+            "code": "Reference",
+            "targetProfile":  [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-device",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-medication",
+              "http://hl7.org/fhir/StructureDefinition/Substance"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

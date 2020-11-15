@@ -1,0 +1,20 @@
+{
+    "resourceType": "ValueSet",
+    "id": "prescriptionmedicinalproduct",
+    "url": "http://hl7.org/fhir/ca/baseline/ValueSet/prescriptionmedicinalproduct",
+    "version": "4.0.0",
+    "name": "PrescriptionMedicinalProduct",
+    "title": "Prescription Medicinal Product",
+    "status": "draft",
+    "publisher": "Canada Health Infoway",
+    "description": "The list of commonly used Medicinal products used for prescribing and dispensing in Canada. [Published here by Canada Health Infoway](https://tgateway.infoway-inforoute.ca/singlesubset.html?id=2.16.840.1.113883.2.20.3.406).",
+    "compose": {
+        "include": [
+            {
+                "valueSet": [
+                    "https://fhir.infoway-inforoute.ca/ValueSet/prescriptionmedicinalproduct"
+                ]
+            }
+        ]
+    }
+}

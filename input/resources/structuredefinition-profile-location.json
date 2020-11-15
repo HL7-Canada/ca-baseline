@@ -1,0 +1,64 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-location",
+  "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-location",
+  "version": "0.0.1",
+  "name": "LocationProfile",
+  "title": "Location Profile",
+  "status": "draft",
+  "date": "2020-03-16",
+  "publisher": "Canada Health Infoway",
+  "description": "Proposed constraints and extensions on the Location resource",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "CA",
+          "display": "Canada"
+        }
+      ]
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Location",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Location",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Location.extension:servicelanguage",
+        "path": "Location.extension",
+        "sliceName": "communication",
+        "short": "Languages used to provide services",
+        "definition": "Indentifies languages that services are provided in at the location.",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-servicelanguage"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "mustSupport": false
+      }, {
+        "id": "Location.identifier",
+        "path": "Location.identifier",
+        "mustSupport": true
+      }, {
+        "id": "Location.name",
+        "path": "Location.name",
+        "mustSupport": true
+      }, {
+        "id": "Location.telecom",
+        "path": "Location.telecom",
+        "mustSupport": true
+      }, {
+        "id": "Location.address",
+        "path": "Location.address"
+      }
+    ]
+  }
+}

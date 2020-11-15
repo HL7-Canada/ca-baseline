@@ -1,0 +1,13 @@
+{
+ "package-id" : "hl7.fhir.ca.baseline",
+ "title" : "Canadian Core",
+ "canonical" : "http://hl7.org/fhir/ca/baseline",
+ "introduction" : "An initial proposal for a Canadian core set of profiles, aligned with US Core",
+ "list" : [{
+  "version" : "current",
+  "desc" : "Continuous Integration Build (latest in version control)",
+  "path" : "http://build.fhir.org/ig/scratch-fhir-profiles/ca-baseline",
+  "status" : "ci-build",
+  "current" : true
+ }]
+}

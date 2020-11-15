@@ -1,0 +1,76 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "profile-organizationaffiliation",
+    "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-organizationaffiliation",
+    "version": "0.0.0",
+    "name": "OrganizationAffiliationProfile",
+    "title": "OrganizationAffiliation Profile",
+    "status": "draft",
+    "date": "2019-04-05",
+    "publisher": "TBD",
+    "description": "Proposed constraints and extensions on the OrganizationAffiliation Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
+    "kind": "resource",
+    "abstract": false,
+    "type": "OrganizationAffiliation",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/OrganizationAffiliation",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "OrganizationAffiliation",
+                "path": "OrganizationAffiliation",
+                "short": "OrganizationAffiliation Profile",
+                "definition": "The OrganizationAffiliation Profile is based upon the core FHIR OrganizationAffiliation Resource"
+            },
+            {
+                "id": "OrganizationAffiliation.period",
+                "path": "OrganizationAffiliation.period"
+            },
+            {
+                "id": "OrganizationAffiliation.organization",
+                "path": "OrganizationAffiliation.organization",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-organization"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "OrganizationAffiliation.participatingOrganization",
+                "path": "OrganizationAffiliation.participatingOrganization",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-organization"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "OrganizationAffiliation.code",
+                "path": "OrganizationAffiliation.code",
+                "binding": {
+                    "strength": "example",
+                    "description": "The role the participating organization providing services to the primary organization.",
+                    "valueSet": "http://hl7.org/fhir/ValueSet/organization-role"
+                }
+            },
+            {
+                "id": "OrganizationAffiliation.location",
+                "path": "OrganizationAffiliation.location",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-location"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

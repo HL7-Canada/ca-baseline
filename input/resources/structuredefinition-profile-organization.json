@@ -1,0 +1,93 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-organization",
+  "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-organization",
+  "version": "0.0.1",
+  "name": "OrganizationProfile",
+  "title": "Organization Profile",
+  "status": "draft",
+  "date": "2020-03-16",
+  "publisher": "Canada Health Infoway",
+  "description": "Proposed constraints and extensions on the Organization resource",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "CA",
+          "display": "Canada"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Organization",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Organization",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Organization.extension:servicelanguage",
+        "path": "Organization.extension",
+        "sliceName": "communication",
+        "short" : "Languages used to provide services",
+        "definition" : "Indentifies languages that services are provided in at the organization.",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-servicelanguage"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "mustSupport": false
+      }, {
+        "id": "Organization.identifier",
+        "path": "Organization.identifier",
+        "mustSupport": true
+      }, {
+        "id": "Organization.name",
+        "path": "Organization.name",
+        "mustSupport": true
+      }, {
+        "id": "Organization.telecom",
+        "path": "Organization.telecom",
+        "mustSupport": true
+      }, {
+        "id": "Organization.address",
+        "path": "Organization.address"
+      }, {
+        "id": "Organization.address.extension",
+        "path": "Organization.address.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        }
+      }, {
+        "id": "Organization.address.extension:preferred",
+        "path": "Organization.address.extension",
+        "sliceName": "preferred",
+        "short": "HL7 Preferred Address Flag extension",
+        "definition": "Flag denoting whether parent address item is preferred",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/iso21090-preferred"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

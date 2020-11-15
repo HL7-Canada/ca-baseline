@@ -1,0 +1,119 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "profile-immunizationrecommendation",
+    "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-immunizationrecommendation",
+    "version": "0.0.1",
+    "name": "ImmunizationRecommendationProfile",
+    "title": "ImmunizationRecommendation Profile",
+    "status": "draft",
+    "date": "2020-03-26",
+    "publisher": "TBD",
+    "description": "Proposed constraints and extensions on the ImmunizationRecommendation resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
+    "kind": "resource",
+    "abstract": false,
+    "type": "ImmunizationRecommendation",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation",
+    "derivation": "constraint",
+    "differential": {
+      "element": [
+        {
+          "id": "ImmunizationRecommendation",
+          "path": "ImmunizationRecommendation",
+          "short": "ImmunizationRecommendation Profile",
+          "definition": "The ImmunizationRecommendation Profile is based upon the core FHIR ImmunizationRecommendation Resource"
+        },
+        {
+            "id": "ImmunizationRecommendation.patient",
+            "path": "ImmunizationRecommendation.patient",
+            "type": [
+              {
+                "code": "Reference",
+                "targetProfile": [
+                  "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient"
+                ]
+              }
+            ],
+            "mustSupport": true
+          },
+          {
+            "id": "ImmunizationRecommendation.date",
+            "path": "ImmunizationRecommendation.date",
+            "mustSupport": true
+          },
+          {
+            "id": "ImmunizationRecommendation.authority",
+            "path": "ImmunizationRecommendation.authority",
+            "type": [
+              {
+                "code": "Reference",
+                "targetProfile": [
+                  "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-organization"
+                ]
+              }
+            ]
+          },
+          {
+          "id": "ImmunizationRecommendation.recommendation",
+          "path": "ImmunizationRecommendation.recommendation",
+          "mustSupport": true
+        },
+        {
+          "id": "ImmunizationRecommendation.recommendation.vaccineCode",
+          "path": "ImmunizationRecommendation.recommendation.vaccineCode",
+          "comment": "CA Core Usage Notes: the assumption is that ImmunizationRecommendation (forecast) is always on the level of a generic vaccine code and/or target disease. TBD: to confirm that there is no use case when an ImmunizationRecommendation needs to be on the vaccine tradename level (e.g. there is no sitation when a 2nd dose has to be of the same tradename as the 1st dose).",
+          "mustSupport": true,
+          "binding": {
+            "strength": "preferred",
+            "valueSet": "https://cvc.canimmunize.ca/v3/ValueSet/Generic"
+          }
+        },
+        {
+          "id": "ImmunizationRecommendation.recommendation.targetDisease",
+          "path": "ImmunizationRecommendation.recommendation.targetDisease",
+          "mustSupport": true,
+          "binding": {
+            "strength": "preferred",
+            "valueSet": "https://cvc.canimmunize.ca/v3/ValueSet/Disease"
+          }
+        },
+        {
+          "id": "ImmunizationRecommendation.recommendation.forecastStatus",
+          "path": "ImmunizationRecommendation.recommendation.forecastStatus",
+          "mustSupport": true,
+          "binding": {
+            "strength": "preferred",
+            "valueSet": "https://cvc.canimmunize.ca/v3/ValueSet/ForecastStatus"
+          }
+        },
+        {
+          "id": "ImmunizationRecommendation.recommendation.dateCriterion",
+          "path": "ImmunizationRecommendation.recommendation.dateCriterion",
+          "mustSupport": true
+        },
+        {
+          "id": "ImmunizationRecommendation.recommendation.dateCriterion.code",
+          "path": "ImmunizationRecommendation.recommendation.dateCriterion.code",
+          "mustSupport": true
+        },
+        {
+          "id": "ImmunizationRecommendation.recommendation.dateCriterion.value",
+          "path": "ImmunizationRecommendation.recommendation.dateCriterion.value",
+          "mustSupport": true
+        },
+        {
+          "id": "ImmunizationRecommendation.recommendation.supportingImmunization",
+          "path": "ImmunizationRecommendation.recommendation.supportingImmunization",
+          "type": [
+            {
+              "code": "Reference",
+              "targetProfile": [
+                "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-immunization",
+                "http://hl7.org/fhir/StructureDefinition/ImmunizationEvaluation"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+  

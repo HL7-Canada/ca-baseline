@@ -1,0 +1,77 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-rolestatus",
+  "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-rolestatus",
+  "version": "0.1.0",
+  "name": "ExtensionRoleStatus",
+  "title": "Extension: RoleStatus",
+  "status": "draft",
+  "date": "2020-03-09",
+  "publisher": "Canada Health Infoway",
+  "description": "This extension applies to the PractitionerRole resource and indicates the possible states of the Role, as defined by the HL7v3 Role class state machine.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "CA"
+        }
+      ]
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "PractitionerRole"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "RoleStatus extension",
+        "definition": "Represents the status of the Role, as defined by the HL7v3 Role class state machine.",
+        "max": "1",
+        "isModifier": true,
+        "isModifierReason": "This extension is labeled as a modifier because the status code may provide additional knowledge about the PractitionerRole resource that modifies its meaning or interpretation",
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "RoleStatus",
+            "comment": "Codes representing the defined possible states of the Role"
+          }
+        ]
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "min": 1,
+        "max": "1",
+        "fixedUri": "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-rolestatus"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "normal | active | cancelled | pending | suspended | terminated | nullified",
+        "definition": "Code representing the defined possible states of a practitioner",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v3-RoleStatus"
+        }
+      }
+    ]
+  }
+}

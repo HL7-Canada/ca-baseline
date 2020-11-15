@@ -1,0 +1,7 @@
+*.dropbox
+publisher.jar
+.DS_Store
+desktop.ini
+output
+temp
+template

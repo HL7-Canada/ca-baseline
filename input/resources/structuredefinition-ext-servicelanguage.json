@@ -1,0 +1,80 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-servicelanguage",
+  "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-servicelanguage",
+  "version": "0.0.0",
+  "name": "ExtensionServiceLanguage",
+  "title": "Extension: ServiceLanguage",
+  "status": "draft",
+  "date": "2019-03-08",
+  "publisher": "TBD",
+  "description": "Indentifies languages that that services are provided in.",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Organization"
+    },
+    {
+      "type": "element",
+      "expression": "Location"
+    },
+    {
+      "type": "element",
+      "expression": "HealthcareService"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Languages used to provide services",
+        "definition": "Indentifies languages that services are provided in at the location.",
+        "isModifier": false
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-servicelanguage"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "closed"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Extension.value[x]:valueCodeableConcept",
+        "path": "Extension.value[x]",
+        "sliceName": "valueCodeableConcept",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "description": "Common Languages",
+          "valueSet": "http://hl7.org/fhir/ValueSet/languages"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-practitionerrole",
+  "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitionerrole",
+  "version": "0.0.1",
+  "name": "PractitionerRoleProfile",
+  "title": "PractitionerRole Profile (General)",
+  "status": "draft",
+  "date": "2020-03-09",
+  "publisher": "Canada Health Infoway",
+  "description": "Proposed constraints and extensions on the PractitionerRole Resource for general use.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "CA",
+          "display": "Canada"
+        }
+      ]
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "PractitionerRole",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "PractitionerRole",
+        "path": "PractitionerRole",
+        "short": "PractitionerRole Profile",
+        "definition": "The PractitionerRole Profile is based upon the core FHIR PractitionerRole Resource"
+      },
+      {
+        "id": "PractitionerRole.identifier",
+        "path": "PractitionerRole.identifier",
+        "mustSupport": true
+      },
+      {
+        "id": "PractitionerRole.identifier.system",
+        "path": "PractitionerRole.identifier.system",
+        "min": 1
+      },
+      {
+        "id": "PractitionerRole.identifier.value",
+        "path": "PractitionerRole.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "PractitionerRole.practitioner",
+        "path": "PractitionerRole.practitioner",
+        "short": "Practitioner that is able to provide the defined services for the organization.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitioner"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "PractitionerRole.code",
+        "path": "PractitionerRole.code",
+        "short": "HealthcareProviderRoleType",
+        "comment": "The binding strength of this element is [Preferred](https://www.hl7.org/fhir/terminologies.html#strength), meaning that codes are encouraged to draw from the HealthcareProviderRoleType code system for interoperability purposes but are not required to do so to be considered conformant.",
+        "binding": {
+          "strength": "preferred",
+          "description": "A role type that is used to categorize an entity that delivers health care in an expected and professional manner to an entity in need of health care services. Examples: Registered Nurse, Chiropractor, Physician, Custodial Care Clinic.",
+          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/healthcareproviderroletype"
+        }
+      },
+      {
+        "id": "PractitionerRole.specialty",
+        "path": "PractitionerRole.specialty",
+        "short": "PractitionerSpecialty",
+        "comment": "The binding strength of this element is [Preferred](https://www.hl7.org/fhir/terminologies.html#strength), meaning that codes are encouraged to draw from the PractitionerSpecialty code system for interoperability purposes but are not required to do so to be considered conformant.",
+        "mustSupport": true,
+        "binding": {
+          "strength": "preferred",
+          "description": "Defines the clinical, medical, surgical or other healthcare-related service specialty of a practitioner who interacts, treats or provides such services to or for a patient.",
+          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/practitionerspecialty"
+        }
+      },
+      {
+        "id": "PractitionerRole.telecom",
+        "path": "PractitionerRole.telecom",
+        "mustSupport": true
+      },
+      {
+        "id": "PractitionerRole.telecom.system",
+        "path": "PractitionerRole.telecom.system",
+        "min": 1
+      },
+      {
+        "id": "PractitionerRole.telecom.value",
+        "path": "PractitionerRole.telecom.value",
+        "min": 1
+      }
+    ]
+  }
+}

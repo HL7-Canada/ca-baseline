@@ -1,0 +1,372 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-patient",
+  "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient",
+  "version": "0.1.1",
+  "name": "PatientProfile",
+  "title": "Patient Profile",
+  "status": "draft",
+  "date": "2020-09-29",
+  "publisher": "Canada Health Infoway",
+  "description": "Proposed constraints and extensions on the Patient Resource",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Patient",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Patient",
+        "path": "Patient",
+        "short": "Patient Profile",
+        "definition": "The Patient Profile is based upon the core FHIR Patient Resource",
+        "mustSupport": true,
+        "isModifier": false
+      }, {
+        "id": "Patient.extension",
+        "path": "Patient.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        }
+      }, {
+        "id": "Patient.extension:aboriginalidentitygroup",
+        "path": "Patient.extension",
+        "sliceName": "aboriginalidentitygroup",
+        "short": "Extension: Aboriginal Identity Group",
+        "definition": "A code classifying the person's aboriginal identity",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-aboriginalidentitygroup"
+            ]
+          }
+        ],
+        "mustSupport": false
+      }, {
+        "id": "Patient.extension:aboriginalidentityindicator",
+        "path": "Patient.extension",
+        "sliceName": "aboriginalidentityindicator",
+        "short": "Extension: Aboriginal Identity Indicator",
+        "definition": "A code classifying the person's self identity as an aboriginal person",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-aboriginalidentityindicator"
+            ]
+          }
+        ],
+        "mustSupport": false
+      }, {
+        "id": "Patient.extension:birthsex",
+        "path": "Patient.extension",
+        "sliceName": "birthsex",
+        "short": "Extension: Sex at Birth",
+        "definition": "A code classifying the person's sex assigned at birth  as specified by the [TODO: assigning authority]. This extension aligns with the C-CDA Birth Sex Observation (LOINC 76689-9)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-patientbirthsex"
+            ]
+          }
+        ],
+        "mustSupport": false
+      }, {
+        "id": "Patient.extension:ethnicity",
+        "path": "Patient.extension",
+        "sliceName": "ethnicity",
+        "short": "Extension: ethnicity extension",
+        "definition": "A code classifying the person's ethnic group or ethnicity as the category of people who identify with each other, usually on the basis of a presumed common genealogy or ancestry or on other similarities.",
+        "comment": "This attribute is based on the belief of the person or the person reporting the attribute, not on any formal analysis of genetic, geneological or historical relationships as these would need to be captured as observations.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-ethnicity"
+            ]
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "HL7v2",
+            "map": "PID.22 [Ethnic Group]",
+            "comment": "This field further defines the patient's ancestry.  Refer to User-defined Table 0189 - Ethnic Group in Chapter 2C, Code Tables, for suggested values."
+          }, {
+            "identity": "rim",
+            "map": "Person.ethnicGroupCode",
+            "comment": "A code classifying the person into a named category of humans sharing a common real or presumed heritage"
+          }, {
+            "identity": "CDA",
+            "map": "/ClinicalDocument/recordTarget/patientRole/patient/sdtc:ethnicGroupCode",
+            "comment": "This CDA R2 SDTC ethnicGroupCode extension is used to record additional ethnicity groups for the recordTarget or subjectPerson"
+          }
+        ]
+      }, {
+        "id": "Patient.identifier",
+        "path": "Patient.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "type"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 0
+      }, {
+        "id": "Patient.identifier.type",
+        "path": "Patient.identifier.type",
+        "min": 1,
+        "example": [
+          {
+            "label": "Pattern",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR"
+                }
+              ]
+            }
+          }
+        ],
+        "mustSupport": true
+      }, {
+        "id": "Patient.identifier.system",
+        "path": "Patient.identifier.system",
+        "min": 1,
+        "mustSupport": true,
+        "isModifier": false
+      }, {
+        "id": "Patient.identifier.value",
+        "path": "Patient.identifier.value",
+        "short": "The value that is unique within the system.",
+        "min": 1,
+        "mustSupport": true,
+        "isModifier": false
+      }, {
+        "id": "Patient.identifier:PPN",
+        "path": "Patient.identifier",
+        "sliceName": "PPN",
+        "short": "Canada Passport Number",
+        "mustSupport": false
+      }, {
+        "id": "Patient.identifier:PPN.type",
+        "path": "Patient.identifier.type",
+        "short": "Passport number identifier type",
+        "min": 1,
+        "max": "1",
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+              "code": "PPN"
+            }
+          ]
+        }
+      }, {
+        "id": "Patient.identifier:PPN.system",
+        "path": "Patient.identifier.system",
+        "short": "A Canadian passport number Naming System from the Canadian URI Registry",
+        "min": 1,
+        "max": "1",
+        "fixedUri": "https://fhir.infoway-inforoute.ca/NamingSystem/ca-passport-number"
+      }, {
+        "id": "Patient.identifier:PPN.value",
+        "path": "Patient.identifier.value",
+        "short": "A Canadian passport number",
+        "min": 1,
+        "max": "1"
+      }, {
+        "id": "Patient.identifier:JPID",
+        "path": "Patient.identifier",
+        "sliceName": "JPID",
+        "short": "Jurisdictional Person Identification",
+        "definition": "Federal patient and person identifiers used by all jurisdictions across Canada",
+        "mustSupport": false
+      }, {
+        "id": "Patient.identifier:JPID.type",
+        "path": "Patient.identifier.type",
+        "short": "Jurisdictional Person Identification",
+        "min": 1,
+        "max": "1",
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+              "code": "JPID"
+            }
+          ]
+        }
+      }, {
+        "id": "Patient.identifier:JPID.system",
+        "path": "Patient.identifier.system",
+        "short": "Jurisdictional Person identification Naming System from the Canadian URI Registry",
+        "min": 1,
+        "max": "1"
+      }, {
+        "id": "Patient.identifier:JPID.value",
+        "path": "Patient.identifier.value",
+        "short": "Jurisdictional Person identification number",
+        "min": 1,
+        "max": "1"
+      }, {
+        "id": "Patient.identifier:JHN",
+        "path": "Patient.identifier",
+        "sliceName": "JHN",
+        "short": "Jurisdictional Health Number",
+        "definition": "Federal patient and person health numbers used by all jurisdictions across Canada"
+      }, {
+        "id": "Patient.identifier:JHN.extension",
+        "path": "Patient.identifier.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        }
+      }, {
+        "id": "Patient.identifier:JHN.extension:versionCode",
+        "path": "Patient.identifier.extension",
+        "sliceName": "versionCode",
+        "short": "Health Number Version Code",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-identifierversion"
+            ]
+          }
+        ]
+      }, {
+        "id": "Patient.identifier:JHN.type",
+        "path": "Patient.identifier.type",
+        "min": 1,
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+              "code": "JHN"
+            }
+          ]
+        },
+        "mustSupport": true
+      }, {
+        "id": "Patient.identifier:JHN.system",
+        "path": "Patient.identifier.system",
+        "short": "A Health Number Naming System from the Canadian URI Registry",
+        "min": 1
+      }, {
+        "id": "Patient.identifier:JHN.value",
+        "path": "Patient.identifier.value",
+        "min": 1
+      }, {
+        "id": "Patient.name",
+        "path": "Patient.name",
+        "min": 0,
+        "constraint": [
+          {
+            "key": "ca-baseline-name",
+            "severity": "error",
+            "human": "Patient.name.given  or Patient.name.family or both SHALL be present",
+            "expression": "family.exists() or given.exists()",
+            "xpath": "f:given or f:family"
+          }
+        ],
+        "mustSupport": true
+      }, {
+        "id": "Patient.name.family",
+        "path": "Patient.name.family"
+      }, {
+        "id": "Patient.name.given",
+        "path": "Patient.name.given"
+      }, {
+        "id": "Patient.telecom",
+        "path": "Patient.telecom",
+        "mustSupport": true
+      }, {
+        "id": "Patient.telecom.system",
+        "path": "Patient.telecom.system",
+        "min": 1
+      }, {
+        "id": "Patient.telecom.value",
+        "path": "Patient.telecom.value",
+        "min": 1
+      }, {
+        "id": "Patient.birthDate",
+        "path": "Patient.birthDate",
+        "mustSupport": true
+      }, {
+        "id": "Patient.address",
+        "path": "Patient.address"
+      }, {
+        "id": "Patient.address.extension",
+        "path": "Patient.address.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        }
+      }, {
+        "id": "Patient.address.extension:preferred",
+        "path": "Patient.address.extension",
+        "sliceName": "preferred",
+        "short": "HL7 Preferred Address Flag extension",
+        "definition": "Flag denoting whether parent address item is preferred",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/iso21090-preferred"
+            ]
+          }
+        ]
+      }, {
+        "id": "Patient.address.extension:no-fixed-address",
+        "path": "Patient.address.extension",
+        "sliceName": "noFixedAddress",
+        "short": "No Fixed Address indicator",
+        "definition": "Flag indicating that there is an assertion that there is no fixed address",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-nofixedaddress"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

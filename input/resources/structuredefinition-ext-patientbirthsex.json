@@ -1,0 +1,102 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-patientbirthsex",
+  "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-patientbirthsex",
+  "version": "0.1.0",
+  "name": "ExtensionBirthSex",
+  "title": "Extension: Birth Sex",
+  "status": "draft",
+  "date": "2019-12-10",
+  "publisher": "TBD",
+  "description": "A code classifying the person's sex assigned at birth. Replicates the birthsex extension in US-Core-R4 for interoperability.",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Patient"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "definition": "A code classifying the person's sex assigned at birth. Replicates the birthsex extension in US-Core-R4 for interoperability.",
+        "comment": "The codes required are intended to present birth sex (i.e., the sex recorded on the patient’s birth certificate) and not gender identity or reassigned sex.",
+        "max": "1",
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "player[classCode=PSN|ANM and determinerCode=INSTANCE]/administrativeGender"
+          },
+          {
+            "identity": "iso11179",
+            "map": ".patient.administrativeGenderCode"
+          }
+        ]
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-patientbirthsex",
+        "mustSupport": true
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "closed"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ]
+      },
+      {
+        "id": "Extension.value[x]:valueCoding",
+        "path": "Extension.value[x]",
+        "sliceName": "valueCoding",
+        "min": 1,
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "example",
+          "description": "Code for sex assigned at birth",
+          "valueSet": "http://hl7.org/fhir/ca/baseline/ValueSet/birthsex"
+        }
+      },
+      {
+        "id": "Extension.value[x]:valueCoding.system",
+        "path": "Extension.value[x].system",
+        "min": 1
+      },
+      {
+        "id": "Extension.value[x]:valueCoding.code",
+        "path": "Extension.value[x].code",
+        "min": 1
+      },
+      {
+        "id": "Extension.value[x]:valueCoding.display",
+        "path": "Extension.value[x].display",
+        "short": "Optional description of the sex at birth code",
+        "definition": "Plain text representation of the sex at birth concept"
+      }
+    ]
+  }
+}

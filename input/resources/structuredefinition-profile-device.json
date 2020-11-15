@@ -1,0 +1,67 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-device",
+  "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-device",
+  "version": "0.0.0",
+  "name": "DeviceProfile",
+  "title": "Device Profile",
+  "status": "draft",
+  "date": "2019-03-31",
+  "publisher": "TBD",
+  "description": "Proposed constraints and extensions on the Device Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Device",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Device",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Device",
+        "path": "Device",
+        "short": "Device Profile",
+        "definition": "The Device Profile is based upon the core FHIR Device Resource"
+      },
+      {
+        "id": "Device.udiCarrier",
+        "path": "Device.udiCarrier",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Device.udiCarrier.carrierAIDC",
+        "path": "Device.udiCarrier.carrierAIDC",
+        "mustSupport": true
+      },
+      {
+        "id": "Device.udiCarrier.carrierHRF",
+        "path": "Device.udiCarrier.carrierHRF",
+        "mustSupport": true
+      },
+      {
+        "id": "Device.type",
+        "path": "Device.type",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "example",
+          "valueSet": "http://hl7.org/fhir/ValueSet/device-kind"
+        }
+      },
+      {
+        "id": "Device.patient",
+        "path": "Device.patient",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

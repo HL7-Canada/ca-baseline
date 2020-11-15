@@ -1,0 +1,146 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-documentreference",
+  "version": "0.0.2",
+  "name": "DocumentReferenceProfile",
+  "title": "DocumentReference Profile for metadata about the document",
+  "status": "draft",
+  "date": "2020-10-21",
+  "publisher": "Canada Health Infoway",
+  "description": "Proposed constraints on the DocumentReference resource for the minimal set of data required to reference to a document of any kind for any purpose.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "CA",
+          "display": "Canada"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "DocumentReference",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DocumentReference",
+        "path": "DocumentReference",
+        "short": "DocumentReference Profile",
+        "definition": "The DocumentReference Profile is based upon the core FHIR DocumentReference resource and created to define the minimal set of the document metadata required to discoverer and manage any kind of documents."
+      }, {
+        "id": "DocumentReference.masterIdentifier",
+        "path": "DocumentReference.masterIdentifier",
+        "mustSupport": true
+      }, {
+        "id": "DocumentReference.type",
+        "path": "DocumentReference.type",
+        "mustSupport": true
+      }, {
+        "id": "DocumentReference.category",
+        "path": "DocumentReference.category",
+        "mustSupport": true
+      }, {
+        "id": "DocumentReference.subject",
+        "path": "DocumentReference.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient", "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitioner", "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-device"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }, {
+        "id": "DocumentReference.author",
+        "path": "DocumentReference.author",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitioner", "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitionerrole", "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-organization", "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-device", "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }, {
+        "id": "DocumentReference.authenticator",
+        "path": "DocumentReference.authenticator",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitioner", "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitionerrole", "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-organization"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }, {
+        "id": "DocumentReference.custodian",
+        "path": "DocumentReference.custodian",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-organization"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }, {
+        "id": "DocumentReference.content.attachment",
+        "path": "DocumentReference.content.attachment",
+        "constraint": [
+          {
+            "key": "ca-baseline-documentreference-1",
+            "severity": "error",
+            "human": "DocumentReference.content.attachment.url or DocumentReference.content.attachment.data or both SHALL be present.",
+            "expression": "url.exists() or data.exists()",
+            "xpath": "f:url or f:content"
+          }
+        ],
+        "mustSupport": true
+      }, {
+        "id": "DocumentReference.context.encounter",
+        "path": "DocumentReference.context.encounter",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-encounter"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }, {
+        "id": "DocumentReference.context.practiceSetting",
+        "path": "DocumentReference.context.practiceSetting",
+        "short": "PractitionerSpecialty",
+        "comment": "The binding strength of this element is [Preferred](https://www.hl7.org/fhir/terminologies.html#strength), meaning that codes are encouraged to draw from the PractitionerSpecialty code system for interoperability purposes but are not required to do so to be considered conformant.",
+        "mustSupport": true,
+        "binding": {
+          "strength": "preferred",
+          "description": "Defines the clinical, medical, surgical or other healthcare-related service specialty of a practitioner who interacts, treats or provides such services to or for a patient.",
+          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/practitionerspecialty"
+        }
+      }, {
+        "id": "DocumentReference.context.sourcePatientInfo",
+        "path": "DocumentReference.context.sourcePatientInfo",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  }
+}

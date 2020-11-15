@@ -1,0 +1,38 @@
+{
+    "resourceType": "ValueSet",
+    "id": "birthsex",
+    "url": "http://hl7.org/fhir/ca/baseline/ValueSet/birthsex",
+    "version": "4.0.0",
+    "name": "BirthSex",
+    "title": "Birth Sex",
+    "status": "draft",
+    "date": "2019-03-08",
+    "publisher": "TBD",
+    "description": "Codes for documenting sex at birth. (Replicates the birthsex ValueSet in US-Core-R4 for interoperability.)",
+    "compose": {
+        "include": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender",
+                "concept": [
+                    {
+                        "code": "F",
+                        "display": "Female"
+                    },
+                    {
+                        "code": "M",
+                        "display": "Male"
+                    }
+                ]
+            },
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+                "concept": [
+                    {
+                        "code": "UNK",
+                        "display": "Unknown"
+                    }
+                ]
+            }
+        ]
+    }
+}
