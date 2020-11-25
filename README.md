@@ -15,11 +15,9 @@ Existing Canadian and International implementation guides (e.g., Canadian eRefer
 
 This guide is a **living document** that includes notes and profiles that continue to evolve as they undergo a working group review process in the Summer/Fall of 2020 before being exposed to the larger FHIR community for further maturation through feedback and testing.
 
-More context on the profiling, governance and review process can be found on the [**here**](developmentprocess.html).
-
 For information on where we are at in the working group review follow our progress in the [Infocentral FHIR Implementation Working Group page](https://infocentral.infoway-inforoute.ca/en/collaboration/wg/fhir-implementations)
 
-The [GitHub repository for this CI build be found here](https://github.com/HL7-Canada/ca-baseline).
+The [CI build for this guide can be found here](https://build.fhir.org/ig/HL7-Canada/ca-baseline/index.html).
 
 ### Principles
 
@@ -42,14 +40,6 @@ The international FHIR community is evolving towards further differentiation bet
 **National Baseline Implementation Guides** (e.g., Canadian Baseline) provide awareness of localized concepts and apply minimal cardinality constraints and preferred binding strengths only where appropriate and when expected given national context. In some scenarios, more restrictive constraints may be found on elements that have been [sliced](https://www.hl7.org/fhir/profiling.html#slicing) to support meaningful conformance when standard heterogenous concepts are expected (ex: fixed values for specific systems the slice applies to). Must Support flags are utilized to identify elements that are expected to be supported broadly regardless of use case.
 
 **National Core Implementation Guides** (e.g., US Core, UK Core) define a set of conformance requirements that enforce alignment to localized concepts through cardinality constraints, must support flags, and required/extensible binding strengths. Conformance to these profiles is tied to regulatory and/or contractual agreements in order to necessitate adoption to these more prescriptive specifications.
-
-### CA Baseline Profiles
-
-The list of CA Baseline Profiles can be found [**here**](https://build.fhir.org/ig/HL7-Canada/ca-baseline/allartifacts.html).
-
-Each profile defines the minimum mandatory elements, extensions and terminology requirements that MUST be present. For each profile, requirements and guidance are given in a simple narrative summary. A formal hierarchical table that presents a logical view of the content in both a differential and snapshot view is also provided along with references to appropriate terminologies and examples.
-
-Guidance, Capability Statements, and other have not yet been reviewed and added.
 
 -----
 Contact: [FHIR-CA-Baseline@infoway-inforoute.ca](mailto:FHIR-CA-Baseline@infoway-inforoute.ca)
