@@ -3,7 +3,7 @@
   "id": "profile-practitionerrole-registry",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitionerrole-registry",
   "version": "0.0.1",
-  "name": "PractitionerRoleProfile-Registry",
+  "name": "PractitionerRoleProfileRegistry",
   "title": "PractitionerRole Profile (Provider Registry)",
   "status": "draft",
   "date": "2020-03-09",

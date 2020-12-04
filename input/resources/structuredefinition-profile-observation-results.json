@@ -3,7 +3,7 @@
   "id": "profile-observation-results",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-observation-results",
   "version": "0.2.2",
-  "name": "ObservationProfile (Laboratory Results)",
+  "name": "ObservationProfileLaboratory",
   "title": "Observation Profile (Laboratory Results)",
   "status": "draft",
   "date": "2020-11-02",
