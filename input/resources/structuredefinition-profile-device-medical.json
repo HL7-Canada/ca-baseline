@@ -1,0 +1,173 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-device-medical",
+  "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-device-medical",
+  "version": "0.1.0",
+  "name": "DeviceProfileMedical",
+  "title": "Device Profile (Medical and Non-medical)",
+  "status": "draft",
+  "date": "2020-12-03",
+  "publisher": "HL7 Canada",
+  "description": "Proposed constraints on the Device resource for the minimal set of data to query and retrieve a medical or non-medical device.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "CA",
+          "display": "Canada"
+        }
+      ]
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Device",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Device",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Device",
+        "path": "Device",
+        "short": "Device Profile",
+        "definition": "The Device Profile is based upon the core FHIR Device Resource"
+      }, {
+        "id": "Device.identifier",
+        "path": "Device.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      }, {
+        "id": "Device.identifier.type",
+        "path": "Device.identifier.type",
+        "mustSupport": true
+      }, {
+        "id": "Device.identifier.system",
+        "path": "Device.identifier.system",
+        "mustSupport": true
+      }, {
+        "id": "Device.identifier.value",
+        "path": "Device.identifier.value",
+        "short": "The value that is unique within the system.",
+        "mustSupport": true
+      }, {
+        "id": "Device.identifier:EUI-64",
+        "path": "Device.identifier",
+        "sliceName": "EUI-64",
+        "short": "IEEE 64-bit Extended Unique Identifier (EUI-64)",
+        "max": "1"
+      }, {
+        "id": "Device.identifier:EUI-64.system",
+        "path": "Device.identifier.system",
+        "short": "EUI-64 system identifier",
+        "min": 1,
+        "fixedUri": "urn:oid:1.2.840.10004.1.1.1.0.0.1.0.0.1.2680"
+      }, {
+        "id": "Device.identifier:EUI-64.value",
+        "path": "Device.identifier.value",
+        "min": 1
+      }, {
+        "id": "Device.identifier:EUI-48",
+        "path": "Device.identifier",
+        "sliceName": "EUI-48",
+        "short": "MAC Transport address identifier (EUI-48)",
+        "max": "1"
+      }, {
+        "id": "Device.identifier:EUI-48.system",
+        "path": "Device.identifier.system",
+        "short": "EUI-48 system identifier",
+        "min": 1,
+        "fixedUri": "http://hl7.org/fhir/sid/eui-48"
+      }, {
+        "id": "Device.identifier:EUI-48.value",
+        "path": "Device.identifier.value",
+        "min": 1
+      }, {
+        "id": "Device.udiCarrier",
+        "path": "Device.udiCarrier",
+        "mustSupport": true
+      }, {
+        "id": "Device.udiCarrier.deviceIdentifier",
+        "path": "Device.udiCarrier.deviceIdentifier",
+        "mustSupport": true
+      }, {
+        "id": "Device.udiCarrier.carrierAIDC",
+        "path": "Device.udiCarrier.carrierAIDC",
+        "mustSupport": true
+      }, {
+        "id": "Device.udiCarrier.carrierHRF",
+        "path": "Device.udiCarrier.carrierHRF",
+        "mustSupport": true
+      }, {
+        "id": "Device.distinctIdentifier",
+        "path": "Device.distinctIdentifier",
+        "mustSupport": true
+      }, {
+        "id": "Device.manufacturer",
+        "path": "Device.manufacturer",
+        "mustSupport": true
+      }, {
+        "id": "Device.manufactureDate",
+        "path": "Device.manufactureDate",
+        "mustSupport": true
+      }, {
+        "id": "Device.expirationDate",
+        "path": "Device.expirationDate",
+        "mustSupport": true
+      }, {
+        "id": "Device.serialNumber",
+        "path": "Device.serialNumber",
+        "mustSupport": true
+      }, {
+        "id": "Device.deviceName",
+        "path": "Device.deviceName",
+        "mustSupport": true
+      }, {
+        "id": "Device.type",
+        "path": "Device.type",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "description": "Codes to identify medical devices",
+          "valueSet": "http://hl7.org/fhir/ValueSet/device-kind"
+        }
+      }, {
+        "id": "Device.version",
+        "path": "Device.version",
+        "mustSupport": true
+      }, {
+        "id": "Device.patient",
+        "path": "Device.patient",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }, {
+        "id": "Device.parent",
+        "path": "Device.parent",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-device-medical"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
