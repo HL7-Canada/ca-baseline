@@ -3,7 +3,7 @@
   "id": "profile-device",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-device",
   "version": "0.1.0",
-  "name": "DeviceProfileImplantable)",
+  "name": "DeviceProfile",
   "title": "Device Profile (Implantable)",
   "status": "draft",
   "date": "2020-12-03",
@@ -39,13 +39,13 @@
         "max": "1",
         "constraint": [
           {
-            "key": "ca-core-device-1",
+            "key": "ca-device-1",
             "severity": "error",
             "human": "Implantable medical devices that have UDI information SHALL represent this information in either carrierAIDC or carrierHRF.",
             "expression": "udiCarrier.empty() or (udiCarrier.carrierAIDC.exists() or udiCarrier.carrierHRF.exists())",
             "xpath": "not(f:udiCarrier) or (f:carrierHRF or f:carrierAIDC)"
           }, {
-            "key": "ca-core-device-2",
+            "key": "ca-device-2",
             "severity": "error",
             "human": "For implantable medical devices that have UDI information, at least one of the Production Identifiers (UDI-PI) SHALL be present.",
             "expression": "udiCarrier.empty() or (manufactureDate.exists() or expirationDate.exists() or lotNumber.exists() or serialNumber.exists() or distinctIdentifier.exists())",
@@ -122,6 +122,17 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient"
+            ]
+          }
+        ]
+      }, {
+        "id": "Device.parent",
+        "path": "Device.parent",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-device"
             ]
           }
         ]
