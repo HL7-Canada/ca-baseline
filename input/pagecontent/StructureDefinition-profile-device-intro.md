@@ -1,16 +1,39 @@
-<!--- Text entered into this file will appear at the top of the profiles page before the Formal Views of the profile content. -->
+# CA Baseline Device (Implantable) Profile
+This profile sets minimum expectations for the Device resource to record, search, and fetch UDI information associated with a patient's implantable device(s).
+It identifies which core elements SHALL be present in the resource when using this profile.
 
-This profile was generated from [HL7 StructureDefinition](https://www.hl7.org/fhir/device.profile.json) on 2019-03-28 and constrained during a review of US Core against Canadian sources.
+This profile defines core localization concepts for use in the Canadian context.
 
-**Note:**
-- USCoreR4 appears to use both
-  - a Universal Device Identifier (barcode) provided by one of multiple entities (e.g. [GS1 GDSN](https://www.gs1.org/standards/gdsn))
-  - Device Types from SNOMED CT
-- Canadian work appears to use both:
-  - codes from Canadian regulators (e.g. [Health Canada Device NTP](https://tgateway.infoway-inforoute.ca/hc.html?id=2.16.840.1.113883.2.20.6.1.DeviceNTP) or [OPINIONS](http://www.atlanticpharmaceutical.ca)
-  - Device Types from SNOMED CT
-- [GS1 Canada is active in the Medical Device space](https://www.gs1ca.org/CHPR2011/) whereas Infoway's Device NTP valueSet shows only a couple sample codes **<< what direction is this headed in?**
+## Mandatory Data Elements
+All elements or attributes within the FHIR specification have cardinality as part of their definition - a minimum number of required appearances and a maximum number of allowable appearances.
 
-Key differences from [USCoreR4 Device](https://build.fhir.org/ig/HL7/US-Core-R4/StructureDefinition-us-core-device.html):
-- included more udiCarrier elements for visibility
-- changed reference to profile-patient
+Most elements in the FHIR specification have a minimum cardinality of 0, so most elements are not required and subsequently they may be missing from a resource when it is exchanged between systems.
+
+**Required elements in the Device (Implantable) profile:**
+* A Unique Device Identifier (UDI) numeric or alphanumeric code (Device.deviceIdentifier):
+  * either as the Human Readable Form (HRF) string representation of the barcode (Device.carrierHRF)
+  * or the Automatic Identification and Data Capture representation (Device.carrierAIDC)
+* The type of the device (Device.type)
+* A patient (Device.patient)
+
+## Must Support Data Elements
+Some elements are marked as Must Support. This means that implementations generating, receiving, or otherwise using resources with Must Support elements SHALL provide support for those elements in some meaningful way (see Must Support definition).
+
+The following elements are marked as Must Support in the Device (Implantable) profile:
+
+**Must Support elements:**
+* Unique Device Identifier (UDI) Barcode string
+* distinct identification string
+* device manufacturer
+* expiration date/time of the device
+* lot number of manufacture
+* serial number assigned by the manufacturer
+* name of the device
+* type of the device
+* version of the device
+* patient
+
+## Usage Note
+The following are example usage scenarios for the implantable Device profile:
+* Query for a patient's implantable devices
+* Record or update a patient implantable device information
