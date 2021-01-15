@@ -15,26 +15,26 @@ All artifacts in this specification are assigned a “Maturity Level”, known a
 |---|---|---|---|
 | AllergyIntolerance Profile | 0 | Complete | Not Complete |
 | Condition Profile | 0 | Complete | Not Complete |
-| Device Profile (Implantable) | 0 | Not Complete | Not Complete |
-| Device Profile (Medical and Non-medical) | 0 | Not Complete | Not Complete |
-| DiagnosticReport Profile | 0 | Complete | Not Complete |
-| DiagnosticReport for Report and Note Profile | 0 | Not Complete | Not Complete |
+| Device Profile (Implantable) | 0 | Partial - Paused until SME available | Not Complete |
+| Device Profile (Medical and Non-medical) | 0 | Partial - Paused until SME available | Not Complete |
+| DiagnosticReport Profile | 0 | Complete, 2nd Review Round | Not Complete |
+| DiagnosticReport for Report and Note Profile | 0 | Complete | Not Complete |
 | Document Reference Profile | 0 | Complete | Not Complete |
 | Encounter Profile | 0 | Complete | Not Complete |
-| Goal Profile | 0 | Not Complete | Not Complete |
-| Immunization Profile | 0 | Complete | DHIR |
+| Goal Profile | 0 | Complete | Not Complete |
+| Immunization Profile | 0 | Complete | DHIR, IPS |
 | ImmunizationRecommendation Profile | 0 | Complete | DHIR |
 | Location Profile | 0 | Complete | Not Complete |
-| Medication Profile | 0 | Complete | Not Complete |
+| Medication Profile | 0 | Complete | PrescribeIT |
 | MedicationAdministration Profile | 0 | Complete | Not Complete |
-| MedicationDispense Profile | 0 | Complete | Not Complete |
-| MedicationRequest Profile | 0 | Complete | Not Complete |
+| MedicationDispense Profile | 0 | Complete | PrescribeIT |
+| MedicationRequest Profile | 0 | Complete | PrescribeIT |
 | MedicationStatement Profile | 0 | Complete | Not Complete |
 | Observation Profile (General) | 0 | Complete | Not Complete |
-| Observation Profile (Laboratory Results) | 0 | Complete | Not Complete |
-| Organization Profile | 0 | Complete | Not Complete |
+| Observation Profile (Laboratory Results) | 0 | Complete, 2nd Review Round | Not Complete |
+| Organization Profile | 0 | Complete | PrescribeIT |
 | Patient Profile | 0 | Complete | PCR, DHIR |
-| Practitioner Profile (General) | 0 | Complete | PPR, DHIR |
+| Practitioner Profile (General) | 0 | Complete | PPR, DHIR, PrescribeIT |
 | Practitioner Profile (Provider Registry) | 0 | Complete | PPR |
 | PractitionerRole Profile (General) | 0 | Complete | PPR |
 | PractitionerRole Profile (Provider Registry) | 0 | Complete | PPR |
