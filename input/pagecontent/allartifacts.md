@@ -25,7 +25,7 @@ All artifacts in this specification are assigned a “Maturity Level”, known a
 | Immunization Profile | 0 | Complete | DHIR, IPS |
 | ImmunizationRecommendation Profile | 0 | Complete | DHIR |
 | Location Profile | 0 | Complete | Not Complete |
-| Medication Profile | 0 | Complete | PrescribeIT |
+| Medication Profile | 0 | Complete | PrescribeIT, IPS |
 | MedicationAdministration Profile | 0 | Complete | Not Complete |
 | MedicationDispense Profile | 0 | Complete | PrescribeIT |
 | MedicationRequest Profile | 0 | Complete | PrescribeIT |
@@ -38,7 +38,7 @@ All artifacts in this specification are assigned a “Maturity Level”, known a
 | Practitioner Profile (Provider Registry) | 0 | Complete | PPR |
 | PractitionerRole Profile (General) | 0 | Complete | PPR |
 | PractitionerRole Profile (Provider Registry) | 0 | Complete | PPR |
-| Procedure Profile | 0 | Complete | Not Complete |
+| Procedure Profile | 0 | Complete | IPS |
 | SmokingStatus Profile | 0 | Not Complete | Not Complete |
 
 <!-- Todo: examples, capabilitystatement, TestScenario? -->
