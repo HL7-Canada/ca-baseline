@@ -17,21 +17,21 @@ All artifacts in this specification are assigned a “Maturity Level”, known a
 | Condition Profile | 0 | Complete | Ontario eReferral |
 | Device Profile (Implantable) | 0 | Partial - Paused until SME available | Not Complete |
 | Device Profile (Medical and Non-medical) | 0 | Partial - Paused until SME available | Not Complete |
-| DiagnosticReport Profile | 0 | Complete, 2nd Review Round | Not Complete |
+| DiagnosticReport Profile | 0 | Complete, 2nd Review Round | PHI Access |
 | DiagnosticReport for Report and Note Profile | 0 | Complete | Not Complete |
 | Document Reference Profile | 0 | Complete | Not Complete |
 | Encounter Profile | 0 | Complete | Not Complete |
 | Goal Profile | 0 | Complete | Not Complete |
-| Immunization Profile | 0 | Complete | DHIR, IPS |
+| Immunization Profile | 0 | Complete | DHIR, IPS, PHI Access |
 | ImmunizationRecommendation Profile | 0 | Complete | DHIR |
 | Location Profile | 0 | Complete | Not Complete |
 | Medication Profile | 0 | Complete | PrescribeIT, IPS |
 | MedicationAdministration Profile | 0 | Complete | Not Complete |
-| MedicationDispense Profile | 0 | Complete | PrescribeIT |
+| MedicationDispense Profile | 0 | Complete | PrescribeIT, PHI Access |
 | MedicationRequest Profile | 0 | Complete | PrescribeIT |
 | MedicationStatement Profile | 0 | Complete | Not Complete |
 | Observation Profile (General) | 0 | Complete | Not Complete |
-| Observation Profile (Laboratory Results) | 0 | Complete, 2nd Review Round | Not Complete |
+| Observation Profile (Laboratory Results) | 0 | Complete, 2nd Review Round | PHI Access |
 | Organization Profile | 0 | Complete | PrescribeIT |
 | Patient Profile | 0 | Complete | PCR, DHIR |
 | Practitioner Profile (General) | 0 | Complete | PPR, DHIR, PrescribeIT |
