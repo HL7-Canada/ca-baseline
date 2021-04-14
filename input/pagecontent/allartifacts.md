@@ -24,17 +24,17 @@ All artifacts in this specification are assigned a “Maturity Level”, known a
 | Goal Profile | 0 | Complete | Not Complete |
 | Immunization Profile | 0 | Complete | DHIR, IPS, PHI Access |
 | ImmunizationRecommendation Profile | 0 | Complete | DHIR |
-| Location Profile | 0 | Complete | Not Complete |
+| Location Profile | 0 | Complete | PPR, Ontario eRefferal |
 | Medication Profile | 0 | Complete | PrescribeIT, IPS |
 | MedicationAdministration Profile | 0 | Complete | Not Complete |
 | MedicationDispense Profile | 0 | Complete | PrescribeIT, PHI Access |
 | MedicationRequest Profile | 0 | Complete | PrescribeIT |
-| MedicationStatement Profile | 0 | Complete | Not Complete |
+| MedicationStatement Profile | 0 | Complete | IPS |
 | Observation Profile (General) | 0 | Complete | Not Complete |
 | Observation Profile (Laboratory Results) | 0 | Complete, 2nd Review Round | PHI Access |
-| Organization Profile | 0 | Complete | PrescribeIT |
-| Patient Profile | 0 | Complete | PCR, DHIR |
-| Practitioner Profile (General) | 0 | Complete | PPR, DHIR, PrescribeIT |
+| Organization Profile | 0 | Complete | DHIR, PrescribeIT |
+| Patient Profile | 0 | Complete | PCR, DHIR, Ontario eReferral |
+| Practitioner Profile (General) | 0 | Complete | PPR, DHIR, Ontario eReferral, PrescribeIT |
 | Practitioner Profile (Provider Registry) | 0 | Complete | PPR |
 | PractitionerRole Profile (General) | 0 | Complete | PPR |
 | PractitionerRole Profile (Provider Registry) | 0 | Complete | PPR |
