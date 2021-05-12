@@ -142,7 +142,7 @@
       {
         "id": "MedicationDispense.whenHandedOver",
         "path": "MedicationDispense.whenHandedOver",
-        "mustSupport": true
+        "mustSupport": false
       },
       {
         "id": "MedicationDispense.destination",
