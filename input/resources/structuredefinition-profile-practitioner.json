@@ -78,11 +78,8 @@
             ]
           }
         ]
-      }, {
-        "id": "Practitioner.birthDate",
-        "path": "Practitioner.birthDate",
-        "mustSupport": true
-      }, {
+      }, 
+      {
         "id": "Practitioner.qualification.code.coding.system",
         "path": "Practitioner.qualification.code.coding.system",
         "short": "QualifiedRoleType",
