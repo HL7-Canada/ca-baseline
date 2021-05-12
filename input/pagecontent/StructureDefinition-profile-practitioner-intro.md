@@ -24,7 +24,6 @@ Following elements are marked as Must Support in the Practitioner profile to aid
 **Must Support elements:**
 1. an identifier
 2. a practitioner name
-3. contact detail (e.g. a telephone number or an email address)
 
 ## Usage Note
 This Practitioner profile is intended for general use, e.g. to be included into a Bundle along with the Patient resource (Patient.generalPractitioner).
