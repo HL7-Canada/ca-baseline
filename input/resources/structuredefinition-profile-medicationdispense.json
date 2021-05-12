@@ -140,11 +140,6 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationDispense.whenHandedOver",
-        "path": "MedicationDispense.whenHandedOver",
-        "mustSupport": false
-      },
-      {
         "id": "MedicationDispense.destination",
         "path": "MedicationDispense.destination",
         "type": [
