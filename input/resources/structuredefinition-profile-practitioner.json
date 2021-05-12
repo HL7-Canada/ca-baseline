@@ -46,11 +46,8 @@
           }
         ],
         "mustSupport": true
-      }, {
-        "id": "Practitioner.telecom",
-        "path": "Practitioner.telecom",
-        "mustSupport": true
-      }, {
+      }, 
+      {
         "id": "Practitioner.address.extension",
         "path": "Practitioner.address.extension",
         "slicing": {
