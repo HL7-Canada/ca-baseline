@@ -53,8 +53,7 @@
       },
       {
         "id": "Goal.target",
-        "path": "Goal.target",
-        "mustSupport": true
+        "path": "Goal.target"
       },
       {
         "id": "Goal.target.due[x]:dueDate",
