@@ -12,13 +12,14 @@ Existing Canadian and International implementation guides (e.g., Canadian eRefer
 
 ### Status
 
-This guide is a **living document** that includes notes and profiles that continue to evolve as they undergo a working group review process in the Summer/Fall of 2020 before being exposed to the larger FHIR community for further maturation through feedback and testing.
+This guide is a **living document** that includes notes and profiles that continue to evolve as they undergo a working group review process and a Due Dillegence Review against existing Canadian FHIR Implementation Guides before being exposed to the larger FHIR community for further maturation through feedback and testing.
 
-More context on the profiling, governance and review process can be found on the [**here**](developmentprocess.html).
-
-For information on where we are at in the working group review follow our progress in the [Infocentral FHIR Implementation Working Group page](https://infocentral.infoway-inforoute.ca/en/collaboration/wg/fhir-implementations)
-
-The [GitHub repository for this CI build be found here](https://github.com/HL7-Canada/ca-baseline).
+**The profiles are currently undergoing reconciliation after a period of community review through our Due Dillegence Review (DDR) process.**
+- Information about the development and review process can be found [here](http://build.fhir.org/ig/HL7-Canada/ca-baseline/branches/master/developmentprocess.html) 
+  - You can follow along with our progress as a working group on the [Infocentral FHIR Implementation Working Group page](https://infocentral.infoway-inforoute.ca/en/collaboration/wg/fhir-implementations)
+- The list of which profiles have undergone DDRs against existing Canadian FHIR Implenetation Guides can be found [here](http://build.fhir.org/ig/HL7-Canada/ca-baseline/branches/master/allartifacts.html)
+- Proposed and past changes to profiles are tracked in the [Simplifier issue log](https://simplifier.net/CanadianFHIRBaselineProfilesCA-Core/~issues) that can be accessed after logging in to Simplifier and navigating to the issues tab of the project or desired profile. The commnunity is encouraged to review the issues and add issues of their own after reading the [review and development process page]((http://build.fhir.org/ig/HL7-Canada/ca-baseline/branches/master/developmentprocess.html) ). 
+- The [GitHub repository for this CI build be found here](https://github.com/HL7-Canada/ca-baseline).
 
 ### Principles
 
