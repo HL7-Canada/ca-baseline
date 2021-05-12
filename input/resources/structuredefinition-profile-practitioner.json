@@ -83,7 +83,7 @@
         "definition": "A code system for the degree or educational rank that the credential specifies. May also apply to an Expertise type.",
         "comment": "The binding strength of this element is [Preferred](https://www.hl7.org/fhir/terminologies.html#strength), meaning that codes are encouraged to draw from the QualifiedRoleType code system for interoperability purposes but are not required to do so to be considered conformant.",
         "binding": {
-          "strength": "preferred",
+          "strength": "example",
           "description": "A code system for the degree or educational rank that the credential specifies",
           "valueSet": "http://fhir.infoway-inforoute.ca/CodeSystem/scpqual"
         }
