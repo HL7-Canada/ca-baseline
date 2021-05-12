@@ -4,7 +4,7 @@ This Practitioner profile sets minimum expectations for the Practitioner resourc
 This profile defines localization concepts for use in an Canadian context.
 
 ## Differences from US Core
-**Note:** This profile was generated from [HL7 StructureDefinition](https://www.hl7.org/fhir/practitioner-profile.json) on 2020-02-19 and constrained during a review of US Core against Canadian sources.
+**Note:** This profile was generated from [HL7 Practitioner StructureDefinition](http://hl7.org/fhir/R4/practitioner.html) on 2020-02-19 and constrained during a review of US Core and a review against Canadian sources.
 
 ## Mandatory Data Elements
 All elements or attributes defined in FHIR have cardinality as part of their definition - a minimum number of required appearances and a maximum number.
