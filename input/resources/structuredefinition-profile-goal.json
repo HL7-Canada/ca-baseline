@@ -34,11 +34,6 @@
         }
       },
       {
-        "id": "Goal.description",
-        "path": "Goal.description",
-        "mustSupport": true
-      },
-      {
         "id": "Goal.subject",
         "path": "Goal.subject",
         "type": [
