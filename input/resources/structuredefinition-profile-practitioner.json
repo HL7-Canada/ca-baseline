@@ -65,7 +65,7 @@
         "sliceName": "preferred",
         "short": "HL7 Preferred Address Flag extension",
         "definition": "Flag denoting whether parent address item is preferred",
-        "min": "1",
+        "min": "0",
         "max": "1",
         "type": [
           {
