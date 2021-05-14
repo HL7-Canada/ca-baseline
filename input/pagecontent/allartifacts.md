@@ -13,11 +13,11 @@ All artifacts in this specification are assigned a “Maturity Level”, known a
 
 | Profile <br> | Profile Maturity <br> Level <br> | Substream <br>Review Status <br> | Due Diligence<br> Review Status <br> |
 |---|---|---|---|
-| AllergyIntolerance Profile | 0 | Complete | Ontario eReferral |
-| Condition Profile | 0 | Complete | Ontario eReferral |
+| AllergyIntolerance Profile | 0 | Complete | Ontario eReferral, IPS |
+| Condition Profile | 0 | Complete | Ontario eReferral, IPS |
 | Device Profile (Implantable) | 0 | Partial - Paused until SME available | Not Complete |
-| Device Profile (Medical and Non-medical) | 0 | Partial - Paused until SME available | Not Complete |
-| DiagnosticReport Profile | 0 | Complete, 2nd Review Round | PHI Access |
+| Device Profile (Medical and Non-medical) | 0 | Partial - Paused until SME available | Attempted against IPS profile, pausing until similarly scoped profile available |
+| DiagnosticReport Profile | 0 | Complete, 2nd Review Round review will resume after DDR | PHI Access |
 | DiagnosticReport for Report and Note Profile | 0 | Complete | Not Complete |
 | Document Reference Profile | 0 | Complete | Not Complete |
 | Encounter Profile | 0 | Complete | Not Complete |
@@ -31,7 +31,7 @@ All artifacts in this specification are assigned a “Maturity Level”, known a
 | MedicationRequest Profile | 0 | Complete | PrescribeIT |
 | MedicationStatement Profile | 0 | Complete | IPS |
 | Observation Profile (General) | 0 | Complete | Not Complete |
-| Observation Profile (Laboratory Results) | 0 | Complete, 2nd Review Round | PHI Access |
+| Observation Profile (Laboratory Results) | 0 | Complete, 2nd Review Round will resume after DDR | PHI Access |
 | Organization Profile | 0 | Complete | DHIR, PrescribeIT |
 | Patient Profile | 0 | Complete | PCR, DHIR, Ontario eReferral |
 | Practitioner Profile (General) | 0 | Complete | PPR, DHIR, Ontario eReferral, PrescribeIT |
