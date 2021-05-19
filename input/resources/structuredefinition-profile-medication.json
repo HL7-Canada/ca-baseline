@@ -20,43 +20,11 @@
         "id": "Medication",
         "path": "Medication",
         "short": "Medication Profile",
-        "definition": "The Medication Profile is based upon the FHIR Medication Resource"
+        "definition": "The Medication Profile is based upon the core FHIR Medication Resource"
       },
-		{
-			"id": "Medication.extension",
-			"path": "Medication.extension",
-			"slicing": {
-				"discriminator":  [
-					{
-						"type": "value",
-						"path": "url"
-					}
-				],
-				"rules": "open"
-			}
-		},
-		{
-			"id": "Medication.extension:medicationstrength",
-			"path": "Medication.extension",
-			"sliceName": "medicationstrength",
-			"short": "Extension: Medication Strength",
-			"definition": "Provides a textual description of the strength of the active ingredient(s) in the medication",
-			"min": 0,
-			"max": "1",
-			"type":  [
-				{
-					"code": "Extension",
-					"profile":  [
-						"http://prescribeit.ca/fhir/StructureDefinition/ext-medication-strength-description"
-					]
-				}
-			],
-			"mustSupport": false
-		},	  
       {
         "id": "Medication.code",
         "path": "Medication.code",
-        "comment": "Depending on the context of use, the code that was actually selected by the user (prescriber, dispenser, etc.) will have the coding.userSelected set to true.  As described in the coding datatype: \"A coding may be marked as a \"userSelected\" if a user selected the particular coded value in a user interface (e.g. the user selects an item in a pick-list). If a user selected coding exists, it is the preferred choice for performing translations etc. Other codes can only be literal translations to alternative code systems, or codes at a lower level of granularity (e.g. a generic code for a vendor-specific primary one).\r\n\r\nGiven the lack of an existing superset of Canadian codes and the complexity and variation in code systems used by of prescription ordering and medication & natural product dispensing systems - The Canadian Baseline has chosen to model the variety of coding systems expected in existing systems through an open slice on code.coding. \r\n\r\nWhen a super value set is developed, the CA Baseline will update the preferred binding strength that currently points to a placeholder to align to the new value set.",
         "min": 1,
         "mustSupport": true,
         "binding": {
@@ -65,50 +33,10 @@
           "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/prescriptionmedicinalproduct"
         }
       },
-	  {
-			"id": "Medication.code.extension",
-			"path": "Medication.code.extension",
-			"slicing": {
-				"discriminator":  [
-					{
-						"type": "value",
-						"path": "url"
-					}
-				],
-				"rules": "open"
-			}
-	  },
-	  {
-			"id": "Medication.code.extension:isRepresentative",
-			"path": "Medication.code.extension",
-			"sliceName": "isRepresentative",
-			"short": "Extension: Code is Representative",
-			"definition": "If set to true, indicates that the medication code sent was chosen as a representative code of a drug picked at a more general level. I.e. The user didn't actually choose this specific code. The intended constraints around what drug should be supplied are conveyed by the request's substitution rules.",
-			"min": 0,
-			"max": "1",
-			"type":  [
-				{
-					"code": "Extension",
-					"profile":  [
-						"http://prescribeit.ca/fhir/StructureDefinition/ext-medication-code-representative"
-					]
-				}
-			],
-			"mustSupport": false
-	  },	  
       {
         "id": "Medication.code.coding",
         "path": "Medication.code.coding",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "system"
-            }
-          ],
-          "rules": "open"
-        },
-        "comment": "CA Baseline Usage Notes: either text or at least one coding or both have to be present",
+        "comment": "CA Core Usage Notes: either text or at least one coding or both have to be present",
         "mustSupport": true
       },
       {
@@ -124,107 +52,15 @@
         "mustSupport": true
       },
       {
-        "id": "Medication.code.coding:DIN",
-        "path": "Medication.code.coding",
-        "sliceName": "DIN"
-      },
-      {
-        "id": "Medication.code.coding:DIN.system",
-        "path": "Medication.code.coding.system",
-        "min": 1,
-        "patternUri": "https://fhir.infoway-inforoute.ca/ValueSet/CA-HC-DIN",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.code.coding:DIN.code",
-        "path": "Medication.code.coding.code",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.code.coding:NPN",
-        "path": "Medication.code.coding",
-        "sliceName": "NPN"
-      },
-      {
-        "id": "Medication.code.coding:NPN.system",
-        "path": "Medication.code.coding.system",
-        "min": 1,
-        "patternUri": "https://fhir.infoway-inforoute.ca/ValueSet/CA-HC-NPN",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.code.coding:NPN.code",
-        "path": "Medication.code.coding.code",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.code.coding:CCDD",
-        "path": "Medication.code.coding",
-        "sliceName": "CCDD"
-      },
-      {
-        "id": "Medication.code.coding:CCDD.system",
-        "path": "Medication.code.coding.system",
-        "min": 1,
-        "patternUri": "https://fhir.infoway-inforoute.ca/ValueSet/prescriptionmedicinalproduct",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.code.coding:CCDD.code",
-        "path": "Medication.code.coding.code",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.code.coding:Medications-SNOMEDCT-IPS",
-        "path": "Medication.code.coding",
-        "sliceName": "Medications-SNOMEDCT-IPS",
-        "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.\r\n\r\nThe value set for this slice comes from the Internation Patient Summary profile for medications and includes codes from SNOMED Clinical Terms®: all descendants of 373873005 |Pharmaceutical / biologic product (product)|. \r\n\r\nIt may be further constrained or extended in the future to reflect a Canadian subset of these codes."
-      },
-      {
-        "id": "Medication.code.coding:Medications-SNOMEDCT-IPS.system",
-        "path": "Medication.code.coding.system",
-        "min": 1,
-        "patternUri": "http://hl7.org/fhir/uv/ips/ValueSet/medication-snomed-uv-ips",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.code.coding:Medications-SNOMEDCT-IPS.code",
-        "path": "Medication.code.coding.code",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.code.coding:WHO-ATC-IPS",
-        "path": "Medication.code.coding",
-        "sliceName": "WHO-ATC-IPS",
-        "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.\r\n\r\nThis slice points to a value set defined in the Internation Patient Summary Medication profile. It includes codes from the World Health Organization Anatomical Therapeutic Chemical (ATC) classification system. Note: The currently implemented code system and the value set expansion contain only a set of example ATC codes, not the complete code system content.\r\n\r\nThis value set may be constrained or extended in the future to reflect a subset of Canadian codes."
-      },
-      {
-        "id": "Medication.code.coding:WHO-ATC-IPS.system",
-        "path": "Medication.code.coding.system",
-        "min": 1,
-        "patternUri": "http://hl7.org/fhir/uv/ips/ValueSet/whoatc-uv-ips",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.code.coding:WHO-ATC-IPS.code",
-        "path": "Medication.code.coding.code",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
         "id": "Medication.code.text",
         "path": "Medication.code.text",
-        "comment": "CA Baseline Usage Notes: either text or at least one coding or both have to be present",
+        "comment": "CA Core Usage Notes: either text or at least one coding or both have to be present",
         "mustSupport": true
       },
       {
         "id": "Medication.manufacturer",
         "path": "Medication.manufacturer",
-        "comment": "CA Baseline Usage Notes: This is a reference to an organization that manufactures the medication. TBD: if there is a need to refernce a 'DPD Company', a new extension should be created and used. A 'DPD Company' name, as used in the Health Canada DPF, indicates the organisation (company) that holds the authorization to place the product on the market in Canada. This may not be the company that has manufactured the product, but it is the company that holds the legal responsibility for the use of the product in Canada and should be the same as the company named on the product label/packaging.",
+        "comment": "CA Core Usage Notes: This is a reference to an organization that manufactures the medication. TBD: if there is a need to refernce a 'DPD Company', a new extension should be created and used. A 'DPD Company' name, as used in the Health Canada DPF, indicates the organisation (company) that holds the authorization to place the product on the market in Canada. This may not be the company that has manufactured the product, but it is the company that holds the legal responsibility for the use of the product in Canada and should be the same as the company named on the product label/packaging.",
         "type": [
           {
             "code": "Reference",
@@ -237,7 +73,7 @@
       {
         "id": "Medication.form",
         "path": "Medication.form",
-        "comment": "CA Baseline Usage Notes: The prescription drug form is required in some provinces in order to meet the prescribing standards set out by the College of Physicians and Surgeons.",
+        "comment": "CA Core Usage Notes: The prescription drug form is required in some provinces in order to meet the prescribing standards set out by the College of Physicians and Surgeons.",
         "binding": {
           "strength": "preferred",
           "description": "TBD. This is a placeholder for a comprehensive valueset, which would be created and maintained by Canada Health Infoway.",
