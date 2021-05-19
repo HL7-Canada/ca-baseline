@@ -12,5 +12,6 @@ Key differences from [PrescribeIT Medication Profile](https://specs.prescribeit.
 
 **Note:**
 - mustSupport reflects PrescribeIT **<< many more requirements here than in USCoreR4 ... must these all be supported**
+- medicationStrength, isRepresentative, and isActive extensions are all socialized from the PrescribeIT 2.0 specification
 - Medication.ingredient.item[x] is currently restricted in a manner consistent with the PrescribeIT Medication profile.  **<< Is this preferable to providing references to other Medication (and potentially Substance) resources?**
 - [ON DHDR](https://simplifier.net/ontariodigitalhealth/medication) and [HL7 v3 AdministerableMedicine](https://infocentral.infoway-inforoute.ca/extra/ca/mr0206-html/html/message.html?COCT_MT220200CA) appear to approach similar things differently than below.
