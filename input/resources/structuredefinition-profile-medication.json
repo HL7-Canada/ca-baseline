@@ -6,7 +6,7 @@
   "name": "MedicationProfile",
   "title": "Medication Profile",
   "status": "draft",
-  "date": "2021-05-19",
+  "date": "2019-03-31",
   "publisher": "HL7 Canada",
   "description": "Proposed constraints and extensions on the Medication resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles.",
   "kind": "resource",
@@ -22,6 +22,37 @@
         "short": "Medication Profile",
         "definition": "The Medication Profile is based upon the FHIR Medication Resource"
       },
+		{
+			"id": "Medication.extension",
+			"path": "Medication.extension",
+			"slicing": {
+				"discriminator":  [
+					{
+						"type": "value",
+						"path": "url"
+					}
+				],
+				"rules": "open"
+			}
+		},
+		{
+			"id": "Medication.extension:medicationstrength",
+			"path": "Medication.extension",
+			"sliceName": "medicationstrength",
+			"short": "Extension: Medication Strength",
+			"definition": "Provides a textual description of the strength of the active ingredient(s) in the medication",
+			"min": 0,
+			"max": "1",
+			"type":  [
+				{
+					"code": "Extension",
+					"profile":  [
+						"http://prescribeit.ca/fhir/StructureDefinition/ext-medication-strength-description"
+					]
+				}
+			],
+			"mustSupport": false
+		},	  
       {
         "id": "Medication.code",
         "path": "Medication.code",
