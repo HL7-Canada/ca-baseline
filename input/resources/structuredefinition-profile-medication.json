@@ -65,6 +65,37 @@
           "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/prescriptionmedicinalproduct"
         }
       },
+	  {
+			"id": "Medication.code.extension",
+			"path": "Medication.code.extension",
+			"slicing": {
+				"discriminator":  [
+					{
+						"type": "value",
+						"path": "url"
+					}
+				],
+				"rules": "open"
+			}
+	  },
+	  {
+			"id": "Medication.code.extension:isRepresentative",
+			"path": "Medication.code.extension",
+			"sliceName": "isRepresentative",
+			"short": "Extension: Code is Representative",
+			"definition": "If set to true, indicates that the medication code sent was chosen as a representative code of a drug picked at a more general level. I.e. The user didn't actually choose this specific code. The intended constraints around what drug should be supplied are conveyed by the request's substitution rules.",
+			"min": 0,
+			"max": "1",
+			"type":  [
+				{
+					"code": "Extension",
+					"profile":  [
+						"http://prescribeit.ca/fhir/StructureDefinition/ext-medication-code-representative"
+					]
+				}
+			],
+			"mustSupport": false
+	  },	  
       {
         "id": "Medication.code.coding",
         "path": "Medication.code.coding",
