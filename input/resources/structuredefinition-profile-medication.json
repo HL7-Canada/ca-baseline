@@ -25,7 +25,60 @@
       {
         "id": "Medication.code",
         "path": "Medication.code",
+        "comment": "Given the lack of an existing superset of Canadian codes and the complexity and variation in code systems used by of prescription ordering and medication & natural product dispensing systems - The Canadian Baseline has chosen to model the variety of coding systems expected in existing systems through an open slice on code.coding. When a super value set is developed, the CA Baseline will update the preferred binding strength that currently points to a placeholder to align to the new value set.",
         "min": 1,
+        "example": [
+          {
+            "label": "DIN",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.infoway-inforoute.ca/ValueSet/CA-HC-DIN"
+                }
+              ]
+            }
+          },
+          {
+            "label": "NPN",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.infoway-inforoute.ca/ValueSet/CA-HC-NPN"
+                }
+              ]
+            }
+          },
+          {
+            "label": "CCDD",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.infoway-inforoute.ca/ValueSet/prescriptionmedicinalproduct"
+                }
+              ]
+            }
+          },
+          {
+            "label": "SNOMED CT (Medications) - IPS",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/uv/ips/ValueSet/medication-snomed-uv-ips"
+                }
+              ]
+            }
+          },
+          {
+            "label": "WHO ATC IPS",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/uv/ips/ValueSet/whoatc-uv-ips"
+                }
+              ]
+            }
+          }
+        ],        
         "mustSupport": true,
         "binding": {
           "strength": "preferred",
