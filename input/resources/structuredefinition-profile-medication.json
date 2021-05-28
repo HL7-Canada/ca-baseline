@@ -23,6 +23,37 @@
         "definition": "The Medication Profile is based upon the core FHIR Medication Resource"
       },
       {
+	      "id": "Medication.extension",
+      	"path": "Medication.extension",
+      	"slicing": {
+	      	"discriminator":  [
+      			{
+	      			"type": "value",
+		      		"path": "url"
+		      	}
+	      	],
+       		"rules": "open"
+      	}
+      },
+      {
+	      "id": "Medication.extension:medicationstrength",
+	      "path": "Medication.extension",
+	      "sliceName": "medicationstrength",
+	      "short": "Extension: Medication Strength",
+      	"definition": "Provides a textual description of the strength of the active ingredient(s) in the medication",
+      	"min": 0,
+	      "max": "1",
+      	"type":  [
+      		{
+	      		"code": "Extension",
+		      	"profile":  [
+			      	"http://prescribeit.ca/fhir/StructureDefinition/ext-medication-strength-description"
+		      	]
+	      	}
+      	],
+      	"mustSupport": false
+      },
+      {
         "id": "Medication.code",
         "path": "Medication.code",
         "comment": "Given the lack of an existing superset of Canadian codes and the complexity and variation in code systems used by of prescription ordering and medication & natural product dispensing systems - The Canadian Baseline has chosen to model the variety of coding systems expected in existing systems through an open slice on code.coding. When a super value set is developed, the CA Baseline will update the preferred binding strength that currently points to a placeholder to align to the new value set.",
@@ -86,6 +117,37 @@
           "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/prescriptionmedicinalproduct"
         }
       },
+    	{
+		    "id": "Medication.code.extension",
+	    	"path": "Medication.code.extension",
+		    "slicing": {
+		    	"discriminator":  [
+			    	{
+			    		"type": "value",
+			    		"path": "url"
+			    	}
+		    	],
+		    	"rules": "open"
+	    	}
+    	},
+    	{
+	    	"id": "Medication.code.extension:isRepresentative",
+	    	"path": "Medication.code.extension",
+	    	"sliceName": "isRepresentative",
+	    	"short": "Extension: Code is Representative",
+	    	"definition": "If set to true, indicates that the medication code sent was chosen as a representative code of a drug picked at a more general level. I.e. The user didn't actually choose this specific code. The intended constraints around what drug should be supplied are conveyed by the request's substitution rules.",
+	    	"min": 0,
+	    	"max": "1",
+	     	"type":  [
+		    	{
+			    	"code": "Extension",
+			    	"profile":  [
+				    	"http://prescribeit.ca/fhir/StructureDefinition/ext-medication-code-representative"
+			    	]
+		    	}
+	    	],
+	    	"mustSupport": false
+    	},  
       {
         "id": "Medication.code.coding",
         "path": "Medication.code.coding",
