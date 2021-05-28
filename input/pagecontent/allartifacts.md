@@ -30,7 +30,7 @@ All artifacts in this specification are assigned a “Maturity Level”, known a
 | MedicationDispense Profile | 0 | Complete | PrescribeIT, PHI Access |
 | MedicationRequest Profile | 0 | Complete | PrescribeIT |
 | MedicationStatement Profile | 0 | Complete | IPS |
-| Observation Profile (General) | 0 | Complete | Not Complete |
+| Observation Profile (General) | 0 | Complete | IPS |
 | Observation Profile (Laboratory Results) | 0 | Complete, 2nd Review Round will resume after DDR | PHI Access |
 | Organization Profile | 0 | Complete | DHIR, PrescribeIT |
 | Patient Profile | 0 | Complete | PCR, DHIR, Ontario eReferral |
