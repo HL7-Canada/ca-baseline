@@ -23,7 +23,7 @@
         "definition": "The Medication Profile is based upon the core FHIR Medication Resource"
       },
       {
-	      "id": "Medication.extension",
+	"id": "Medication.extension",
       	"path": "Medication.extension",
       	"slicing": {
 	      	"discriminator":  [
@@ -36,19 +36,19 @@
       	}
       },
       {
-	      "id": "Medication.extension:medicationstrength",
-	      "path": "Medication.extension",
-	      "sliceName": "medicationstrength",
-	      "short": "Extension: Medication Strength",
+	"id": "Medication.extension:medicationstrength",
+	"path": "Medication.extension",
+	"sliceName": "medicationstrength",
+	"short": "Extension: Medication Strength",
       	"definition": "Provides a textual description of the strength of the active ingredient(s) in the medication",
       	"min": 0,
-	      "max": "1",
+	"max": "1",
       	"type":  [
-      		{
-	      		"code": "Extension",
-		      	"profile":  [
-			      	"http://prescribeit.ca/fhir/StructureDefinition/ext-medication-strength-description"
-		      	]
+      	{
+	      	"code": "Extension",
+		      "profile":  [
+			      "http://prescribeit.ca/fhir/StructureDefinition/ext-medication-strength-description"
+		      ]
 	      	}
       	],
       	"mustSupport": false
