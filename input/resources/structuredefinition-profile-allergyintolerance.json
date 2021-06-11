@@ -132,7 +132,7 @@
       }, {
         "id": "AllergyIntolerance.category",
         "path": "AllergyIntolerance.category",
-        "mustSupport": true
+        "comment" : "Some implementors may utilize value sets where category is readily distinguishable while others may not, and those that do not use those value sets should consider making category MS in their profiles"
       }, {
         "id": "AllergyIntolerance.criticality",
         "path": "AllergyIntolerance.criticality",
