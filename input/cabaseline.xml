@@ -418,8 +418,8 @@
       <reference>
         <reference value="StructureDefinition/profile-smokingstatus"/>
       </reference>
-      <name value="SmokingStatus Profile"/>
-      <description value="Proposed constraints and extensions on the Observation Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
+      <name value="Observation (Tobacco Smoking Status) Profile"/>
+      <description value="Proposed constraints and extensions on the Observation Resource to support collection of tobacco smoking status information.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
