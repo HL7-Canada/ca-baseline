@@ -35,8 +35,7 @@
       },
       {
         "id": "Observation.identifier",
-        "path": "Observation.identifier",
-        "mustSupport": true
+        "path": "Observation.identifier"
       },
       {
         "id": "Observation.basedOn",
@@ -74,6 +73,19 @@
             "xpath": "exists(f:coding/code) and exists(f:coding/system[@value='http://terminology.hl7.org/CodeSystem/observation-category'])"
           }
         ],
+        "type" : [
+          {
+            "code" : "CodeableConcept"
+          }
+        ],
+        "patternCodeableConcept" : {
+          "coding" : [
+            {
+              "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+              "code" : "laboratory"
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
@@ -140,7 +152,7 @@
       {
          "id": "Observation.issued",
          "path": "Observation.issued",
-         "mustSupport": true
+         "comment": "Implementors should consider adding a must support flag in the case that the relevant systems are not able to support effective, but are able to support issued."
        }, {
          "id": "Observation.performer",
          "path": "Observation.performer",
