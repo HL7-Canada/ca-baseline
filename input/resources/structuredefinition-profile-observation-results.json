@@ -34,10 +34,6 @@
         "definition": "The Observation Profile is based upon the core FHIR Observation Resource"
       },
       {
-        "id": "Observation.identifier",
-        "path": "Observation.identifier"
-      },
-      {
         "id": "Observation.category",
         "path": "Observation.category",
         "slicing": {
