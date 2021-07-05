@@ -11,7 +11,6 @@ All elements or attributes within the FHIR specification have cardinality as par
 Most elements in the FHIR specification have a minimum cardinality of **0**, so most elements are not required and subsequently they may be missing from a resource when it is exchanged between systems.
 
 **Required elements:**
-* link to the initial plan, proposal or order
 *	status of the result value
 *	category to classify the general type of observation being made
 *	category: laboratory (mandatory child element of above)
@@ -31,7 +30,6 @@ Some elements are marked as Must Support. This means that implementations genera
 The following elements are marked as Must Support in the Observation (Laboratory Results) profile:
 
 **Must Support elements:**
-*	identifier
 *	category
 *	category:laboratory
 *	code
