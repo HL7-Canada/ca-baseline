@@ -103,12 +103,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitioner"
-            ]
-          },
-          {
-            "code": "Reference",
-            "targetProfile": [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitioner",
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-organization"
             ]
           }
