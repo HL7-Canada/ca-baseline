@@ -130,7 +130,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient",
               "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitioner",
-              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitionerRole"
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitionerrole"
             ]
           }
         ]
@@ -143,7 +143,7 @@
             "code": "Reference",
             "targetProfile":  [
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitioner",
-              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitionerRole",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitionerrole",
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-organization",
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient",
               "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
