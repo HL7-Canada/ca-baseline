@@ -3,30 +3,6 @@
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "valueSet" : ["https://fhir.infoway-inforoute.ca/ValueSet/healthconcerncode"]
-    }]
-  }
-}}####
-e: {
-  "error" : "Error from server: Unable to find value set \"https://fhir.infoway-inforoute.ca/ValueSet/healthconcerncode\""
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "valueSet" : ["https://fhir.infoway-inforoute.ca/ValueSet/prescriptiondrugform"]
-    }]
-  }
-}}####
-e: {
-  "error" : "Error from server: Unable to find value set \"https://fhir.infoway-inforoute.ca/ValueSet/prescriptiondrugform\""
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
       "valueSet" : ["https://fhir.infoway-inforoute.ca/ValueSet/prescriptionmedicinalproduct"]
     }]
   }
@@ -46,5 +22,29 @@ e: {
 }}####
 e: {
   "error" : "Error from server: Unable to find value set \"https://fhir.infoway-inforoute.ca/ValueSet/vaccineadministeredtradenamecode\""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "valueSet" : ["https://fhir.infoway-inforoute.ca/ValueSet/healthconcerncode"]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to find value set \"https://fhir.infoway-inforoute.ca/ValueSet/healthconcerncode\""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "valueSet" : ["https://fhir.infoway-inforoute.ca/ValueSet/prescriptiondrugform"]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to find value set \"https://fhir.infoway-inforoute.ca/ValueSet/prescriptiondrugform\""
 }
 -------------------------------------------------------------------------------------

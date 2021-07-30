@@ -3,7 +3,7 @@
   "id": "profile-smokingstatus",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-smokingstatus",
   "version": "0.0.0",
-  "name": "ObservationSmokingStatusProfile",
+  "name": "ObservationTobaccoSmokingStatusProfile",
   "title": "Observation (Tobacco Smoking Status) Profile",
   "status": "draft",
   "publisher": "HL7 Canada",

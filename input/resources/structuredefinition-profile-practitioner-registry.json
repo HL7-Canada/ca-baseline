@@ -3,7 +3,7 @@
   "id": "profile-practitioner-registry",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitioner-registry",
   "version": "0.0.3",
-  "name": "PractitionerProfile-Registry",
+  "name": "PractitionerProfileRegistry",
   "title": "Practitioner Profile (Provider Registry)",
   "status": "draft",
   "date": "2020-07-31",
