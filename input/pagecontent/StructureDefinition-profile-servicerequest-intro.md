@@ -31,7 +31,6 @@ Following elements are marked as Must Support in the Canadian ServiceRequest pro
 * category
 * code
 * subject
-* encounter
 * authoredOn
 * requester
 * performer
