@@ -35,8 +35,7 @@
         "definition": "The AllergyIntolerance Profile is based upon the core FHIR AllergyIntolerance Resource"
       }, {
         "id": "AllergyIntolerance.identifier",
-        "path": "AllergyIntolerance.identifier",
-        "mustSupport": true
+        "path": "AllergyIntolerance.identifier"
       }, {
         "id": "AllergyIntolerance.clinicalStatus",
         "path": "AllergyIntolerance.clinicalStatus",
