@@ -197,7 +197,7 @@
         "id": "AllergyIntolerance.code.coding:NotAsked.system",
         "path": "AllergyIntolerance.code.coding.system",
         "min": 1,
-        "fixedUri": "http://hl7.org/fhir/v3/NullFlavor"
+        "fixedUri": "http://terminology.hl7.org/fhir/v3/NullFlavor"
       }, {
         "id": "AllergyIntolerance.code.coding:NotAsked.code",
         "path": "AllergyIntolerance.code.coding.code",
@@ -238,7 +238,7 @@
         "id": "AllergyIntolerance.code.coding:NoAllergy.code",
         "path": "AllergyIntolerance.code.coding.code",
         "min": 1,
-        "fixedString": "716186003"
+        "fixedCode": "716186003"
       }, {
         "id": "AllergyIntolerance.code.coding:@default",
         "path": "AllergyIntolerance.code.coding",

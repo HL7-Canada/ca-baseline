@@ -141,6 +141,11 @@
         ]
       },
       {
+        "id": "Condition.onset[x]",
+        "path": "Condition.onset[x]",
+        "mustSupport": true
+      },
+      {
         "id": "Condition.recorder",
         "path": "Condition.recorder",
         "type":  [
@@ -169,11 +174,6 @@
             ]
           }
         ]
-      },
-      {
-        "id": "Condition.onset[x]",
-        "path": "Condition.onset[x]",
-        "mustSupport": true
       }
     ]
   }
