@@ -218,8 +218,7 @@
               "http://hl7.org/fhir/StructureDefinition/Specimen"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       }, {
         "id": "DiagnosticReport.specimen:LabResult",
         "path": "DiagnosticReport.specimen",
