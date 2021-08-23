@@ -17,8 +17,8 @@ All artifacts in this specification are assigned a “Maturity Level”, known a
 | Condition Profile | 0 | Complete | Ontario eReferral, IPS |
 | Device Profile (Implantable) | 0 | Partial - Paused until SME available | Not Complete |
 | Device Profile (Medical and Non-medical) | 0 | Partial - Paused until SME available | Attempted against IPS profile, pausing until similarly scoped profile available |
-| DiagnosticReport Profile | 0 | Complete, 2nd Review Round review will resume after DDR | PHI Access |
-| DiagnosticReport for Report and Note Profile | 0 | Complete | Not Complete |
+| DiagnosticReport Profile | 0 | Complete, 2nd Review Round review will resume after DDR | PHI Access, IPS |
+| DiagnosticReport for Report and Note Profile | 0 | Complete | IPS |
 | Document Reference Profile | 0 | Complete | Not Complete |
 | Encounter Profile | 0 | Complete | Not Complete |
 | Goal Profile | 0 | Complete | Not Complete |
@@ -31,7 +31,7 @@ All artifacts in this specification are assigned a “Maturity Level”, known a
 | MedicationRequest Profile | 0 | Complete | PrescribeIT |
 | MedicationStatement Profile | 0 | Complete | IPS |
 | Observation Profile (General) | 0 | Complete | IPS |
-| Observation Profile (Laboratory Results) | 0 | Complete, 2nd Review Round will resume after DDR | PHI Access |
+| Observation Profile (Laboratory Results) | 0 | Complete, 2nd Review Round will resume after DDR | PHI Access, IPS |
 | Observation (Tobacco Smoking Status) Profile | 0 | Inital Review Complete | IPS |
 | Organization Profile | 0 | Complete | DHIR, PrescribeIT |
 | Patient Profile | 0 | Complete | PCR, DHIR, Ontario eReferral |
@@ -40,5 +40,6 @@ All artifacts in this specification are assigned a “Maturity Level”, known a
 | PractitionerRole Profile (General) | 0 | Complete | PPR |
 | PractitionerRole Profile (Provider Registry) | 0 | Complete | PPR |
 | Procedure Profile | 0 | Complete | IPS |
+| ServiceRequest Profile | 0 | Complete | Ontario eReferral |
 
 <!-- Todo: examples, capabilitystatement, TestScenario? -->

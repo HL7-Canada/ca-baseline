@@ -12,7 +12,6 @@ In this Canadian Baseline ServiceRequest Profile following elements are required
 * status of the order (ServiceRequest.status)
 * progression of a business activity (ServiceRequest.intent)
 * on whom or what the service is to be performed (ServiceRequest.subject)
-* date of the request (ServiceRequest.authoredOn)
 * who initiated the request (ServiceRequest.requester)
 
 ### Data Absent Reason
@@ -31,7 +30,6 @@ Following elements are marked as Must Support in the Canadian ServiceRequest pro
 * category
 * code
 * subject
-* encounter
 * authoredOn
 * requester
 * performer

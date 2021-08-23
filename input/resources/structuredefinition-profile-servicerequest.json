@@ -156,12 +156,10 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-encounter"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       }, {
         "id": "ServiceRequest.authoredOn",
         "path": "ServiceRequest.authoredOn",
-        "min": 1,
         "max": "1",
         "mustSupport": true
       }, {
