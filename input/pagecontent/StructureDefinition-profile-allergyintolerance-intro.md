@@ -17,7 +17,6 @@ Some elements are marked as Must Support. This means that implementations genera
 The following elements are marked as Must Support in the AllergyIntolerance profile:
 
 **Must Support elements:**
-* identifier
 * clinical status of the allergy or intolerance (AllergyIntolerance.clinicalStatus)
 * verification status (AllergyIntolerance.verificationStatus)
 * code of the allergy or intolerance (AllergyIntolerance.code)
