@@ -53,6 +53,58 @@
             ]
           }
         ],
+        "example": [
+          {
+            "label": "DIN",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.infoway-inforoute.ca/ValueSet/CA-HC-DIN"
+                }
+              ]
+            }
+          },
+          {
+            "label": "NPN",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.infoway-inforoute.ca/ValueSet/CA-HC-NPN"
+                }
+              ]
+            }
+          },
+          {
+            "label": "CCDD",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.infoway-inforoute.ca/ValueSet/prescriptionmedicinalproduct"
+                }
+              ]
+            }
+          },
+          {
+            "label": "SNOMED CT (Medications) - IPS",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/uv/ips/ValueSet/medication-snomed-uv-ips"
+                }
+              ]
+            }
+          },
+          {
+            "label": "WHO ATC IPS",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/uv/ips/ValueSet/whoatc-uv-ips"
+                }
+              ]
+            }
+          }
+        ], 
         "mustSupport": true,
         "binding": {
           "strength": "preferred",
