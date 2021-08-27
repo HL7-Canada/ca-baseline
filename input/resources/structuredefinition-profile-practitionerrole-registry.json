@@ -127,7 +127,6 @@
       {
         "id": "PractitionerRole.specialty",
         "path": "PractitionerRole.specialty",
-        "min": 1,
         "short": "PractitionerSpecialty",
         "comment": "The binding strength of this element is [Preferred](https://www.hl7.org/fhir/terminologies.html#strength), meaning that codes are encouraged to draw from the PractitionerSpecialty code system for interoperability purposes but are not required to do so to be considered conformant.",
         "mustSupport": true,
