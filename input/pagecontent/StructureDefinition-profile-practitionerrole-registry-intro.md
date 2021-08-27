@@ -11,7 +11,6 @@ Most elements in FHIR specification have a minimum cardinality of **0**, which m
 **Required elements:**
 * an identifier
 * reference to a practitioner
-* specialty
 
 In addition to that, some optional elements (e.g., PractitionerRole.telecom) have required components that MUST be present if that optional element is provided.
 
@@ -27,7 +26,7 @@ Following elements are marked as Must Support in the PractitionerRole profile to
 * an identifier
 * reference to a practitioner
 * contact detail (e.g. a telephone number or an email address)
-* speciality
+* specialty
 
 ## Extensions
 This PractitionerRole profile contains optional [RoleStatus]( https://build.fhir.org/ig/HL7-Canada/ca-baseline/extension-ext-rolestatus.html) [modifier extension](https://www.hl7.org/fhir/extensibility.html#modifierExtension) to indicate the possible states of the Role as defined by the [HL7v3 Role]( https://www.hl7.org/fhir/v3/RoleStatus/cs.html) class state machine.
