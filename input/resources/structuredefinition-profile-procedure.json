@@ -76,15 +76,9 @@
         ],
         "mustSupport" : true,
         "binding" : {
-          "extension" : [
-            {
-              "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString" : "ProcedureCode"
-            }
-          ],
-          "strength" : "example",
-          "description" : "Represents the care procedures performed by a primary health care providers from SNOMED CT and SNOMED CT - CA Extension code systems.",          
-          "valueSet" : "https://fhir.infoway-inforoute.ca/ValueSet/interventioncodesubsetcare"
+          "strength" : "preferred",
+          "description" : "Extensional Subset of SNOMED CT and SNOMED CT CA Extension Codes to describe Services/Activities performed by Primary Health Care Providers.",
+          "valueSet" : "https://fhir.infoway-inforoute.ca/ValueSet/interventioncode"
         }
       },
       {

@@ -7,7 +7,7 @@
     The cardinality on procedure.performed[x] has been constrained to 1..1. While this did not cause any Due Diligence Review Issues with IPS or US Core, we are seeking feedback from additional implementers on whether this cardinality restriction poses problems for their FHIR implementations.
     <br>
     <br>
-    This profile also socializes an example of a subset of SNOMED CT codes for procedures that is made available through the Infoway Terminology Gateway: https://fhir.infoway-inforoute.ca/ValueSet/interventioncodesubsetcare. This subset was developed after initial review of the profiles but has been added in. We are seeking community feedback as to whether this subset is in use today by Canadian implementers or whether or not we should point to the larger value set of SNOMED CT codes contained in the IPS Value Set.
+    This profile also socializes an example of a subset of SNOMED CT codes for procedures that is made available through the Infoway Terminology Gateway: https://fhir.infoway-inforoute.ca/ValueSet/interventioncode. This extensional value set was developed after initial review of the profiles but has been added in. We are seeking community feedback as to whether this subset is in use today by Canadian implementers or whether or not we should point to the larger value set of SNOMED CT codes contained in the IPS Value Set.
     <br>
     <br>
     Feedback can be provided using the <a href="https://simplifier.net/CanadianFHIRBaselineProfilesCA-Core/procedureprofile/~issues">Simplifier issue log for this profile</a>.
