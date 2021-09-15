@@ -67,6 +67,15 @@
         "path": "PractitionerRole.code",
         "short": "HealthcareProviderRoleType",
         "comment": "The binding strength of this element is [Preferred](https://www.hl7.org/fhir/terminologies.html#strength), meaning that codes are encouraged to draw from the HealthcareProviderRoleType code system for interoperability purposes but are not required to do so to be considered conformant.",
+        "constraint" : [
+        {
+          "key" : "pracRole-1",
+          "severity" : "error",
+          "human" : "PractitionerRole.code or PracitionerRole.specialty SHOULD be present",
+          "expression" : "code.exists() or specialty.exists().",
+          "xpath" : "PracitionerRole.code or PracitionerRole.specialty"
+        }
+      ],
         "binding": {
           "strength": "preferred",
           "description": "A role type that is used to categorize an entity that delivers health care in an expected and professional manner to an entity in need of health care services. Examples: Registered Nurse, Chiropractor, Physician, Custodial Care Clinic.",
@@ -78,6 +87,15 @@
         "path": "PractitionerRole.specialty",
         "short": "PractitionerSpecialty",
         "comment": "The binding strength of this element is [Preferred](https://www.hl7.org/fhir/terminologies.html#strength), meaning that codes are encouraged to draw from the PractitionerSpecialty code system for interoperability purposes but are not required to do so to be considered conformant.",
+        "constraint" : [
+        {
+          "key" : "pracRole-1",
+          "severity" : "error",
+          "human" : "PractitionerRole.code or PracitionerRole.specialty SHOULD be present",
+          "expression" : "code.exists() or specialty.exists().",
+          "xpath" : "PracitionerRole.code or PracitionerRole.specialty"
+        }
+      ],
         "mustSupport": true,
         "binding": {
           "strength": "preferred",
