@@ -30,8 +30,7 @@
       {
         "id": "Immunization.statusReason",
         "path": "Immunization.statusReason",
-        "comment": "CA Baseline Usage Notes: a reason should be provided if the status is \"not-done\".",
-        "mustSupport": true
+        "comment": "CA Baseline Usage Notes: a reason should be provided if the status is \"not-done\"."
       },
       {
         "id": "Immunization.vaccineCode",
@@ -105,20 +104,37 @@
         ]
       },
       {
-        "id": "Immunization.occurrence[x]:occurrenceDateTime",
-        "path": "Immunization.occurrence[x]",
-        "sliceName": "occurrenceDateTime",
-        "comment": "CA Baseline Usage Notes: occurrenceString is not supported - a combination of occurrenceDateTime (full or partial) with the 'estimated' extension should be used when an exact date is unknown. For example, if a patient recalls that she/he was immunized in June 1980, occurrenceDateTime will have a partial date '1980-06' with 'estimated'=true. Another example: if in 2020, a 55 y.o. patient recalls that she/he was immunized at the age of 5, occurrenceDateTime will have a partial date '1970' with 'estimated'=true",
-        "type": [
+        "id" : "Immunization.occurrence[x]",
+        "path" : "Immunization.occurrence[x]",
+        "short" : "Vaccine administration date",
+        "definition" : "Date vaccine administered or was to be administered.",
+        "comment" : "WhCA Baseline Usage Notes: While occurrenceString is allowed given its use in existing Canadian systems - a combination of occurrenceDateTime (full or partial) with the 'estimated' extension is the preferred mechanism for expressing when an exact date is unknown. For example, if a patient recalls that they were immunized in June 1980, occurrenceDateTime will have a partial date '1980-06' with 'estimated'=true. Another example: if in 2020, a 55 y.o. patient recalls that they were immunized at the age of 5, occurrenceDateTime will have a partial date '1970' with 'estimated'=true.",
+        "min" : 1,
+        "max" : "1",
+        "base" : {
+          "path" : "Immunization.occurrence[x]",
+          "min" : 1,
+          "max" : "1"
+        },
+        "type" : [
           {
-            "code": "dateTime"
+            "extension" : [
+              {
+                "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                "valueBoolean" : true
+              }
+            ],
+            "code" : "dateTime"
+          },
+          {
+            "code" : "string"
           }
         ],
-        "mustSupport": true
+        "mustSupport" : true
       },
       {
-        "id": "Immunization.occurrence[x]:occurrenceDateTime.extension:estimated",
-        "path": "Immunization.occurrence[x].extension",
+        "id": "Immunization.occurenceDateTime.extension:estimated",
+        "path": "Immunization.occurenceDateTime.extension",
         "sliceName": "estimated",
         "max": "1",
         "type": [
@@ -175,7 +191,6 @@
       {
         "id": "Immunization.site",
         "path": "Immunization.site",
-        "mustSupport": true,
         "binding": {
           "strength": "preferred",
           "valueSet": "https://cvc.canimmunize.ca/v3/ValueSet/AnatomicalSite"
@@ -184,7 +199,6 @@
       {
         "id": "Immunization.route",
         "path": "Immunization.route",
-        "mustSupport": true,
         "binding": {
           "strength": "preferred",
           "valueSet": "https://cvc.canimmunize.ca/v3/ValueSet/RouteOfAdmin"
@@ -223,8 +237,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-diagnosticreport"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "Immunization.reaction.detail",

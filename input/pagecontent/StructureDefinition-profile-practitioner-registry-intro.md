@@ -1,7 +1,16 @@
 # CA Baseline Practitioner Profile for Registries
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<blockquote class="stu-note">
+		<p> While the CA Baseline relies on the existing extensible value set for identifier.type (from the base FHIR Spec) - some Canadian Jurisdictions have published the values that are extensions on that value set. Review of the <a href="https://simplifier.net/provincialproviderregistry-ontario-r4/ppr-organization-identifier-type-duplicate-2">Ontario Provider Registry Identifier.Type ValueSet</a>.identified that the following Ontario specific identifier type codes may be used from the http://ehealthontario.ca/fhir/CodeSystem/ppr-organization-identifier-type code system: LHIN (Local Health Integration Network), MNI (Master Numbering Index), LSS (Lab Services Licensing System, CNUM (Corporate Number), BNUM (Business Number), AC (Accreditation Number).
+    <br>
+    <br>
+    The CA Baseline is asking other jurisdictions or implementers to provide feedback if other values are being used for identifier.type not already discussed in this profile</p>
+	</blockquote>
+  </div>
+
 This Practitioner profile sets minimum expectations for the Practitioner resource to record, search and fetch demographics and other administrative information about a person who is directly or indirectly involved in the provisioning of healthcare.
 
-This profile further constrains the general purpose Practitioner profile and is intended to be used by Provider or Healthcare Directory systems. 
+This profile further constrains the general purpose Practitioner profile and is intended to be used by Provider or Healthcare Directory systems.
 
 ## Differences from US Core
 **Note:** This profile was generated from [HL7 StructureDefinition](https://www.hl7.org/fhir/practitioner.profile.json) on 2020-02-19 and constrained during a review of US Core against Canadian sources.
