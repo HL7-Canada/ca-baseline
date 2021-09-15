@@ -54,14 +54,62 @@
         "mustSupport": true
       },
       {
-        "id": "Procedure.code",
-        "path": "Procedure.code",
-        "min": 1,
-        "mustSupport": true,
-        "binding": {
-          "strength": "example",
-          "description": "Represents the Operating Room procedures performed by a Provider",
-          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/interventioncodesubsetoperatingroomprocedure"
+        "id" : "Procedure.code",
+        "path" : "Procedure.code",
+        "slicing" : {
+          "discriminator" : [
+            {
+              "type" : "pattern",
+              "path" : "$this"
+            }
+          ],
+          "description" : "Discriminated by the bound value set",
+          "rules" : "open"
+        },
+        "definition" : "Identification of the procedure or recording of \"absence of relevant procedures\" or of \"procedures unknown\".",
+        "min" : 1,
+        "max" : "1",
+        "type" : [
+          {
+            "code" : "CodeableConcept"
+          }
+        ],
+        "mustSupport" : true,
+        "binding" : {
+          "extension" : [
+            {
+              "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString" : "ProcedureCode"
+            }
+          ],
+          "strength" : "example",
+          "description" : "Represents the care procedures performed by a primary health care providers from SNOMED CT and SNOMED CT - CA Extension code systems.",          
+          "valueSet" : "https://fhir.infoway-inforoute.ca/ValueSet/interventioncodesubsetcare"
+        }
+      },
+      {
+        "id" : "Procedure.code:absentOrUnknownProcedure",
+        "path" : "Procedure.code",
+        "sliceName" : "absentOrUnknownProcedure",
+        "short" : "Code for absent problem or for unknown procedure",
+        "definition" : "Code representing the statement \"absent problem\" or the statement \"procedures unknown\"",
+        "min" : 0,
+        "max" : "1",
+        "type" : [
+          {
+            "code" : "CodeableConcept"
+          }
+        ],
+        "binding" : {
+          "extension" : [
+            {
+              "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString" : "absentOrUnknownProcedure"
+            }
+          ],
+          "strength" : "required",
+          "description" : "A code to identify absent or unknown procedures",
+          "valueSet" : "http://hl7.org/fhir/uv/ips/ValueSet/absent-or-unknown-procedures-uv-ips"
         }
       },
       {
@@ -101,6 +149,15 @@
           },
           {
             "code": "Period"
+          },
+          {
+            "code": "string"
+          },
+          {
+            "code": "Age"
+          },
+          {
+            "code": "Range"
           }
         ],
         "mustSupport": true
