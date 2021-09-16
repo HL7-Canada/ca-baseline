@@ -18,7 +18,7 @@
       {
         "id": "Observation",
         "path": "Observation",
-        "short": "Smoking Status Profile",
+        "short": "Tobacco Smoking Status Profile",
         "definition": "The Observation (Tobacco Smoking Status) Profile is based upon the core FHIR Observation Resource"
       },
       {
@@ -59,16 +59,37 @@
         "mustSupport": true
       },
       {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "short": "Clinically relevant time/time-period for the smoking status observation",
+        "constraint" : [
+        {
+          "key" : "Obs-1",
+          "severity" : "error",
+          "human" : "Observation.effective or Observation.issued SHOULD be present",
+          "expression" : "effective.exists() or issued.exists().",
+          "xpath" : "Observation.effective or Observation.issued"
+        }
+      ]
+      },
+      {
         "id": "Observation.issued",
         "path": "Observation.issued",
         "short": "Date/Time this version of the smoking status observation was made available",
-        "min": 1,
-        "mustSupport": true
+        "constraint" : [
+        {
+          "key" : "Obs-1",
+          "severity" : "error",
+          "human" : "Observation.effective or Observation.issued SHOULD be present",
+          "expression" : "effective.exists() or issued.exists().",
+          "xpath" : "Observation.effective or Observation.issued"
+        }
+      ]
       },
       {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
-        "short": "Coded Responses from Smoking Status ValueSet",
+        "short": "Coded Responses for Tobacco Smoking Status ValueSet",
         "min": 1,
         "type": [
           {
@@ -77,9 +98,8 @@
         ],
         "mustSupport": true,
         "binding": {
-          "strength": "extensible",
-          "description": "A code to identify a specific procedure .",
-          "valueSet": "http://hl7.org/fhir/ca/baseline/ValueSet/ca-baseline-observation-smokingstatus"
+          "strength": "example",
+          "valueSet": "http://hl7.org/fhir/uv/ips/ValueSet/current-smoking-status-uv-ips"
         }
       }
     ]
