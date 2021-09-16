@@ -37,7 +37,6 @@
       {
         "id": "Condition.clinicalStatus",
         "path": "Condition.clinicalStatus",
-        "min": 0,
         "mustSupport": true,
         "isModifier": true,
         "isModifierReason": "This element is labeled as a modifier because the status contains codes that mark the condition as no longer active."
@@ -45,7 +44,6 @@
       {
         "id": "Condition.verificationStatus",
         "path": "Condition.verificationStatus",
-        "min": 0,
         "mustSupport": true,
         "isModifier": true,
         "isModifierReason": "This element is labeled as a modifier because the status contains the code refuted and entered-in-error that mark the Condition as not currently valid."
@@ -59,7 +57,6 @@
         "id": "Condition.code",
         "path": "Condition.code",
         "definition": "Identification of the patient's relevant condition, problem or diagnosis or recording of 'problem absent' or of 'problems unknown', as interpreted by the provider.",
-        "min": 1,
         "mustSupport": true
       },
       {
@@ -75,7 +72,6 @@
           "rules": "open"
         },
         "definition": "Identification of the patient's relevant condition, problem or diagnosis or recording of 'problem absent' or of 'problems unknown', as interpreted by the provider.",
-        "min": 1,
         "mustSupport": true
       },
       {
@@ -85,7 +81,6 @@
         "short": "CHI identification of the condition, problem or diagnosis",
         "definition": "The code that represents relevant clinical problems, conditions, diagnoses, symptoms, findings and complaints, as interpreted by the provider shall be taken from [CHI Health Concern Code](https://fhir.infoway-inforoute.ca/ValueSet/healthconcerncode)",
         "comment": "The binding strength of this element is [Required](https://www.hl7.org/fhir/terminologies.html#strength), meaning that codes come from the Canada Health Infoway Health Concern Code value set for interoperability purposes",
-        "min": 1,
         "max": "1",
         "type":  [
           {
