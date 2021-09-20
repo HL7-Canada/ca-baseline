@@ -21,18 +21,19 @@
         "path": "Practitioner",
         "short": "Practitioner Profile",
         "definition": "The Practitioner Profile is based upon the core FHIR Practitioner Resource"
-      },
-      {
+      }, {
+        "id": "Practitioner.identifier",
+        "path": "Practitioner.identifier",
+        "mustSupport": true
+      }, {
         "id": "Practitioner.identifier.system",
         "path": "Practitioner.identifier.system",
         "min": 1
-      },
-      {
+      }, {
         "id": "Practitioner.identifier.value",
         "path": "Practitioner.identifier.value",
         "min": 1
-      },
-      {
+      }, {
         "id": "Practitioner.name",
         "path": "Practitioner.name",
         "constraint": [
@@ -45,7 +46,7 @@
           }
         ],
         "mustSupport": true
-      },
+      }, 
       {
         "id": "Practitioner.address.extension",
         "path": "Practitioner.address.extension",
@@ -58,8 +59,7 @@
           ],
           "rules": "open"
         }
-      },
-      {
+      }, {
         "id": "Practitioner.address.extension:Extension",
         "path": "Practitioner.address.extension",
         "sliceName": "preferred",
@@ -75,7 +75,7 @@
             ]
           }
         ]
-      },
+      }, 
       {
         "id": "Practitioner.qualification.code.coding.system",
         "path": "Practitioner.qualification.code.coding.system",

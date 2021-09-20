@@ -34,6 +34,11 @@
         "definition": "The PractitionerRole Profile is based upon the core FHIR PractitionerRole Resource"
       },
       {
+        "id": "PractitionerRole.identifier",
+        "path": "PractitionerRole.identifier",
+        "mustSupport": true
+      },
+      {
         "id": "PractitionerRole.identifier.system",
         "path": "PractitionerRole.identifier.system",
         "min": 1
