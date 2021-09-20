@@ -110,6 +110,11 @@
         "mustSupport": true
       },
       {
+        "id": "MedicationStatement.dateAsserted",
+        "path": "MedicationStatement.dateAsserted",
+        "mustSupport": true
+      },
+      {
         "id": "MedicationStatement.informationSource",
         "path": "MedicationStatement.informationSource",
         "type": [
@@ -140,7 +145,8 @@
               "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "MedicationStatement.reasonReference",
