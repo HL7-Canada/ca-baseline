@@ -58,7 +58,10 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient"
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient",
+              "http://hl7.org/fhir/StructureDefinition/Group",
+              "http://hl7.org/fhir/StructureDefinition/Device",
+              "http://hl7.org/fhir/StructureDefinition/Location"
             ]
           }
         ],

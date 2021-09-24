@@ -36,13 +36,13 @@
       	}
       },
       {
-	"id": "Medication.extension:medicationstrength",
-	"path": "Medication.extension",
-	"sliceName": "medicationstrength",
-	"short": "Extension: Medication Strength",
+        "id": "Medication.extension:medicationstrength",
+        "path": "Medication.extension",
+        "sliceName": "medicationstrength",
+        "short": "Socialized Optional Extension: Medication Strength",
       	"definition": "Provides a textual description of the strength of the active ingredient(s) in the medication",
       	"min": 0,
-	"max": "1",
+        "max": "1",
       	"type":  [
       	{
 	      	"code": "Extension",
@@ -109,7 +109,7 @@
               ]
             }
           }
-        ],        
+        ],
         "mustSupport": true,
         "binding": {
           "strength": "preferred",
@@ -134,7 +134,7 @@
 	    	"id": "Medication.code.extension:isRepresentative",
 	    	"path": "Medication.code.extension",
 	    	"sliceName": "isRepresentative",
-	    	"short": "Extension: Code is Representative",
+	    	"short": "Socialized Optional Extension: Code is Representative",
 	    	"definition": "If set to true, indicates that the medication code sent was chosen as a representative code of a drug picked at a more general level. I.e. The user didn't actually choose this specific code. The intended constraints around what drug should be supplied are conveyed by the request's substitution rules.",
 	    	"min": 0,
 	    	"max": "1",
@@ -147,7 +147,7 @@
 		    	}
 	    	],
 	    	"mustSupport": false
-    	},  
+    	},
       {
         "id": "Medication.code.coding",
         "path": "Medication.code.coding",
