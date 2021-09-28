@@ -143,7 +143,6 @@
       {
         "id": "Patient.identifier.type",
         "path": "Patient.identifier.type",
-        "min": 1,
         "example": [
           {
             "label": "Pattern",
@@ -156,8 +155,7 @@
               ]
             }
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "Patient.identifier.system",
