@@ -289,8 +289,7 @@
               "code": "JHN"
             }
           ]
-        },
-        "mustSupport": true
+        }
       },
       {
         "id": "Patient.identifier:JHN.system",
