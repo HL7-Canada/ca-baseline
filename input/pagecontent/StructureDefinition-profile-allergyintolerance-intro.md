@@ -19,10 +19,11 @@ The following elements are marked as Must Support in the AllergyIntolerance prof
 **Must Support elements:**
 * clinical status of the allergy or intolerance (AllergyIntolerance.clinicalStatus)
 * verification status (AllergyIntolerance.verificationStatus)
+* Allergy or Intolerance Type (AllergyIntolerance.type)
+* criticality (AllergyIntolerance.criticality)
 * code of the allergy or intolerance (AllergyIntolerance.code)
 * reference to a subject (AllergyIntolerance.patient)
 * reaction to the allergy or intolerance (AllergyIntolerance.reaction)
-* substance that caused the adverse reaction event (AllergyIntolerance.reaction.substance)
 * manifestation of clinical symptoms (AllergyIntolerance.reaction.manifestation)
 * severity of the reaction event (AllergyIntolerance.reaction.severity)
 
@@ -35,7 +36,7 @@ The _AllergyIntolerance_ resource instance use could be clinical decision suppor
 
 If the patient has been asked and has indicated a history of allergy or intolerance then this information is represented by:
 * _AllergyIntolerance.code_ - an appropriate SNOMED CT code
-* _AllergyIntolerance.verificationStatus_ element SHALL be one of the following: confirmed | refuted | entered-in-error 
+* _AllergyIntolerance.verificationStatus_ element SHALL be one of the following: confirmed | refuted | entered-in-error
 
 If a patient asserts a history of allergy or intolerance then the following elements SHOULD be populated:
 * _AllergyIntolerance.criticality_
@@ -47,20 +48,19 @@ If a patient asserts a history of allergy or intolerance then the following elem
 
 If a patient has been asked and has indicated no history of allergies or intolerance then this is represented by:
 * _AllergyIntolerance.code_ = "716186003" No known allergy (situation) SNOMED CT code
-* _AllergyIntolerance.verificationStatus_ element SHALL be one of the following: confirmed | refuted | entered-in-error 
+* _AllergyIntolerance.verificationStatus_ element SHALL be one of the following: confirmed | refuted | entered-in-error
 
 
 **Not Asked**
 
-If the patient has NOT been asked or it is NOT possible to obtain information about any history of allergy or intolerance then this situation is represented with NullFlavor codes: 
+If the patient has NOT been asked or it is NOT possible to obtain information about any history of allergy or intolerance then this situation is represented with NullFlavor codes:
 * _AllergyIntolerance.code_ - NullFalvor code, e.g., "NASK" (Not asked).
 
-If NullFlavor is used then the following elements SHOULD NOT be populated: 
-* _AllergyIntolerance.clinicalStatus_ 
-* _AllergyIntolerance.verificationStatus_ 
-* _AllergyIntolerance.type_ 
-* _AllergyIntolerance.category_ 
-* _AllergyIntolerance.criticality_ 
+If NullFlavor is used then the following elements SHOULD NOT be populated:
+* _AllergyIntolerance.clinicalStatus_
+* _AllergyIntolerance.verificationStatus_
+* _AllergyIntolerance.type_
+* _AllergyIntolerance.category_
+* _AllergyIntolerance.criticality_
 
 and other allergy related elements.
-

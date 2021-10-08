@@ -317,13 +317,13 @@
         "id": "AllergyIntolerance.onsetDateTime:onsetDateTime",
         "path": "AllergyIntolerance.onsetDateTime",
         "sliceName": "onsetDateTime",
+        "comment": "This slice was initially flagged as Must Support, and is considered MS in a handful of Canadian FHIR Implementation Guides. However, while clinically desireable it is not broadly considered MS across all IGuides reviewed during the Due Dilligence Review.",
         "min": 0,
         "type": [
           {
             "code": "dateTime"
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "AllergyIntolerance.recorder",
@@ -376,8 +376,9 @@
           ],
           "rules": "closed"
         },
-        "min": 1
-        }, {
+        "comment": "This slice was initially identified with a 1..* cardinality, and has similar constraints in a handful of Canadian FHIR Implementation Guides. However, while clinically desireable to include coding, it was not constrained consistently across all IGuides reviewed during the Due Dilligence Review."
+        },
+        {
         "id": "AllergyIntolerance.reaction.substance.coding:NonDrugAllergen",
         "path": "AllergyIntolerance.reaction.substance.coding",
         "sliceName": "NonDrugAllergen",
