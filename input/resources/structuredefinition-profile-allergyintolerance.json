@@ -240,12 +240,7 @@
             "expression": "AllergyIntolerance.code.coding.where(system = 'http://snomed.info/sct' and code = '716186003').exists() and AllergyIntolerance.verificationStatus.coding.where(code = 'unconfirmed').empty()",
             "xpath": "f:code/f:coding/f:system/@value='http://snomed.info/sct' and exists(f:verificationStatus/f:coding/f:code/@value='unconfirmed').not()"
           }
-        ],
-        "binding": {
-          "strength": "required",
-          "description": "Negation/exclusion codes for reporting no known allergies",
-          "valueSet": "http://snomed.info/sct"
-        }
+        ]
       },
       {
         "id": "AllergyIntolerance.code.coding:NoAllergy.system",

@@ -30,6 +30,8 @@ The following elements are marked as Must Support in the AllergyIntolerance prof
 ## Usage Note
 The _AllergyIntolerance_ resource instance use could be clinical decision support applications to generate/display warnings about potentially harmful medications; any intolerance to other agents (e.g. intolerance to soaps, dressings, latex, etc.) more relevant for at the bedside care.
 
+ This profile utilizes and recommends some value sets that exist on the Infoway Terminology Gateway and can be assessed by API. Implementors using and/or re-profiling from this profile should be aware that the IGPublisher can not directly resolve the canonical url to value sets that exist on the Infoway Terminology Gateway due to technical limitations and will produce warnings in the qa.txt file when this occurs. These particular warnings have been suppressed in this specification and will need to be suppressed by other IGuide authors looking to leverage this particular service until the limitations are resolved.
+
 ### Profile specific implementation guidance
 
 **History of Allergy or Intolerance**

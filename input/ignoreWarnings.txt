@@ -3,3 +3,16 @@
 # Add warning and/or information messages here after you've confirmed that they aren't really a problem
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
+
+
+# AllergyIntolerance Terminology Gateway ValueSets Not Resolvable
+WARNING: StructureDefinition/profile-allergyintolerance: StructureDefinition.differential.element[5].binding: The valueSet reference https://fhir.infoway-inforoute.ca/ValueSet/allergyintolerancestatuscode on element AllergyIntolerance.verificationStatus.coding could not be resolved
+WARNING: StructureDefinition/profile-allergyintolerance: StructureDefinition.differential.element[16].binding: The valueSet reference https://fhir.infoway-inforoute.ca/ValueSet/NullFlavor on element AllergyIntolerance.code.coding could not be resolved
+WARNING: StructureDefinition/profile-allergyintolerance: StructureDefinition.differential.element[31].binding: The valueSet reference https://fhir.infoway-inforoute.ca/ValueSet/NonDrugAllergenCode on element AllergyIntolerance.reaction.substance.coding could not be resolved
+WARNING: StructureDefinition/profile-allergyintolerance: StructureDefinition.differential.element[34].binding: The valueSet reference https://fhir.infoway-inforoute.ca/ValueSet/prescriptionmedicinalproduct on element AllergyIntolerance.reaction.substance.coding could not be resolved
+WARNING: StructureDefinition/profile-allergyintolerance: StructureDefinition.differential.element[40].binding: The valueSet reference https://fhir.infoway-inforoute.ca/ValueSet/RouteOfAdministration on element AllergyIntolerance.reaction.exposureRoute could not be resolved
+WARNING: StructureDefinition/profile-allergyintolerance: StructureDefinition.snapshot.element[15].binding: The valueSet reference https://fhir.infoway-inforoute.ca/ValueSet/allergyintolerancestatuscode on element AllergyIntolerance.verificationStatus.coding could not be resolved
+WARNING: StructureDefinition/profile-allergyintolerance: StructureDefinition.snapshot.element[39].binding: The valueSet reference https://fhir.infoway-inforoute.ca/ValueSet/NullFlavor on element AllergyIntolerance.code.coding could not be resolved
+WARNING: StructureDefinition/profile-allergyintolerance: StructureDefinition.snapshot.element[74].binding: The valueSet reference https://fhir.infoway-inforoute.ca/ValueSet/NonDrugAllergenCode on element AllergyIntolerance.reaction.substance.coding could not be resolved
+WARNING: StructureDefinition/profile-allergyintolerance: StructureDefinition.snapshot.element[82].binding: The valueSet reference https://fhir.infoway-inforoute.ca/ValueSet/prescriptionmedicinalproduct on element AllergyIntolerance.reaction.substance.coding could not be resolved
+WARNING: StructureDefinition/profile-allergyintolerance: StructureDefinition.snapshot.element[96].binding: The valueSet reference https://fhir.infoway-inforoute.ca/ValueSet/RouteOfAdministration on element AllergyIntolerance.reaction.exposureRoute could not be resolved
