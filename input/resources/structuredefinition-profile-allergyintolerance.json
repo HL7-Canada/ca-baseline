@@ -240,12 +240,7 @@
             "expression": "AllergyIntolerance.code.coding.where(system = 'http://snomed.info/sct' and code = '716186003').exists() and AllergyIntolerance.verificationStatus.coding.where(code = 'unconfirmed').empty()",
             "xpath": "f:code/f:coding/f:system/@value='http://snomed.info/sct' and exists(f:verificationStatus/f:coding/f:code/@value='unconfirmed').not()"
           }
-        ],
-        "binding": {
-          "strength": "required",
-          "description": "Negation/exclusion codes for reporting no known allergies",
-          "valueSet": "http://snomed.info/sct"
-        }
+        ]
       },
       {
         "id": "AllergyIntolerance.code.coding:NoAllergy.system",
@@ -317,13 +312,13 @@
         "id": "AllergyIntolerance.onsetDateTime:onsetDateTime",
         "path": "AllergyIntolerance.onsetDateTime",
         "sliceName": "onsetDateTime",
+        "comment": "This slice was initially flagged as Must Support, and is considered MS in a handful of Canadian FHIR Implementation Guides. However, while clinically desireable it is not broadly considered MS across all IGuides reviewed during the Due Dilligence Review.",
         "min": 0,
         "type": [
           {
             "code": "dateTime"
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "AllergyIntolerance.recorder",
@@ -376,8 +371,9 @@
           ],
           "rules": "closed"
         },
-        "min": 1
-        }, {
+        "comment": "This slice was initially identified with a 1..* cardinality, and has similar constraints in a handful of Canadian FHIR Implementation Guides. However, while clinically desireable to include coding, it was not constrained consistently across all IGuides reviewed during the Due Dilligence Review."
+        },
+        {
         "id": "AllergyIntolerance.reaction.substance.coding:NonDrugAllergen",
         "path": "AllergyIntolerance.reaction.substance.coding",
         "sliceName": "NonDrugAllergen",
