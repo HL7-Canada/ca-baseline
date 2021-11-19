@@ -17,12 +17,6 @@
   "differential": {
     "element": [
       {
-        "id": "Immunization",
-        "path": "Immunization",
-        "short": "Immunization Profile",
-        "definition": "The Immunization Profile is based upon the core FHIR Immunization Resource"
-      },
-      {
         "id": "Immunization.status",
         "path": "Immunization.status",
         "mustSupport": true
@@ -122,8 +116,11 @@
               {
                 "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
                 "valueBoolean" : true
+              },
+              {
+                "url" : "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-dateestimated"
               }
-            ],
+              ],
             "code" : "dateTime"
           },
           {
