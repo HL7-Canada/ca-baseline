@@ -86,15 +86,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/ext-dataabsentreason"/>
-      </reference>
-      <name value="Data Absent Reason"/>
-      <description value="Provides a reason why the expected value or elements in the element that is extended are missing."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="extensions"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/ext-deceased"/>
       </reference>
       <name value="Deceased"/>
