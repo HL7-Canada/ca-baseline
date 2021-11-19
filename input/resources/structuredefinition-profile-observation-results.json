@@ -186,6 +186,8 @@
         "id": "Observation.value[x]:valueCodeableConcept",
         "path": "Observation.value[x]",
         "sliceName": "valueCodeableConcept",
+        "comment": "A coded value **SHOULD**  be selected from [SNOMED CT](http://www.snomed.org).",
+
         "type": [
           {
             "code": "CodeableConcept"
@@ -199,12 +201,7 @@
             "expression": "valueCodeableConcept.coding.system.empty() or valueCodeableConcept.coding.system = 'http://snomed.info/sct'",
             "xpath": "not(exists(f:valueCodeableConcept/f:coding/f:system) ) or  f:valueCodeableConcept/f:coding/f:system[@value='http://snomed.info/sct']"
           }
-        ],
-        "binding": {
-          "strength": "preferred",
-          "description": "A coded value **SHOULD**  be selected from [SNOMED CT](http://www.snomed.org).",
-          "valueSet": "http://snomed.info/sct"
-        }
+        ]
       },
       {
         "id": "Observation.value[x]:valueCodeableConcept.coding",
