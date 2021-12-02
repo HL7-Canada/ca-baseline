@@ -41,14 +41,12 @@
       {
         "id": "AllergyIntolerance.clinicalStatus",
         "path": "AllergyIntolerance.clinicalStatus",
-        "mustSupport": true,
         "isModifier": true,
         "isModifierReason": "This element is labeled as a modifier because the status contains the codes refuted and entered-in-error that mark the AllergyIntolerance as not currently valid."
       },
       {
         "id": "AllergyIntolerance.verificationStatus",
         "path": "AllergyIntolerance.verificationStatus",
-        "mustSupport": true,
         "isModifier": true,
         "isModifierReason": "This element is labeled as a modifier because the status contains the codes refuted and entered-in-error that mark the AllergyIntolerance as not currently valid."
       },
@@ -71,8 +69,7 @@
           {
             "code" : "Coding"
           }
-        ],
-        "mustSupport" : true
+        ]
       },
       {
         "id": "AllergyIntolerance.verificationStatus.coding:StatusCode",
@@ -135,19 +132,9 @@
         "min": 1
       },
       {
-        "id": "AllergyIntolerance.type",
-        "path": "AllergyIntolerance.type",
-        "mustSupport": true
-      },
-      {
         "id": "AllergyIntolerance.category",
         "path": "AllergyIntolerance.category",
         "comment" : "Some implementers may utilize value sets where category is readily distinguishable while others may not, and those that do not use those value sets should consider making category MS in their profiles"
-      },
-      {
-        "id": "AllergyIntolerance.criticality",
-        "path": "AllergyIntolerance.criticality",
-        "mustSupport": true
       },
       {
         "id": "AllergyIntolerance.code",
@@ -176,8 +163,7 @@
           ],
           "rules": "closed"
         },
-        "min": 0,
-        "mustSupport": true
+        "min": 0
       },
       {
         "id": "AllergyIntolerance.code.coding:NotAsked",
