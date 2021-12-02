@@ -446,11 +446,6 @@
         "mustSupport": true
       },
       {
-        "id": "AllergyIntolerance.reaction.severity",
-        "path": "AllergyIntolerance.reaction.severity",
-        "mustSupport": true
-      },
-      {
         "id": "AllergyIntolerance.reaction.exposureRoute",
         "path": "AllergyIntolerance.reaction.exposureRoute",
         "short": "How the subject was exposed to the substance",
