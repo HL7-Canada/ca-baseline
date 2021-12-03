@@ -98,12 +98,46 @@
         ]
       },
       {
-        "id" : "Immunization.occurrence[x]",
+      "id" : "Immunization.occurrence[x]",
+      "path" : "Immunization.occurrence[x]",
+      "slicing" : {
+        "discriminator" : [
+          {
+            "type" : "type",
+            "path" : "$this"
+          }
+        ],
+        "ordered" : false,
+        "rules" : "closed"
+      },
+      "short" : "Vaccine administration date",
+      "definition" : "Date vaccine administered or was to be administered.",
+      "comment" : "CA Baseline Usage Notes: While occurrenceString is allowed given its use in existing Canadian systems - a combination of occurrenceDateTime (full or partial) with the 'estimated' extension is the preferred mechanism for expressing when an exact date is unknown. For example, if a patient recalls that they were immunized in June 1980, occurrenceDateTime will have a partial date '1980-06' with 'estimated'=true. Another example: if in 2020, a 55 y.o. patient recalls that they were immunized at the age of 5, occurrenceDateTime will have a partial date '1970' with 'estimated'=true.",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
         "path" : "Immunization.occurrence[x]",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [
+        {
+          "code" : "dateTime"
+        },
+        {
+          "code" : "string"
+        }
+      ],
+      "mustSupport" : true
+      },
+      {
+        "id" : "Immunization.occurrence[x]:occurrenceDateTime",
+        "path" : "Immunization.occurrence[x]",
+        "sliceName" : "occurrenceDateTime",
         "short" : "Vaccine administration date",
         "definition" : "Date vaccine administered or was to be administered.",
-        "comment" : "WhCA Baseline Usage Notes: While occurrenceString is allowed given its use in existing Canadian systems - a combination of occurrenceDateTime (full or partial) with the 'estimated' extension is the preferred mechanism for expressing when an exact date is unknown. For example, if a patient recalls that they were immunized in June 1980, occurrenceDateTime will have a partial date '1980-06' with 'estimated'=true. Another example: if in 2020, a 55 y.o. patient recalls that they were immunized at the age of 5, occurrenceDateTime will have a partial date '1970' with 'estimated'=true.",
-        "min" : 1,
+        "comment" : "When immunizations are given a specific date and time should always be known.   When immunizations are patient reported, a specific date might not be known.  Although partial dates are allowed, an adult patient might not be able to recall the year a childhood immunization was given. An exact date is always preferable, but the use of the String data type is acceptable when an exact date is not known. A small number of vaccines (e.g. live oral typhoid vaccine) are given as a series of patient self-administered dose over a span of time. In cases like this, often, only the first dose (typically a provider supervised dose) is recorded with the occurrence indicating the date/time of the first dose.",
+        "min" : 0,
         "max" : "1",
         "base" : {
           "path" : "Immunization.occurrence[x]",
@@ -112,28 +146,47 @@
         },
         "type" : [
           {
-            "extension" : [
-              {
-                "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                "valueBoolean" : true
-              },
-              {
-                "url" : "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-dateestimated"
-              }
-              ],
             "code" : "dateTime"
-          },
-          {
-            "code" : "string"
           }
         ],
         "mustSupport" : true
       },
       {
-        "id": "Immunization.occurenceDateTime.extension:estimated",
-        "path": "Immunization.occurenceDateTime.extension",
+         "id": "Immunization.occurrence[x]:occurrenceDateTime.extension",
+         "path": "Immunization.occurrence[x].extension",
+         "slicing": {
+             "discriminator":  [
+                 {
+                     "type": "value",
+                      "path": "url"
+                 }
+              ],
+             "ordered": false,
+             "rules": "open"
+           },
+             "min" : 0,
+              "max" : "*",
+              "base" : {
+                "path" : "Element.extension",
+                "min" : 0,
+                "max" : "*"
+              },
+              "type" : [
+                {
+                  "code" : "Extension"
+                }
+              ]
+      },
+      {
+        "id": "Immunization.occurrence[x]:occurrenceDateTime.extension:estimated",
+        "path": "Immunization.occurrence[x].extension",
         "sliceName": "estimated",
         "max": "1",
+        "base" : {
+          "path" : "Element.extension",
+          "min" : 0,
+          "max" : "*"
+        },
         "type": [
           {
             "code": "Extension",
