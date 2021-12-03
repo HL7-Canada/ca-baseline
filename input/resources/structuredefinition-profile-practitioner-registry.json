@@ -165,7 +165,7 @@
         "binding": {
           "strength": "preferred",
           "description": "A code system for the degree or educational rank that the credential specifies",
-          "valueSet": "http://fhir.infoway-inforoute.ca/CodeSystem/scpqual"
+          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/qualifiedroletype"
         }
       },
       {
@@ -188,7 +188,7 @@
         "binding": {
           "strength": "preferred",
           "description": "A code system that is used to categorize an entity that delivers health care",
-          "valueSet": "https://fhir.infoway-inforoute.ca/CodeSystem/scptype"
+          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/qualifiedroletype"
         }
       },
       {
