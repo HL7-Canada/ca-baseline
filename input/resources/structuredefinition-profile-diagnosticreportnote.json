@@ -34,25 +34,15 @@
       {
         "id": "DiagnosticReport.category",
         "path": "DiagnosticReport.category",
-        "short": "CA Core Category Code",
+        "comment": "This profile does not currently put forth a Canadian value set for Diagnostic Report Categories. Further work is required to determine if this profile should align to the value set in use in US Core https://www.hl7.org/fhir/us/core/ValueSet-us-core-diagnosticreport-category.html or if a Canadian value set needs to be created.",
         "min": 1,
-        "mustSupport": true,
-        "binding": {
-          "strength": "extensible",
-          "description": "The CA Core Diagnostic Report Cateogy Value Set is a 'starter set' of categories supported for fetching and Diagnostic Reports and Notes.",
-          "valueSet": "http://hl7.org/fhir/ca/baseline/ValueSet/ca-baseline-diagnosticreport-category"
-        }
+        "mustSupport": true
       },
       {
         "id": "DiagnosticReport.code",
         "path": "DiagnosticReport.code",
-        "short": "CA Core Report Code",
-        "mustSupport": true,
-        "binding": {
-          "strength": "extensible",
-          "description": "CA Core Diagnostic Report and Note Codes",
-          "valueSet": "http://hl7.org/fhir/ca/baseline/ValueSet/ca-baseline-diagnosticreport-report-and-note-codes"
-        }
+        "comment": "This profile does not currently put forth a Canadian value set for Diagnostic Report Codes. Further work is required to determine if this profile should align to the value set in use in US Core https://www.hl7.org/fhir/us/core/ValueSet-us-core-diagnosticreport-report-and-note-codes.html or if a Canadian value set needs to be created.",      
+        "mustSupport": true
       },
       {
         "id": "DiagnosticReport.subject",
