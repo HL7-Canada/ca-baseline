@@ -52,4 +52,4 @@ Each profile defines the minimum mandatory elements, extensions and terminology 
 Guidance, Capability Statements, and other have not yet been reviewed and added.
 
 -----
-Contact: [FHIR-CA-Baseline@infoway-inforoute.ca](mailto:FHIR-CA-Baseline@infoway-inforoute.ca)
+Contact: [hl7canada@infoway-inforoute.ca](mailto:hl7canada@infoway-inforoute.ca)
