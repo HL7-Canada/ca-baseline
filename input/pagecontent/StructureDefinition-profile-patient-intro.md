@@ -35,7 +35,6 @@ Following elements are marked as Must Support in the Canadian Patient profile to
 **Must Support elements:**
 * an identifier
 * a patient name
-* contact detail (e.g. a telephone number or an email address)
 * a birth date
 
 ## Usage Note
