@@ -326,8 +326,7 @@
       },
       {
         "id": "Patient.telecom",
-        "path": "Patient.telecom",
-        "mustSupport": true
+        "path": "Patient.telecom"
       },
       {
         "id": "Patient.telecom.system",
