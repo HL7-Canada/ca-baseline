@@ -17,15 +17,9 @@ Some elements are marked as Must Support. This means that implementations genera
 The following elements are marked as Must Support in the AllergyIntolerance profile:
 
 **Must Support elements:**
-* clinical status of the allergy or intolerance (AllergyIntolerance.clinicalStatus)
-* verification status (AllergyIntolerance.verificationStatus)
-* Allergy or Intolerance Type (AllergyIntolerance.type)
-* criticality (AllergyIntolerance.criticality)
 * code of the allergy or intolerance (AllergyIntolerance.code)
 * reference to a subject (AllergyIntolerance.patient)
-* reaction to the allergy or intolerance (AllergyIntolerance.reaction)
 * manifestation of clinical symptoms (AllergyIntolerance.reaction.manifestation)
-* severity of the reaction event (AllergyIntolerance.reaction.severity)
 
 ## Usage Note
 The _AllergyIntolerance_ resource instance use could be clinical decision support applications to generate/display warnings about potentially harmful medications; any intolerance to other agents (e.g. intolerance to soaps, dressings, latex, etc.) more relevant for at the bedside care.
