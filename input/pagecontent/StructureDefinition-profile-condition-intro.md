@@ -19,8 +19,6 @@ Following elements are marked as Must Support in the Canadian Condition profile 
 
 **Must Support elements:**
 * clinical status of the condition
-* verification status to support the clinical status of the condition
-* category assigned to the condition
 * code identifying the patient's relevant condition
 * reference to subject
 * onset - estimated or actual date of the condition
