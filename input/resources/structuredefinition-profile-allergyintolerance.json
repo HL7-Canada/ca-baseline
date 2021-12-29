@@ -335,11 +335,7 @@
             ]
           }
         ]
-      }, {
-        "id": "AllergyIntolerance.reaction",
-        "path": "AllergyIntolerance.reaction",
-        "mustSupport": true
-      },
+      }, 
       {
         "id": "AllergyIntolerance.reaction.substance",
         "path": "AllergyIntolerance.reaction.substance",
