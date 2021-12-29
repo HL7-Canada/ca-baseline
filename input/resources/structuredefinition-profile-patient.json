@@ -21,7 +21,6 @@
         "path": "Patient",
         "short": "Patient Profile",
         "definition": "The Patient Profile is based upon the core FHIR Patient Resource",
-        "mustSupport": true,
         "isModifier": false
       },
       {
