@@ -28,11 +28,6 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.intent",
-        "path": "MedicationRequest.intent",
-        "mustSupport": true
-      },
-      {
         "id": "MedicationRequest.reported[x]",
         "path": "MedicationRequest.reported[x]",
         "type" : [
@@ -49,8 +44,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-organization"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "MedicationRequest.medication[x]",
@@ -118,8 +112,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-device"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "MedicationRequest.performer",
