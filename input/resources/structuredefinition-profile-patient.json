@@ -137,6 +137,14 @@
           ],
           "rules": "open"
         },
+        "type" : [
+          {
+            "code" : "Identifier",
+            "profile" : [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier"
+            ]
+          }
+        ],
         "min": 0
       },
       {
