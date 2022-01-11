@@ -1,0 +1,32 @@
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "profile-identifier",
+  "url" : "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier",
+  "version" : "0.0.1",
+  "name" : "IdentifierCABaseline",
+  "title" : "Identifier DataType Profile (CA Baseline)",
+  "status" : "draft",
+  "date" : "2021-09-14T18:37:29+00:00",
+  "publisher" : "HL7 Canada",
+  "description" : "This profile constrains the identifier data type to support minimum expectations of Canadian systems when expressing the identifier data type.",
+  "fhirVersion" : "4.0.1",
+  "kind" : "complex-type",
+  "abstract" : false,
+  "type" : "Identifier",
+  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Identifier",
+  "derivation" : "constraint",
+  "differential" : {
+    "element" : [
+      {
+        "id" : "Identifier.system",
+        "path" : "Identifier.system",
+        "min": 1
+      },
+      {
+        "id" : "Identifier.value",
+        "path" : "Identifier.value",
+        "min": 1
+      }
+    ]
+  }
+}
