@@ -425,7 +425,7 @@
   </reference>
   <name value="Identifier DataType Profile (CA Baseline)"/>
   <exampleBoolean value="false"/>
-  <groupingId value="datatypes"/>
+  <groupingId value="profiles"/>
   </resource>
     <resource>
       <reference>
