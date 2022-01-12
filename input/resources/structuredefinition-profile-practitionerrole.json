@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-practitionerrole",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitionerrole",
-  "version": "0.0.1",
+  "version": "0.9.0",
   "name": "PractitionerRoleProfile",
   "title": "PractitionerRole Profile (General)",
   "status": "draft",
-  "date": "2020-03-09",
+  "date": "2022-01-11",
   "publisher": "HL7 Canada",
   "description": "Proposed constraints and extensions on the PractitionerRole Resource for general use.",
   "jurisdiction": [
@@ -30,8 +30,6 @@
       {
         "id": "PractitionerRole",
         "path": "PractitionerRole",
-        "short": "PractitionerRole Profile",
-        "definition": "The PractitionerRole Profile is based upon the core FHIR PractitionerRole Resource",
         "constraint" : [
           {
             "key" : "ca-baseline-pracRole-1",
@@ -40,22 +38,20 @@
             "expression" : "code.exists() or specialty.exists()",
             "xpath" : "PracitionerRole.code or PracitionerRole.specialty"
           }
-        ]        
+        ]
       },
       {
         "id": "PractitionerRole.identifier",
         "path": "PractitionerRole.identifier",
+        "type" : [
+          {
+            "code" : "Identifier",
+            "profile" : [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier"
+            ]
+          }
+        ],        
         "mustSupport": true
-      },
-      {
-        "id": "PractitionerRole.identifier.system",
-        "path": "PractitionerRole.identifier.system",
-        "min": 1
-      },
-      {
-        "id": "PractitionerRole.identifier.value",
-        "path": "PractitionerRole.identifier.value",
-        "min": 1
       },
       {
         "id": "PractitionerRole.practitioner",
