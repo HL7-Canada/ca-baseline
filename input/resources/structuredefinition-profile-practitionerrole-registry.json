@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "profile-practitionerrole-registry",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitionerrole-registry",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "name": "PractitionerRoleProfileRegistry",
   "title": "PractitionerRole Profile (Provider Registry)",
   "status": "draft",
@@ -95,17 +95,15 @@
         "id": "PractitionerRole.identifier",
         "path": "PractitionerRole.identifier",
         "min": 1,
+        "type" : [
+          {
+            "code" : "Identifier",
+            "profile" : [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier"
+            ]
+          }
+        ],           
         "mustSupport": true
-      },
-      {
-        "id": "PractitionerRole.identifier.system",
-        "path": "PractitionerRole.identifier.system",
-        "min": 1
-      },
-      {
-        "id": "PractitionerRole.identifier.value",
-        "path": "PractitionerRole.identifier.value",
-        "min": 1
       },
       {
         "id": "PractitionerRole.practitioner",
