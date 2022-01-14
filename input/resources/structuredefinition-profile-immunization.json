@@ -200,14 +200,11 @@
       {
         "id": "Immunization.primarySource",
         "path": "Immunization.primarySource",
-        "short": "Indicates that data is from the primary record created at the time the vaccine was administered.",
-        "min": 1,
-        "mustSupport": true
+        "short": "Indicates that data is from the primary record created at the time the vaccine was administered."
       },
       {
         "id": "Immunization.reportOrigin",
         "path": "Immunization.reportOrigin",
-        "mustSupport": true,
         "binding": {
           "strength": "preferred",
           "valueSet": "https://cvc.canimmunize.ca/v3/ValueSet/RepSource"
@@ -255,12 +252,6 @@
         }
       },
       {
-        "id": "Immunization.performer.function",
-        "path": "Immunization.performer.function",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
         "id": "Immunization.performer.actor",
         "path": "Immunization.performer.actor",
         "type": [
@@ -272,8 +263,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-organization"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "Immunization.reasonReference",
@@ -316,7 +306,6 @@
       {
         "id": "Immunization.protocolApplied.targetDisease",
         "path": "Immunization.protocolApplied.targetDisease",
-        "mustSupport": true,
         "binding": {
           "strength": "preferred",
           "valueSet": "https://cvc.canimmunize.ca/v3/ValueSet/Disease"
