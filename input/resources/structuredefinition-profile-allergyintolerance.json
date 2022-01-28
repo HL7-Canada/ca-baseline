@@ -33,39 +33,45 @@
         "path": "AllergyIntolerance",
         "short": "AllergyIntolerance Profile",
         "definition": "The AllergyIntolerance Profile is based upon the core FHIR AllergyIntolerance Resource"
-      }, {
+      },
+      {
         "id": "AllergyIntolerance.identifier",
-        "path": "AllergyIntolerance.identifier",
-        "mustSupport": true
-      }, {
+        "path": "AllergyIntolerance.identifier"
+      },
+      {
         "id": "AllergyIntolerance.clinicalStatus",
         "path": "AllergyIntolerance.clinicalStatus",
-        "min": 0,
-        "mustSupport": true,
         "isModifier": true,
         "isModifierReason": "This element is labeled as a modifier because the status contains the codes refuted and entered-in-error that mark the AllergyIntolerance as not currently valid."
-      }, {
+      },
+      {
         "id": "AllergyIntolerance.verificationStatus",
         "path": "AllergyIntolerance.verificationStatus",
-        "min": 0,
-        "mustSupport": true,
         "isModifier": true,
         "isModifierReason": "This element is labeled as a modifier because the status contains the codes refuted and entered-in-error that mark the AllergyIntolerance as not currently valid."
-      }, {
-        "id": "AllergyIntolerance.verificationStatus.coding",
-        "path": "AllergyIntolerance.verificationStatus.coding",
-        "slicing": {
-          "discriminator": [
+      },
+      {
+        "id" : "AllergyIntolerance.verificationStatus.coding",
+        "path" : "AllergyIntolerance.verificationStatus.coding",
+        "comment" : "Many Canadian systems currently use the [AllergyIntoleranceStatusCode](https://fhir.infoway-inforoute.ca/ValueSet/allergyintolerancestatuscode) value set comprised of SNOMED CT codes that can be mapped and provided as additional codings to the required FHIR allergyIntolerance-verification codes.The element is sliced to express the required population of at least one allergyIntolerance-verification coding",
+        "slicing" : {
+          "discriminator" : [
             {
-              "type": "value",
-              "path": "system"
+              "type" : "pattern",
+              "path" : "$this"
             }
           ],
-          "rules": "closed"
+          "description" : "Discriminated by the bound value set",
+          "rules" : "open"
         },
-        "min": 0,
-        "mustSupport": true
-      }, {
+        "min" : 0,
+        "type" : [
+          {
+            "code" : "Coding"
+          }
+        ]
+      },
+      {
         "id": "AllergyIntolerance.verificationStatus.coding:StatusCode",
         "path": "AllergyIntolerance.verificationStatus.coding",
         "sliceName": "StatusCode",
@@ -84,60 +90,53 @@
           "description": "Assertion about certainty associated with a propensity, or potential risk, of a reaction to the identified substance.",
           "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/allergyintolerancestatuscode"
         }
-      }, {
+      },
+      {
         "id": "AllergyIntolerance.verificationStatus.coding:StatusCode.system",
         "path": "AllergyIntolerance.verificationStatus.coding.system",
         "min": 1
-      }, {
+      },
+      {
         "id": "AllergyIntolerance.verificationStatus.coding:StatusCode.code",
         "path": "AllergyIntolerance.verificationStatus.coding.code",
         "min": 1
-      }, {
-        "id": "AllergyIntolerance.verificationStatus.coding:@default",
-        "path": "AllergyIntolerance.verificationStatus.coding",
-        "sliceName": "@default",
-        "definition": "Code for an allergy or intolerance statement. This may be a code for a substance or pharmaceutical product that is considered to be responsible for the adverse reaction risk, an allergy or intolerance condition.",
-        "comment": "The binding strength of this element is [Required](https://hl7.org/fhir/R4/terminologies.html#required), meaning that codes SHALL be taken from the specified value set to be conformant",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "AllergyIntoleranceVerificationStatus"
-            }
+      },
+      {
+          "id": "AllergyIntolerance.verificationStatus.coding:HL7VerificationStatus",
+          "path": "AllergyIntolerance.verificationStatus.coding",
+          "sliceName": "HL7VerificationStatus",
+          "short": "Required value set for AllergyIntolerance Verification Status.",
+          "definition": "Code for an allergy or intolerance statement. Represents whether an allergy/intolerance is active or resolved (indicating no longer active).",
+          "min": 1,
+          "max": "1",
+          "type":  [
+              {
+                  "code": "Coding"
+              }
           ],
-          "strength": "required",
-          "description": "Assertion about certainty associated with a propensity, or potential risk, of a reaction to the identified substance.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/allergyintolerance-verification|4.0.1"
-        }
-      }, {
-        "id": "AllergyIntolerance.verificationStatus.coding:@default.system",
+          "binding": {
+              "strength": "required",
+              "description": "Preferred value set for AllergyIntolerance Verification Status.",
+              "valueSet": "http://hl7.org/fhir/ValueSet/allergyintolerance-verification|4.0.1"
+          }
+      },
+      {
+        "id": "AllergyIntolerance.verificationStatus.coding:HL7VerificationStatus.system",
         "path": "AllergyIntolerance.verificationStatus.coding.system",
         "min": 1,
         "fixedUri": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"
-      }, {
-        "id": "AllergyIntolerance.verificationStatus.coding:@default.code",
+      },
+      {
+        "id": "AllergyIntolerance.verificationStatus.coding:HL7VerificationStatus.code",
         "path": "AllergyIntolerance.verificationStatus.coding.code",
         "min": 1
-      }, {
-        "id": "AllergyIntolerance.type",
-        "path": "AllergyIntolerance.type",
-        "mustSupport": true
-      }, {
+      },
+      {
         "id": "AllergyIntolerance.category",
         "path": "AllergyIntolerance.category",
-        "comment" : "Some implementors may utilize value sets where category is readily distinguishable while others may not, and those that do not use those value sets should consider making category MS in their profiles"
-      }, {
-        "id": "AllergyIntolerance.criticality",
-        "path": "AllergyIntolerance.criticality",
-        "mustSupport": true
-      }, {
+        "comment" : "Some implementers may utilize value sets where category is readily distinguishable while others may not, and those that do not use those value sets should consider making category MS in their profiles"
+      },
+      {
         "id": "AllergyIntolerance.code",
         "path": "AllergyIntolerance.code",
         "min": 0,
@@ -151,7 +150,8 @@
           }
         ],
         "mustSupport": true
-      }, {
+      },
+      {
         "id": "AllergyIntolerance.code.coding",
         "path": "AllergyIntolerance.code.coding",
         "slicing": {
@@ -163,9 +163,9 @@
           ],
           "rules": "closed"
         },
-        "min": 0,
-        "mustSupport": true
-      }, {
+        "min": 0
+      },
+      {
         "id": "AllergyIntolerance.code.coding:NotAsked",
         "path": "AllergyIntolerance.code.coding",
         "sliceName": "NotAsked",
@@ -193,16 +193,19 @@
           "description": "Negation/exclusion codes for reporting no known allergies or not available data.",
           "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/NullFlavor"
         }
-      }, {
+      },
+      {
         "id": "AllergyIntolerance.code.coding:NotAsked.system",
         "path": "AllergyIntolerance.code.coding.system",
         "min": 1,
         "fixedUri": "http://terminology.hl7.org/fhir/v3/NullFlavor"
-      }, {
+      },
+      {
         "id": "AllergyIntolerance.code.coding:NotAsked.code",
         "path": "AllergyIntolerance.code.coding.code",
         "min": 1
-      }, {
+      },
+      {
         "id": "AllergyIntolerance.code.coding:NoAllergy",
         "path": "AllergyIntolerance.code.coding",
         "sliceName": "NoAllergy",
@@ -223,23 +226,21 @@
             "expression": "AllergyIntolerance.code.coding.where(system = 'http://snomed.info/sct' and code = '716186003').exists() and AllergyIntolerance.verificationStatus.coding.where(code = 'unconfirmed').empty()",
             "xpath": "f:code/f:coding/f:system/@value='http://snomed.info/sct' and exists(f:verificationStatus/f:coding/f:code/@value='unconfirmed').not()"
           }
-        ],
-        "binding": {
-          "strength": "required",
-          "description": "Negation/exclusion codes for reporting no known allergies",
-          "valueSet": "http://snomed.info/sct"
-        }
-      }, {
+        ]
+      },
+      {
         "id": "AllergyIntolerance.code.coding:NoAllergy.system",
         "path": "AllergyIntolerance.code.coding.system",
         "min": 1,
         "fixedUri": "http://snomed.info/sct"
-      }, {
+      },
+      {
         "id": "AllergyIntolerance.code.coding:NoAllergy.code",
         "path": "AllergyIntolerance.code.coding.code",
         "min": 1,
         "fixedCode": "716186003"
-      }, {
+      },
+      {
         "id": "AllergyIntolerance.code.coding:@default",
         "path": "AllergyIntolerance.code.coding",
         "sliceName": "@default",
@@ -263,7 +264,8 @@
           "description": "Type of the substance/product, allergy or intolerance condition.",
           "valueSet": "http://hl7.org/fhir/ValueSet/allergyintolerance-code"
         }
-      }, {
+      },
+      {
         "id": "AllergyIntolerance.patient",
         "path": "AllergyIntolerance.patient",
         "type": [
@@ -275,7 +277,8 @@
           }
         ],
         "mustSupport": true
-      }, {
+      },
+      {
         "id": "AllergyIntolerance.encounter",
         "path": "AllergyIntolerance.encounter",
         "short": "Encounter when the allergy or intolerance was asserted",
@@ -290,18 +293,20 @@
             ]
           }
         ]
-      }, {
+      },
+      {
         "id": "AllergyIntolerance.onsetDateTime:onsetDateTime",
         "path": "AllergyIntolerance.onsetDateTime",
         "sliceName": "onsetDateTime",
+        "comment": "This slice was initially flagged as Must Support, and is considered MS in a handful of Canadian FHIR Implementation Guides. However, while clinically desireable it is not broadly considered MS across all IGuides reviewed during the Due Dilligence Review.",
         "min": 0,
         "type": [
           {
             "code": "dateTime"
           }
-        ],
-        "mustSupport": true
-      }, {
+        ]
+      },
+      {
         "id": "AllergyIntolerance.recorder",
         "path": "AllergyIntolerance.recorder",
         "short": "Who recorded the sensitivity",
@@ -314,7 +319,8 @@
             ]
           }
         ]
-      }, {
+      },
+      {
         "id": "AllergyIntolerance.asserter",
         "path": "AllergyIntolerance.asserter",
         "short": "Source of the information about the allergy",
@@ -329,17 +335,13 @@
             ]
           }
         ]
-      }, {
-        "id": "AllergyIntolerance.reaction",
-        "path": "AllergyIntolerance.reaction",
-        "mustSupport": true
-      }, {
+      }, 
+      {
         "id": "AllergyIntolerance.reaction.substance",
         "path": "AllergyIntolerance.reaction.substance",
-        "short": "Specific substance or pharmaceutical product considered to be responsible for event",
-        "min": 0,
-        "mustSupport": true
-      }, {
+        "short": "Specific substance or pharmaceutical product considered to be responsible for event"
+      },
+      {
         "id": "AllergyIntolerance.reaction.substance.coding",
         "path": "AllergyIntolerance.reaction.substance.coding",
         "slicing": {
@@ -351,9 +353,9 @@
           ],
           "rules": "closed"
         },
-        "min": 1,
-        "mustSupport": true
-      }, {
+        "comment": "This slice was initially identified with a 1..* cardinality, and has similar constraints in a handful of Canadian FHIR Implementation Guides. However, while clinically desireable to include coding, it was not constrained consistently across all IGuides reviewed during the Due Dilligence Review."
+        },
+        {
         "id": "AllergyIntolerance.reaction.substance.coding:NonDrugAllergen",
         "path": "AllergyIntolerance.reaction.substance.coding",
         "sliceName": "NonDrugAllergen",
@@ -370,15 +372,18 @@
           "description": "Represents the specific non-drug allergen or other agent/substance to which the Client has an allergic reaction.",
           "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/NonDrugAllergenCode"
         }
-      }, {
+      },
+      {
         "id": "AllergyIntolerance.reaction.substance.coding:NonDrugAllergen.system",
         "path": "AllergyIntolerance.reaction.substance.coding.system",
         "min": 1
-      }, {
+      },
+      {
         "id": "AllergyIntolerance.reaction.substance.coding:NonDrugAllergen.code",
         "path": "AllergyIntolerance.reaction.substance.coding.code",
         "min": 1
-      }, {
+      },
+      {
         "id": "AllergyIntolerance.reaction.substance.coding:CCDD",
         "path": "AllergyIntolerance.reaction.substance.coding",
         "sliceName": "CCDD",
@@ -395,16 +400,19 @@
           "description": "Represents subset of codes with commonly used medicinal products that are available for prescribing and dispensing in Canada.",
           "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/prescriptionmedicinalproduct"
         }
-      }, {
+      },
+      {
         "id": "AllergyIntolerance.reaction.substance.coding:CCDD.system",
         "path": "AllergyIntolerance.reaction.substance.coding.system",
         "min": 1,
         "fixedUri": "https://fhir.infoway-inforoute.ca/CodeSystem/canadianclinicaldrugdataset"
-      }, {
+      },
+      {
         "id": "AllergyIntolerance.reaction.substance.coding:CCDD.code",
         "path": "AllergyIntolerance.reaction.substance.coding.code",
         "min": 1
-      }, {
+      },
+      {
         "id": "AllergyIntolerance.reaction.substance.coding:@default",
         "path": "AllergyIntolerance.reaction.substance.coding",
         "sliceName": "@default",
@@ -427,15 +435,13 @@
           "description": "Codes defining the type of the substance (including pharmaceutical products).",
           "valueSet": "http://hl7.org/fhir/ValueSet/substance-code"
         }
-      }, {
+      },
+      {
         "id": "AllergyIntolerance.reaction.manifestation",
         "path": "AllergyIntolerance.reaction.manifestation",
         "mustSupport": true
-      }, {
-        "id": "AllergyIntolerance.reaction.severity",
-        "path": "AllergyIntolerance.reaction.severity",
-        "mustSupport": true
-      }, {
+      },
+      {
         "id": "AllergyIntolerance.reaction.exposureRoute",
         "path": "AllergyIntolerance.reaction.exposureRoute",
         "short": "How the subject was exposed to the substance",

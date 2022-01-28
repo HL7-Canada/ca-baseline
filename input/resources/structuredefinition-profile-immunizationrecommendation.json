@@ -68,6 +68,45 @@
           }
         },
         {
+          "id": "ImmunizationRecommendation.recommendation.vaccineCode.coding",
+          "path": "ImmunizationRecommendation.recommendation.vaccineCode.coding",
+          "slicing": {
+            "discriminator": [
+              {
+                "type": "pattern",
+                "path": "system"
+              },
+              {
+                "type": "pattern",
+                "path": "code"
+              }
+            ],
+            "rules": "open"
+          }
+          },
+          {
+          "id": "ImmunizationRecommendation.recommendation.vaccineCode.coding:Generic",
+          "path": "ImmunizationRecommendation.recommendation.vaccineCode.coding",
+          "sliceName": "Generic",
+          "comment": "CA Baseline Usage Notes: either a Generic code or a Tradename code or both have to be present.",
+          "max": "1",
+          "binding": {
+            "strength": "preferred",
+            "valueSet": "https://cvc.canimmunize.ca/v3/ValueSet/Generic"
+          }
+        },
+        {
+          "id": "ImmunizationRecommendation.recommendation.vaccineCode.coding:Tradename",
+          "path": "ImmunizationRecommendation.recommendation.vaccineCode.coding",
+          "sliceName": "Tradename",
+          "comment": "CA Baseline Usage Notes: either a Generic code or a Tradename code or both have to be present.",
+          "max": "1",
+          "binding": {
+            "strength": "preferred",
+            "valueSet": "https://cvc.canimmunize.ca/v3/ValueSet/Tradename"
+          }
+        },
+        {
           "id": "ImmunizationRecommendation.recommendation.targetDisease",
           "path": "ImmunizationRecommendation.recommendation.targetDisease",
           "mustSupport": true,

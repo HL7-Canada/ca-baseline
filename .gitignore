@@ -5,3 +5,17 @@ desktop.ini
 output
 temp
 template
+_gencontinuous.bat
+_gencontinuous.bat
+_gencontinuous.bat
+_gencontinuous.bat
+_gencontinuous.bat
+_gencontinuous.bat
+_gencontinuous.sh
+_updatePublisher.sh
+_updatePublisher.bat
+_gencontinuous.bat
+_gencontinuous.sh
+*.bat
+*.xsd
+input-cache/txcache/null.cache

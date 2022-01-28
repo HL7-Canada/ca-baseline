@@ -17,12 +17,6 @@
   "differential": {
     "element": [
       {
-        "id": "Immunization",
-        "path": "Immunization",
-        "short": "Immunization Profile",
-        "definition": "The Immunization Profile is based upon the core FHIR Immunization Resource"
-      },
-      {
         "id": "Immunization.status",
         "path": "Immunization.status",
         "mustSupport": true
@@ -30,8 +24,7 @@
       {
         "id": "Immunization.statusReason",
         "path": "Immunization.statusReason",
-        "comment": "CA Baseline Usage Notes: a reason should be provided if the status is \"not-done\".",
-        "mustSupport": true
+        "comment": "CA Baseline Usage Notes: a reason should be provided if the status is \"not-done\"."
       },
       {
         "id": "Immunization.vaccineCode",
@@ -105,22 +98,95 @@
         ]
       },
       {
-        "id": "Immunization.occurrence[x]:occurrenceDateTime",
-        "path": "Immunization.occurrence[x]",
-        "sliceName": "occurrenceDateTime",
-        "comment": "CA Baseline Usage Notes: occurrenceString is not supported - a combination of occurrenceDateTime (full or partial) with the 'estimated' extension should be used when an exact date is unknown. For example, if a patient recalls that she/he was immunized in June 1980, occurrenceDateTime will have a partial date '1980-06' with 'estimated'=true. Another example: if in 2020, a 55 y.o. patient recalls that she/he was immunized at the age of 5, occurrenceDateTime will have a partial date '1970' with 'estimated'=true",
-        "type": [
+      "id" : "Immunization.occurrence[x]",
+      "path" : "Immunization.occurrence[x]",
+      "slicing" : {
+        "discriminator" : [
           {
-            "code": "dateTime"
+            "type" : "type",
+            "path" : "$this"
           }
         ],
-        "mustSupport": true
+        "ordered" : false,
+        "rules" : "closed"
+      },
+      "short" : "Vaccine administration date",
+      "definition" : "Date vaccine administered or was to be administered.",
+      "comment" : "CA Baseline Usage Notes: While occurrenceString is allowed given its use in existing Canadian systems - a combination of occurrenceDateTime (full or partial) with the 'estimated' extension is the preferred mechanism for expressing when an exact date is unknown. For example, if a patient recalls that they were immunized in June 1980, occurrenceDateTime will have a partial date '1980-06' with 'estimated'=true. Another example: if in 2020, a 55 y.o. patient recalls that they were immunized at the age of 5, occurrenceDateTime will have a partial date '1970' with 'estimated'=true.",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "Immunization.occurrence[x]",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [
+        {
+          "code" : "dateTime"
+        },
+        {
+          "code" : "string"
+        }
+      ],
+      "mustSupport" : true
+      },
+      {
+        "id" : "Immunization.occurrence[x]:occurrenceDateTime",
+        "path" : "Immunization.occurrence[x]",
+        "sliceName" : "occurrenceDateTime",
+        "short" : "Vaccine administration date",
+        "definition" : "Date vaccine administered or was to be administered.",
+        "comment" : "When immunizations are given a specific date and time should always be known.   When immunizations are patient reported, a specific date might not be known.  Although partial dates are allowed, an adult patient might not be able to recall the year a childhood immunization was given. An exact date is always preferable, but the use of the String data type is acceptable when an exact date is not known. A small number of vaccines (e.g. live oral typhoid vaccine) are given as a series of patient self-administered dose over a span of time. In cases like this, often, only the first dose (typically a provider supervised dose) is recorded with the occurrence indicating the date/time of the first dose.",
+        "min" : 0,
+        "max" : "1",
+        "base" : {
+          "path" : "Immunization.occurrence[x]",
+          "min" : 1,
+          "max" : "1"
+        },
+        "type" : [
+          {
+            "code" : "dateTime"
+          }
+        ],
+        "mustSupport" : true
+      },
+      {
+         "id": "Immunization.occurrence[x]:occurrenceDateTime.extension",
+         "path": "Immunization.occurrence[x].extension",
+         "slicing": {
+             "discriminator":  [
+                 {
+                     "type": "value",
+                      "path": "url"
+                 }
+              ],
+             "ordered": false,
+             "rules": "open"
+           },
+             "min" : 0,
+              "max" : "*",
+              "base" : {
+                "path" : "Element.extension",
+                "min" : 0,
+                "max" : "*"
+              },
+              "type" : [
+                {
+                  "code" : "Extension"
+                }
+              ]
       },
       {
         "id": "Immunization.occurrence[x]:occurrenceDateTime.extension:estimated",
         "path": "Immunization.occurrence[x].extension",
         "sliceName": "estimated",
         "max": "1",
+        "base" : {
+          "path" : "Element.extension",
+          "min" : 0,
+          "max" : "*"
+        },
         "type": [
           {
             "code": "Extension",
@@ -134,14 +200,11 @@
       {
         "id": "Immunization.primarySource",
         "path": "Immunization.primarySource",
-        "short": "Indicates that data is from the primary record created at the time the vaccine was administered.",
-        "min": 1,
-        "mustSupport": true
+        "short": "Indicates that data is from the primary record created at the time the vaccine was administered."
       },
       {
         "id": "Immunization.reportOrigin",
         "path": "Immunization.reportOrigin",
-        "mustSupport": true,
         "binding": {
           "strength": "preferred",
           "valueSet": "https://cvc.canimmunize.ca/v3/ValueSet/RepSource"
@@ -175,7 +238,6 @@
       {
         "id": "Immunization.site",
         "path": "Immunization.site",
-        "mustSupport": true,
         "binding": {
           "strength": "preferred",
           "valueSet": "https://cvc.canimmunize.ca/v3/ValueSet/AnatomicalSite"
@@ -184,17 +246,10 @@
       {
         "id": "Immunization.route",
         "path": "Immunization.route",
-        "mustSupport": true,
         "binding": {
           "strength": "preferred",
           "valueSet": "https://cvc.canimmunize.ca/v3/ValueSet/RouteOfAdmin"
         }
-      },
-      {
-        "id": "Immunization.performer.function",
-        "path": "Immunization.performer.function",
-        "min": 1,
-        "mustSupport": true
       },
       {
         "id": "Immunization.performer.actor",
@@ -208,8 +263,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-organization"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "Immunization.reasonReference",
@@ -223,8 +277,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-diagnosticreport"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "Immunization.reaction.detail",
@@ -253,7 +306,6 @@
       {
         "id": "Immunization.protocolApplied.targetDisease",
         "path": "Immunization.protocolApplied.targetDisease",
-        "mustSupport": true,
         "binding": {
           "strength": "preferred",
           "valueSet": "https://cvc.canimmunize.ca/v3/ValueSet/Disease"

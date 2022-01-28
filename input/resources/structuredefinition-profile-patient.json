@@ -21,9 +21,9 @@
         "path": "Patient",
         "short": "Patient Profile",
         "definition": "The Patient Profile is based upon the core FHIR Patient Resource",
-        "mustSupport": true,
         "isModifier": false
-      }, {
+      },
+      {
         "id": "Patient.extension",
         "path": "Patient.extension",
         "slicing": {
@@ -35,7 +35,8 @@
           ],
           "rules": "open"
         }
-      }, {
+      },
+      {
         "id": "Patient.extension:aboriginalidentitygroup",
         "path": "Patient.extension",
         "sliceName": "aboriginalidentitygroup",
@@ -52,7 +53,8 @@
           }
         ],
         "mustSupport": false
-      }, {
+      },
+      {
         "id": "Patient.extension:aboriginalidentityindicator",
         "path": "Patient.extension",
         "sliceName": "aboriginalidentityindicator",
@@ -69,7 +71,8 @@
           }
         ],
         "mustSupport": false
-      }, {
+      },
+      {
         "id": "Patient.extension:birthsex",
         "path": "Patient.extension",
         "sliceName": "birthsex",
@@ -86,7 +89,8 @@
           }
         ],
         "mustSupport": false
-      }, {
+      },
+      {
         "id": "Patient.extension:ethnicity",
         "path": "Patient.extension",
         "sliceName": "ethnicity",
@@ -120,7 +124,8 @@
             "comment": "This CDA R2 SDTC ethnicGroupCode extension is used to record additional ethnicity groups for the recordTarget or subjectPerson"
           }
         ]
-      }, {
+      },
+      {
         "id": "Patient.identifier",
         "path": "Patient.identifier",
         "slicing": {
@@ -132,11 +137,19 @@
           ],
           "rules": "open"
         },
+        "type" : [
+          {
+            "code" : "Identifier",
+            "profile" : [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier"
+            ]
+          }
+        ],
         "min": 0
-      }, {
+      },
+      {
         "id": "Patient.identifier.type",
         "path": "Patient.identifier.type",
-        "min": 1,
         "example": [
           {
             "label": "Pattern",
@@ -149,28 +162,29 @@
               ]
             }
           }
-        ],
-        "mustSupport": true
-      }, {
+        ]
+      },
+      {
         "id": "Patient.identifier.system",
         "path": "Patient.identifier.system",
         "min": 1,
-        "mustSupport": true,
         "isModifier": false
-      }, {
+      },
+      {
         "id": "Patient.identifier.value",
         "path": "Patient.identifier.value",
         "short": "The value that is unique within the system.",
         "min": 1,
-        "mustSupport": true,
         "isModifier": false
-      }, {
+      },
+      {
         "id": "Patient.identifier:PPN",
         "path": "Patient.identifier",
         "sliceName": "PPN",
         "short": "Canada Passport Number",
         "mustSupport": false
-      }, {
+      },
+      {
         "id": "Patient.identifier:PPN.type",
         "path": "Patient.identifier.type",
         "short": "Passport number identifier type",
@@ -184,27 +198,31 @@
             }
           ]
         }
-      }, {
+      },
+      {
         "id": "Patient.identifier:PPN.system",
         "path": "Patient.identifier.system",
         "short": "A Canadian passport number Naming System from the Canadian URI Registry",
         "min": 1,
         "max": "1",
         "fixedUri": "https://fhir.infoway-inforoute.ca/NamingSystem/ca-passport-number"
-      }, {
+      },
+      {
         "id": "Patient.identifier:PPN.value",
         "path": "Patient.identifier.value",
         "short": "A Canadian passport number",
         "min": 1,
         "max": "1"
-      }, {
+      },
+      {
         "id": "Patient.identifier:JPID",
         "path": "Patient.identifier",
         "sliceName": "JPID",
         "short": "Jurisdictional Person Identification",
         "definition": "Federal patient and person identifiers used by all jurisdictions across Canada",
         "mustSupport": false
-      }, {
+      },
+      {
         "id": "Patient.identifier:JPID.type",
         "path": "Patient.identifier.type",
         "short": "Jurisdictional Person Identification",
@@ -213,30 +231,33 @@
         "fixedCodeableConcept": {
           "coding": [
             {
-              "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
               "code": "JPID"
             }
           ]
         }
-      }, {
+      },
+      {
         "id": "Patient.identifier:JPID.system",
         "path": "Patient.identifier.system",
         "short": "Jurisdictional Person identification Naming System from the Canadian URI Registry",
         "min": 1,
         "max": "1"
-      }, {
+      },
+      {
         "id": "Patient.identifier:JPID.value",
         "path": "Patient.identifier.value",
         "short": "Jurisdictional Person identification number",
         "min": 1,
         "max": "1"
-      }, {
+      },
+      {
         "id": "Patient.identifier:JHN",
         "path": "Patient.identifier",
         "sliceName": "JHN",
         "short": "Jurisdictional Health Number",
         "definition": "Federal patient and person health numbers used by all jurisdictions across Canada"
-      }, {
+      },
+      {
         "id": "Patient.identifier:JHN.extension",
         "path": "Patient.identifier.extension",
         "slicing": {
@@ -248,7 +269,8 @@
           ],
           "rules": "open"
         }
-      }, {
+      },
+      {
         "id": "Patient.identifier:JHN.extension:versionCode",
         "path": "Patient.identifier.extension",
         "sliceName": "versionCode",
@@ -261,7 +283,8 @@
             ]
           }
         ]
-      }, {
+      },
+      {
         "id": "Patient.identifier:JHN.type",
         "path": "Patient.identifier.type",
         "min": 1,
@@ -272,18 +295,20 @@
               "code": "JHN"
             }
           ]
-        },
-        "mustSupport": true
-      }, {
+        }
+      },
+      {
         "id": "Patient.identifier:JHN.system",
         "path": "Patient.identifier.system",
         "short": "A Health Number Naming System from the Canadian URI Registry",
         "min": 1
-      }, {
+      },
+      {
         "id": "Patient.identifier:JHN.value",
         "path": "Patient.identifier.value",
         "min": 1
-      }, {
+      },
+      {
         "id": "Patient.name",
         "path": "Patient.name",
         "min": 0,
@@ -297,32 +322,39 @@
           }
         ],
         "mustSupport": true
-      }, {
+      },
+      {
         "id": "Patient.name.family",
         "path": "Patient.name.family"
-      }, {
+      },
+      {
         "id": "Patient.name.given",
         "path": "Patient.name.given"
-      }, {
+      },
+      {
         "id": "Patient.telecom",
-        "path": "Patient.telecom",
-        "mustSupport": true
-      }, {
+        "path": "Patient.telecom"
+      },
+      {
         "id": "Patient.telecom.system",
         "path": "Patient.telecom.system",
         "min": 1
-      }, {
+      },
+      {
         "id": "Patient.telecom.value",
         "path": "Patient.telecom.value",
         "min": 1
-      }, {
+      },
+      {
         "id": "Patient.birthDate",
         "path": "Patient.birthDate",
         "mustSupport": true
-      }, {
+      },
+      {
         "id": "Patient.address",
         "path": "Patient.address"
-      }, {
+      },
+      {
         "id": "Patient.address.extension",
         "path": "Patient.address.extension",
         "slicing": {
@@ -334,7 +366,8 @@
           ],
           "rules": "open"
         }
-      }, {
+      },
+      {
         "id": "Patient.address.extension:preferred",
         "path": "Patient.address.extension",
         "sliceName": "preferred",
@@ -350,7 +383,8 @@
             ]
           }
         ]
-      }, {
+      },
+      {
         "id": "Patient.address.extension:no-fixed-address",
         "path": "Patient.address.extension",
         "sliceName": "noFixedAddress",

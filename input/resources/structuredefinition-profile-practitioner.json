@@ -24,16 +24,17 @@
       }, {
         "id": "Practitioner.identifier",
         "path": "Practitioner.identifier",
+        "type" : [
+          {
+            "code" : "Identifier",
+            "profile" : [
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier"
+            ]
+          }
+        ],
         "mustSupport": true
-      }, {
-        "id": "Practitioner.identifier.system",
-        "path": "Practitioner.identifier.system",
-        "min": 1
-      }, {
-        "id": "Practitioner.identifier.value",
-        "path": "Practitioner.identifier.value",
-        "min": 1
-      }, {
+      },
+      {
         "id": "Practitioner.name",
         "path": "Practitioner.name",
         "constraint": [
@@ -46,7 +47,7 @@
           }
         ],
         "mustSupport": true
-      }, 
+      },
       {
         "id": "Practitioner.address.extension",
         "path": "Practitioner.address.extension",
@@ -75,7 +76,7 @@
             ]
           }
         ]
-      }, 
+      },
       {
         "id": "Practitioner.qualification.code.coding.system",
         "path": "Practitioner.qualification.code.coding.system",
@@ -85,7 +86,7 @@
         "binding": {
           "strength": "example",
           "description": "A code system for the degree or educational rank that the credential specifies",
-          "valueSet": "http://fhir.infoway-inforoute.ca/CodeSystem/scpqual"
+          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/qualifiedroletype"
         }
       }
     ]

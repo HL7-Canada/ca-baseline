@@ -1,5 +1,18 @@
 <!--- Text entered into this file will appear at the top of the profiles page before the Formal Views of the profile content. -->
 # CA Baseline Patient Profile
+<blockquote class="stu-note">
+  <p>This profile is seeking community and implementer feedback on whether further relaxation of the 1..1 cardinality is needed on the Patient.identifier.type & .system & .value elements.
+  <br>
+  <br>
+
+  Due Diligence Reviews identified the above elements as 1..1 cardinality but not in the equivalent eReferral Specification profile. This variance is believed to be due to the eReferral Specification profile not necessarily expecting a Patient to always have a health card (or at minimum a health card number). General consensus from Due Diligence Review is that the cardinalities should not be relaxed in the CA Baseline. Feedback can be provided through the Simplifier issue log for this profile.
+  <br>
+
+  Feedback can be provided through the <a href="https://simplifier.net/CanadianFHIRBaselineProfilesCA-Core/PatientProfile/~issues">Simplifier issue log for this profile</a>.</p>
+</blockquote>
+</div>
+
+
 This Patient profile sets minimum expectations for the Patient resource to record, search and fetch demographics and other administrative information about an individual receiving care or other health-related services.
 
 Since not all concepts are included within the base FHIR Patient resource, this profile defines localization concepts for use in an Canadian context.
@@ -22,7 +35,6 @@ Following elements are marked as Must Support in the Canadian Patient profile to
 **Must Support elements:**
 * an identifier
 * a patient name
-* contact detail (e.g. a telephone number or an email address)
 * a birth date
 
 ## Usage Note
@@ -31,3 +43,7 @@ Some of the typical use cases where the Patient profile may be used:
 * Enterprise-wide information systems that manage patient registration and services ordering
 * Local or cross-jurisdictional systems to query information about patients whose demographics data match data provided in the query parameters
 * Synchronization of patient information between multiple ADT systems employed by healthcare enterprises
+
+This profile includes an invariant that enforces that a family.name, given.name, or both be present. This is intended to enforce minimum constraints while allowing for cases where the patient may only have one name.
+* Some jurisdictions with more rigid cardinality constraints on both family and given may be handling this today by populating the name of a patient into both fields
+* Other jurisdictions may allow the population of either family or given

@@ -23,6 +23,54 @@
         "definition": "The Canadian Baseline MedicationDispense Profile is based upon the core FHIR MedicationDispense Resource"
       },
       {
+        "id": "MedicationDispense.extension",
+        "path": "MedicationDispense.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "MedicationDispense.extension:renderedDosageInstruction",
+        "path": "MedicationDispense.extension",
+        "sliceName": "renderedDosageInstruction",
+        "short": "Socialized Optional Extension: PrescribeIT renderedDosageInstruction",
+        "definition": "Provides a complete text rendering of dosageInstruction lines for an order or dispense (separate from the rendering of the overall resource instance)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://prescribeit.ca/fhir/StructureDefinition/ext-medication-rendered-dosage"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.extension:quantityRemaining",
+        "path": "MedicationDispense.extension",
+        "sliceName": "quantityRemaining",
+        "short": "Socialized Optional Extension: PrescribeIT quantityRemaining",
+        "definition": "The total authorized quantity outstanding after the fill issued as part of this dispense record",
+        "comment": "In R5, an equivalent extension is put forth in the base FHIR specification - R5 implementors are encouraged to review: http://hl7.org/fhir/StructureDefinition/medicationdispense-quantityRemaining",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://prescribeit.ca/fhir/StructureDefinition/ext-dispense-quantity-remaining"
+            ]
+          }
+        ]
+      },
+      {
         "id": "MedicationDispense.partOf",
         "path": "MedicationDispense.partOf",
         "type": [
@@ -51,6 +99,58 @@
             "targetProfile": [
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-medication"
             ]
+          }
+        ],
+        "example": [
+          {
+            "label": "DIN",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.infoway-inforoute.ca/ValueSet/CA-HC-DIN"
+                }
+              ]
+            }
+          },
+          {
+            "label": "NPN",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.infoway-inforoute.ca/ValueSet/CA-HC-NPN"
+                }
+              ]
+            }
+          },
+          {
+            "label": "CCDD",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://fhir.infoway-inforoute.ca/ValueSet/prescriptionmedicinalproduct"
+                }
+              ]
+            }
+          },
+          {
+            "label": "SNOMED CT (Medications) - IPS",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/uv/ips/ValueSet/medication-snomed-uv-ips"
+                }
+              ]
+            }
+          },
+          {
+            "label": "WHO ATC IPS",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/uv/ips/ValueSet/whoatc-uv-ips"
+                }
+              ]
+            }
           }
         ],
         "mustSupport": true,
@@ -168,6 +268,36 @@
         "id": "MedicationDispense.dosageInstruction",
         "path": "MedicationDispense.dosageInstruction",
         "mustSupport": true
+      },
+      {
+        "id": "MedicationDispense.dosageInstruction.extension",
+        "path": "MedicationDispense.dosageInstruction.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "MedicationDispense.dosageInstruction.extension:instructionRelationship",
+        "path": "MedicationDispense.dosageInstruction.extension",
+        "sliceName": "instructionRelationship",
+        "short": "Socialized Optional Extension: PrescribeIT dosageInstruction Relationship",
+        "definition": "Indicates how the timing of this dosage instruction relates to the preceding dosage instruction. Specifically, is it concurrent (AND) or sequential (THEN).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://prescribeit.ca/fhir/StructureDefinition/ext-medicationorder-dosageinstruction-relationship"
+            ]
+          }
+        ]
       },
       {
         "id": "MedicationDispense.dosageInstruction.text",

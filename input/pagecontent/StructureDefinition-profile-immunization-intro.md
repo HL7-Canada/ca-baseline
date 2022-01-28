@@ -7,5 +7,5 @@ This profile was generated from [HL7 StructureDefinition](https://www.hl7.org/fh
 Key differences from [USCoreR4 Immunization](https://build.fhir.org/ig/HL7/US-Core-R4/StructureDefinition-us-core-immunization.html):
 - Immunization.code bound to ValueSet with Canadian vaccine codes
 - Immunization.patient reference changed to profile-patient
-- Immunization.occurrence[x] restricted to DateTime, optional **ext_estimated** extension added to identify estimated dates to be more consistent with ICON and CDN HL7v3 specs
+- Immunization.occurrenceDateTime:estimated extension added to identify estimated dates to be more consistent with ICON and CDN HL7v3 specs
 - included other Immunization resource elements used in the ICON spec for visibility

@@ -1,4 +1,4 @@
-# CA Core DiagnosticReport Profile
+# CA Core DiagnosticReport (Laboratory Results) Profile
 This profile sets minimum expectations for the DiagnosticReport resource to record, search, and fetch laboratory results associated with a patient. It identifies which core elements, constraints and value sets SHALL be present in the resource instance when using this profile.
 
 This profile defines core localisation concepts for use in an Canadian context.
@@ -25,7 +25,6 @@ Following elements are marked as Must Support in the Canadian DiagnosticReport p
 * subject of the report
 * healthcare event this report is about
 * time when report was created
-* specimens this report is based on
 * Observations that are part of this report  
 
 ## Usage Note

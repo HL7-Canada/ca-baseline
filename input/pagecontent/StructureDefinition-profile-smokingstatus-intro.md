@@ -1,16 +1,19 @@
-# CA Baseline Procedure Profile
+# CA Baseline Tobacco Smoking Status Profile
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<blockquote class="stu-note">
 		<p>This profile is seeking broader community and implementer feedback.
     <br>
     <br>
-    The cardinality on procedure.performed[x] has been constrained to 1..1. While this did not cause any Due Diligence Review Issues with IPS or US Core, we are seeking feedback from additional implementers on whether this cardinality restriction poses problems for their FHIR implementations.
+    There is no single standardized Canadian value set for collecting coded responses to a person's tobacco smoking status. A variety of codes exist across ICD-10 CA, SNOMED CT, LOINC etc. Given the patient summary initiative that is ongoing in Canada - we have pointed to the IPS-UV smoking status as an example.
+		<br>
     <br>
+		This profile is seeking feedback from implementers on which code systems they use to capture tobacco smoking status to ensure we're aligning to a preferred value set that is being used across jurisdictions.
+		<br>
     <br>
-    This profile also socializes an example of a subset of SNOMED CT codes for procedures that is made available through the Infoway Terminology Gateway: https://fhir.infoway-inforoute.ca/ValueSet/interventioncode. This extensional value set was developed after initial review of the profiles but has been added in. We are seeking community feedback as to whether this subset is in use today by Canadian implementers or whether or not we should point to the larger value set of SNOMED CT codes contained in the IPS Value Set.
-    <br>
-    <br>
-    Feedback can be provided using the <a href="https://simplifier.net/CanadianFHIRBaselineProfilesCA-Core/procedureprofile/~issues">Simplifier issue log for this profile</a>.
+		This profile is also interested in gauging community interest in a vaping profile	given the use of vaping codes in the Canadian landscape.
+		<br>
+		<br>
+		Feedback can be provided using the <a href="https://simplifier.net/CanadianFHIRBaselineProfilesCA-Core/smokingstatusprofile/~issues">Simplifier issue log for this profile</a>.
     </p>
 	</blockquote>
   </div>
@@ -46,4 +49,4 @@ Following elements are marked as Must Support in the Procedure profile to aid re
 This Procedure profile is used to provide summary information about the occurrence of current or historical procedures performed on or for a patient, and is not intended to provide real-time snapshots of a procedure as it unfolds.
 Examples include surgical procedures, diagnostic procedures, endoscopic procedures, biopsies, counseling, physiotherapy, personal support services, adult day care services, non-emergency transportation, home modification, exercise and so on.
 
-A slice for absentOrUnknownProcedure comes from the IPS-UV specification and has been socialized in the profile as a way to represent a standard set of codes for identifying absent or unknown procedures. While the profile expects that a procedure.code be present (cardinality of 1..1) the use of the slice is entirely optional.  
+A slice for absentOrUnknownProcedure comes from the IPS-UV specification and has been socialized in the profile as a way to represent a standard set of codes for identifying absent or unknown procedures. While the profile expects that a procedure.code be present (cardinality of 1..1) the use of the slice is entirely optional.
