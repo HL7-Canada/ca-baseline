@@ -150,19 +150,7 @@
       {
         "id": "Patient.identifier.type",
         "path": "Patient.identifier.type",
-        "example": [
-          {
-            "label": "Pattern",
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-                  "code": "MR"
-                }
-              ]
-            }
-          }
-        ]
+        "comment": "The slice provided below is one example of an identifier type and has been socialized because of a Canadian extension on that identifier type. It is not required, and the slicing is open meaning that other types can be provided."
       },
       {
         "id": "Patient.identifier.system",
@@ -176,79 +164,6 @@
         "short": "The value that is unique within the system.",
         "min": 1,
         "isModifier": false
-      },
-      {
-        "id": "Patient.identifier:PPN",
-        "path": "Patient.identifier",
-        "sliceName": "PPN",
-        "short": "Canada Passport Number",
-        "mustSupport": false
-      },
-      {
-        "id": "Patient.identifier:PPN.type",
-        "path": "Patient.identifier.type",
-        "short": "Passport number identifier type",
-        "min": 1,
-        "max": "1",
-        "fixedCodeableConcept": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-              "code": "PPN"
-            }
-          ]
-        }
-      },
-      {
-        "id": "Patient.identifier:PPN.system",
-        "path": "Patient.identifier.system",
-        "short": "A Canadian passport number Naming System from the Canadian URI Registry",
-        "min": 1,
-        "max": "1",
-        "fixedUri": "https://fhir.infoway-inforoute.ca/NamingSystem/ca-passport-number"
-      },
-      {
-        "id": "Patient.identifier:PPN.value",
-        "path": "Patient.identifier.value",
-        "short": "A Canadian passport number",
-        "min": 1,
-        "max": "1"
-      },
-      {
-        "id": "Patient.identifier:JPID",
-        "path": "Patient.identifier",
-        "sliceName": "JPID",
-        "short": "Jurisdictional Person Identification",
-        "definition": "Federal patient and person identifiers used by all jurisdictions across Canada",
-        "mustSupport": false
-      },
-      {
-        "id": "Patient.identifier:JPID.type",
-        "path": "Patient.identifier.type",
-        "short": "Jurisdictional Person Identification",
-        "min": 1,
-        "max": "1",
-        "fixedCodeableConcept": {
-          "coding": [
-            {
-              "code": "JPID"
-            }
-          ]
-        }
-      },
-      {
-        "id": "Patient.identifier:JPID.system",
-        "path": "Patient.identifier.system",
-        "short": "Jurisdictional Person identification Naming System from the Canadian URI Registry",
-        "min": 1,
-        "max": "1"
-      },
-      {
-        "id": "Patient.identifier:JPID.value",
-        "path": "Patient.identifier.value",
-        "short": "Jurisdictional Person identification number",
-        "min": 1,
-        "max": "1"
       },
       {
         "id": "Patient.identifier:JHN",
