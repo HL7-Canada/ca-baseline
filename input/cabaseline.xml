@@ -2,7 +2,7 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input/schemas/fhir-single.xsd">
   <id value="ca-baseline"/>
   <url value="http://hl7.org/fhir/ca/baseline/ImplementationGuide/CanadianBaseline"/>
-  <version value="0.1.0"/>
+  <version value="1.0.0"/>
   <name value="CanadianBaseline"/>
   <title value="Canadian Baseline"/>
   <status value="draft"/>
