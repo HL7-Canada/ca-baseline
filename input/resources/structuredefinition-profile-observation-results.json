@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-observation-results",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-observation-results",
-  "version": "0.2.2",
+  "version": "0.5.1",
   "name": "ObservationProfileLaboratory",
   "title": "Observation Profile (Laboratory Results)",
   "status": "draft",
-  "date": "2020-11-02",
+  "date": "2022-02-25",
   "publisher": "HL7 Canada",
   "description": "Proposed constraints on the Observation Resource to represent results produced by laboratory tests or panels/studies",
   "jurisdiction": [
@@ -260,8 +260,7 @@
             "expression": "value[x].exists() or dataAbsentReason.exists() or component.exists()",
             "xpath": "Observation.value[x] or Observation.dataAbsentReason or Observation.component"
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "Observation.interpretation",
@@ -392,8 +391,7 @@
             "expression": "value[x].exists() or dataAbsentReason.exists()",
             "xpath": "Observation.value[x] or Observation.dataAbsentReason"
           }
-        ],
-        "mustSupport": true
+        ]
       }
     ]
   }
