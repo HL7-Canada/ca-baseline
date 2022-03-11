@@ -46,7 +46,6 @@ The following elements are marked as Must Support in the Observation (Laboratory
 *	reference to a subject
 *	effective date
 *	value
-*	dataAbsentReason
 *	interpretation
 *	reference range
 *	hasMember
