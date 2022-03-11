@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "profile-medicationstatement",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-medicationstatement",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "name": "MedicationStatementProfile",
   "title": "MedicationStatement Profile",
   "status": "draft",

@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "profile-allergyintolerance",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-allergyintolerance",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "name": "AllergyIntoleranceProfile",
   "title": "AllergyIntolerance Profile",
   "status": "draft",
@@ -335,7 +335,7 @@
             ]
           }
         ]
-      }, 
+      },
       {
         "id": "AllergyIntolerance.reaction.substance",
         "path": "AllergyIntolerance.reaction.substance",

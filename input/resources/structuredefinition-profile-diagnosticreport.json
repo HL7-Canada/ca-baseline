@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-diagnosticreport",
-  "version": "0.0.2",
+  "version": "0.5.0",
   "name": "DiagnosticReportProfile",
   "title": "DiagnosticReport Profile for Results Reporting",
   "status": "draft",

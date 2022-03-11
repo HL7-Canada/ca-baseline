@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "profile-medication",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-medication",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "name": "MedicationProfile",
   "title": "Medication Profile",
   "status": "draft",

@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "profile-practitionerrole",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitionerrole",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "name": "PractitionerRoleProfile",
   "title": "PractitionerRole Profile (General)",
   "status": "draft",
@@ -50,7 +50,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier"
             ]
           }
-        ],        
+        ],
         "mustSupport": true
       },
       {
