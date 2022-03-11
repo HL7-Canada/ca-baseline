@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "profile-practitioner-registry",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitioner-registry",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "name": "PractitionerProfileRegistry",
   "title": "Practitioner Profile (Provider Registry)",
   "status": "draft",

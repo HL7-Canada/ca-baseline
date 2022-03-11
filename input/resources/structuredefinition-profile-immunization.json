@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "profile-immunization",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-immunization",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "name": "ImmunizationProfile",
   "title": "Immunization Profile",
   "status": "draft",
