@@ -1,11 +1,10 @@
 # CA Baseline Observation (Laboratory Results) Profile
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<blockquote class="stu-note">
-		<p>This profile is seeking community and implementer feedback on whether further relaxation of the Must Support flag on the <b>dataAbsentReason</b> element is needed.
-    <br>
-    <br>
+		While this profile does not currently apply MS constraints on the hasMember, referenceRange, interpretation or component elements, this profile is seeking community and implementer feedback on how these elements are being used to assess whether consistent patterns can be identified for use in the Canadian landscape for certain types of test results (e.g., panel, antibody, blood tests, etc)
+		<br>
 
-    Due Diligence Reviews identified this element as Must Support in the equivalent US Core profile, but not in the equivalent International Patient Summary profile. This variance is believed to be due to the IPS profile not expecting non-resulted observations to be packaged up in the summary document as part of the workflow. Need further feedback from Canadian implementations on the impact of keeping the MS flag on this element. Feedback can be provided through the <a href="https://simplifier.net/CanadianFHIRBaselineProfilesCA-Core/ObservationProfileLaboratory/~issues">Simplifier issue log for this profile</a>.</p>
+		Feedback can be provided through the <a href="https://simplifier.net/CanadianFHIRBaselineProfilesCA-Core/ObservationProfileLaboratory/~issues">Simplifier issue log for this profile</a>.</p>
 	</blockquote>
   </div>
 
@@ -29,11 +28,6 @@ Most elements in the FHIR specification have a minimum cardinality of **0**, so 
 
 Note: if Observation.component is provided then Observation.component.value is mandatory.
 
-### Data Absent Reason
-If the minimum cardinality of an element or attribute is 1 AND information is missing AND the Responder knows the precise reason for the absence of data, then Responders SHALL send the reason for the missing information using values from the valueset where it exists by using the [DataAbsentReason](http://hl7.org/fhir/StructureDefinition/data-absent-reason) extension.
-
-An Observation without a value, SHALL include a reason why the data is absent unless there are component observations, or references to other Observations that are grouped within it, i.e., unless there are component observations, or references to other Observations that are grouped within it then either ONE of _Observation.value_ OR _Observation.dataAbsentReason_ but NOT both SHALL be present.
-
 ## Must Support Data Elements
 Some elements are marked as Must Support. This means that implementations generating, receiving, or otherwise using resources with Must Support elements SHALL provide support for those elements in some meaningful way (see [Must Support](https://build.fhir.org/ig/HL7-Canada/ca-baseline/general-guidance.html#must-support) definition).
 
@@ -45,12 +39,17 @@ The following elements are marked as Must Support in the Observation (Laboratory
 *	code
 *	reference to a subject
 *	effective date
+* performer
 *	value
-*	interpretation
-*	reference range
-*	hasMember
-*	component.code
-*	component.value[x]
+*	component.code (if implementer supports component)
+*	component.value[x] (if implementer supports component)
+
+### Data Absent Reason
+If the minimum cardinality of an element or attribute is 1 AND information is missing AND the Responder knows the precise reason for the absence of data, then Responders SHOULD send the reason for the missing information using values from the valueset where it exists by using the [DataAbsentReason](http://hl7.org/fhir/StructureDefinition/data-absent-reason) extension.
+
+An Observation without a value, SHOULD include a reason why the data is absent unless there are component observations, or references to other Observations that are grouped within it, i.e., unless there are component observations, or references to other Observations that are grouped within it then either ONE of _Observation.value_ OR _Observation.dataAbsentReason_ but NOT both should be present.
+
+Note: The conformance language above was modified from SHALL to SHOULD to reflect the community decision to relax the invariant to account for Canadian implementations that have reason to not meet the rule given circumstances with R4 modeling for value expressions that is corrected in later versions of FHIR. At least one Canadian lab implementation uses an extension to communicate a result value in the form of a PDF (which R4 does not support under its existing value data types).
 
 ## Usage Note
 Observation (Laboratory Results) is intended to represent results of laboratory tests and studies. This profile constrains the Observation (General Use) resource to represent laboratory results in messages and patient summaries if no other, more specific profile is more appropriate.
