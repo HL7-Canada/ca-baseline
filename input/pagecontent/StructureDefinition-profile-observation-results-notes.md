@@ -1,5 +1,5 @@
 ## Using codes in Observation
-Additional codes that translate or map to the Observation code or category codes are allowed (see [CodeableConcept](http://hl7.org/fhir/R4/datatypes.html#CodeableConcept) data type). 
+Additional codes that translate or map to the Observation code or category codes are allowed (see [CodeableConcept](http://hl7.org/fhir/R4/datatypes.html#CodeableConcept) data type).
 For example: providing both a local code and LOINC code providing a more specific category codes, SNOMED CT concept, or system specific codes.
 
 ## Category
@@ -22,7 +22,3 @@ If the result value is a numeric quantity:
 * _valueQuantity.value_ , _valueQuantity.unit_ and _valueQuantity.sytem_ SHALL be present
 * a standard [UCUM](http://unitsofmeasure.org) unit SHALL be used.
           
-## dataAbsentReason
-An Observation without a value SHALL include a reason why the data is absent unless there are component observations, or references to other Observations that are grouped within it.
-I.e., if _Observation.value[x]_ is missed, the _Observation.dataAbsentReason_ SHALL be present and provide a reason why the expected value is missing.
-Also, the _Observation.dataAbsentReason_ SHALL only be present if _Observation.value[x]_ is not present

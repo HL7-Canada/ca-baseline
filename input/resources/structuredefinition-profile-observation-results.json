@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-observation-results",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-observation-results",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "name": "ObservationProfileLaboratory",
   "title": "Observation Profile (Laboratory Results)",
   "status": "draft",
-  "date": "2022-02-25",
+  "date": "2022-03-25",
   "publisher": "HL7 Canada",
   "description": "Proposed constraints on the Observation Resource to represent results produced by laboratory tests or panels/studies",
   "jurisdiction": [
@@ -23,7 +23,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "baseDefinition": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-observation",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -32,6 +32,10 @@
         "path": "Observation",
         "short": "Observation Profile",
         "definition": "The Observation Profile is based upon the core FHIR Observation Resource"
+      },
+      {
+        "id": "Observation.status",
+        "path": "Observation.status"
       },
       {
         "id": "Observation.category",
@@ -77,21 +81,6 @@
           ]
         },
         "mustSupport": true
-      },
-      {
-        "id": "Observation.category:laboratory.system",
-        "path": "Observation.category.coding.system",
-        "short": "FHIR standard classification of type of observation code system",
-        "min": 1,
-        "max": "1",
-        "fixedUri": "http://terminology.hl7.org/CodeSystem/observation-category"
-      },
-      {
-        "id": "Observation.category:laboratory.code",
-        "path": "Observation.category.coding.code",
-        "short": "FHIR standard classification of type of observation code",
-        "min": 1,
-        "max": "1"
       },
       {
         "id": "Observation.code",
@@ -146,7 +135,8 @@
          "id": "Observation.issued",
          "path": "Observation.issued",
          "comment": "Implementors should consider adding a must support flag in the case that the relevant systems are not able to support effective, but are able to support issued."
-       }, {
+       },
+       {
          "id": "Observation.performer",
          "path": "Observation.performer",
          "type": [
@@ -171,15 +161,6 @@
           ],
           "rules": "open"
         },
-        "constraint": [
-          {
-            "key": "ca-baseline-value",
-            "severity": "error",
-            "human": "Observation.value[x] or Observation.dataAbsentReason or Observation.component SHOULD be present",
-            "expression": "value[x].exists() or dataAbsentReason.exists() or component.exists()",
-            "xpath": "Observation.value[x] or Observation.dataAbsentReason or Observation.component"
-          }
-        ],
         "mustSupport": true
       },
       {
@@ -252,30 +233,27 @@
       {
         "id": "Observation.dataAbsentReason",
         "path": "Observation.dataAbsentReason",
-        "constraint": [
-          {
-            "key": "ca-baseline-value",
-            "severity": "error",
-            "human": "Observation.value[x] or Observation.dataAbsentReason or Observation.component SHOULD be present",
-            "expression": "value[x].exists() or dataAbsentReason.exists() or component.exists()",
-            "xpath": "Observation.value[x] or Observation.dataAbsentReason or Observation.component"
-          }
-        ]
+        "comment": "This element is recommended for support and was initially flagged as must support but was later determined to be too strong for some types of lab result profiles that want to derive from the CA Baseline but do not need a dataAbsentReason concept"
       },
       {
         "id": "Observation.interpretation",
         "path": "Observation.interpretation",
-        "mustSupport": true
+        "comment": "This element is recommended for support and was initially flagged as must support but was later determined to be too strong for some types of lab result profiles (e.g., antibody results, blood typing results, etc.) that want to derive from the CA Baseline but do not have an interpretation concept (e.g., norm/abnormal, high/low)."
       },
       {
         "id": "Observation.referenceRange",
         "path": "Observation.referenceRange",
-        "mustSupport": true
+        "comment": "This element is recommended for support and was initially flagged as must support but was later determined to be too strong for some types of lab result profiles (e.g., labs with non-numeric results) that want to derive from the CA Baseline but do not have a need for a numeric reference range concept."
       },
       {
         "id": "Observation.hasMember",
         "path": "Observation.hasMember",
-        "mustSupport": true
+        "comment": "This element was initially flagged as must support but was later determined to be too strong for some types of lab result profile that want to derive from the CA Baseline but do not have a use hasMember to link results. Examples of these include but are not limited to non-panel results and panel result implementations that use alternative methods like ServiceRequest or DiagnosticReport to link panel results together."
+      },
+      {
+        "id": "Observation.component",
+        "path": "Observation.component",
+        "comment": "Some elements underneath this backbone element are considered must support. This does not incur the expectation to support these elements for any implementers that do not need to support the parent concept of observation.component. This may need to be evaluated in the future as impelementations seek to derive directly from the CA Baseline profiles"
       },
       {
         "id": "Observation.component.code",
@@ -300,15 +278,6 @@
           ],
           "rules": "open"
         },
-        "constraint": [
-          {
-            "key": "ca-baseline-component-value",
-            "severity": "error",
-            "human": "Observation.component.value[x] or Observation.component.dataAbsentReason SHALL be present",
-            "expression": "component.value[x].exists() or component.dataAbsentReason.exists()",
-            "xpath": "Observation.component.value[x] or Observation.component.dataAbsentReason"
-          }
-        ],
         "mustSupport": true
       },
       {
@@ -382,16 +351,7 @@
       },
       {
         "id": "Observation.component.dataAbsentReason",
-        "path": "Observation.component.dataAbsentReason",
-        "constraint": [
-          {
-            "key": "ca-baseline-component-value",
-            "severity": "error",
-            "human": "Observation.value[x] or Observation.dataAbsentReason SHALL be present",
-            "expression": "value[x].exists() or dataAbsentReason.exists()",
-            "xpath": "Observation.value[x] or Observation.dataAbsentReason"
-          }
-        ]
+        "path": "Observation.component.dataAbsentReason"
       }
     ]
   }
