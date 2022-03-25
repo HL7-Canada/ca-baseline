@@ -14,6 +14,11 @@ Vendors in Canada have the base capability to support the elements, with the exp
 
 Given the challenge that comes from inheritance of must support flags into implementation guides that have strict definitions for must support (e.g., must be able to display this value to an end user), the CA Baseline has only applied must support flags on the elements that would be expected to be flagged as must support across the majority of Canadian Implementation Guides.
 
+**Must Support Expectations: Backbone & Child Elements**
+Occasionally, Must Support flags are applied to elements that fall under a backbone element that is not considered Must Support. This profiling is intended to communicate conditional expectations IF the implementation uses/supports the backbone element.
+
+It is *not* intended to incur the expectation that systems have to support the backbone element and the child elements noted underneath if they would have otherwise not included them in their profile. This modeling will continue to be evaluated for impacts for derived profiles.
+
 **Should Support Expectations:**
 This specification may also identify elements that are "should support" using usage notes. These are elements that may not reasonably meet the rule above of being in the majority of Canadian Implementation Guide, but that the CA Baseline is encouraging further proliferation of.
 
