@@ -6,9 +6,9 @@
   "name": "ObservationProfile",
   "title": "Observation Profile (General Use)",
   "status": "draft",
-  "date": "2020-06-08",
+  "date": "2022-03-25",
   "publisher": "HL7 Canada",
-  "description": "Proposed constraints on the Observation Resource for general use",
+  "description": "Proposed constraints on the Observation Resource for general use. This profile sets minimum expectations for the Observation resource to represent various observations if no other, more specific profile is applicable. An observation is a measurement or assertion about a subject (person, group, device, location, or another subject).",
   "jurisdiction": [
     {
       "coding": [
@@ -34,9 +34,12 @@
         "definition": "The Observation Profile is based upon the core FHIR Observation Resource"
       },
       {
+        "id": "Observation.status",
+        "path": "Observation.status"
+      },
+      {
         "id": "Observation.category",
         "path": "Observation.category",
-        "min": 0,
         "mustSupport": true
       },
       {
@@ -83,30 +86,17 @@
       {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
-        "constraint": [
-          {
-            "key": "ca-baseline-value-1",
-            "severity": "error",
-            "human": "Observation.value[x] or Observation.dataAbsentReason or Observation.component SHOULD be present",
-            "expression": "value[x].exists() or dataAbsentReason.exists() or component.exists()",
-            "xpath": "Observation.value[x] or Observation.dataAbsentReason or Observation.component"
-          }
-        ],
         "mustSupport": true
       },
       {
         "id": "Observation.dataAbsentReason",
         "path": "Observation.dataAbsentReason",
-        "constraint": [
-          {
-            "key": "ca-baseline-value-1",
-            "severity": "error",
-            "human": "Observation.value[x] or Observation.dataAbsentReason or Observation.component SHOULD be present",
-            "expression": "value[x].exists() or dataAbsentReason.exists() or component.exists()",
-            "xpath": "Observation.value[x] or Observation.dataAbsentReason or Observation.component"
-          }
-        ],
-        "mustSupport": true
+        "comment": "This element is recommended for support and was initially flagged as must support but was later determined to be too strong for some types of observation profiles that want to derive from the CA Baseline but do not need a dataAbsentReason concept"
+      },
+      {
+        "id": "Observation.component",
+        "path": "Observation.component",
+        "comment": "Some elements underneath this backbone element are considered must support. This does not incur the expectation to support these elements for any implementers that do not need to support the parent concept of observation.component. This may need to be evaluated in the future as impelementations seek to derive directly from the CA Baseline profiles"
       },
       {
         "id": "Observation.component.code",
@@ -122,30 +112,11 @@
       {
         "id": "Observation.component.value[x]",
         "path": "Observation.component.value[x]",
-        "constraint": [
-          {
-            "key": "ca-baseline-value-2",
-            "severity": "error",
-            "human": "Observation.component.value[x] or Observation.component.dataAbsentReason SHALL be present",
-            "expression": "component.value[x].exists() or component.dataAbsentReason.exists()",
-            "xpath": "Observation.component.value[x] or Observation.component.dataAbsentReason"
-          }
-        ],
         "mustSupport": true
       },
       {
         "id": "Observation.component.dataAbsentReason",
-        "path": "Observation.component.dataAbsentReason",
-        "constraint": [
-          {
-            "key": "ca-baseline-value-2",
-            "severity": "error",
-            "human": "Observation.component.value[x] or Observation.component.dataAbsentReason SHALL be present",
-            "expression": "component.value[x].exists() or component.dataAbsentReason.exists()",
-            "xpath": "Observation.component.value[x] or Observation.component.dataAbsentReason"
-          }
-        ],
-        "mustSupport": true
+        "path": "Observation.component.dataAbsentReason"
       }
     ]
   }
