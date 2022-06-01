@@ -94,7 +94,7 @@
       {
         "id": "PractitionerRole.identifier",
         "path": "PractitionerRole.identifier",
-        "min": 1,
+        "comment": "This element is considered SHOULD support and it is recommended to have an identifier associated with PractitionerRole to assist in searches, not every implementation (especially legacy implementations that combined both concepts of practitioner & practitionerRole) will include an identifier practioner role.",
         "type" : [
           {
             "code" : "Identifier",
@@ -102,8 +102,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier"
             ]
           }
-        ],           
-        "mustSupport": true
+        ]
       },
       {
         "id": "PractitionerRole.practitioner",
