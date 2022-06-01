@@ -22,7 +22,7 @@ All elements or attributes defined in FHIR have cardinality as part of their def
 Most elements in FHIR specification have a minimum cardinality of 0, which means that they may be missing from a resource when it is exchanged between systems.
 
 **Required elements:**
-* an identifier
+* a identifier
 * a practitioner name
 
 In addition to that, some optional elements (e.g., _Practitioner.qualification_) have required components that MUST be present if that optional element is provided.
@@ -42,8 +42,10 @@ Following elements are marked as Must Support in the Practitioner profile to aid
 * contact detail (e.g. a telephone number or an email address)
 * a birth date
 
-## Modifier Extension
-This Practitioner profile contains optional [modifier extension](https://www.hl7.org/fhir/extensibility.html#modifierExtension) to indicate if a practitioner is deceased or not.
+## Extensions
+
+### Deceased Extension
+This Practitioner profile contains optional [deceased extension](http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-deceased) to indicate if a practitioner is deceased or not.
 
 This extension is labeled as a modifier because once a practitioner is marked as deceased, the clinical processes that the practitioner was involved in may be significantly different.
 
