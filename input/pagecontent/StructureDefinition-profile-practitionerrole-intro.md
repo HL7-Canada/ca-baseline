@@ -3,12 +3,15 @@ This PractitionerRole profile sets minimum expectations for the PractitionerRole
 
 This profile defines localization concepts for use in an Canadian context.
 
+## Differences from US Core
+This analysis is not applicable as this profile is a specialization of PractitionerRole for registry profiles and there is no equivalent in US Core R4 Implementation Guide, See the general PractitionerRole profile for differences.
+
 ## Mandatory Data Elements
 All elements or attributes defined in FHIR have cardinality as part of their definition - a minimum number of required appearances and a maximum number.
 
 Most elements in FHIR specification have a minimum cardinality of **0**, which means that they may be missing from a resource when it is exchanged between systems.
 
-In this Canadian Baseline PractitionerRole Profile all elements are optional, i.e., there is no element with a minimum cardinality of **1**. However, some optional elements (e.g., identifier) have required components that MUST be present if that optional element is provided.
+In this Canadian Baseline PractitionerRole Profile all elements are optional, i.e., there is no element with a minimum cardinality of **1**. However, some optional elements (e.g., identifier, telecom) have required components that MUST be present if that optional element is provided.
 
 ### Data Absent Reason
 In situations where the minimum cardinality of an element or attribute is **1** and information is missing and the Responder knows the precise reason for the absence of data, Responders SHALL send the reason for the missing information using values (such as [NullFlavor](https://www.hl7.org/fhir/extension-iso21090-nullflavor.html)) from the value set where they exist or using the [DataAbsentReason](http://hl7.org/fhir/StructureDefinition/data-absent-reason) extension.
@@ -16,13 +19,18 @@ In situations where the minimum cardinality of an element or attribute is **1** 
 ## Must Support Data Elements
 Some elements are labeled as MustSupport meaning that implementations that produce or consume resources SHALL provide "support" for the element in some meaningful way (see [Must Support](https://build.fhir.org/ig/HL7-Canada/ca-baseline/general-guidance.html#must-support) definition).
 
-Following elements are marked as Must Support in the PractitionerRole profile to aid record matching in databases with many pediatric records.
+The following elements are marked as Must Support in the PractitionerRole profile:
 
 **Must Support elements:**
-* an identifier
 * reference to a practitioner
 * contact detail (e.g. a telephone number or an email address)
-* speciality
+* specialty
+
+## Best Practices/"Should" Support
+* identifier: It is recommended to have an identifier associated with PractitionerRole to assist in searches, however not every implementation (especially legacy implementations that combined both concepts of practitioner & practitionerRole) will include an identifier practitioner role. Given the scope and principles of the CA Baseline, the cardinality on this element was relaxed back to its base cardinality after receiving community feedback from FHIR IGuides that could not support the expectation in their existing implementation(s).
+
+## Invariants
+This profile adds an invariant that necessitates either PractitionerRole.code or PracititionerRole.specialty be present.
 
 ## Usage Note
 This PractitionerRole profile is intended for general use, e.g. to be included into a Bundle along with the Practitioner resource.
