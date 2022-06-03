@@ -4,14 +4,7 @@ This PractitionerRole profile sets minimum expectations for the PractitionerRole
 This profile defines localization concepts for use in an Canadian context.
 
 ## Differences from US Core
-**Note:** This profile was generated from [HL7 PractitionerRole StructureDefinition](http://hl7.org/fhir/R4/practitionerrole.html) and constrained during a review of US Core R4 equivalent profile(s) and a review against Canadian sources.
-
-The following differences are noted from the [US Core R4 PractitionerRole Profile](hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-practitionerrole.html):
-* MS Differences: US Core R4 PractitionerRole profile includes additional MS constraints on identifier, organization, code, location, telecom.system, telecom.value, and endpoint.
-* Cardinality Differences: None
-* Terminology Differences: US Core binds PractitionerRole.code to their National Uniform Claim Committet (NUCC) Taxonomy, and binds PractitionerRole.specialty to their Healthcare Provider Taxonomy valueset. Both are expected to be realm specific.
-* Invariant Differences: US Core R4 PractitionerRole profile includes an additional invariant necessitating a reference to practitioner, org, healthcareService, or location be present
-
+This analysis is not applicable as this profile is a specialization of PractitionerRole for registry profiles and there is no equivalent in US Core R4 Implementation Guide, See the general PractitionerRole profile for differences.
 
 ## Mandatory Data Elements
 All elements or attributes defined in FHIR have cardinality as part of their definition - a minimum number of required appearances and a maximum number.
@@ -37,18 +30,18 @@ The following elements are marked as Must Support in the PractitionerRole-Regist
 * specialty
 
 ## Best Practices/"Should" Support
-* identifier: It is recommended to have an identifier associated with PractitionerRole to assist in searches, however not every implementation (especially legacy implementations that combined both concepts of practitioner & practitionerRole) will include an identifier practitioner role. Given the scope and principles of the CA Baseline, the cardinality on this element was relaxed back to its base cardinality after receiving community feedback from FHIR Iguides that could not support the expectation in their existing implementation(s).
+**identifier**: It is recommended to have an identifier associated with PractitionerRole to assist in searches, however not every implementation (especially legacy implementations that combined both concepts of practitioner & practitionerRole) will include an identifier practitioner role. Given the scope and principles of the CA Baseline, the cardinality on this element was relaxed back to its base cardinality after receiving community feedback from FHIR Iguides that could not support the expectation in their existing implementation(s).
 
 ## Invariants
-* ca-baseline-pracRole-1: This profile adds an invariant that necessitates either PractitionerRole.code or PracititionerRole.specialty be present.
+**ca-baseline-pracRole-1**: This profile adds an invariant that necessitates either PractitionerRole.code or PracititionerRole.specialty be present.
 
 
 ## Extensions
-This PractitionerRole profile contains optional [RoleStatus]( https://build.fhir.org/ig/HL7-Canada/ca-baseline/extension-ext-rolestatus.html) [modifier extension](https://www.hl7.org/fhir/extensibility.html#modifierExtension) to indicate the possible states of the Role as defined by the [HL7v3 Role]( https://www.hl7.org/fhir/v3/RoleStatus/cs.html) class state machine.
+**ext-rolestatus**: This PractitionerRole profile contains optional [RoleStatus]( https://build.fhir.org/ig/HL7-Canada/ca-baseline/extension-ext-rolestatus.html) [modifier extension](https://www.hl7.org/fhir/extensibility.html#modifierExtension) to indicate the possible states of the Role as defined by the [HL7v3 Role]( https://www.hl7.org/fhir/v3/RoleStatus/cs.html) class state machine.
 
 This extension is labeled as modifier because the status code may provide additional knowledge about the PractitionerRole resource that modifies its meaning or interpretation.
 
-In conjunction to the RoleStatus extension, this PractitionerRole profile includes an optional [StatusReason]( https://build.fhir.org/ig/HL7-Canada/ca-baseline/extension-ext-statusreason.html) extension to provides a textual description for the status.
+**ext-statusreason**: In conjunction to the RoleStatus extension, this PractitionerRole profile includes an optional [StatusReason]( https://build.fhir.org/ig/HL7-Canada/ca-baseline/extension-ext-statusreason.html) extension to provides a textual description for the status.
 
 Note: Role status effective from/to dates go to _PractitionerRole.period_ element.
 
