@@ -2314,7 +2314,7 @@
         "comment": "The larger SNOMED CT CA data exchange value set (ClinicalFinding) has been included as a preferred binding for this element. However, HealthConcernCode (which is a subset of SCTCA) has been maintained as a slice to recognize that the subset is is commonly used by Primary Health Care EMRs and was developed and reinforced through inclusion in CIHI Pan-Canadian Primary Health Care EMR Minimum Data Set",
         "mustSupport": true,
         "binding": {
-          "strength": "required",
+          "strength": "preferred",
           "description": "Codes for problems from the SNOMED CT Canadian edition value set",
           "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/clinicalfindingcode"
         }
