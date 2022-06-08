@@ -33,7 +33,7 @@ The following elements are marked as Must Support in the PractitionerRole-Regist
 **identifier**: It is recommended to have an identifier associated with PractitionerRole to assist in searches, however not every implementation (especially legacy implementations that combined both concepts of practitioner & practitionerRole) will include an identifier practitioner role. Given the scope and principles of the CA Baseline, the cardinality on this element was relaxed back to its base cardinality after receiving community feedback from FHIR Iguides that could not support the expectation in their existing implementation(s).
 
 ## Invariants
-**ca-baseline-pracRole-1**: This profile adds an invariant that necessitates either PractitionerRole.code or PracititionerRole.specialty be present.
+The invariant necessitating either code or specialty be present was removed after review against Canadian FHIR rpracititoner registry implementations identified challenges with some legacy systems (registry and otherwise) that have cpmmon use cases for PractitionerRole that do not include specialty or code.
 
 
 ## Extensions
