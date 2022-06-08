@@ -2,11 +2,10 @@
     "resourceType": "ValueSet",
     "id": "vaccinecodes",
     "url": "http://hl7.org/fhir/ca/baseline/ValueSet/vaccinecodes",
-    "version": "4.0.0",
     "name": "VaccineCodes",
     "title": "Vaccine Codes",
     "status": "draft",
-    "publisher": "Canada Health Infoway",
+    "publisher": "HL7 Canada - FHIR Implementation Work Group",
     "description": "**Placeholder**\nCurrent and historical vaccines are published as separate lists by Canada Health Infoway. See:\n[VaccineAdministeredTradeNameCode](https://tgateway.infoway-inforoute.ca/html/singlesubset.html?id=2.16.840.1.113883.2.20.3.281&versionid=20181031)\n[VaccineHistoricalNameCode](https://tgateway.infoway-inforoute.ca/html/singlesubset.html?id=2.16.840.1.113883.2.20.3.282&versionid=20181031).",
     "compose": {
         "include": [

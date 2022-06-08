@@ -2,12 +2,11 @@
     "resourceType": "ValueSet",
     "id": "birthsex",
     "url": "http://hl7.org/fhir/ca/baseline/ValueSet/birthsex",
-    "version": "4.0.0",
     "name": "BirthSex",
     "title": "Birth Sex",
     "status": "draft",
     "date": "2019-03-08",
-    "publisher": "TBD",
+    "publisher": "HL7 Canada - FHIR Implementation Work Group",
     "description": "Codes for documenting sex at birth. (Replicates the birthsex ValueSet in US-Core-R4 for interoperability.)",
     "compose": {
         "include": [

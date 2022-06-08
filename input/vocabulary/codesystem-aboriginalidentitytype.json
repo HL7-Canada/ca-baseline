@@ -2,12 +2,11 @@
   "resourceType": "CodeSystem",
   "id": "aboriginalidentitytype",
   "url": "https://fhir.infoway-inforoute.ca/CodeSystem/aboriginalidentitytype",
-  "version": "0.0.1",
   "name": "AboriginalIdentityType",
   "title": "Aboriginal Identity Type",
   "status": "draft",
   "date": "2020-09-15",
-  "publisher": "Canada Health Infoway",
+  "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "description": "Represents codes for Aboriginal Identity",
   "jurisdiction": [
     {
