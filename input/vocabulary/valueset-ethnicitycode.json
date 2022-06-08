@@ -2,11 +2,10 @@
 	"resourceType": "ValueSet",
 	"id": "ethnicitycode",
 	"url": "https://fhir.infoway-inforoute.ca/ValueSet/ethnicitycode",
-	"version": "20190930",
 	"name": "EthnicityCode",
 	"status": "draft",
 	"date": "2019-09-30",
-	"publisher": "Canada Health Infoway",
+	"publisher": "HL7 Canada - FHIR Implementation Work Group",
 	"description": "Codes representing a self-reported ethnic group. This should not be confused with citizenship or nationality.",
 	"jurisdiction": [
 		{

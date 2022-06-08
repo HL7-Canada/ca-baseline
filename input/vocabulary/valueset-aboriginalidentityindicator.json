@@ -2,12 +2,11 @@
   "resourceType": "ValueSet",
   "id": "aboriginalidentityindicator",
   "url": "https://fhir.infoway-inforoute.ca/ValueSet/aboriginalidentityindicator",
-  "version": "0.0.1",
   "name": "AboriginalIdentityIndicator",
   "title": "Aboriginal Identity Indicator",
   "status": "draft",
   "date": "2020-09-15",
-  "publisher": "Canada Health Infoway",
+  "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "description": "Represents the self identity as an Aboriginal Person",
   "jurisdiction": [
     {
