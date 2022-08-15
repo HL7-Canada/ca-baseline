@@ -47,7 +47,9 @@ Following elements are marked as Must Support in the Practitioner profile to aid
 ### Deceased Extension
 This Practitioner profile contains optional [deceased extension](http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-deceased) to indicate if a practitioner is deceased or not.
 
-This extension is labeled as a modifier because once a practitioner is marked as deceased, the clinical processes that the practitioner was involved in may be significantly different.
+This extension was previously labeled as a modifier extension (because of its potential impacts on clinical processes if the practitioner is marked deceased), but was removed after further discussion on the nuances of making something a modifierExtension vs regular extension if it was expected to be picked up by registry implementation guides that collect deceased practitioner information but may or may not use it in ways that would align to HL7 FHIR R4 [definition](https://www.hl7.org/fhir/R4/backboneelement-definitions.html#BackboneElement.modifierExtension) and expectations for modifierExtension.
+
+Implementers should recognize that the determination of whether this should be considered a modifierExtension is ongoing. Since Modifier Extensions should have extreme caution in their application and are further nuanced by the use cases in the implementing registry systems, this extension has been shifted back to a regular extension to align to use in existing implementations. Implementers who are considering using this extension in their guidance are required to review the [FHIR Guidance on Modifier Extensions])(https://www.hl7.org/fhir/R4/extensibility.html#modifierExtension) before including this extension in their profile. Implementers should also be aware of the Practitioner.deceased[x] R5 concept and that the CA Baseline is monitoring changes in the element to determine if the approach to this extension requires a shift.
 
 ## Usage Note
 This Practitioner profile is intended to provide a foundation for a central or distributed Provider or Healthcare Directory. Additional work flow components and elements may be required for a particular implementation.
