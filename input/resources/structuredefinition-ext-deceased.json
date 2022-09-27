@@ -58,8 +58,8 @@
         "id": "Extension",
         "path": "Extension",
         "short": "Extension",
-        "definition": "Deceased indicator",
-        "comment": "An assertion that an individual is deceased or not",
+        "definition": "Deceased indicator- An assertion that an individual is deceased or not",
+        "comment": "Implementers should recognize that the determination of whether this should be considered a modifierExtension is ongoing. Since Modifier Extensions should have extreme caution in their application and are further nuanced by the use cases in the implementing registry systems, this extension has been shifted back to a regular extension to align to use in existing implementations. Implementers who are considering using this extension in their guidance are required to review the [FHIR Guidance on Modifier Extensions])(https://www.hl7.org/fhir/R4/extensibility.html#modifierExtension) before including this extension in their profile. Implementers should also be aware of the Practitioner.deceased[x] R5 concept and that the CA Baseline is monitoring changes in the element to determine if the approach to this extension requires a shift.",
         "min": 0,
         "max": "1",
         "base": {
@@ -88,7 +88,6 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
-        "isModifier": true,
         "isModifierReason": "This element is labeled as a modifier because once a practitioner is marked as deceased, the clinical processes that the practitioner was involved in may be significantly different."
       },
       {
@@ -268,12 +267,10 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "definition": "Deceased indicator",
-        "comment": "An assertion that an individual is deceased or not",
+        "definition": "Deceased indicator - An assertion that an individual is deceased or not",
+        "comment": "Implementers should recognize that the determination of whether this should be considered a modifierExtension is ongoing. Since Modifier Extensions should have extreme caution in their application and are further nuanced by the use cases in the implementing registry systems, this extension has been shifted back to a regular extension to align to use in existing implementations. Implementers who are considering using this extension in their guidance are required to review the [FHIR Guidance on Modifier Extensions])(https://www.hl7.org/fhir/R4/extensibility.html#modifierExtension) before including this extension in their profile. Implementers should also be aware of the Practitioner.deceased[x] R5 concept and that the CA Baseline is monitoring changes in the element to determine if the approach to this extension requires a shift.",
         "min": 0,
-        "max": "1",
-        "isModifier": true,
-        "isModifierReason": "This element is labeled as a modifier because once a practitioner is marked as deceased, the clinical processes that the practitioner was involved in may be significantly different."
+        "max": "1"
       },
       {
         "id": "Extension.url",
