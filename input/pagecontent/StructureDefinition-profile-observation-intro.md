@@ -4,7 +4,7 @@
 		While this profile does not currently apply MS constraints on the hasMember or component elements, this profile is seeking community and implementer feedback on how both elements are being used to assess whether consistent patterns can be identified for use in the Canadian landscape.
 		<br>
 
-		Feedback can be provided through the <a href="https://simplifier.net/CanadianFHIRBaselineProfilesCA-Core/ObservationProfileLaboratory/~issues">Simplifier issue log for this profile</a>.</p>
+		Feedback can be provided through the <a href="https://simplifier.net/CanadianFHIRBaselineProfilesCA-Core/ObservationProfileLaboratory/~issues">Simplifier issue log for this profile</a>. 
 	</blockquote>
   </div>
 
