@@ -3290,7 +3290,8 @@
         "id": "Practitioner",
         "path": "Practitioner",
         "short": "Practitioner Profile",
-        "definition": "The Practitioner Profile is based upon the CA Core FHIR Practitioner Profile for general use"
+        "definition": "The Practitioner Profile is based upon the CA Bas+
+        `eline FHIR Practitioner Profile for general use"
       },
       {
         "id": "Practitioner.extension",
@@ -3393,6 +3394,11 @@
         "mustSupport": true
       },
       {
+        "id": "Practitioner.qualification",
+        "path": "Practitioner.qualification",
+        "comment": "Slicing has been maintained to demonstrate that there are some registries supporting hybridized registry/eReferral use cases that require a separate set of codes. Until practices are more standardized regarding these two code systems, implementers are cautioned that these code systems and value sets still may change. Implementers are encouraged to provide feedback on the value sets and code systems they are expecting to utilize."
+      },
+      {
         "id": "Practitioner.qualification.code.coding",
         "path": "Practitioner.qualification.code.coding",
         "slicing": {
@@ -3425,41 +3431,22 @@
         "path": "Practitioner.qualification.code.coding.system",
         "short": "QualifiedRoleType",
         "definition": "A code system for the degree or educational rank that the credential specifies. May also apply to an Expertise type.",
-        "comment": "The binding strength of this element is [Preferred](https://www.hl7.org/fhir/terminologies.html#strength), meaning that codes are encouraged to draw from the QualifiedRoleType code system for interoperability purposes but are not required to do so to be considered conformant.",
         "min": 1,
-        "binding": {
-          "strength": "preferred",
-          "description": "A code system for the degree or educational rank that the credential specifies",
-          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/qualifiedroletype"
-        }
-      },
-      {
-        "id": "Practitioner.qualification.code.coding:Registry.code",
-        "path": "Practitioner.qualification.code.coding.code",
-        "min": 1
+        "fixedString": "https://fhir.infoway-inforoute.ca/CodeSystem/scpqual"
       },
       {
         "id": "Practitioner.qualification.code.coding:eReferral",
         "path": "Practitioner.qualification.code.coding",
-        "sliceName": "eReferral"
+        "sliceName": "eReferral",
+        "comment": "Some registries may be used to support electronic referral use cases. A separate code system for practitioner qualification codes has been identified as in use by at least one Canadian regsitry supporting the hybridized use case."
       },
       {
         "id": "Practitioner.qualification.code.coding:eReferral.system",
         "path": "Practitioner.qualification.code.coding.system",
         "short": "HealthcareProviderRoleType",
         "definition": "A role type that is used to categorize an entity that delivers health care in an expected and professional manner to an entity in need of health care services.",
-        "comment": "The binding strength of this element is [Preferred](https://www.hl7.org/fhir/terminologies.html#strength), meaning that codes are encouraged to draw from the HealthcareProviderRoleType code system for interoperability purposes but are not required to do so to be considered conformant.",
         "min": 1,
-        "binding": {
-          "strength": "preferred",
-          "description": "A code system that is used to categorize an entity that delivers health care",
-          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/qualifiedroletype"
-        }
-      },
-      {
-        "id": "Practitioner.qualification.code.coding:eReferral.code",
-        "path": "Practitioner.qualification.code.coding.code",
-        "min": 1
+        "fixedString": "https://fhir.infoway-inforoute.ca/CodeSystem/scptype"
       }
     ]
   }
