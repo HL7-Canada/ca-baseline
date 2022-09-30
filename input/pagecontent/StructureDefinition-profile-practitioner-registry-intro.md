@@ -9,7 +9,6 @@
 		<br>
 		<br>
 		The CA Baseline is asking implementers to provide feedback on the value sets and code systems they are expecting to utilize as they transition to FHIR .</p>
-
 		<br>
 		Feedback can be provided through the <a href="https://simplifier.net/CanadianFHIRBaselineProfilesCA-Core/ObservationProfileLaboratory/~issues">Simplifier issue log for this profile</a>.
 	</blockquote>
