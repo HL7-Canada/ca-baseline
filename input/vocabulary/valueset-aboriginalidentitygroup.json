@@ -23,7 +23,7 @@
     "include": [
       {
         "valueSet": [
-          "https://fhir.infoway-inforoute.ca/CodeSystem/aboriginalidentitytype"
+          "https://fhir.infoway-inforoute.ca/ValueSet/aboriginalidentitytype"
         ]
       }, {
         "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
