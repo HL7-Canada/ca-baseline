@@ -98,6 +98,6 @@ FMM 3 = FMM 2 PLUS the artifact has been verified by the work group as meeting t
 
 FMM 4 = FMM 3 PLUS the artifact is published in a formal publication (e.g. a FHIR Implementation Guide), and implemented in multiple prototype projects. As well, the responsible work group agrees the artifact is sufficiently stable to require implementer consultation for subsequent non-backward compatible changes.
 
-FMM 5 = FMM 5 PLUS the artifact has been published in two formal publication release cycles at FMM1+ (i.e. Trial Use level) and has been implemented in at least 5 independent production systems.
+FMM 5 = FMM 4 PLUS the artifact has been published in two formal publication release cycles at FMM1+ (i.e. Trial Use level) and has been implemented in at least 5 independent production systems.
 
 Normative the artifact is now considered stable.

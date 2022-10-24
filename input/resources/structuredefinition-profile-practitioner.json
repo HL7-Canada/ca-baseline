@@ -127,7 +127,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/DomainResource"
           },
           {
-            "key": "ca-baseline-name",
+            "key": "ca-baseline-practitioner-name",
             "severity": "error",
             "human": "Either name.given and/or name.family SHALL be present or a Data Absent Reason Extension SHALL be present",
             "expression": "(name.family.exists() or name.given.exists()) xor extension.where(url='http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()",
@@ -830,7 +830,7 @@
           }
         ],
         "condition": [
-          "ca-baseline-name"
+          "ca-baseline-practitioner-name"
         ],
         "constraint": [
           {
@@ -883,7 +883,7 @@
         ],
         "orderMeaning": "Given Names appear in the correct order for presenting the name",
         "condition": [
-          "ca-baseline-name"
+          "ca-baseline-practitioner-name"
         ],
         "constraint": [
           {
@@ -2383,7 +2383,7 @@
         "definition": "The Practitioner Profile is based upon the core FHIR Practitioner Resource",
         "constraint": [
           {
-            "key": "ca-baseline-name",
+            "key": "ca-baseline-practitioner-name",
             "severity": "error",
             "human": "Either name.given and/or name.family SHALL be present or a Data Absent Reason Extension SHALL be present",
             "expression": "(name.family.exists() or name.given.exists()) xor extension.where(url='http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()",
@@ -2413,14 +2413,14 @@
         "id": "Practitioner.name.family",
         "path": "Practitioner.name.family",
         "condition" : [
-          "ca-baseline-name"
+          "ca-baseline-practitioner-name"
         ]
       },
       {
         "id": "Practitioner.name.given",
         "path": "Practitioner.name.given",
         "condition" : [
-          "ca-baseline-name"
+          "ca-baseline-practitioner-name"
         ]
       },
       {
