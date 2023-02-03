@@ -4,7 +4,7 @@
   "url": "https://fhir.infoway-inforoute.ca/ValueSet/encountertype",
   "name": "EncounterType",
   "title": "Encounter Type",
-  "status": "active",
+  "status": "draft",
   "date": "2020-07-23",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "description": "The type of encounter: a specific code indicating type of service provided. This value set includes codes from SNOMED CT decending from the concept 308335008 (Patient encounter procedure (procedure))",

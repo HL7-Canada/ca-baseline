@@ -2,7 +2,7 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input/schemas/fhir-single.xsd">
   <id value="hl7.fhir.ca.baseline"/>
   <url value="http://hl7.org/fhir/ca/baseline/ImplementationGuide/hl7.fhir.ca.baseline"/>
-  <version value="1.0.0"/>
+  <version value="1.1.0"/>
   <name value="CanadianBaseline"/>
   <title value="Canadian Baseline"/>
   <status value="draft"/>
@@ -23,11 +23,11 @@
   </jurisdiction>
   <packageId value="hl7.fhir.ca.baseline"/>
   <fhirVersion value="4.0.1"/>
-  <dependsOn id="ips">
+  <!--<dependsOn id="ips">
     <uri value="http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"/>
     <packageId value="hl7.fhir.uv.ips"/>
     <version value="1.0.0"/>
-  </dependsOn>
+  </dependsOn>-->
   <definition>
     <!--    <grouping id="conformance">
       <name value="Capability Statements"/>
@@ -52,11 +52,11 @@
     <grouping id="search">
       <name value="Search Parameters"/>
       <description value="Additional search parameters defined for use within the CA-Baseline implementation guide"/>
-    </grouping>
+    </grouping>-->
     <grouping id="examples">
       <name value="Example(s)"/>
       <description value="Example(s) showing the use of the CA-Baseline profiles"/>
-    </grouping>-->
+    </grouping>
     <resource>
       <reference>
         <reference value="StructureDefinition/ext-aboriginalidentitygroup"/>
@@ -338,7 +338,7 @@
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
-    <!--    <resource>
+    <resource>
       <reference>
         <reference value="StructureDefinition/profile-organizationaffiliation"/>
       </reference>
@@ -346,7 +346,7 @@
       <description value="Proposed constraints and extensions on the OrganizationAffiliation Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
-    </resource> -->
+    </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/profile-patient"/>
@@ -578,6 +578,10 @@
       <code value="show-reference-messages"/>
       <value value="true"/>
     </parameter>
+    <parameter>
+			<code value="ipa-comparison"/>
+			<value value="current"/>
+		</parameter>
 		<!-- <parameter>
       <code value="special-uri"/>
       <value value="https://fhir.infoway-inforoute.ca/CodeSystem/aboriginalidentitytype"/>

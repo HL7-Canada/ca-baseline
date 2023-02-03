@@ -2304,6 +2304,7 @@
       {
         "id": "Condition.verificationStatus",
         "path": "Condition.verificationStatus",
+        "comment": "This profile is seeking community and implementer feedback on whether further constraints on use of verificationStatus are needed. Feedback on current utilization practices is encouraged to support this effort.",
         "isModifier": true,
         "isModifierReason": "This element is labeled as a modifier because the status contains the code refuted and entered-in-error that mark the Condition as not currently valid."
       },
