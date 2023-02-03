@@ -1,4 +1,16 @@
 # CA Baseline Condition Profile
+<blockquote class="stu-note">
+  <p>This profile is seeking community and implementer feedback on whether further constraints on use of verificationStatus are needed.
+  <br>
+  <br>
+
+  VerificationStatus has been identified by members of our community as having clinical significance, though standardization around its use is still evolving in the international community (particularly in implementation guidance and value sets). We are currently seeking feedback from implementers on current utilization practices before further strengthening guidance on its use.
+
+  <br>
+
+  Feedback can be provided through the <a href="https://simplifier.net/CanadianFHIRBaselineProfilesCA-Core/PatientProfile/~issues">Simplifier issue log for this profile.</a>. Proposed language for inclusion under our Best Practice/Should support section is also welcomed.</p>
+</blockquote>
+</div>
 This profile constrains the Condition resource to record a list of problems associated with a patient. It identifies which elements, vocabularies and value sets to be present in the resource when using this profile.
 
 This profile defines localization concepts for use in a Canadian context.
