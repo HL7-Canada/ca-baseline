@@ -10,7 +10,7 @@
 
   Feedback can be provided through the <a href="https://simplifier.net/CanadianFHIRBaselineProfilesCA-Core/PatientProfile/~issues">Simplifier issue log for this profile.</a>. Proposed language for inclusion under our Best Practice/Should support section is also welcomed.</p>
 </blockquote>
-</div>
+
 This profile constrains the Condition resource to record a list of problems associated with a patient. It identifies which elements, vocabularies and value sets to be present in the resource when using this profile.
 
 This profile defines localization concepts for use in a Canadian context.
