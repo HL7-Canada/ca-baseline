@@ -10,7 +10,7 @@
   "name": "PractitionerRoleProfile",
   "title": "PractitionerRole Profile (General)",
   "status": "draft",
-  "date": "2022-06-08",
+  "date": "2023-05-05",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {
@@ -93,8 +93,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-practitioner"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "PractitionerRole.code",
@@ -112,7 +111,6 @@
         "path": "PractitionerRole.specialty",
         "short": "PractitionerSpecialty",
         "comment": "The binding strength of this element is [Preferred](https://www.hl7.org/fhir/terminologies.html#strength), meaning that codes are encouraged to draw from the PractitionerSpecialty code system for interoperability purposes but are not required to do so to be considered conformant.",
-        "mustSupport": true,
         "binding": {
           "strength": "preferred",
           "description": "Defines the clinical, medical, surgical or other healthcare-related service specialty of a practitioner who interacts, treats or provides such services to or for a patient.",
@@ -121,8 +119,7 @@
       },
       {
         "id": "PractitionerRole.telecom",
-        "path": "PractitionerRole.telecom",
-        "mustSupport": true
+        "path": "PractitionerRole.telecom"
       },
       {
         "id": "PractitionerRole.telecom.system",

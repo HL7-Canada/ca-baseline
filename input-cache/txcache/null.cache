@@ -1,50 +1,41 @@
 -------------------------------------------------------------------------------------
-{"hierarchical" : true, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "valueSet" : ["https://fhir.infoway-inforoute.ca/ValueSet/prescriptionmedicinalproduct"]
-    }]
-  }
-}}####
-e: {
-  "error" : "Error from server: Unable to find value set \"https://fhir.infoway-inforoute.ca/ValueSet/prescriptionmedicinalproduct\""
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "valueSet" : ["https://fhir.infoway-inforoute.ca/ValueSet/vaccineadministeredtradenamecode",
-      "https://fhir.infoway-inforoute.ca/ValueSet/vaccinehistoricalnamecode"]
-    }]
-  }
-}}####
-e: {
-  "error" : "Error from server: Unable to find value set \"https://fhir.infoway-inforoute.ca/ValueSet/vaccineadministeredtradenamecode\""
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "valueSet" : ["https://fhir.infoway-inforoute.ca/ValueSet/healthconcerncode"]
-    }]
-  }
-}}####
+{"hierarchical" : true, "url": "http://hl7.org/fhir/ca/baseline/ValueSet/healthconcerncode", "version": "1.0.0"}####
 e: {
   "error" : "Error from server: Unable to find value set \"https://fhir.infoway-inforoute.ca/ValueSet/healthconcerncode\""
 }
 -------------------------------------------------------------------------------------
-{"hierarchical" : true, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "valueSet" : ["https://fhir.infoway-inforoute.ca/ValueSet/prescriptiondrugform"]
-    }]
-  }
-}}####
+{"hierarchical" : true, "url": "http://hl7.org/fhir/ca/baseline/ValueSet/prescriptiondrugform", "version": "1.0.0"}####
 e: {
   "error" : "Error from server: Unable to find value set \"https://fhir.infoway-inforoute.ca/ValueSet/prescriptiondrugform\""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://hl7.org/fhir/ca/baseline/ValueSet/prescriptionmedicinalproduct", "version": "1.0.0"}####
+e: {
+  "error" : "Error from server: Unable to find value set \"https://fhir.infoway-inforoute.ca/ValueSet/prescriptionmedicinalproduct\""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://hl7.org/fhir/ca/baseline/ValueSet/vaccinecodes", "version": "1.0.0"}####
+e: {
+  "error" : "Error from server: Unable to find value set \"https://fhir.infoway-inforoute.ca/ValueSet/vaccineadministeredtradenamecode\""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://hl7.org/fhir/ca/baseline/ValueSet/healthconcerncode", "version": "1.1.0"}####
+e: {
+  "error" : "Error from server: Unable to find value set \"https://fhir.infoway-inforoute.ca/ValueSet/healthconcerncode\""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://hl7.org/fhir/ca/baseline/ValueSet/prescriptiondrugform", "version": "1.1.0"}####
+e: {
+  "error" : "Error from server: Unable to find value set \"https://fhir.infoway-inforoute.ca/ValueSet/prescriptiondrugform\""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://hl7.org/fhir/ca/baseline/ValueSet/prescriptionmedicinalproduct", "version": "1.1.0"}####
+e: {
+  "error" : "Error from server: Unable to find value set \"https://fhir.infoway-inforoute.ca/ValueSet/prescriptionmedicinalproduct\""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://hl7.org/fhir/ca/baseline/ValueSet/vaccinecodes", "version": "1.1.0"}####
+e: {
+  "error" : "Error from server: Unable to find value set \"https://fhir.infoway-inforoute.ca/ValueSet/vaccineadministeredtradenamecode\""
 }
 -------------------------------------------------------------------------------------
