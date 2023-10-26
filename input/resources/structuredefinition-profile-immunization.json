@@ -168,22 +168,7 @@
         },
         "short": "Vaccine administration date",
         "definition": "Date vaccine administered or was to be administered.",
-        "comment": "CA Baseline Usage Notes: While occurrenceString is allowed given its use in existing Canadian systems - a combination of occurrenceDateTime (full or partial) with the 'estimated' extension is the preferred mechanism for expressing when an exact date is unknown. For example, if a patient recalls that they were immunized in June 1980, occurrenceDateTime will have a partial date '1980-06' with 'estimated'=true. Another example: if in 2020, a 55 y.o. patient recalls that they were immunized at the age of 5, occurrenceDateTime will have a partial date '1970' with 'estimated'=true.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Immunization.occurrence[x]",
-          "min": 1,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "dateTime"
-          },
-          {
-            "code": "string"
-          }
-        ]
+        "comment": "CA Baseline Usage Notes: While occurrenceString is allowed given its use in existing Canadian systems - a combination of occurrenceDateTime (full or partial) with the 'estimated' extension is the preferred mechanism for expressing when an exact date is unknown. For example, if a patient recalls that they were immunized in June 1980, occurrenceDateTime will have a partial date '1980-06' with 'estimated'=true. Another example: if in 2020, a 55 y.o. patient recalls that they were immunized at the age of 5, occurrenceDateTime will have a partial date '1970' with 'estimated'=true."
       },
       {
         "id": "Immunization.occurrence[x]:occurrenceDateTime",
