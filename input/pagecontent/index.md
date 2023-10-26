@@ -15,10 +15,10 @@ Existing Canadian and International implementation guides (e.g., Canadian eRefer
 This guide is a **living document** that includes notes and profiles that continue to evolve as they undergo a working group review process and a Due Dillegence Review against existing Canadian FHIR Implementation Guides before being exposed to the larger FHIR community for further maturation through feedback and testing.
 
 **The profiles are currently undergoing reconciliation after a period of community review through our Due Dillegence Review (DDR) process.**
-- Information about the development and review process can be found [here](http://build.fhir.org/ig/HL7-Canada/ca-baseline/branches/master/developmentprocess.html) 
+- Information about the development and review process can be found [here](http://build.fhir.org/ig/HL7-Canada/ca-baseline/branches/master/developmentprocess.html)
   - You can follow along with our progress as a working group on the [Infocentral FHIR Implementation Working Group page](https://infocentral.infoway-inforoute.ca/en/collaboration/wg/fhir-implementations)
 - The list of which profiles have undergone DDRs against existing Canadian FHIR Implementation Guides can be found [here](http://build.fhir.org/ig/HL7-Canada/ca-baseline/branches/master/allartifacts.html)
-- Proposed and past changes to profiles are tracked in the [Simplifier issue log](https://simplifier.net/CanadianFHIRBaselineProfilesCA-Core/~issues) that can be accessed after logging in to Simplifier and navigating to the issues tab of the project or desired profile. The commnunity is encouraged to review the issues and add issues of their own after reading the [review and development process page](http://build.fhir.org/ig/HL7-Canada/ca-baseline/branches/master/developmentprocess.html). 
+- Proposed and past changes to profiles are tracked in the [Simplifier issue log](https://simplifier.net/CanadianFHIRBaselineProfilesCA-Core/~issues) that can be accessed after logging in to Simplifier and navigating to the issues tab of the project or desired profile. The commnunity is encouraged to review the issues and add issues of their own after reading the [review and development process page](http://build.fhir.org/ig/HL7-Canada/ca-baseline/branches/master/developmentprocess.html).
 - The [GitHub repository for this CI build be found here](https://github.com/HL7-Canada/ca-baseline).
 
 ### Principles
@@ -35,13 +35,13 @@ The following principles were applied when creating the profiles:
 
 ### Base vs. Baseline vs. Core
 
-The international FHIR community is evolving towards further differentiation between the use of Base, Baseline, and Core terminology to categorize implementation guides. At the time that this implementation guide was authored, the following patterns were discerned:
+The international FHIR community is evolving towards further differentiation between the use of Base, Baseline, and Core terminology to categorize implementation guides - readers should be aware that the definitions below may be refined as formal definitions are provided by HL7 International. At the time that this implementation guide was authored, the following patterns were discerned and proposed by the CA FHIR Baseline Community:
 
 **National Base Implementation Guides** (e.g., Australian Base, Germany Base, Netherlands Base) provide awareness of localized concepts but do not apply cardinality constraints or required binding strengths that enforce conformance to those concepts. In rare cases, cardinality constraints may be applied to elements that have been [sliced](https://www.hl7.org/fhir/profiling.html#slicing) to ensure the presence of sub-elements if a particular slice is used (ex: identified coding system). Must support flags are not utilized in Base National Profiles.
 
 **National Baseline Implementation Guides** (e.g., Canadian Baseline) provide awareness of localized concepts and apply minimal cardinality constraints and preferred binding strengths only where appropriate and when expected given national context. In some scenarios, more restrictive constraints may be found on elements that have been [sliced](https://www.hl7.org/fhir/profiling.html#slicing) to support meaningful conformance when standard heterogenous concepts are expected (ex: fixed values for specific systems the slice applies to). Must Support flags are utilized to identify elements that are expected to be supported broadly regardless of use case.
 
-**National Core Implementation Guides** (e.g., US Core, UK Core) define a set of conformance requirements that enforce alignment to localized concepts through cardinality constraints, must support flags, and required/extensible binding strengths. Conformance to these profiles is tied to regulatory and/or contractual agreements in order to necessitate adoption to these more prescriptive specifications.
+**National Core Implementation Guides** (e.g., US Core) define a set of conformance requirements that enforce alignment to localized concepts through cardinality constraints, must support flags, and required/extensible binding strengths. Conformance to these profiles is tied to regulatory and/or contractual agreements in order to necessitate adoption to these more prescriptive specifications. To date, National "Cores" may or may not be scoped to specific use cases (e.g., Norway Core vs US Core) however they are a reflection of additional requirements that are expected to be included in implementations in a nation or region.
 
 ### CA Baseline Profiles
 
