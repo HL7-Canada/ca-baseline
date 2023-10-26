@@ -183,8 +183,7 @@
           {
             "code": "string"
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "Immunization.occurrence[x]:occurrenceDateTime",
@@ -204,8 +203,7 @@
           {
             "code": "dateTime"
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "Immunization.occurrence[x]:occurrenceDateTime.extension",
