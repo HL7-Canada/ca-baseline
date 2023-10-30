@@ -29,7 +29,7 @@ The following elements are marked as Must Support in the PractitionerRole profil
 
 **Must Support elements:**
 * reference to a practitioner
-* contact detail (e.g. a telephone number or an email address)
+* contact detail (e.g. a telephone number or an email address) - inclusive of telecom system
 * specialty
 
 ## Best Practices/"Should" Support
