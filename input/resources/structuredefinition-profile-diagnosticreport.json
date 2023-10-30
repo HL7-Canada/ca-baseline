@@ -210,8 +210,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-encounter"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "DiagnosticReport.effective[x]",
