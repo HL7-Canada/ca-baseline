@@ -4,8 +4,8 @@
     "type": "fhir.template",
     "license": "CC0-1.0",
     "description": "CA Baseline template with link to issue log ",
-    "base": "fhir.ca.template",
+    "base": "hl7.ca.fhir.template",
     "dependencies": {
-    "fhir.ca.template" : "0.1.0"
+    "hl7.ca.fhir.template" : "0.1.0"
     }
    }
