@@ -8,7 +8,7 @@
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-deceased",
   "version": "0.3.0",
   "name": "ExtensionDeceased",
-  "title": "Extension: individual is deceased flag or date",
+  "title": "Extension: Individual is deceased flag or date",
   "status": "draft",
   "date": "2020-02-19",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
