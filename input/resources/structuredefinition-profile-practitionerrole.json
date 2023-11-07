@@ -94,7 +94,6 @@
             ]
           }
         ],
-        "mustSupport": true
       },
       {
         "id": "PractitionerRole.code",
@@ -112,7 +111,6 @@
         "path": "PractitionerRole.specialty",
         "short": "PractitionerSpecialty",
         "comment": "The binding strength of this element is [Preferred](https://www.hl7.org/fhir/terminologies.html#strength), meaning that codes are encouraged to draw from the PractitionerSpecialty code system for interoperability purposes but are not required to do so to be considered conformant.",
-        "mustSupport": true,
         "binding": {
           "strength": "preferred",
           "description": "Defines the clinical, medical, surgical or other healthcare-related service specialty of a practitioner who interacts, treats or provides such services to or for a patient.",
@@ -122,7 +120,6 @@
       {
         "id": "PractitionerRole.telecom",
         "path": "PractitionerRole.telecom",
-        "mustSupport": true
       },
       {
         "id": "PractitionerRole.telecom.system",
