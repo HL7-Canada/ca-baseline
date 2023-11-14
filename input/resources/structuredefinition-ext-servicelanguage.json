@@ -22,7 +22,7 @@
       ]
     }
   ],
-  "description": "Indentifies languages that that services are provided in.",
+  "description": "Identifies languages that services are provided in.",
   "jurisdiction": [
     {
       "coding": [
