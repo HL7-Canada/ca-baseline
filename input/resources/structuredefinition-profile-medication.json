@@ -178,8 +178,14 @@
         }
       },
       {
-        "id": "Medication.code.extension:isRepresentative",
-        "path": "Medication.code.extension",
+        "id": "Medication.code.coding",
+        "path": "Medication.code.coding",
+        "comment": "CA Baseline Usage Notes: either text or at least one coding or both have to be present",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.code.coding.extension:isRepresentative",
+        "path": "Medication.code.coding.extension",
         "sliceName": "isRepresentative",
         "short": "Socialized Optional Extension: Code is Representative",
         "definition": "If set to true, indicates that the medication code sent was chosen as a representative code of a drug picked at a more general level. I.e. The user didn't actually choose this specific code. The intended constraints around what drug should be supplied are conveyed by the request's substitution rules.",
@@ -194,12 +200,6 @@
           }
         ],
         "mustSupport": false
-      },
-      {
-        "id": "Medication.code.coding",
-        "path": "Medication.code.coding",
-        "comment": "CA Baseline Usage Notes: either text or at least one coding or both have to be present",
-        "mustSupport": true
       },
       {
         "id": "Medication.code.coding.system",
