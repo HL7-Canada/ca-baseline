@@ -10,7 +10,7 @@
   "name": "ExtensionServiceLanguage",
   "title": "Extension: ServiceLanguage",
   "status": "draft",
-  "date": "2019-03-08",
+  "date": "2023-12-15",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {
@@ -75,32 +75,8 @@
         "fixedUri": "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-servicelanguage"
       },
       {
-        "id": "Extension.value[x]",
-        "path": "Extension.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "rules": "closed"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ]
-      },
-      {
-        "id": "Extension.value[x]:valueCodeableConcept",
-        "path": "Extension.value[x]",
-        "sliceName": "valueCodeableConcept",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
+        "id": "Extension.valueCodeableConcept",
+        "path": "Extension.valueCodeableConcept",
         "binding": {
           "strength": "preferred",
           "description": "Common Languages",
