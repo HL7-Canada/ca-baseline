@@ -10,7 +10,7 @@
   "name": "ExtensionBirthSex",
   "title": "Extension: Birth Sex",
   "status": "draft",
-  "date": "2019-12-10",
+  "date": "2023-12-15",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {
@@ -79,33 +79,9 @@
         "mustSupport": true
       },
       {
-        "id": "Extension.value[x]",
-        "path": "Extension.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "rules": "closed"
-        },
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ]
-      },
-      {
-        "id": "Extension.value[x]:valueCoding",
-        "path": "Extension.value[x]",
-        "sliceName": "valueCoding",
+        "id": "Extension.valueCoding",
+        "path": "Extension.valueCoding",
         "min": 1,
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
         "mustSupport": true,
         "binding": {
           "strength": "example",
@@ -114,18 +90,18 @@
         }
       },
       {
-        "id": "Extension.value[x]:valueCoding.system",
-        "path": "Extension.value[x].system",
+        "id": "Extension.valueCoding.system",
+        "path": "Extension.valueCoding.system",
         "min": 1
       },
       {
-        "id": "Extension.value[x]:valueCoding.code",
-        "path": "Extension.value[x].code",
+        "id": "Extension.valueCoding.code",
+        "path": "Extension.valueCoding.code",
         "min": 1
       },
       {
-        "id": "Extension.value[x]:valueCoding.display",
-        "path": "Extension.value[x].display",
+        "id": "Extension.valueCoding.display",
+        "path": "Extension.valueCoding.display",
         "short": "Optional description of the sex at birth code",
         "definition": "Plain text representation of the sex at birth concept"
       }

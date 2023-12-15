@@ -10,7 +10,7 @@
   "name": "ExtensionAboriginalIdentityIndicator",
   "title": "Extension: Aboriginal Identity Indicator",
   "status": "draft",
-  "date": "2020-09-23",
+  "date": "2023-12-15",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {
@@ -71,17 +71,11 @@
         "fixedUri": "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-aboriginalidentityindicator"
       },
       {
-        "id": "Extension.value[x]:valueCoding",
-        "path": "Extension.value[x]",
-        "sliceName": "valueCoding",
+        "id": "Extension.valueCoding",
+        "path": "Extension.valueCoding",
         "definition": "Concepts classifying the person as an aboriginal sharing common history, traits or geographical origin",
         "min": 1,
         "max": "1",
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
         "binding": {
           "strength": "preferred",
           "description": "One of [self-reported codes](https://fhir.infoway-inforoute.ca/ValueSet/aboriginalidentityindicator) identity as an aboriginal person",
@@ -89,21 +83,21 @@
         }
       },
       {
-        "id": "Extension.value[x]:valueCoding.system",
-        "path": "Extension.value[x].system",
+        "id": "Extension.valueCoding.system",
+        "path": "Extension.valueCoding.system",
         "short": "Identity of the terminology system",
         "min": 1
       },
       {
-        "id": "Extension.value[x]:valueCoding.code",
-        "path": "Extension.value[x].code",
+        "id": "Extension.valueCoding.code",
+        "path": "Extension.valueCoding.code",
         "short": "Code defining aboriginal identity indicator concept",
         "definition": "One of [self-reported codes](https://fhir.infoway-inforoute.ca/ValueSet/aboriginalidentityindicator) identity as an aboriginal person",
         "min": 1
       },
       {
-        "id": "Extension.value[x]:valueCoding.display",
-        "path": "Extension.value[x].display",
+        "id": "Extension.valueCoding.display",
+        "path": "Extension.valueCoding.display",
         "short": "Optional description of the aboriginal identity indicator code",
         "definition": "Plain text representation of the aboriginal identity indicator concept"
       }

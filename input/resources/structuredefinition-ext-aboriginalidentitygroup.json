@@ -70,17 +70,11 @@
         "fixedUri": "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-aboriginalidentitygroup"
       },
       {
-        "id": "Extension.value[x]:valueCoding",
-        "path": "Extension.value[x]",
-        "sliceName": "valueCoding",
+        "id": "Extension.valueCoding",
+        "path": "Extension.valueCoding",
         "definition": "Concepts classifying the person's aboriginal identity sharing common history, traits or geographical origin",
         "min": 1,
         "max": "1",
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
         "binding": {
           "strength": "preferred",
           "description": "One of [aboriginal identity codes](https://fhir.infoway-inforoute.ca/ValueSet/aboriginalidentitygroup)",
@@ -88,21 +82,21 @@
         }
       },
       {
-        "id": "Extension.value[x]:valueCoding.system",
-        "path": "Extension.value[x].system",
+        "id": "Extension.valueCoding.system",
+        "path": "Extension.valueCoding.system",
         "short": "Identity of the terminology system",
         "min": 1
       },
       {
-        "id": "Extension.value[x]:valueCoding.code",
-        "path": "Extension.value[x].code",
+        "id": "Extension.valueCoding.code",
+        "path": "Extension.valueCoding.code",
         "short": "Code defining aboriginal identity concept",
         "definition": "One of [aboriginal identity codes](https://fhir.infoway-inforoute.ca/ValueSet/aboriginalidentitygroup)",
         "min": 1
       },
       {
-        "id": "Extension.value[x]:valueCoding.display",
-        "path": "Extension.value[x].display",
+        "id": "Extension.valueCoding.display",
+        "path": "Extension.valueCoding.display",
         "short": "Optional description of the aboriginal identity code",
         "definition": "Plain text representation of the aboriginal identity concept"
       }

@@ -10,7 +10,7 @@
   "name": "ExtensionIdentifierVersion",
   "title": "Extension: Identifier Version",
   "status": "draft",
-  "date": "2019-03-08",
+  "date": "2023-12-15",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {
@@ -68,33 +68,9 @@
         "fixedUri": "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-identifierversion"
       },
       {
-        "id": "Extension.value[x]",
-        "path": "Extension.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "rules": "closed"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ]
-      },
-      {
-        "id": "Extension.value[x]:valueString",
-        "path": "Extension.value[x]",
-        "sliceName": "valueString",
+        "id": "Extension.valueString",
+        "path": "Extension.valueString",
         "min": 1,
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
         "mustSupport": true
       }
     ]

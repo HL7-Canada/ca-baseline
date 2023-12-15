@@ -10,7 +10,7 @@
   "name": "ExtensionDateEstimatedFlag",
   "title": "Extension: Date Estimated Flag",
   "status": "draft",
-  "date": "2019-03-08",
+  "date": "2023-12-15",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {
@@ -67,33 +67,9 @@
         "fixedUri": "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-dateestimated"
       },
       {
-        "id": "Extension.value[x]",
-        "path": "Extension.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "rules": "closed"
-        },
-        "type": [
-          {
-            "code": "boolean"
-          }
-        ]
-      },
-      {
-        "id": "Extension.value[x]:valueBoolean",
-        "path": "Extension.value[x]",
-        "sliceName": "valueBoolean",
-        "min": 1,
-        "type": [
-          {
-            "code": "boolean"
-          }
-        ]
+        "id": "Extension.valueBoolean",
+        "path": "Extension.valueBoolean",
+        "min": 1
       }
     ]
   }
