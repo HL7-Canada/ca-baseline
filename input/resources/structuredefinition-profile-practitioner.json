@@ -67,16 +67,7 @@
         "id": "Practitioner",
         "path": "Practitioner",
         "short": "Practitioner Profile",
-        "definition": "The Practitioner Profile is based upon the core FHIR Practitioner Resource",
-        "constraint": [
-          {
-            "key": "ca-baseline-practitioner-name",
-            "severity": "error",
-            "human": "Either name.given and/or name.family SHALL be present or a Data Absent Reason Extension SHALL be present",
-            "expression": "(name.family.exists() or name.given.exists()) xor extension.where(url='http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()",
-            "xpath": "(/f:name/f:extension/@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason' and not(/f:name/f:family or /f:name/f:given)) or (not(/f:name/f:extension/@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason') and (/f:name/f:family or /f:name/f:given))"
-          }
-        ]
+        "definition": "The Practitioner Profile is based upon the core FHIR Practitioner Resource"
       },
       {
         "id": "Practitioner.identifier",
@@ -94,7 +85,16 @@
       {
         "id": "Practitioner.name",
         "path": "Practitioner.name",
-        "mustSupport": true
+        "mustSupport": true,
+        "constraint": [
+          {
+            "key": "ca-baseline-practitioner-name",
+            "severity": "error",
+            "human": "Either name.given and/or name.family SHALL be present or a Data Absent Reason Extension SHALL be present",
+            "expression": "(family.exists() or given.exists()) xor extension.where(url='http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()",
+            "xpath": "(/f:extension/@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason' and not(/f:family or /f:given)) or (not(/f:extension/@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason') and (/f:family or /f:given))"
+          }
+        ]        
       },
       {
         "id": "Practitioner.name.family",
