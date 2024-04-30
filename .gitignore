@@ -19,3 +19,13 @@ _gencontinuous.sh
 *.bat
 *.xsd
 input-cache/txcache/null.cache
+input-cache/schemas/R5/fhir-single.xsd
+input-cache/schemas/R5/fhir-single.xsd
+input-cache/schemas/R5/fhir-single.xsd
+input-cache/txcache/all-systems.cache
+input-cache/txcache/can.svg
+input-cache/txcache/current/.terminologyCapabilities.cache
+input-cache/txcache/current/.capabilityStatement.cache
+input-cache/txcache/all-systems.cache
+input-cache/txcache/iso3166-2.cache
+/input-cache
