@@ -313,7 +313,7 @@
         "path": "DiagnosticReport.result",
         "sliceName": "LabResult",
         "comment": "Observations that represent results produced by laboratory tests or panels/studies",
-        "min": 1,
+        "min": 0,
         "max": "*",
         "type": [
           {
