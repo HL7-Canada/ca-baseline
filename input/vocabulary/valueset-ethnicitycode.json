@@ -4,6 +4,7 @@
 	"url": "https://fhir.infoway-inforoute.ca/ValueSet/ethnicitycode",
 	"name": "EthnicityCode",
 	"status": "draft",
+    "experimental": false,  	
 	"date": "2019-09-30",
 	"publisher": "HL7 Canada - FHIR Implementation Work Group",
 	"description": "Codes representing a self-reported ethnic group. This should not be confused with citizenship or nationality.",

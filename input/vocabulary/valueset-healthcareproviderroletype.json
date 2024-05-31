@@ -1,0 +1,37 @@
+{
+    "resourceType": "ValueSet",
+    "id": "healthcareproviderroletype",
+    "url": "https://fhir.infoway-inforoute.ca/ValueSet/healthcareproviderroletype",
+    "name": "HealthcareProviderRoleType",
+    "title": "HealthcareProviderRoleType",
+    "status": "active",
+    "experimental": false,
+    "publisher": "Canada Health Infoway",
+    "contact":  [
+        {
+            "name": "National Standards Release Centre",
+            "telecom":  [
+                {
+                    "system": "url",
+                    "value": "http://www.infoway-inforoute.ca"
+                },
+                {
+                    "system": "email",
+                    "value": "standards@infoway-inforoute.ca"
+                }
+            ]
+        }
+    ],
+    "description": "A role type that is used to categorize an entity that delivers health care in an expected and professional manner to an entity in need of health care services. Examples: Registered Nurse, Chiropractor, Physician, Custodial Care Clinic.\n\nThis resource is an informative value set; a [normative subset](https://tgateway.infoway-inforoute.ca/vs/healthcareproviderroletype) can be found on Canada Health Infoway's [Terminology Gateway](https://tgateway.infoway-inforoute.ca).",
+    "jurisdiction":  [
+        {
+            "coding":  [
+                {
+                    "system": "urn:iso:std:iso:3166",
+                    "code": "CA"
+                }
+            ]
+        }
+    ],
+    "copyright": "Copyright © 2024 Canada Health Infoway. All rights reserved. [Terms of Use and License Agreements](https://ic.infoway-inforoute.ca/en/about/tou). [Privacy Policy](https://www.infoway-inforoute.ca/en/legal/privacy-policy)."
+}
