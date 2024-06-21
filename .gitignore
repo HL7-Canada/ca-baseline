@@ -13,4 +13,4 @@ _gencontinuous.bat
 _gencontinuous.sh
 *.bat
 *.xsd
-/input-cache
+/input-cache/**
