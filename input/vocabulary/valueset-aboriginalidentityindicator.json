@@ -5,6 +5,7 @@
   "name": "AboriginalIdentityIndicator",
   "title": "Aboriginal Identity Indicator",
   "status": "draft",
+  "experimental": false, 
   "date": "2020-09-15",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "description": "Represents the self identity as an Aboriginal Person",

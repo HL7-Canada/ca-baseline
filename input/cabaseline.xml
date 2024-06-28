@@ -517,6 +517,14 @@
       <exampleBoolean value="false"/>
       <groupingId value="terminology"/>
     </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/practitionerspecialty"/>
+      </reference>
+      <name value="Practitioner Specialty Codes"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="terminology"/>
+    </resource>    
     <page>
       <nameUrl value="toc.html"/>
       <title value="Table of Contents"/>
@@ -582,25 +590,57 @@
 			<code value="ipa-comparison"/>
 			<value value="current"/>
 		</parameter>
-		<!-- <parameter>
-      <code value="special-uri"/>
+		<parameter>
+      <code value="special-url"/>
       <value value="https://fhir.infoway-inforoute.ca/CodeSystem/aboriginalidentitytype"/>
     </parameter>
 		<parameter>
-      <code value="special-uri"/>
+      <code value="special-url"/>
       <value value="https://fhir.infoway-inforoute.ca/ValueSet/aboriginalidentitygroup"/>
     </parameter>
+    <parameter>
+      <code value="special-url"/>
+      <value value="https://fhir.infoway-inforoute.ca/ValueSet/healthconcerncode"/>
+    </parameter>
+    <parameter>
+      <code value="special-url"/>
+      <value value="https://fhir.infoway-inforoute.ca/ValueSet/prescriptiondrugform"/>
+    </parameter>
+    <parameter>
+      <code value="special-url"/>
+      <value value="https://fhir.infoway-inforoute.ca/ValueSet/prescriptionmedicinalproduct"/>
+    </parameter>
+    <parameter>
+      <code value="special-url"/>
+      <value value="https://fhir.infoway-inforoute.ca/ValueSet/vaccinecodes"/>
+    </parameter> 
+    <parameter>
+      <code value="special-url"/>
+      <value value="https://fhir.infoway-inforoute.ca/ValueSet/birthsex"/>
+    </parameter>                                             
 		<parameter>
-      <code value="special-uri"/>
+      <code value="special-url"/>
       <value value="https://fhir.infoway-inforoute.ca/ValueSet/aboriginalidentityindicator"/>
     </parameter>
 		<parameter>
-      <code value="special-uri"/>
+      <code value="special-url"/>
       <value value="https://fhir.infoway-inforoute.ca/ValueSet/encountertype"/>
     </parameter>
 		<parameter>
-      <code value="special-uri"/>
+      <code value="special-url"/>
       <value value="https://fhir.infoway-inforoute.ca/ValueSet/ethnicitycode"/>
-    </parameter> -->
+    </parameter> 
+    <parameter>
+      <code value="special-url"/>
+      <value value="https://fhir.infoway-inforoute.ca/ValueSet/practitionerspecialty"/>
+    </parameter> 
+    <parameter>
+      <code value="special-url"/>
+      <value value="https://fhir.infoway-inforoute.ca/ValueSet/qualifiedroletype"/>
+    </parameter>
+    <parameter>
+      <code value="special-url"/>
+      <value value="https://fhir.infoway-inforoute.ca/ValueSet/healthcareproviderroletype"/>
+    </parameter>               
   </definition>
 </ImplementationGuide>

@@ -5,6 +5,7 @@
     "name": "BirthSex",
     "title": "Birth Sex",
     "status": "draft",
+    "experimental": false,    
     "date": "2019-03-08",
     "publisher": "HL7 Canada - FHIR Implementation Work Group",
     "description": "Codes for documenting sex at birth. (Replicates the birthsex ValueSet in US-Core-R4 for interoperability.)",

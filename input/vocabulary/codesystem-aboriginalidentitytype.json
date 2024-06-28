@@ -5,7 +5,7 @@
   "name": "AboriginalIdentityType",
   "title": "Aboriginal Identity Type",
   "status": "draft",
-  "date": "2020-09-15",
+  "experimental": false,  
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "description": "Represents codes for Aboriginal Identity",
   "jurisdiction": [

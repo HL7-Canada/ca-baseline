@@ -5,6 +5,7 @@
     "name": "PrescriptionMedicinalProduct",
     "title": "Prescription Medicinal Product",
     "status": "draft",
+    "experimental": false,      
     "publisher": "HL7 Canada - FHIR Implementation Work Group",
     "description": "The list of commonly used Medicinal products used for prescribing and dispensing in Canada. [Published here by Canada Health Infoway](https://tgateway.infoway-inforoute.ca/singlesubset.html?id=2.16.840.1.113883.2.20.3.406).",
     "compose": {

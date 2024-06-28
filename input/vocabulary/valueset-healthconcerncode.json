@@ -5,6 +5,7 @@
     "name": "HealthConcernCode",
     "title": "Health Concern Code",
     "status": "draft",
+    "experimental": false,     
     "publisher": "HL7 Canada - FHIR Implementation Work Group",
     "description": "Clinical problems, conditions, diagnoses, symptoms, findings and complaints, as interpreted by the provider. [Published here by Canada Health Infoway](https://tgateway.infoway-inforoute.ca/singlesubset.html?id=2.16.840.1.113883.2.20.3.278&versionid=20181031).",
     "compose": {
