@@ -51,5 +51,59 @@ Each profile defines the minimum mandatory elements, extensions and terminology 
 
 Guidance, Capability Statements, and other have not yet been reviewed and added.
 
+### Authors and Contributors 
+ 
+| Role  | Name |
+| --- | --- |
+| **Primary Author** | Sheridan Cook |
+| **Primary Author** | Michael Savage |
+| **Primary Author** | Elliot Silver |
+| **Primary Author** | Russ Buchanan |
+| **Primary Author** | Shamil Nizamov |
+| **Primary Author** | Igor Sirkovich |
+| **Primary Author** | Scott Prior |
+| **Editor** | Arthur Nonay |
+| **Editor** | Piers Hollott |
+| **Editor** | Inderpal Singh |
+| **Editor** | Garrett Stubbings |
+| **Editor** | Lloyd McKenzie |
+| **Editor** | Mikael Rinnetmaki |
+| **Contributor** | Ian Bekker |
+| **Contributor** | Anne Belford |
+| **Contributor** | Alex Bennett |
+| **Contributor** | Fang Cao |
+| **Contributor** | Lorraine Constable |
+| **Contributor** | Ramandeep Dhanoa |
+| **Contributor** | Jean Duteau |
+| **Contributor** | Finnie Flores |
+| **Contributor** | Joel Francis |
+| **Contributor** | Alex Goel |
+| **Contributor** | Joanie Harper |
+| **Contributor** | Maria Hu |
+| **Contributor** | Anibal Jodorcovsky |
+| **Contributor** | Mukesh Kashyap |
+| **Contributor** | Paul Knapp |
+| **Contributor** | Marc L'Arrivee |
+| **Contributor** | Francis Lau |
+| **Contributor** | Adesh Maharaj |
+| **Contributor** | Dean Matthews |
+| **Contributor** | Randy Nonay |
+| **Contributor** | Ron Parker |
+| **Contributor** | Anil Patel |
+| **Contributor** | Melva Peters |
+| **Contributor** | Rita Pyle |
+| **Contributor** | Derek Ritz |
+| **Contributor** | Philip Sales |
+| **Contributor** | Khushwinder Sekhon |
+| **Contributor** | Harsh Sharma |
+| **Contributor** | Sisira De Silva |
+| **Contributor** | Dan Simic |
+| **Contributor** | Ken Sinn |
+| **Contributor** | Janice Spence |
+| **Contributor** | Erik Uittien |
+| **Contributor** | Tony Waldschmidt |
+| **Contributor** | Thomas Zhou |
+
+
 -----
 Contact: [hl7canada@infoway-inforoute.ca](mailto:hl7canada@infoway-inforoute.ca)
