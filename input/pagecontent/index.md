@@ -57,13 +57,13 @@ The CA FHIR Baseline is a community developed specification that was made possib
  
 | Role  | Name |
 | --- | --- |
+| **Primary Author** | Russ Buchanan |
 | **Primary Author** | Sheridan Cook |
+| **Primary Author** | Shamil Nizamov |
+| **Primary Author** | Scott Prior |
 | **Primary Author** | Michael Savage |
 | **Primary Author** | Elliot Silver |
-| **Primary Author** | Russ Buchanan |
-| **Primary Author** | Shamil Nizamov |
 | **Primary Author** | Igor Sirkovich |
-| **Primary Author** | Scott Prior |
 | **Editor** | Arthur Nonay |
 | **Editor** | Piers Hollott |
 | **Editor** | Inderpal Singh |
