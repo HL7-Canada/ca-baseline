@@ -52,6 +52,8 @@ Each profile defines the minimum mandatory elements, extensions and terminology 
 Guidance, Capability Statements, and other have not yet been reviewed and added.
 
 ### Authors and Contributors 
+
+The CA FHIR Baseline is a community developed specification that was made possible through the efforts and dedication of so many in our [Canadian FHIR Implementer community](https://infocentral.infoway-inforoute.ca/en/collaboration/wg/fhir-implementations). The true list exceeds what we've been able to capture and is expected to grow as our community reviews and refines it.
  
 | Role  | Name |
 | --- | --- |
