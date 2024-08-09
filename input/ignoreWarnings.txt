@@ -4,6 +4,9 @@
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
 
+# Temporarily Remove Warning re: owning committee while we work to move over our canonical and QA content
+When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
+
 # Remove Warnings for Errors Inherited in Snapshot Generation from IGPublisher
 ERROR: C:\Users\scook\ca-baseline\output\StructureDefinition-profile-servicerequest-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 430, column 261: The link 'valueset-diagnostic-requests.html' for "here" cannot be resolved
 ERROR: C:\Users\scook\ca-baseline\output\StructureDefinition-profile-servicerequest.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 427, column 2553: The link 'valueset-diagnostic-requests.html' for "here" cannot be resolved
