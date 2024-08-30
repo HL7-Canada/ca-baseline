@@ -62,8 +62,6 @@ The CA FHIR Baseline is a community developed specification that was made possib
 | **Editors** | Anyone who has pushed updates/PRs to the spec (not otherwise an author) | Piers Hollott, &nbsp;&nbsp; Lloyd McKenzie, &nbsp;&nbsp; Arthur Nonay, &nbsp;&nbsp; Mikael Rinnetmaki, &nbsp;&nbsp; Inderpal Singh, &nbsp;&nbsp; Garrett Stubbings |
 | **Contributors** | Participants in the Entities, Medications, and Clinical Profiling Sub-Streams, Vocal contributors in governance and/or profiling calls, issue submitters | Ian Bekker, &nbsp;&nbsp; Anne Belford, &nbsp;&nbsp; Alex Bennett, &nbsp;&nbsp; Michael Boivin, &nbsp;&nbsp; Fang Cao, &nbsp;&nbsp; Lorraine Constable, &nbsp;&nbsp; Ramandeep Dhanoa, &nbsp;&nbsp; Jean Duteau, &nbsp;&nbsp; Finnie Flores, &nbsp;&nbsp; Joel Francis, &nbsp;&nbsp; Alex Goel, &nbsp;&nbsp; Joanie Harper, &nbsp;&nbsp; Maria Hu, &nbsp;&nbsp; Anibal Jodorcovsky, &nbsp;&nbsp; Mukesh Kashyap, &nbsp;&nbsp; Paul Knapp, &nbsp;&nbsp; Marc L'Arrivee, &nbsp;&nbsp; Francis Lau, &nbsp;&nbsp; Adesh Maharaj, &nbsp;&nbsp; Dean Matthews, &nbsp;&nbsp; Randy Nonay, &nbsp;&nbsp; Ron Parker, &nbsp;&nbsp; Anil Patel, &nbsp;&nbsp; Melva Peters, &nbsp;&nbsp; Rita Pyle, &nbsp;&nbsp; Derek Ritz, &nbsp;&nbsp; Philip Sales, &nbsp;&nbsp; Khushwinder Sekhon, &nbsp;&nbsp; Harsh Sharma, &nbsp;&nbsp; Sisira De Silva, &nbsp;&nbsp; Dan Simic, &nbsp;&nbsp; Ken Sinn, &nbsp;&nbsp; Janice Spence, &nbsp;&nbsp; Erik Uittien, &nbsp;&nbsp; Tony Waldschmidt, &nbsp;&nbsp; Thomas Zhou |
 
-
-
 -----
 
 Contact: [hl7canada@infoway-inforoute.ca](mailto:hl7canada@infoway-inforoute.ca)

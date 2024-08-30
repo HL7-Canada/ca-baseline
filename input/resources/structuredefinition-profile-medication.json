@@ -107,7 +107,7 @@
             "valueCodeableConcept": {
               "coding": [
                 {
-                  "system": "https://fhir.infoway-inforoute.ca/ValueSet/CA-HC-DIN"
+                  "system": "http://hl7.org/fhir/NamingSystem/ca-hc-din"
                 }
               ]
             }
@@ -117,7 +117,7 @@
             "valueCodeableConcept": {
               "coding": [
                 {
-                  "system": "https://fhir.infoway-inforoute.ca/ValueSet/CA-HC-NPN"
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-hc-npn"
                 }
               ]
             }
@@ -127,7 +127,7 @@
             "valueCodeableConcept": {
               "coding": [
                 {
-                  "system": "https://fhir.infoway-inforoute.ca/ValueSet/prescriptionmedicinalproduct"
+                  "system": "http://terminology.hl7.org/CodeSystem/hc-CCDD"
                 }
               ]
             }
@@ -137,7 +137,7 @@
             "valueCodeableConcept": {
               "coding": [
                 {
-                  "system": "http://hl7.org/fhir/uv/ips/ValueSet/medication-snomed-uv-ips"
+                  "system": "http://snomed.info/sct"
                 }
               ]
             }
@@ -147,7 +147,7 @@
             "valueCodeableConcept": {
               "coding": [
                 {
-                  "system": "http://hl7.org/fhir/uv/ips/ValueSet/whoatc-uv-ips"
+                  "system": "http://www.whocc.no/atc"
                 }
               ]
             }
