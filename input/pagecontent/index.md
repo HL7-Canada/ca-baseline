@@ -54,58 +54,14 @@ Guidance, Capability Statements, and other have not yet been reviewed and added.
 ### Authors and Contributors 
 
 The CA FHIR Baseline is a community developed specification that was made possible through the efforts and dedication of so many in our [Canadian FHIR Implementer community](https://infocentral.infoway-inforoute.ca/en/collaboration/wg/fhir-implementations). The true list exceeds what we've been able to capture and is expected to grow as our community reviews and refines it.
- 
-| Role  | Name |
-| --- | --- |
-| **Primary Author** | Russ Buchanan |
-| **Primary Author** | Sheridan Cook |
-| **Primary Author** | Shamil Nizamov |
-| **Primary Author** | Scott Prior |
-| **Primary Author** | Michael Savage |
-| **Primary Author** | Elliot Silver |
-| **Primary Author** | Igor Sirkovich |
-| **Editor** | Arthur Nonay |
-| **Editor** | Piers Hollott |
-| **Editor** | Inderpal Singh |
-| **Editor** | Garrett Stubbings |
-| **Editor** | Lloyd McKenzie |
-| **Editor** | Mikael Rinnetmaki |
-| **Contributor** | Ian Bekker |
-| **Contributor** | Anne Belford |
-| **Contributor** | Alex Bennett |
-| **Contributor** | Fang Cao |
-| **Contributor** | Lorraine Constable |
-| **Contributor** | Ramandeep Dhanoa |
-| **Contributor** | Jean Duteau |
-| **Contributor** | Finnie Flores |
-| **Contributor** | Joel Francis |
-| **Contributor** | Alex Goel |
-| **Contributor** | Joanie Harper |
-| **Contributor** | Maria Hu |
-| **Contributor** | Anibal Jodorcovsky |
-| **Contributor** | Mukesh Kashyap |
-| **Contributor** | Paul Knapp |
-| **Contributor** | Marc L'Arrivee |
-| **Contributor** | Francis Lau |
-| **Contributor** | Adesh Maharaj |
-| **Contributor** | Dean Matthews |
-| **Contributor** | Randy Nonay |
-| **Contributor** | Ron Parker |
-| **Contributor** | Anil Patel |
-| **Contributor** | Melva Peters |
-| **Contributor** | Rita Pyle |
-| **Contributor** | Derek Ritz |
-| **Contributor** | Philip Sales |
-| **Contributor** | Khushwinder Sekhon |
-| **Contributor** | Harsh Sharma |
-| **Contributor** | Sisira De Silva |
-| **Contributor** | Dan Simic |
-| **Contributor** | Ken Sinn |
-| **Contributor** | Janice Spence |
-| **Contributor** | Erik Uittien |
-| **Contributor** | Tony Waldschmidt |
-| **Contributor** | Thomas Zhou |
 
+
+| Role  | Role Description| Name |
+| --- | --- | -- |
+| **Primary Authors** | Anyone historically involved in the  authoring/development of the spec (including stream hosts) |Russ Buchanan, &nbsp;&nbsp; Sheridan Cook, &nbsp;&nbsp; Shamil Nizamov, Scott Prior, &nbsp;&nbsp; Michael Savage, &nbsp;&nbsp; Elliot Silver, &nbsp;&nbsp; Igor Sirkovich |
+| **Editors** | Anyone who has pushed updates/PRs to the spec (not otherwise an author) | Piers Hollott, &nbsp;&nbsp; Lloyd McKenzie, &nbsp;&nbsp; Arthur Nonay, &nbsp;&nbsp; Mikael Rinnetmaki, &nbsp;&nbsp; Inderpal Singh, &nbsp;&nbsp; Garrett Stubbings |
+| **Contributors** | Participants in the Entities, Medications, and Clinical Profiling Sub-Streams, Vocal contributors in governance and/or profiling calls, issue submitters | Ian Bekker, &nbsp;&nbsp; Anne Belford, &nbsp;&nbsp; Alex Bennett, &nbsp;&nbsp; Michael Boivin, &nbsp;&nbsp; Fang Cao, &nbsp;&nbsp; Lorraine Constable, &nbsp;&nbsp; Ramandeep Dhanoa, &nbsp;&nbsp; Jean Duteau, &nbsp;&nbsp; Finnie Flores, &nbsp;&nbsp; Joel Francis, &nbsp;&nbsp; Alex Goel, &nbsp;&nbsp; Joanie Harper, &nbsp;&nbsp; Maria Hu, &nbsp;&nbsp; Anibal Jodorcovsky, &nbsp;&nbsp; Mukesh Kashyap, &nbsp;&nbsp; Paul Knapp, &nbsp;&nbsp; Marc L'Arrivee, &nbsp;&nbsp; Francis Lau, &nbsp;&nbsp; Adesh Maharaj, &nbsp;&nbsp; Dean Matthews, &nbsp;&nbsp; Randy Nonay, &nbsp;&nbsp; Ron Parker, &nbsp;&nbsp; Anil Patel, &nbsp;&nbsp; Melva Peters, &nbsp;&nbsp; Rita Pyle, &nbsp;&nbsp; Derek Ritz, &nbsp;&nbsp; Philip Sales, &nbsp;&nbsp; Khushwinder Sekhon, &nbsp;&nbsp; Harsh Sharma, &nbsp;&nbsp; Sisira De Silva, &nbsp;&nbsp; Dan Simic, &nbsp;&nbsp; Ken Sinn, &nbsp;&nbsp; Janice Spence, &nbsp;&nbsp; Erik Uittien, &nbsp;&nbsp; Tony Waldschmidt, &nbsp;&nbsp; Thomas Zhou |
 
 -----
+
 Contact: [hl7canada@infoway-inforoute.ca](mailto:hl7canada@infoway-inforoute.ca)
