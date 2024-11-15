@@ -6,7 +6,7 @@
   "name": "PatientProfile",
   "title": "Patient Profile",
   "status": "draft",
-  "date": "2022-02-11",
+  "date": "2024-11-14",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {
@@ -253,7 +253,7 @@
         "id": "Patient.identifier:JHN.type",
         "path": "Patient.identifier.type",
         "min": 1,
-        "fixedCodeableConcept": {
+        "patternCodeableConcept": {
           "coding": [
             {
               "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
