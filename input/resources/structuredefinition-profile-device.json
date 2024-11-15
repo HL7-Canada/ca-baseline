@@ -6,7 +6,7 @@
   "name": "DeviceProfile",
   "title": "Device Profile (Implantable)",
   "status": "draft",
-  "date": "2020-12-03",
+  "date": "2024-11-15",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {
@@ -58,29 +58,29 @@
         "id": "Device",
         "path": "Device",
         "short": "Device Profile",
-        "definition": "The Device Profile is based upon the core FHIR Device Resource"
+        "definition": "The Device Profile is based upon the core FHIR Device Resource",
+        "constraint": [
+          {
+            "key": "ca-device-1",
+            "severity": "warning",
+            "human": "Implantable medical devices that have UDI information MAY represent this information in either carrierAIDC or carrierHRF.",
+            "expression": "udiCarrier.empty() or (udiCarrier.carrierAIDC.exists() or udiCarrier.carrierHRF.exists())",
+            "xpath": "not(f:udiCarrier) or (f:carrierHRF or f:carrierAIDC)"
+          },
+          {
+            "key": "ca-device-2",
+            "severity": "warning",
+            "human": "For implantable medical devices that have UDI information, at least one of the Production Identifiers (UDI-PI) MAY be present.",
+            "expression": "udiCarrier.empty() or (manufactureDate.exists() or expirationDate.exists() or lotNumber.exists() or serialNumber.exists() or distinctIdentifier.exists())",
+            "xpath": "not(f:udiCarrier) or (f:manufactureDate or f:expirationDate or f:lotNumber or f:serialNumber or f:distinctIdentifier)"
+          }
+        ]        
       }, 
       {
         "id": "Device.udiCarrier",
         "path": "Device.udiCarrier",
         "min": 1,
         "max": "1",
-        "constraint": [
-          {
-            "key": "ca-device-1",
-            "severity": "error",
-            "human": "Implantable medical devices that have UDI information SHALL represent this information in either carrierAIDC or carrierHRF.",
-            "expression": "udiCarrier.empty() or (udiCarrier.carrierAIDC.exists() or udiCarrier.carrierHRF.exists())",
-            "xpath": "not(f:udiCarrier) or (f:carrierHRF or f:carrierAIDC)"
-          },
-          {
-            "key": "ca-device-2",
-            "severity": "error",
-            "human": "For implantable medical devices that have UDI information, at least one of the Production Identifiers (UDI-PI) SHALL be present.",
-            "expression": "udiCarrier.empty() or (manufactureDate.exists() or expirationDate.exists() or lotNumber.exists() or serialNumber.exists() or distinctIdentifier.exists())",
-            "xpath": "not(f:udiCarrier) or (f:manufactureDate or f:expirationDate or f:lotNumber or f:serialNumber or f:distinctIdentifier)"
-          }
-        ],
         "mustSupport": true
       },
       {
