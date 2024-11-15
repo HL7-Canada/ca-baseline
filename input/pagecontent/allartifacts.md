@@ -32,7 +32,6 @@ All artifacts in this specification are assigned a “Maturity Level”, known a
 | MedicationStatement Profile | 1 | Complete | IPS |
 | Observation Profile (General) | 1 | Complete | IPS |
 | Observation Profile (Laboratory Results) | 0 | Complete, 2nd Review Round will resume after DDR | PHI Access |
-| Observation (Tobacco Smoking Status) Profile | 0 | Inital Review Complete | IPS |
 | Organization Profile | 1 | Complete | DHIR, PrescribeIT |
 | Patient Profile | 1 | Complete | PCR, DHIR, Ontario eReferral |
 | Practitioner Profile (General) | 1 | Complete | PPR, DHIR, Ontario eReferral, PrescribeIT |
