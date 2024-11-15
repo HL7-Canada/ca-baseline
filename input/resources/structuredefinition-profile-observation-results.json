@@ -248,7 +248,7 @@
       {
         "id": "Observation.value[x]:valueQuantity",
         "path": "Observation.value[x]",
-        "sliceName": "valueQuantity",    
+        "sliceName": "valueQuantity",
         "type": [
           {
             "code": "Quantity"
