@@ -1,11 +1,44 @@
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-  "code" : "72166-2"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+  "code" : "5792-7"
+}, "valueSet" :{
+  "resourceType" : "ValueSet"
+}, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"true", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  }]
+}}####
 v: {
-  "display" : "Tobacco smoking status",
-  "severity" : null,
-  "error" : ""
+  "code" : "5792-7",
+  "system" : "http://loinc.org",
+  "severity" : "error",
+  "error" : "The provided code 'http://loinc.org#5792-7' was not found in the value set 'https://fhir.infoway-inforoute.ca/ValueSet/aboriginalidentitygroup'",
+  "class" : "UNKNOWN",
+  "server" : "http://localhost:8086/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "http://localhost:8086/r4"
+    }],
+    "severity" : "error",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "not-in-vs"
+      }],
+      "text" : "The provided code 'http://loinc.org#5792-7' was not found in the value set 'https://fhir.infoway-inforoute.ca/ValueSet/aboriginalidentitygroup'"
+    },
+    "location" : ["Coding.code"],
+    "expression" : ["Coding.code"]
+  }]
+}
+
 }
 -------------------------------------------------------------------------------------

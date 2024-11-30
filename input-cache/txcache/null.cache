@@ -1,50 +1,21 @@
 -------------------------------------------------------------------------------------
-{"hierarchical" : true, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "valueSet" : ["https://fhir.infoway-inforoute.ca/ValueSet/prescriptionmedicinalproduct"]
-    }]
-  }
-}}####
+{"hierarchical" : true, "url": "http://hl7.org/fhir/ca/baseline/ValueSet/healthconcerncode", "version": "1.1.0"}####
 e: {
-  "error" : "Error from server: Unable to find value set \"https://fhir.infoway-inforoute.ca/ValueSet/prescriptionmedicinalproduct\""
+  "error" : "Unable to expand imported value set https://fhir.infoway-inforoute.ca/ValueSet/healthconcerncode: Unable to find imported value set http://snomed.info/sct?fhir_vs=refset/23831000087103 (and Error from http://localhost:8086/r4: Unable to find value set \"http://snomed.info/sct?fhir_vs=refset/23831000087103\")"
 }
 -------------------------------------------------------------------------------------
-{"hierarchical" : true, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "valueSet" : ["https://fhir.infoway-inforoute.ca/ValueSet/vaccineadministeredtradenamecode",
-      "https://fhir.infoway-inforoute.ca/ValueSet/vaccinehistoricalnamecode"]
-    }]
-  }
-}}####
+{"hierarchical" : true, "url": "http://hl7.org/fhir/ca/baseline/ValueSet/prescriptiondrugform", "version": "1.1.0"}####
 e: {
-  "error" : "Error from server: Unable to find value set \"https://fhir.infoway-inforoute.ca/ValueSet/vaccineadministeredtradenamecode\""
+  "error" : "Unable to expand imported value set https://fhir.infoway-inforoute.ca/ValueSet/prescriptiondrugform: Required supplement not found: https://fhir.infoway-inforoute.ca/CodeSystem/Supplement/fr-CA/v3-orderableDrugForm|1.0.0 (and Error from http://localhost:8086/r4: Required supplement not found: https://fhir.infoway-inforoute.ca/CodeSystem/Supplement/fr-CA/v3-orderableDrugForm|1.0.0)"
 }
 -------------------------------------------------------------------------------------
-{"hierarchical" : true, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "valueSet" : ["https://fhir.infoway-inforoute.ca/ValueSet/healthconcerncode"]
-    }]
-  }
-}}####
+{"hierarchical" : true, "url": "http://hl7.org/fhir/ca/baseline/ValueSet/prescriptionmedicinalproduct", "version": "1.1.0"}####
 e: {
-  "error" : "Error from server: Unable to find value set \"https://fhir.infoway-inforoute.ca/ValueSet/healthconcerncode\""
+  "error" : "Unable to find imported value set https://fhir.infoway-inforoute.ca/ValueSet/prescriptionmedicinalproduct (and Error from http://localhost:8086/r4: Unable to find value set \"https://fhir.infoway-inforoute.ca/ValueSet/prescriptionmedicinalproduct\")"
 }
 -------------------------------------------------------------------------------------
-{"hierarchical" : true, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "valueSet" : ["https://fhir.infoway-inforoute.ca/ValueSet/prescriptiondrugform"]
-    }]
-  }
-}}####
+{"hierarchical" : true, "url": "http://hl7.org/fhir/ca/baseline/ValueSet/vaccinecodes", "version": "1.1.0"}####
 e: {
-  "error" : "Error from server: Unable to find value set \"https://fhir.infoway-inforoute.ca/ValueSet/prescriptiondrugform\""
+  "error" : "Unable to expand imported value set https://fhir.infoway-inforoute.ca/ValueSet/vaccineadministeredtradenamecode: Unable to find imported value set http://snomed.info/sct?fhir_vs=refset/22061000087108 (and Error from http://localhost:8086/r4: Unable to find value set \"http://snomed.info/sct?fhir_vs=refset/22061000087108\")"
 }
 -------------------------------------------------------------------------------------

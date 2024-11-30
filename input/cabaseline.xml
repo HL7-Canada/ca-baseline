@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input/schemas/fhir-single.xsd">
+<ImplementationGuide xmlns="http://hl7.org/fhir"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input/schemas/fhir-single.xsd">
   <id value="hl7.fhir.ca.baseline"/>
   <url value="http://hl7.org/fhir/ca/baseline/ImplementationGuide/hl7.fhir.ca.baseline"/>
   <version value="1.1.0"/>
@@ -201,7 +202,7 @@
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
-<!--	Exceluded as per Issue #158 but retained for the historical purpose
+    <!--	Exceluded as per Issue #158 but retained for the historical purpose
     <resource>
       <reference>
         <reference value="StructureDefinition/profile-diagnosticreportnote"/>
@@ -411,39 +412,12 @@
       <groupingId value="profiles"/>
     </resource>
     <resource>
-  <reference>
-    <reference value="StructureDefinition/profile-identifier"/>
-  </reference>
-  <name value="Identifier DataType Profile (CA Baseline)"/>
-  <exampleBoolean value="false"/>
-  <groupingId value="profiles"/>
-  </resource>
-    <resource>
       <reference>
-        <reference value="CodeSystem/aboriginalidentitytype"/>
+        <reference value="StructureDefinition/profile-identifier"/>
       </reference>
-      <name value="Aboriginal Identity Type"/>
-      <description value="Represents codes for Aboriginal Identity"/>
+      <name value="Identifier DataType Profile (CA Baseline)"/>
       <exampleBoolean value="false"/>
-      <!-- groupingId is not used to exclude from rendering to a page -->
-    </resource>
-    <resource>
-      <reference>
-        <reference value="ValueSet/aboriginalidentitygroup"/>
-      </reference>
-      <name value="Aboriginal Identity Group"/>
-      <description value="Represents codes for Aboriginal Identity"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="terminology"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="ValueSet/aboriginalidentityindicator"/>
-      </reference>
-      <name value="Aboriginal Identity Indicator"/>
-      <description value="Represents the self identity as an Aboriginal Person"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="terminology"/>
+      <groupingId value="profiles"/>
     </resource>
     <resource>
       <reference>
@@ -451,24 +425,6 @@
       </reference>
       <name value="Birth Sex"/>
       <description value="Codes for documenting sex at birth. (Replicates the birthsex ValueSet in US-Core-R4 for interoperability.)"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="terminology"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="ValueSet/encountertype"/>
-      </reference>
-      <name value="Encounter Type"/>
-      <description value="The type of encounter: a specific code indicating type of service provided. This value set includes codes from SNOMED CT decending from the concept 308335008 (Patient encounter procedure (procedure))"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="terminology"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="ValueSet/ethnicitycode"/>
-      </reference>
-      <name value="Ethnicity Code"/>
-      <description value="Codes representing a self-reported ethnic group. This should not be confused with citizenship or nationality."/>
       <exampleBoolean value="false"/>
       <groupingId value="terminology"/>
     </resource>
@@ -508,14 +464,6 @@
       <exampleBoolean value="false"/>
       <groupingId value="terminology"/>
     </resource>
-    <resource>
-      <reference>
-        <reference value="ValueSet/practitionerspecialty"/>
-      </reference>
-      <name value="Practitioner Specialty Codes"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="terminology"/>
-    </resource>    
     <page>
       <nameUrl value="toc.html"/>
       <title value="Table of Contents"/>
@@ -546,92 +494,40 @@
         <generation value="markdown"/>
       </page>
       <page>
-				<nameUrl value="allartifacts.html"/>
-				<title value="FHIR Artifacts"/>
-				<generation value="markdown"/>
-				<page>
-					<nameUrl value="artifacts.html"/>
-					<title value="Artifact List"/>
-					<generation value="html"/>
-				</page>
+        <nameUrl value="allartifacts.html"/>
+        <title value="FHIR Artifacts"/>
+        <generation value="markdown"/>
         <page>
-					<nameUrl value="vitalsigns-profiles.html"/>
-					<title value="Vital Signs"/>
-					<generation value="markdown"/>
-				</page>
-			</page>
+          <nameUrl value="artifacts.html"/>
+          <title value="Artifact List"/>
+          <generation value="html"/>
+        </page>
+        <page>
+          <nameUrl value="vitalsigns-profiles.html"/>
+          <title value="Vital Signs"/>
+          <generation value="markdown"/>
+        </page>
+      </page>
     </page>
-		<parameter>
-			<code value="copyrightyear"/>
-			<value value="2019+"/>
-		</parameter>
-		<parameter>
-			<code value="releaselabel"/>
-			<value value="CI Build"/>
-		</parameter>
-		<parameter>
-			<code value="find-other-resources"/>
-			<value value="true"/>
-		</parameter>
-		<parameter>
+    <parameter>
+      <code value="copyrightyear"/>
+      <value value="2019+"/>
+    </parameter>
+    <parameter>
+      <code value="releaselabel"/>
+      <value value="CI Build"/>
+    </parameter>
+    <parameter>
+      <code value="find-other-resources"/>
+      <value value="true"/>
+    </parameter>
+    <parameter>
       <code value="show-reference-messages"/>
       <value value="true"/>
     </parameter>
     <parameter>
-			<code value="ipa-comparison"/>
-			<value value="current"/>
-		</parameter>
-		<parameter>
-      <code value="special-url"/>
-      <value value="https://fhir.infoway-inforoute.ca/CodeSystem/aboriginalidentitytype"/>
+      <code value="ipa-comparison"/>
+      <value value="current"/>
     </parameter>
-		<parameter>
-      <code value="special-url"/>
-      <value value="https://fhir.infoway-inforoute.ca/ValueSet/aboriginalidentitygroup"/>
-    </parameter>
-    <parameter>
-      <code value="special-url"/>
-      <value value="https://fhir.infoway-inforoute.ca/ValueSet/healthconcerncode"/>
-    </parameter>
-    <parameter>
-      <code value="special-url"/>
-      <value value="https://fhir.infoway-inforoute.ca/ValueSet/prescriptiondrugform"/>
-    </parameter>
-    <parameter>
-      <code value="special-url"/>
-      <value value="https://fhir.infoway-inforoute.ca/ValueSet/prescriptionmedicinalproduct"/>
-    </parameter>
-    <parameter>
-      <code value="special-url"/>
-      <value value="https://fhir.infoway-inforoute.ca/ValueSet/vaccinecodes"/>
-    </parameter> 
-    <parameter>
-      <code value="special-url"/>
-      <value value="https://fhir.infoway-inforoute.ca/ValueSet/birthsex"/>
-    </parameter>                                             
-		<parameter>
-      <code value="special-url"/>
-      <value value="https://fhir.infoway-inforoute.ca/ValueSet/aboriginalidentityindicator"/>
-    </parameter>
-		<parameter>
-      <code value="special-url"/>
-      <value value="https://fhir.infoway-inforoute.ca/ValueSet/encountertype"/>
-    </parameter>
-		<parameter>
-      <code value="special-url"/>
-      <value value="https://fhir.infoway-inforoute.ca/ValueSet/ethnicitycode"/>
-    </parameter> 
-    <parameter>
-      <code value="special-url"/>
-      <value value="https://fhir.infoway-inforoute.ca/ValueSet/practitionerspecialty"/>
-    </parameter> 
-    <parameter>
-      <code value="special-url"/>
-      <value value="https://fhir.infoway-inforoute.ca/ValueSet/qualifiedroletype"/>
-    </parameter>
-    <parameter>
-      <code value="special-url"/>
-      <value value="https://fhir.infoway-inforoute.ca/ValueSet/healthcareproviderroletype"/>
-    </parameter>               
   </definition>
 </ImplementationGuide>
