@@ -232,6 +232,15 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/profile-goal"/>
+      </reference>
+      <name value="Goal Profile"/>
+      <description value="Proposed constraints and extensions on the Goal Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>    
+    <resource>
+      <reference>
         <reference value="StructureDefinition/profile-immunization"/>
       </reference>
       <name value="Immunization Profile"/>
