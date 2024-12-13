@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-servicerequest",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-servicerequest",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "name": "ServiceRequestProfile",
   "title": "ServiceRequest Profile for Results Reporting",
   "status": "draft",
-  "date": "2020-10-06",
+  "date": "2024-12-13",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {
@@ -290,6 +290,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-condition",
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-observation",
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-diagnosticreport",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-diagnosticreportnote",
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-documentreference"
             ]
           }
