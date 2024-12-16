@@ -196,7 +196,7 @@
       <reference>
         <reference value="StructureDefinition/profile-diagnosticreport"/>
       </reference>
-      <name value="DiagnosticReport Profile"/>
+      <name value="DiagnosticReport Profile for Laboratory Results Reporting"/>
       <description value="Proposed constraints on the DiagnosticReport resource to set minimum expectations to laboratory and similar results reporting."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
@@ -238,7 +238,7 @@
       <description value="Proposed constraints and extensions on the Goal Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
-    </resource>
+    </resource>    
     <resource>
       <reference>
         <reference value="StructureDefinition/profile-immunization"/>

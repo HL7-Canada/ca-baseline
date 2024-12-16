@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-medicationstatement",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-medicationstatement",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "name": "MedicationStatementProfile",
   "title": "MedicationStatement Profile",
   "status": "draft",
-  "date": "2019-03-31",
+  "date": "2024-12-13",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {
@@ -194,7 +194,8 @@
             "targetProfile": [
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-condition",
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-observation",
-              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-diagnosticreport"
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-diagnosticreport",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-diagnosticreportnote"
             ]
           }
         ]

@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-medicationadministration",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-medicationadministration",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "name": "MedicationAdministrationProfile",
   "title": "MedicationAdministration Profile",
   "status": "draft",
-  "date": "2020-03-05",
+  "date": "2024-12-13",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {
@@ -172,7 +172,8 @@
             "targetProfile": [
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-condition",
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-observation",
-              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-diagnosticreport"
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-diagnosticreport",
+              "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-diagnosticreportnote"
             ]
           }
         ]
