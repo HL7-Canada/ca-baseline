@@ -21,7 +21,6 @@ All artifacts in this specification are assigned a “Maturity Level”, known a
 | DiagnosticReport for Report and Note Profile | 0 | Complete | IPS |
 | Document Reference Profile | 0 | Complete | Not Complete |
 | Encounter Profile | 0 | Complete | Not Complete |
-| Goal Profile | 0 | Complete | Not Complete |
 | Immunization Profile | 1 | Complete | DHIR, IPS, PHI Access |
 | ImmunizationRecommendation Profile | 1 | Complete | DHIR |
 | Location Profile | 1 | Complete | PPR, Ontario eRefferal |
