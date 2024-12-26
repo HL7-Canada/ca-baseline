@@ -23,11 +23,11 @@
   </jurisdiction>
   <packageId value="hl7.fhir.ca.baseline"/>
   <fhirVersion value="4.0.1"/>
-  <!--<dependsOn id="ips">
+  <dependsOn id="ips">
     <uri value="http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"/>
     <packageId value="hl7.fhir.uv.ips"/>
-    <version value="1.0.0"/>
-  </dependsOn>-->
+    <version value="1.1.0"/>
+  </dependsOn>
   <definition>
     <!--    <grouping id="conformance">
       <name value="Capability Statements"/>
@@ -227,15 +227,6 @@
       </reference>
       <name value="Encounter Profile"/>
       <description value="Proposed constraints and extensions on the Encounter Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="profiles"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/profile-goal"/>
-      </reference>
-      <name value="Goal Profile"/>
-      <description value="Proposed constraints and extensions on the Goal Resource.  Generated as a first step toward creating a set of Canadian Baseline FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>    
@@ -574,8 +565,8 @@
 			<value value="true"/>
 		</parameter>
 		<parameter>
-      <code value="show-reference-messages"/>
-      <value value="true"/>
+      <code value="validation"/>
+      <value value="show-reference-messages"/>
     </parameter>
     <parameter>
 			<code value="ipa-comparison"/>
