@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "profile-diagnosticreport",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-diagnosticreport",
-  "version": "0.6.0",
+  "version": "1.0.1",
   "name": "DiagnosticReportProfile",
   "title": "DiagnosticReport Profile for Laboratory Results Reporting",
   "status": "draft",
@@ -270,9 +270,7 @@
         "id": "DiagnosticReport.specimen:LabResult",
         "path": "DiagnosticReport.specimen",
         "sliceName": "LabResult",
-        "comment": "Details about the specimen(s) on which this laboratory report is based on.",
-        "min": 1,
-        "max": "*"
+        "comment": "Details about the specimen(s) on which this laboratory report is based on."
       },
       {
         "id": "DiagnosticReport.specimen:@default",
