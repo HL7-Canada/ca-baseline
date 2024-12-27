@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-medication",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-medication",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "MedicationProfile",
   "title": "Medication Profile",
   "status": "draft",
-  "date": "2019-03-31",
+  "date": "2024-12-27",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {
@@ -233,8 +233,8 @@
         "path": "Medication.form",
         "comment": "CA Core Usage Notes: The prescription drug form is required in some provinces in order to meet the prescribing standards set out by the College of Physicians and Surgeons.",
         "binding": {
-          "strength": "preferred",
-          "description": "TBD. This is a placeholder for a comprehensive valueset, which would be created and maintained by Canada Health Infoway.",
+          "strength": "example",
+          "description": "TBD. This is a placeholder for a comprehensive valueset, which would be created and maintained by Canada Health Infoway. Currently seeking implementer feedback and input from pan-Canadian profiles to support updates to the nominated valueSet.",
           "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/dispensabledrugform"
         }
       }
