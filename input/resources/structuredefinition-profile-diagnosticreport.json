@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-diagnosticreport",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-diagnosticreport",
-  "version": "0.6.0",
+  "version": "1.0.1",
   "name": "DiagnosticReportProfile",
   "title": "DiagnosticReport Profile for Laboratory Results Reporting",
   "status": "draft",
-  "date": "2024-12-13",
+  "date": "2024-12-27",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {
@@ -66,6 +66,22 @@
         "definition": "Diagnostic Report Profile is based upon the core FHIR DiagnosticReport resource and created to meet the Laboratory test(s) and Laboratory value(s)/result(s) requirements."
       },
       {
+        "id": "DiagnosticReport.extension:note",
+        "path": "DiagnosticReport.extension",
+        "sliceName": "note",
+        "comment": "This extension is used to preadopt the DiagnosticReport.note element that was introduced in FHIR R5. This was done to socialize a standardized method for conveying notes that apply to the entirety of a diagnostic report as is seen in some Canadian implementations (e.g., OLIS). Before using this extension in your implementation, consider if its fit-for-purpose/fit-for-use applicable for your needs. Users are encouraged to review the https://build.fhir.org/versions.html#extensions.",
+          "min" : 0,
+          "max" : "*",
+          "type" : [
+            {
+              "code" : "Extension",
+              "profile" : [
+                "http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.note"
+              ]
+            }
+          ]        
+      },      
+      {
         "id": "DiagnosticReport.category",
         "path": "DiagnosticReport.category",
         "slicing": {
@@ -105,6 +121,11 @@
       {
         "id": "DiagnosticReport.code",
         "path": "DiagnosticReport.code",
+        "mustSupport": true
+      },      
+      {
+        "id": "DiagnosticReport.code.coding",
+        "path": "DiagnosticReport.code.coding",
         "slicing": {
           "discriminator": [
             {
@@ -113,66 +134,44 @@
             }
           ],
           "rules": "open"
-        },
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "mustSupport": true
+        }
       },
       {
-        "id": "DiagnosticReport.code:LabResult",
-        "path": "DiagnosticReport.code",
+        "id": "DiagnosticReport.code.coding:LabResult",
+        "path": "DiagnosticReport.code.coding",
         "sliceName": "LabResult",
         "definition": "A code that classifies the Laboratory test(s) and Laboratory result(s). This is used for searching, sorting and display purposes.",
-        "comment": "The code SHALL be LOINC 11502-2 'Laboratory report' code",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ]
+        "comment": "The code SHALL be LOINC 11502-2 'Laboratory report' code"
       },
       {
-        "id": "DiagnosticReport.code:LabResult.coding.system",
+        "id": "DiagnosticReport.code.coding:LabResult.system",
         "path": "DiagnosticReport.code.coding.system",
         "min": 1,
         "max": "1",
         "fixedUri": "http://loinc.org"
       },
       {
-        "id": "DiagnosticReport.code:LabResult.coding.code",
+        "id": "DiagnosticReport.code.coding:LabResult.code",
         "path": "DiagnosticReport.code.coding.code",
         "min": 1,
         "max": "1",
         "fixedCode": "11502-2"
       },
       {
-        "id": "DiagnosticReport.code:@default",
-        "path": "DiagnosticReport.code",
+        "id": "DiagnosticReport.code.coding:@default",
+        "path": "DiagnosticReport.code.coding",
         "sliceName": "@default",
         "definition": "A code that classifies the report(s) or result(s). This is used for searching, sorting and display purposes.",
-        "comment": "The code is preferrable comes from LOINC code system",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ]
+        "comment": "It is preferrable that the coding comes from the LOINC code system"
       },
       {
-        "id": "DiagnosticReport.code:@default.coding.system",
+        "id": "DiagnosticReport.code.coding:@default.system",
         "path": "DiagnosticReport.code.coding.system",
         "min": 1,
         "max": "1"
       },
       {
-        "id": "DiagnosticReport.code:@default.coding.code",
+        "id": "DiagnosticReport.code.coding:@default.code",
         "path": "DiagnosticReport.code.coding.code",
         "min": 1,
         "max": "1"
@@ -271,9 +270,7 @@
         "id": "DiagnosticReport.specimen:LabResult",
         "path": "DiagnosticReport.specimen",
         "sliceName": "LabResult",
-        "comment": "Details about the specimen(s) on which this laboratory report is based on.",
-        "min": 1,
-        "max": "*"
+        "comment": "Details about the specimen(s) on which this laboratory report is based on."
       },
       {
         "id": "DiagnosticReport.specimen:@default",

@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-observation",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-observation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "ObservationProfile",
   "title": "Observation Profile (General Use)",
   "status": "draft",
-  "date": "2022-03-25",
+  "date": "2024-08-09",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {

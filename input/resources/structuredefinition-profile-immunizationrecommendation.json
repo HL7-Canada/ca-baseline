@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-immunizationrecommendation",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-immunizationrecommendation",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "name": "ImmunizationRecommendationProfile",
   "title": "ImmunizationRecommendation Profile",
   "status": "draft",
-  "date": "2020-03-26",
+  "date": "2024-08-09",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {

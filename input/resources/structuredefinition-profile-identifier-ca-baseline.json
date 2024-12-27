@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-identifier",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-identifier",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "name": "IdentifierCABaseline",
   "title": "Identifier DataType Profile (CA Baseline)",
   "status": "draft",
-  "date": "2021-09-14T18:37:29+00:00",
+  "date": "2024-08-09",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {

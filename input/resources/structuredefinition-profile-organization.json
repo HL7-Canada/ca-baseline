@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-organization",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-organization",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "OrganizationProfile",
   "title": "Organization Profile",
   "status": "draft",
-  "date": "2020-03-16",
+  "date": "2024-08-09",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {

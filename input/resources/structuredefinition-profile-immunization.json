@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-immunization",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-immunization",
-  "version": "1.1.1",
+  "version": "1.2.1",
   "name": "ImmunizationProfile",
   "title": "Immunization Profile",
   "status": "draft",
-  "date": "2024-12-13",
+  "date": "2024-12-27",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {
@@ -99,8 +99,7 @@
           ],
           "rules": "open"
         },
-        "comment": "CA Baseline Usage Notes: for immunization submission, a server should accept any code a client is able to provide: a Generic code, a Tradename code or both. For immunization retireval, a Trade name is optional, but a Generic code has to be returned if it's known to the server or if it can be derived from the Tradename code.",
-        "min": 1
+        "comment": "CA Baseline Usage Notes: for immunization submission, a server should accept any code a client is able to provide: a Generic code, a Tradename code or both. For immunization retireval, a Trade name is optional, but a Generic code has to be returned if it's known to the server or if it can be derived from the Tradename code. Supply of codings is preferred, however legacy, emergency vaccines, and recall use cases may present challenges to requiring codings. It is at the discretion of the implementer to strengthen the requirement further based on their needs and business context (e.g., requiring coding on all immunization records in their repository)."
       },
       {
         "id": "Immunization.vaccineCode.coding:Generic",

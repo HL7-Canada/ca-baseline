@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "ext-dateestimated",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-dateestimated",
-  "version": "0.2.0",
+  "version": "0.3.1",
   "name": "ExtensionDateEstimatedFlag",
   "title": "Extension: Date Estimated Flag",
   "status": "draft",
-  "date": "2023-12-15",
+  "date": "2024-08-09",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {

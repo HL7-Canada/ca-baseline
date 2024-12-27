@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-diagnosticreportnote",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-diagnosticreportnote",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "name": "DiagnosticReportNoteProfile",
   "title": "Diagnostic Report for Report and Note Exchange Profile",
   "status": "draft",
-  "date": "2022-06-08T13:02:51-03:00",
+  "date": "2024-12-13",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {

@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-device",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-device",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "name": "DeviceProfile",
   "title": "Device Profile (Implantable)",
   "status": "draft",
-  "date": "2024-11-15",
+  "date": "2024-12-27",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {
@@ -141,12 +141,13 @@
       {
         "id": "Device.type",
         "path": "Device.type",
+        "comment": "The device-kind and device-type valueSets used in HL7 are identical. This profile currently mainatins the binding on device-kind because it is currently hosted in THO and is therefor expected to be updated more frequently",
         "min": 1,
         "mustSupport": true,
         "binding": {
           "strength": "extensible",
           "description": "Codes to identify medical devices",
-          "valueSet": "http://hl7.org/fhir/ValueSet/device-kind"
+          "valueSet": "http://terminology.hl7.org/ValueSet/device-kind"
         }
       },
       {
