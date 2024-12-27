@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-patient",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "name": "PatientProfile",
   "title": "Patient Profile",
   "status": "draft",
-  "date": "2024-11-14",
+  "date": "2024-12-27",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {
@@ -18,7 +18,7 @@
       ]
     }
   ],
-  "description": "Proposed constraints and extensions on the Patient Resource",
+  "description": "Proposed constraints and extensions on the Patient Resource as scoped to human patients",
   "jurisdiction": [
     {
       "coding": [
@@ -279,11 +279,11 @@
         "min": 0,
         "constraint": [
           {
-            "key": "ca-baseline-name",
-            "severity": "error",
-            "human": "Patient.name.given  or Patient.name.family or both SHALL be present",
-            "expression": "family.exists() or given.exists()",
-            "xpath": "f:given or f:family"
+            "key" : "ipa-pat-2",
+            "severity" : "error",
+            "human" : "Either Patient.name.given and/or Patient.name.family and/or Patient.name.text SHALL be present or a Data Absent Reason Extension SHALL be present.",
+            "expression" : "(family.exists() or given.exists() or text.exists()) xor extension.where(url='http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()",
+            "xpath" : "(/f:name/f:extension/@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason' and not(/f:name/f:family or /f:name/f:given or /f:name/f:text)) or (not(/f:name/f:extension/@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason') and (/f:name/f:family or /f:name/f:given or /f:name/f:text))"
           }
         ],
         "mustSupport": true
