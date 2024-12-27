@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "ext-ethnicity",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-ethnicity",
-  "version": "0.2.0",
+  "version": "0.3.1",
   "name": "ExtensionEthnicity",
   "title": "Extension: Ethnicity",
   "status": "draft",
-  "date": "2019-12-18",
+  "date": "2024-08-09",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {

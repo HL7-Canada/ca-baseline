@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-device-medical",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-device-medical",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "name": "DeviceProfileMedical",
   "title": "Device Profile (Medical and Non-medical)",
   "status": "draft",
-  "date": "2020-12-03",
+  "date": "2024-08-09",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {

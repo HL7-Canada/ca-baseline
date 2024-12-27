@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "ext-nofixedaddress",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-nofixedaddress",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "name": "ExtensionNoFixedAddress",
   "title": "Extension: No fixed address flag",
   "status": "draft",
-  "date": "2023-12-15",
+  "date": "2024-08-09",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {

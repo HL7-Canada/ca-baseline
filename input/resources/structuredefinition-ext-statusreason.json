@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "ext-statusreason",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-statusreason",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "name": "ExtensionStatusReason",
   "title": "Extension: StatusReason",
   "status": "draft",
-  "date": "2020-03-09",
+  "date": "2024-08-09",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {
