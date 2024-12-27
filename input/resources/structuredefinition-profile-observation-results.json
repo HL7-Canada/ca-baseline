@@ -85,7 +85,9 @@
       },
       {
         "id": "Observation.status",
-        "path": "Observation.status"
+        "path": "Observation.status",
+        "comment": "Statuses are fundamental to understanding lab domain results. This element is considered mandatory and is a modifier element in the base specification. This profile is seeking community and implementer feedback on whether the MustSupport flag that has been reintroduced in this profile elicits further challenges to systems.",
+        "mustSupport": true        
       },
       {
         "id": "Observation.category",
@@ -107,6 +109,7 @@
         "path": "Observation.category",
         "sliceName": "laboratory",
         "short": "FHIR standard classification of type of observation",
+        "comment": "This profile is scoped to an event (results) which includes constraints for that event. Profiles such as the OLIS Lab Observation Profile may be scoped more broadly to include modelling for more than just a single results step in the workflow. Both forms of modelling are appopriate, however implementers should be aware of the impact of scope on the setting of constraints (like this slice) and agknowledge that if their own profile is different in scope than the CA Baseline profile, it is not expected that they meet all the constraints outlined in this profile and it may be appropriate to review the generic observation profile instead.",
         "min": 1,
         "type": [
           {
@@ -121,15 +124,6 @@
             }
           ]
         },
-        "constraint": [
-          {
-            "key": "ca-baseline-category",
-            "severity": "error",
-            "human": "SHALL have a category from 'http://terminology.hl7.org/CodeSystem/observation-category'",
-            "expression": "where(coding.system='http://terminology.hl7.org/CodeSystem/observation-category' and coding.code.exists()).exists()",
-            "xpath": "exists(f:coding/code) and exists(f:coding/system[@value='http://terminology.hl7.org/CodeSystem/observation-category'])"
-          }
-        ],
         "mustSupport": true
       },
       {
