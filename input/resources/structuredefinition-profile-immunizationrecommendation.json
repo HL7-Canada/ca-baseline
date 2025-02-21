@@ -103,7 +103,7 @@
       {
         "id": "ImmunizationRecommendation.recommendation.vaccineCode",
         "path": "ImmunizationRecommendation.recommendation.vaccineCode",
-        "comment": "CA Core Usage Notes: the assumption is that ImmunizationRecommendation (forecast) is always on the level of a generic vaccine code and/or target disease. TBD: to confirm that there is no use case when an ImmunizationRecommendation needs to be on the vaccine tradename level (e.g. there is no sitation when a 2nd dose has to be of the same tradename as the 1st dose).",
+        "comment": "CA Core Usage Notes: the assumption is that ImmunizationRecommendation (forecast) is always on the level of a generic vaccine code and/or target disease. TBD: to confirm that there is no use case when an ImmunizationRecommendation needs to be on the vaccine tradename level (e.g. there is no situation when a 2nd dose has to be of the same tradename as the 1st dose).",
         "mustSupport": true,
         "binding": {
           "strength": "preferred",
