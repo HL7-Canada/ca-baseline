@@ -87,16 +87,6 @@
       {
         "id": "Procedure.code",
         "path": "Procedure.code",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "$this"
-            }
-          ],
-          "description": "Discriminated by the bound value set",
-          "rules": "open"
-        },
         "definition": "Identification of the procedure or recording of \"absence of relevant procedures\" or of \"procedures unknown\".",
         "min": 1,
         "max": "1",
@@ -113,18 +103,27 @@
         }
       },
       {
-        "id": "Procedure.code:absentOrUnknownProcedure",
-        "path": "Procedure.code",
+        "id": "Procedure.code.coding",
+        "path": "Procedure.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "description": "Discriminated by the bound value set",
+          "rules": "open"
+        }
+      },      
+      {
+        "id": "Procedure.code.coding:absentOrUnknownProcedure",
+        "path": "Procedure.code.coding",
         "sliceName": "absentOrUnknownProcedure",
         "short": "Code for absent problem or for unknown procedure",
         "definition": "Code representing the statement \"absent problem\" or the statement \"procedures unknown\"",
         "min": 0,
         "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
         "binding": {
           "extension": [
             {
