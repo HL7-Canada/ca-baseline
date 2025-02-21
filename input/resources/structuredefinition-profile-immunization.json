@@ -93,7 +93,7 @@
               "path": "system"
             },
             {
-              "type": "pattern",
+              "type": "value",
               "path": "code"
             }
           ],
