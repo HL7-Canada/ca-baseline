@@ -167,7 +167,7 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "pattern",
+              "type": "value",
               "path": "system"
             }
           ],

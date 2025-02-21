@@ -70,24 +70,24 @@
         "path": "DiagnosticReport.extension",
         "sliceName": "note",
         "comment": "This extension is used to preadopt the DiagnosticReport.note element that was introduced in FHIR R5. This was done to socialize a standardized method for conveying notes that apply to the entirety of a diagnostic report as is seen in some Canadian implementations (e.g., OLIS). Before using this extension in your implementation, consider if its fit-for-purpose/fit-for-use applicable for your needs. Users are encouraged to review the https://build.fhir.org/versions.html#extensions.",
-          "min" : 0,
-          "max" : "*",
-          "type" : [
-            {
-              "code" : "Extension",
-              "profile" : [
-                "http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.note"
-              ]
-            }
-          ]        
-      },      
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.note"
+            ]
+          }
+        ]
+      },
       {
         "id": "DiagnosticReport.category",
         "path": "DiagnosticReport.category",
         "slicing": {
           "discriminator": [
             {
-              "type": "pattern",
+              "type": "value",
               "path": "$this"
             }
           ],
@@ -122,14 +122,14 @@
         "id": "DiagnosticReport.code",
         "path": "DiagnosticReport.code",
         "mustSupport": true
-      },      
+      },
       {
         "id": "DiagnosticReport.code.coding",
         "path": "DiagnosticReport.code.coding",
         "slicing": {
           "discriminator": [
             {
-              "type": "pattern",
+              "type": "value",
               "path": "$this"
             }
           ],
@@ -251,7 +251,7 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "pattern",
+              "type": "value",
               "path": "$this"
             }
           ],

@@ -181,7 +181,7 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "pattern",
+              "type": "value",
               "path": "type"
             }
           ],
@@ -279,11 +279,11 @@
         "min": 0,
         "constraint": [
           {
-            "key" : "ipa-pat-2",
-            "severity" : "error",
-            "human" : "Either Patient.name.given and/or Patient.name.family and/or Patient.name.text SHALL be present or a Data Absent Reason Extension SHALL be present.",
-            "expression" : "(family.exists() or given.exists() or text.exists()) xor extension.where(url='http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()",
-            "xpath" : "(/f:name/f:extension/@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason' and not(/f:name/f:family or /f:name/f:given or /f:name/f:text)) or (not(/f:name/f:extension/@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason') and (/f:name/f:family or /f:name/f:given or /f:name/f:text))"
+            "key": "ipa-pat-2",
+            "severity": "error",
+            "human": "Either Patient.name.given and/or Patient.name.family and/or Patient.name.text SHALL be present or a Data Absent Reason Extension SHALL be present.",
+            "expression": "(family.exists() or given.exists() or text.exists()) xor extension.where(url='http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()",
+            "xpath": "(/f:name/f:extension/@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason' and not(/f:name/f:family or /f:name/f:given or /f:name/f:text)) or (not(/f:name/f:extension/@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason') and (/f:name/f:family or /f:name/f:given or /f:name/f:text))"
           }
         ],
         "mustSupport": true
