@@ -195,7 +195,7 @@
         "short": "QualifiedRoleType",
         "definition": "A code system for the degree or educational rank that the credential specifies. May also apply to an Expertise type.",
         "min": 1,
-        "fixedUri": "https://fhir.infoway-inforoute.ca/CodeSystem/scpqual"
+        "patternUri": "https://fhir.infoway-inforoute.ca/CodeSystem/scpqual"
       },
       {
         "id": "Practitioner.qualification.code.coding:eReferral",
@@ -209,7 +209,7 @@
         "short": "HealthcareProviderRoleType",
         "definition": "A role type that is used to categorize an entity that delivers health care in an expected and professional manner to an entity in need of health care services.",
         "min": 1,
-        "fixedUri": "https://fhir.infoway-inforoute.ca/CodeSystem/scptype"
+        "patternUri": "https://fhir.infoway-inforoute.ca/CodeSystem/scptype"
       }
     ]
   }

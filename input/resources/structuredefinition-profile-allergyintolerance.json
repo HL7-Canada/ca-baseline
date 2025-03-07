@@ -148,7 +148,7 @@
         "id": "AllergyIntolerance.code.coding:NotAsked.system",
         "path": "AllergyIntolerance.code.coding.system",
         "min": 1,
-        "fixedUri": "http://terminology.hl7.org/fhir/v3/NullFlavor"
+        "patternUri": "http://terminology.hl7.org/fhir/v3/NullFlavor"
       },
       {
         "id": "AllergyIntolerance.code.coding:NotAsked.code",
@@ -173,13 +173,13 @@
         "id": "AllergyIntolerance.code.coding:NoAllergy.system",
         "path": "AllergyIntolerance.code.coding.system",
         "min": 1,
-        "fixedUri": "http://snomed.info/sct"
+        "patternUri": "http://snomed.info/sct"
       },
       {
         "id": "AllergyIntolerance.code.coding:NoAllergy.code",
         "path": "AllergyIntolerance.code.coding.code",
         "min": 1,
-        "fixedCode": "716186003"
+        "patternCode": "716186003"
       },
       {
         "id": "AllergyIntolerance.code.coding:@default",
@@ -350,7 +350,7 @@
         "id": "AllergyIntolerance.reaction.substance.coding:CCDD.system",
         "path": "AllergyIntolerance.reaction.substance.coding.system",
         "min": 1,
-        "fixedUri": "https://fhir.infoway-inforoute.ca/CodeSystem/canadianclinicaldrugdataset"
+        "patternUri": "https://fhir.infoway-inforoute.ca/CodeSystem/canadianclinicaldrugdataset"
       },
       {
         "id": "AllergyIntolerance.reaction.substance.coding:CCDD.code",
