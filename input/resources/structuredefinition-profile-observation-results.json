@@ -109,7 +109,7 @@
         "path": "Observation.category",
         "sliceName": "laboratory",
         "short": "FHIR standard classification of type of observation",
-        "comment": "This profile is scoped to an event (results) which includes constraints for that event. Profiles such as the OLIS Lab Observation Profile may be scoped more broadly to include modelling for more than just a single results step in the workflow. Both forms of modelling are appopriate, however implementers should be aware of the impact of scope on the setting of constraints (like this slice) and agknowledge that if their own profile is different in scope than the CA Baseline profile, it is not expected that they meet all the constraints outlined in this profile and it may be appropriate to review the generic observation profile instead.",
+        "comment": "This profile is scoped to an event (results) which includes constraints for that event. Profiles such as the OLIS Lab Observation Profile may be scoped more broadly to include modelling for more than just a single results step in the workflow. Both forms of modelling are appropriate, however implementers should be aware of the impact of scope on the setting of constraints (like this slice) and acknowledge that if their own profile is different in scope than the CA Baseline profile, it is not expected that they meet all the constraints outlined in this profile and it may be appropriate to review the generic observation profile instead.",
         "min": 1,
         "type": [
           {
@@ -235,7 +235,7 @@
       {
         "id": "Observation.value[x]:valueCodeableConcept.coding.code",
         "path": "Observation.value[x].coding.code",
-        "short": "A code difining laboratory result",
+        "short": "A code defining laboratory result",
         "min": 1,
         "max": "1"
       },
@@ -281,7 +281,7 @@
       {
         "id": "Observation.component",
         "path": "Observation.component",
-        "comment": "Some elements underneath this backbone element are considered must support. This does not incur the expectation to support these elements for any implementers that do not need to support the parent concept of observation.component. This may need to be evaluated in the future as impelementations seek to derive directly from the CA Baseline profiles"
+        "comment": "Some elements underneath this backbone element are considered must support. This does not incur the expectation to support these elements for any implementers that do not need to support the parent concept of observation.component. This may need to be evaluated in the future as implementations seek to derive directly from the CA Baseline profiles"
       },
       {
         "id": "Observation.component.code",

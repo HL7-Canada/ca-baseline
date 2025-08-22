@@ -69,7 +69,7 @@
         "id": "DiagnosticReport.extension:note",
         "path": "DiagnosticReport.extension",
         "sliceName": "note",
-        "comment": "This extension is used to preadopt the DiagnosticReport.note element that was introduced in FHIR R5. This was done to socialize a standardized method for conveying notes that apply to the entirety of a diagnostic report as is seen in some Canadian implementations (e.g., OLIS). Before using this extension in your implementation, consider if its fit-for-purpose/fit-for-use applicable for your needs. Users are encouraged to review the https://build.fhir.org/versions.html#extensions.",
+        "comment": "This extension is used to pre-adopt the DiagnosticReport.note element that was introduced in FHIR R5. This was done to socialize a standardized method for conveying notes that apply to the entirety of a diagnostic report as is seen in some Canadian implementations (e.g., OLIS). Before using this extension in your implementation, consider if its fit-for-purpose/fit-for-use applicable for your needs. Users are encouraged to review the https://build.fhir.org/versions.html#extensions.",
           "min" : 0,
           "max" : "*",
           "type" : [
@@ -162,7 +162,7 @@
         "path": "DiagnosticReport.code.coding",
         "sliceName": "@default",
         "definition": "A code that classifies the report(s) or result(s). This is used for searching, sorting and display purposes.",
-        "comment": "It is preferrable that the coding comes from the LOINC code system"
+        "comment": "It is preferable that the coding comes from the LOINC code system"
       },
       {
         "id": "DiagnosticReport.code.coding:@default.system",

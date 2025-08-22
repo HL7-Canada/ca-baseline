@@ -99,7 +99,7 @@
           ],
           "rules": "open"
         },
-        "comment": "CA Baseline Usage Notes: for immunization submission, a server should accept any code a client is able to provide: a Generic code, a Tradename code or both. For immunization retireval, a Trade name is optional, but a Generic code has to be returned if it's known to the server or if it can be derived from the Tradename code. Supply of codings is preferred, however legacy, emergency vaccines, and recall use cases may present challenges to requiring codings. It is at the discretion of the implementer to strengthen the requirement further based on their needs and business context (e.g., requiring coding on all immunization records in their repository)."
+        "comment": "CA Baseline Usage Notes: for immunization submission, a server should accept any code a client is able to provide: a Generic code, a Tradename code or both. For immunization retrieval, a Trade name is optional, but a Generic code has to be returned if it's known to the server or if it can be derived from the Tradename code. Supply of codings is preferred, however legacy, emergency vaccines, and recall use cases may present challenges to requiring codings. It is at the discretion of the implementer to strengthen the requirement further based on their needs and business context (e.g., requiring coding on all immunization records in their repository)."
       },
       {
         "id": "Immunization.vaccineCode.coding:Generic",
@@ -274,7 +274,7 @@
       {
         "id": "Immunization.manufacturer",
         "path": "Immunization.manufacturer",
-        "comment": "CA Baseline Usage Notes: This is a reference to an organization that manufactures the vaccine. TBD: if there is a need to refernce a 'DPD Company', a new extension should be created and used. A 'DPD Company' name, as used in the Health Canada DPF, indicates the organisation (company) that holds the authorization to place the product on the market in Canada. This may not be the company that has manufactured the product, but it is the company that holds the legal responsibility for the use of the product in Canada and should be the same as the company named on the product label/packaging.",
+        "comment": "CA Baseline Usage Notes: This is a reference to an organization that manufactures the vaccine. TBD: if there is a need to reference a 'DPD Company', a new extension should be created and used. A 'DPD Company' name, as used in the Health Canada DPF, indicates the organization (company) that holds the authorization to place the product on the market in Canada. This may not be the company that has manufactured the product, but it is the company that holds the legal responsibility for the use of the product in Canada and should be the same as the company named on the product label/packaging.",
         "type": [
           {
             "code": "Reference",

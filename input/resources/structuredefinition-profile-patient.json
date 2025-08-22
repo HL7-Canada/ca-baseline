@@ -144,7 +144,7 @@
         "sliceName": "ethnicity",
         "short": "Extension: ethnicity extension",
         "definition": "A code classifying the person's ethnic group or ethnicity as the category of people who identify with each other, usually on the basis of a presumed common genealogy or ancestry or on other similarities.",
-        "comment": "This attribute is based on the belief of the person or the person reporting the attribute, not on any formal analysis of genetic, geneological or historical relationships as these would need to be captured as observations.",
+        "comment": "This attribute is based on the belief of the person or the person reporting the attribute, not on any formal analysis of genetic, genealogical or historical relationships as these would need to be captured as observations.",
         "min": 0,
         "max": "1",
         "type": [

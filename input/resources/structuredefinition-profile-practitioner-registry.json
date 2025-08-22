@@ -201,7 +201,7 @@
         "id": "Practitioner.qualification.code.coding:eReferral",
         "path": "Practitioner.qualification.code.coding",
         "sliceName": "eReferral",
-        "comment": "Some registries may be used to support electronic referral use cases. A separate code system for practitioner qualification codes has been identified as in use by at least one Canadian regsitry supporting the hybridized use case."
+        "comment": "Some registries may be used to support electronic referral use cases. A separate code system for practitioner qualification codes has been identified as in use by at least one Canadian registry supporting the hybridized use case."
       },
       {
         "id": "Practitioner.qualification.code.coding:eReferral.system",
