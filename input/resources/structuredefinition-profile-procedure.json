@@ -80,11 +80,6 @@
         ]
       },
       {
-        "id": "Procedure.status",
-        "path": "Procedure.status",
-        "mustSupport": true
-      },
-      {
         "id": "Procedure.code",
         "path": "Procedure.code",
         "definition": "Identification of the procedure or recording of \"absence of relevant procedures\" or of \"procedures unknown\".",
@@ -95,11 +90,27 @@
             "code": "CodeableConcept"
           }
         ],
-        "mustSupport": true,
         "binding": {
+        "extension": [
+            {
+            "extension": [
+              {
+              "url": "purpose",
+              "valueCode": "candidate"
+              },
+              {
+              "url": "valueSet",
+              "valueCanonical": "https://fhir.infoway-inforoute.ca/ValueSet/CCI"
+              },
+              {
+              "url": "documentation",
+              "valueMarkdown": "CCI Codes"
+              }
+              ],
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+              }],       
           "strength": "preferred",
-          "description": "Extensional Subset of SNOMED CT and SNOMED CT CA Extension Codes to describe Services/Activities performed by Primary Health Care Providers.",
-          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/interventioncode"
+          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/procedurecode"
         }
       },
       {
@@ -148,8 +159,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient"
             ]
           }
-        ],
-        "mustSupport": true
+        ]      
       },
       {
         "id": "Procedure.encounter",
@@ -183,8 +193,7 @@
           {
             "code": "Range"
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "Procedure.recorder",
