@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-location",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-location",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "name": "LocationProfile",
   "title": "Location Profile",
   "status": "draft",
-  "date": "2024-08-09",
+  "date": "2026-01-09",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {
@@ -67,27 +67,7 @@
             ]
           }
         ],
-        "mustSupport": false,
         "isModifier": false
-      },
-      {
-        "id": "Location.identifier",
-        "path": "Location.identifier",
-        "mustSupport": true
-      },
-      {
-        "id": "Location.name",
-        "path": "Location.name",
-        "mustSupport": true
-      },
-      {
-        "id": "Location.telecom",
-        "path": "Location.telecom",
-        "mustSupport": true
-      },
-      {
-        "id": "Location.address",
-        "path": "Location.address"
       }
     ]
   }

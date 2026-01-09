@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-medicationrequest",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-medicationrequest",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "name": "MedicationRequestProfile",
   "title": "MedicationRequest Profile",
   "status": "draft",
-  "date": "2024-08-09",
+  "date": "2026-01-09",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {
@@ -71,11 +71,6 @@
         "definition": "The Canadian Baseline MedicationRequest Profile is based upon the core FHIR MedicationRequest Resource"
       },
       {
-        "id": "MedicationRequest.status",
-        "path": "MedicationRequest.status",
-        "mustSupport": true
-      },
-      {
         "id": "MedicationRequest.reported[x]",
         "path": "MedicationRequest.reported[x]",
         "type": [
@@ -108,7 +103,6 @@
             ]
           }
         ],
-        "mustSupport": true,
         "binding": {
           "strength": "preferred",
           "description": "TBD. This is a placeholder for a comprehensive valueset, consisting of all Manufactured Product (MP), Non-proprietary Therapeutic Product (NTP) and Therapeutic Moiety (TM) codes, which would be created and maintained by Canada Health Infoway. Medicinal products for prescribing and dispensing in Canada. The content of this subset only contains commonly used medicinal products that are available for prescribing and dispensing in Canada. This content will expand to include all human medicinal products over time.",
@@ -125,8 +119,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "MedicationRequest.encounter",
@@ -139,11 +132,6 @@
             ]
           }
         ]
-      },
-      {
-        "id": "MedicationRequest.authoredOn",
-        "path": "MedicationRequest.authoredOn",
-        "mustSupport": true
       },
       {
         "id": "MedicationRequest.requester",
@@ -220,16 +208,6 @@
             ]
           }
         ]
-      },
-      {
-        "id": "MedicationRequest.dosageInstruction",
-        "path": "MedicationRequest.dosageInstruction",
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationRequest.dosageInstruction.text",
-        "path": "MedicationRequest.dosageInstruction.text",
-        "mustSupport": true
       },
       {
         "id": "MedicationRequest.dispenseRequest.performer",

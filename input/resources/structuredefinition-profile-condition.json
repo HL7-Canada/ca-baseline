@@ -78,7 +78,6 @@
       {
         "id": "Condition.clinicalStatus",
         "path": "Condition.clinicalStatus",
-        "mustSupport": true,
         "isModifier": true,
         "isModifierReason": "This element is labeled as a modifier because the status contains codes that mark the condition as no longer active."
       },
@@ -86,13 +85,11 @@
         "id": "Condition.verificationStatus",
         "path": "Condition.verificationStatus",
         "comment": "This profile is seeking community and implementer feedback on whether further constraints on use of verificationStatus are needed. Feedback on current utilization practices is encouraged to support this effort.",
-        "isModifier": true,
         "isModifierReason": "This element is labeled as a modifier because the status contains the code refuted and entered-in-error that mark the Condition as not currently valid."
       },
       {
         "id": "Condition.code",
         "path": "Condition.code",
-        "mustSupport": true,
         "binding": {
           "strength": "preferred",
           "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/healthconditioncode"
@@ -100,8 +97,7 @@
       },
       {
         "id": "Condition.code.coding",
-        "path": "Condition.code.coding",
-        "mustSupport": true
+        "path": "Condition.code.coding"
       },
       {
         "id": "Condition.subject",
@@ -113,8 +109,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "Condition.encounter",
@@ -127,11 +122,6 @@
             ]
           }
         ]
-      },
-      {
-        "id": "Condition.onset[x]",
-        "path": "Condition.onset[x]",
-        "mustSupport": true
       },
       {
         "id": "Condition.recorder",

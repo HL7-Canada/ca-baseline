@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-device-medical",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-device-medical",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "name": "DeviceProfileMedical",
   "title": "Device Profile (Medical and Non-medical)",
   "status": "draft",
-  "date": "2024-08-09",
+  "date": "2026-01-09",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {
@@ -71,24 +71,7 @@
             }
           ],
           "rules": "open"
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "Device.identifier.type",
-        "path": "Device.identifier.type",
-        "mustSupport": true
-      },
-      {
-        "id": "Device.identifier.system",
-        "path": "Device.identifier.system",
-        "mustSupport": true
-      },
-      {
-        "id": "Device.identifier.value",
-        "path": "Device.identifier.value",
-        "short": "The value that is unique within the system.",
-        "mustSupport": true
+        }
       },
       {
         "id": "Device.identifier:EUI-64",
@@ -129,60 +112,9 @@
         "min": 1
       },
       {
-        "id": "Device.udiCarrier",
-        "path": "Device.udiCarrier",
-        "mustSupport": true
-      },
-      {
-        "id": "Device.udiCarrier.deviceIdentifier",
-        "path": "Device.udiCarrier.deviceIdentifier",
-        "mustSupport": true
-      },
-      {
-        "id": "Device.udiCarrier.carrierAIDC",
-        "path": "Device.udiCarrier.carrierAIDC",
-        "mustSupport": true
-      },
-      {
-        "id": "Device.udiCarrier.carrierHRF",
-        "path": "Device.udiCarrier.carrierHRF",
-        "mustSupport": true
-      },
-      {
-        "id": "Device.distinctIdentifier",
-        "path": "Device.distinctIdentifier",
-        "mustSupport": true
-      },
-      {
-        "id": "Device.manufacturer",
-        "path": "Device.manufacturer",
-        "mustSupport": true
-      },
-      {
-        "id": "Device.manufactureDate",
-        "path": "Device.manufactureDate",
-        "mustSupport": true
-      },
-      {
-        "id": "Device.expirationDate",
-        "path": "Device.expirationDate",
-        "mustSupport": true
-      },
-      {
-        "id": "Device.serialNumber",
-        "path": "Device.serialNumber",
-        "mustSupport": true
-      },
-      {
-        "id": "Device.deviceName",
-        "path": "Device.deviceName",
-        "mustSupport": true
-      },
-      {
         "id": "Device.type",
         "path": "Device.type",
         "min": 1,
-        "mustSupport": true,
         "binding": {
           "strength": "extensible",
           "description": "Codes to identify medical devices",
@@ -191,8 +123,7 @@
       },
       {
         "id": "Device.version",
-        "path": "Device.version",
-        "mustSupport": true
+        "path": "Device.version"      
       },
       {
         "id": "Device.patient",
@@ -204,8 +135,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "Device.parent",

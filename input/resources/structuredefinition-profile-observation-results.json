@@ -86,8 +86,7 @@
       {
         "id": "Observation.status",
         "path": "Observation.status",
-        "comment": "Statuses are fundamental to understanding lab domain results. This element is considered mandatory and is a modifier element in the base specification. This profile is seeking community and implementer feedback on whether the MustSupport flag that has been reintroduced in this profile elicits further challenges to systems.",
-        "mustSupport": true        
+        "comment": "Statuses are fundamental to understanding lab domain results. This element is considered mandatory and is a modifier element in the base specification. This profile is seeking community and implementer feedback on whether the MustSupport flag that has been reintroduced in this profile elicits further challenges to systems."       
       },
       {
         "id": "Observation.category",
@@ -101,8 +100,7 @@
           ],
           "rules": "open"
         },
-        "min": 1,
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "Observation.category:laboratory",
@@ -123,14 +121,12 @@
               "code": "laboratory"
             }
           ]
-        },
-        "mustSupport": true
+        }
       },
       {
         "id": "Observation.code",
         "path": "Observation.code",
         "comment": "The binding strength of this element is [Preferred](https://www.hl7.org/fhir/terminologies.html#strength), meaning that codes are encouraged to draw from the LOINC or PCLOCD code system for interoperability purposes but are not required to do so to be considered conformant. *All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.",
-        "mustSupport": true,
         "binding": {
           "strength": "preferred",
           "description": "LOINC codes identifying names of simple observations.",
@@ -151,8 +147,7 @@
               "http://hl7.org/fhir/StructureDefinition/Location"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "Observation.effective[x]",
@@ -172,8 +167,7 @@
             "human": "Datetime SHALL be at least to day",
             "expression": "($this as dateTime).toString().length() >= 8"
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "Observation.issued",
@@ -193,8 +187,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "Observation.value[x]",
@@ -207,8 +200,7 @@
             }
           ],
           "rules": "open"
-        },
-        "mustSupport": true
+        }
       },
       {
         "id": "Observation.value[x]:valueCodeableConcept",
@@ -287,7 +279,6 @@
         "id": "Observation.component.code",
         "path": "Observation.component.code",
         "comment": "The binding strength of this element is [Preferred](https://www.hl7.org/fhir/terminologies.html#strength), meaning that codes are encouraged to draw from the LOINC code system for interoperability purposes but are not required to do so to be considered conformant. *All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.",
-        "mustSupport": true,
         "binding": {
           "strength": "preferred",
           "description": "LOINC codes identifying names of simple observations.",
@@ -305,8 +296,7 @@
             }
           ],
           "rules": "open"
-        },
-        "mustSupport": true
+        }      
       },
       {
         "id": "Observation.component.value[x]:valueCodeableConcept",

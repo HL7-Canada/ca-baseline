@@ -23,20 +23,6 @@ Most elements in the FHIR specification have a minimum cardinality of 0, so most
 * subject of the observation (Observation.subject)
 
 
-## Must Support Data Elements
-Some elements are marked as Must Support. This means that implementations generating, receiving, or otherwise using resources with Must Support elements SHALL provide support for those elements in some meaningful way (see Must Support definition).
-
-The following elements are marked as Must Support in the Observation (General Use) profile:
-
-**Must Support elements:**
-* category
-* code
-* reference to a subject (Observation.subject)
-* effective data
-* value
-* component code (if implementer supports component)
-* component value (if implementer supports component)
-
 ## Usage Note
 Observation (General Use) is intended to capture data associated with most observations; it is not intended to capture data in some cases where a more appropriate profile is applicable (see below). Data typically consists of measurements or assertions about a subject. Observation (General Use) can capture data in eclectic use cases as it incorporates multiple categories of observations and datatypes. Observation (General Use) can capture data such as:
 * Clinical observations such as clinical finding, diagnosis, disorder

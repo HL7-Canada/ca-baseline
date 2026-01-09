@@ -25,16 +25,6 @@ Most elements in FHIR specification have a minimum cardinality of **0**, which m
 * code identifying the patient's relevant condition
 * reference to a subject
 
-## Must Support Data Elements
-Some elements are labeled as MustSupport meaning that implementations that produce or consume resources SHALL provide "support" for the element in some meaningful way (see [Must Support](https://build.fhir.org/ig/HL7-Canada/ca-baseline/general-guidance.html#must-support) definition).
-
-Following elements are marked as Must Support in the Canadian Condition profile to aid record matching in databases with many pediatric records.
-
-**Must Support elements:**
-* clinical status of the condition
-* code identifying the patient's relevant condition
-* reference to subject
-* onset - estimated or actual date of the condition
 
 ## Usage Note
 Condition is intended for capturing and querying patient's current and historical problems.

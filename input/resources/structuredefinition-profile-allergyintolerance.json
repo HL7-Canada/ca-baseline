@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-allergyintolerance",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-allergyintolerance",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "AllergyIntoleranceProfile",
   "title": "AllergyIntolerance Profile",
   "status": "draft",
-  "date": "2024-11-24",
+  "date": "2026-01-09",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {
@@ -134,12 +134,6 @@
         "comment": "Some implementers may utilize value sets where category is readily distinguishable while others may not, and those that do not use those value sets should consider making category MS in their profiles"
       },
       {
-        "id": "AllergyIntolerance.code",
-        "path": "AllergyIntolerance.code",
-        "min": 0,
-        "mustSupport": true
-      },
-      {
         "id": "AllergyIntolerance.code.coding",
         "path": "AllergyIntolerance.code.coding",
         "slicing": {
@@ -245,8 +239,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "AllergyIntolerance.encounter",
@@ -409,11 +402,6 @@
           "description": "Codes defining the type of the substance (including pharmaceutical products).",
           "valueSet": "http://hl7.org/fhir/ValueSet/substance-code"
         }
-      },
-      {
-        "id": "AllergyIntolerance.reaction.manifestation",
-        "path": "AllergyIntolerance.reaction.manifestation",
-        "mustSupport": true
       },
       {
         "id": "AllergyIntolerance.reaction.exposureRoute",

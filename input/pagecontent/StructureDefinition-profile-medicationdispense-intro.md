@@ -13,16 +13,5 @@ Most elements in the FHIR specification have a minimum cardinality of 0, so most
 * subject
 
 
-## Must Support Data Elements
-The following elements are marked as Must Support in this profile:
-
-**Must Support elements:**
-* status
-* medication
-* subject
-* quantity
-* whenPrepared
-* dosageInstruction
-
 ## CA Core Considerations
 The whenHandedOver element was initially profiled as must support and was later relaxed through the Due Diligence Review Process with the goal of not constraining for certain use cases over others. Given the criticality to many clinical/pharmaceutical use cases, it has been identified as an element to consider for additional constraints in the CA Core Profiles which are to be developed in the future under the guidance of a larger collaborative of pan-Canadian governing bodies.

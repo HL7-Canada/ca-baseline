@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-procedure",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-procedure",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "name": "ProcedureProfile",
   "title": "Procedure Profile",
   "status": "draft",
-  "date": "2024-12-13",
+  "date": "2026-01-09",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {
