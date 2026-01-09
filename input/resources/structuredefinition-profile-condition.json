@@ -92,65 +92,16 @@
       {
         "id": "Condition.code",
         "path": "Condition.code",
-        "definition": "Identification of the patient's relevant condition, problem or diagnosis or recording of 'problem absent' or of 'problems unknown', as interpreted by the provider.",
-        "comment": "The larger SNOMED CT CA data exchange value set (ClinicalFinding) has been included as a preferred binding for this element. However, HealthConcernCode (which is a subset of SCTCA) has been maintained as a slice to recognize that the subset is is commonly used by Primary Health Care EMRs and was developed and reinforced through inclusion in CIHI Pan-Canadian Primary Health Care EMR Minimum Data Set",
         "mustSupport": true,
         "binding": {
           "strength": "preferred",
-          "description": "Codes for problems from the SNOMED CT Canadian edition value set",
-          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/clinicalfindingcode"
+          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/healthconditioncode"
         }
       },
       {
         "id": "Condition.code.coding",
         "path": "Condition.code.coding",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "binding.valueSet"
-            }
-          ],
-          "rules": "open"
-        },
-        "definition": "Identification of the patient's relevant condition, problem or diagnosis or recording of 'problem absent' or of 'problems unknown', as interpreted by the provider.",
         "mustSupport": true
-      },
-      {
-        "id": "Condition.code.coding:HealthConcernCode",
-        "path": "Condition.code.coding",
-        "sliceName": "HealthConcernCode",
-        "short": "CHI identification of the condition, problem or diagnosis",
-        "definition": "The code that represents relevant clinical problems, conditions, diagnoses, symptoms, findings and complaints, as interpreted by the provider shall be taken from [CHI Health Concern Code](https://fhir.infoway-inforoute.ca/ValueSet/healthconcerncode)",
-        "comment": "HealthConcernCode is a subset of the larger SNOMED CT CA data exchange value set (ClinicalFinding) that is preferred binding for the parent element. HealthConcernCode has been maintained as a slice to recognize that the subset is is commonly used by Primary Health Care EMRs and was developed and reinforced through inclusion in CIHI Pan-Canadian Primary Health Care EMR Minimum Data Set",
-        "max": "1",
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "binding": {
-          "strength": "required",
-          "description": "Represents the patient's relevant clinical problems, conditions, diagnoses, symptoms, findings and complaints, as interpreted by the provider.",
-          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/healthconcerncode"
-        }
-      },
-      {
-        "id": "Condition.code.coding:@default",
-        "path": "Condition.code.coding",
-        "sliceName": "@default",
-        "short": "Other identifications of the condition, problem or diagnosis",
-        "definition": "Other identifications of the patient's relevant condition, problem or diagnosis or recording of 'problem absent' or of 'problems unknown', as interpreted by the provider.",
-        "max": "1",
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "binding": {
-          "strength": "example",
-          "valueSet": "http://hl7.org/fhir/ValueSet/condition-code"
-        }
       },
       {
         "id": "Condition.subject",
