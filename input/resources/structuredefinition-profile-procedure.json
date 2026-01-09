@@ -187,36 +187,6 @@
         "mustSupport": true
       },
       {
-        "id": "Procedure.performed[x].extension",
-        "path": "Procedure.performed[x].extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "rules": "open"
-        }
-      },
-      {
-        "id": "Procedure.performed[x].extension:data-absent-reason",
-        "path": "Procedure.performed[x].extension",
-        "sliceName": "data-absent-reason",
-        "short": "performed[x] absence reason",
-        "definition": "Provides a reason why the performed is missing.",
-        "comment": "Some Canadian implementations cannot guarantee that a procedure performed date will always be available in every instance of legacy data. Any implementors who do not require a performed date be available on every procedure need to be able to produce a dataAbsentReason extension",
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-            ]
-          }
-        ]
-      },
-      {
         "id": "Procedure.recorder",
         "path": "Procedure.recorder",
         "type": [
