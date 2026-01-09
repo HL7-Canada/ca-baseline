@@ -116,11 +116,11 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "pattern",
+              "type": "value",
               "path": "system"
             },
             {
-              "type": "pattern",
+              "type": "value",
               "path": "code"
             }
           ],

@@ -108,14 +108,14 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "pattern",
+              "type": "value",
               "path": "$this"
             }
           ],
           "description": "Discriminated by the bound value set",
           "rules": "open"
         }
-      },      
+      },
       {
         "id": "Procedure.code.coding:absentOrUnknownProcedure",
         "path": "Procedure.code.coding",

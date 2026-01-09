@@ -81,13 +81,13 @@
             "human": "SHOULD use SNOMED CT for coded Results",
             "expression": "(component.value | value).ofType(Quantity).all(system = 'http://unitsofmeasure.org')"
           }
-        ]        
+        ]
       },
       {
         "id": "Observation.status",
         "path": "Observation.status",
         "comment": "Statuses are fundamental to understanding lab domain results. This element is considered mandatory and is a modifier element in the base specification. This profile is seeking community and implementer feedback on whether the MustSupport flag that has been reintroduced in this profile elicits further challenges to systems.",
-        "mustSupport": true        
+        "mustSupport": true
       },
       {
         "id": "Observation.category",
@@ -95,7 +95,7 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "pattern",
+              "type": "value",
               "path": "$this"
             }
           ],
@@ -342,7 +342,7 @@
       {
         "id": "Observation.component.value[x]:valueQuantity",
         "path": "Observation.component.value[x]",
-        "sliceName": "valueQuantity",        
+        "sliceName": "valueQuantity",
         "type": [
           {
             "code": "Quantity"

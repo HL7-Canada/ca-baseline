@@ -102,7 +102,7 @@
         "path": "Device.identifier.system",
         "short": "EUI-64 system identifier",
         "min": 1,
-        "fixedUri": "urn:oid:1.2.840.10004.1.1.1.0.0.1.0.0.1.2680"
+        "patternUri": "urn:oid:1.2.840.10004.1.1.1.0.0.1.0.0.1.2680"
       },
       {
         "id": "Device.identifier:EUI-64.value",
@@ -121,7 +121,7 @@
         "path": "Device.identifier.system",
         "short": "EUI-48 system identifier",
         "min": 1,
-        "fixedUri": "http://terminology.hl7.org/fhir/sid/eui-48"
+        "patternUri": "http://terminology.hl7.org/fhir/sid/eui-48"
       },
       {
         "id": "Device.identifier:EUI-48.value",
