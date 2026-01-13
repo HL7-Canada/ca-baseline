@@ -1,7 +1,7 @@
 # CA Baseline AllergyIntolerance Profile
 This profile sets minimum expectations for the AllergyIntolerance resource to record, search and fetch allergies/adverse reactions associated with a patient. It documents the relevant allergies or intolerances (conditions) for a patient, describing the kind of reaction, agent(s) that cause it, criticality and the certainty of the allergy/adverse reaction.
 
-This profile defines localization concepts for use in the Canadian context.
+This profile defines localization concepts for use in the Canadian context.  
 
 ## Mandatory Data Elements
 All elements or attributes within the FHIR specification have cardinality as part of their definition - a minimum number of required appearances and a maximum number of allowable appearances.
