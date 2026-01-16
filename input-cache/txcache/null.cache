@@ -1,50 +1,18 @@
 -------------------------------------------------------------------------------------
-{"hierarchical" : true, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "valueSet" : ["https://fhir.infoway-inforoute.ca/ValueSet/prescriptionmedicinalproduct"]
-    }]
-  }
-}}####
+{"hierarchical" : false, "url": "https://fhir.infoway-inforoute.ca/ValueSet/aboriginalidentitytype"}####
 e: {
-  "error" : "Error from server: Unable to find value set \"https://fhir.infoway-inforoute.ca/ValueSet/prescriptionmedicinalproduct\""
+  "from-server" : true,
+  "error" : "Error from https://terminologystandardsservice.ca/tx/fhir: Error: [9f2cb489-17b9-44e8-a6d8-1823384c7d70]: Could not find value set https://fhir.infoway-inforoute.ca/ValueSet/aboriginalidentitytype and version null. If this is an implicit value set please make sure the url is correct. Implicit values sets for different code systems are specified in https://www.hl7.org/fhir/terminologies-systems.html.\r\nInformation: X-Request-Id: 5fedb38c-21a1-41e1-a5b6-a751836a675a"
 }
 -------------------------------------------------------------------------------------
-{"hierarchical" : true, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "valueSet" : ["https://fhir.infoway-inforoute.ca/ValueSet/vaccineadministeredtradenamecode",
-      "https://fhir.infoway-inforoute.ca/ValueSet/vaccinehistoricalnamecode"]
-    }]
-  }
-}}####
+{"hierarchical" : false, "url": "https://fhir.infoway-inforoute.ca/ValueSet/prescriptionmedicinalproduct"}####
 e: {
-  "error" : "Error from server: Unable to find value set \"https://fhir.infoway-inforoute.ca/ValueSet/vaccineadministeredtradenamecode\""
+  "from-server" : true,
+  "error" : "Error from https://terminologystandardsservice.ca/tx/fhir: Error: [5acc0f95-80b8-4759-9306-4e38e87a446a]: Could not find value set https://fhir.infoway-inforoute.ca/ValueSet/prescriptionmedicinalproduct and version null. If this is an implicit value set please make sure the url is correct. Implicit values sets for different code systems are specified in https://www.hl7.org/fhir/terminologies-systems.html.\r\nInformation: X-Request-Id: 30fc196f-9d29-40c6-a8a5-201fb1134384"
 }
 -------------------------------------------------------------------------------------
-{"hierarchical" : true, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "valueSet" : ["https://fhir.infoway-inforoute.ca/ValueSet/healthconcerncode"]
-    }]
-  }
-}}####
+{"hierarchical" : true, "url": "http://hl7.org/fhir/ca/baseline/ValueSet/prescriptiondrugform", "version": "1.2.0"}####
 e: {
-  "error" : "Error from server: Unable to find value set \"https://fhir.infoway-inforoute.ca/ValueSet/healthconcerncode\""
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "valueSet" : ["https://fhir.infoway-inforoute.ca/ValueSet/prescriptiondrugform"]
-    }]
-  }
-}}####
-e: {
-  "error" : "Error from server: Unable to find value set \"https://fhir.infoway-inforoute.ca/ValueSet/prescriptiondrugform\""
+  "error" : "Unable to expand included value set 'https://fhir.infoway-inforoute.ca/ValueSet/prescriptiondrugform': Required supplement not found: https://fhir.infoway-inforoute.ca/CodeSystem/Supplement/fr-CA/v3-orderableDrugForm|1.0.0 (and Error from http://tx.fhir.org/r4: Required supplement not found: https://fhir.infoway-inforoute.ca/CodeSystem/Supplement/fr-CA/v3-orderableDrugForm|1.0.0)"
 }
 -------------------------------------------------------------------------------------
