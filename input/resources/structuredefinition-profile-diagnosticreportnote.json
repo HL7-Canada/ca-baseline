@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-diagnosticreportnote",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-diagnosticreportnote",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "name": "DiagnosticReportNoteProfile",
   "title": "Diagnostic Report for Report and Note Exchange Profile",
   "status": "draft",
-  "date": "2024-12-13",
+  "date": "2026-01-09",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {
@@ -68,7 +68,6 @@
       {
         "id": "DiagnosticReport.status",
         "path": "DiagnosticReport.status",
-        "mustSupport": true,
         "binding": {
           "strength": "required",
           "description": "Codes providing the status of a DiagnosticReport.",
@@ -78,14 +77,11 @@
       {
         "id": "DiagnosticReport.category",
         "path": "DiagnosticReport.category",
-        "comment": "This profile does not currently put forth a Canadian value set for Diagnostic Report Categories. Further work is required to determine if this profile should align to the value set in use in US Core https://www.hl7.org/fhir/us/core/ValueSet-us-core-diagnosticreport-category.html or if a Canadian value set needs to be created.",
-        "mustSupport": true
-      },
+        "comment": "This profile does not currently put forth a Canadian value set for Diagnostic Report Categories. Further work is required to determine if this profile should align to the value set in use in US Core https://www.hl7.org/fhir/us/core/ValueSet-us-core-diagnosticreport-category.html or if a Canadian value set needs to be created."      },
       {
         "id": "DiagnosticReport.code",
         "path": "DiagnosticReport.code",
-        "comment": "This profile does not currently put forth a Canadian value set for Diagnostic Report Codes. Further work is required to determine if this profile should align to the value set in use in US Core https://www.hl7.org/fhir/us/core/ValueSet-us-core-diagnosticreport-report-and-note-codes.html or if a Canadian value set needs to be created.",
-        "mustSupport": true
+        "comment": "This profile does not currently put forth a Canadian value set for Diagnostic Report Codes. Further work is required to determine if this profile should align to the value set in use in US Core https://www.hl7.org/fhir/us/core/ValueSet-us-core-diagnosticreport-report-and-note-codes.html or if a Canadian value set needs to be created."
       },
       {
         "id": "DiagnosticReport.subject",
@@ -99,8 +95,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "DiagnosticReport.encounter",
@@ -112,21 +107,13 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-encounter"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "DiagnosticReport.effective[x]",
         "path": "DiagnosticReport.effective[x]",
         "short": "Time of report or note",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "DiagnosticReport.issued",
-        "path": "DiagnosticReport.issued",
-        "short": "Date/Time this version of the DiagnosticReport was made available",
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "DiagnosticReport.performer",
@@ -140,20 +127,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-organization"
             ]
           }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "DiagnosticReport.media",
-        "path": "DiagnosticReport.media",
-        "short": "Key images associated with this report",
-        "mustSupport": true
-      },
-      {
-        "id": "DiagnosticReport.presentedForm",
-        "path": "DiagnosticReport.presentedForm",
-        "short": "Entire report as issued",
-        "mustSupport": true
+        ]
       }
     ]
   }

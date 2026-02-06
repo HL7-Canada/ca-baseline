@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-patient",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "name": "PatientProfile",
   "title": "Patient Profile",
   "status": "draft",
-  "date": "2024-12-27",
+  "date": "2026-01-09",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {
@@ -99,8 +99,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-aboriginalidentitygroup"
             ]
           }
-        ],
-        "mustSupport": false
+        ]
       },
       {
         "id": "Patient.extension:aboriginalidentityindicator",
@@ -117,8 +116,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-aboriginalidentityindicator"
             ]
           }
-        ],
-        "mustSupport": false
+        ]
       },
       {
         "id": "Patient.extension:birthsex",
@@ -135,8 +133,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-patientbirthsex"
             ]
           }
-        ],
-        "mustSupport": false
+        ]
       },
       {
         "id": "Patient.extension:ethnicity",
@@ -155,7 +152,6 @@
             ]
           }
         ],
-        "mustSupport": false,
         "isModifier": false,
         "mapping": [
           {
@@ -285,8 +281,7 @@
             "expression" : "(family.exists() or given.exists() or text.exists()) xor extension.where(url='http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()",
             "xpath" : "(/f:name/f:extension/@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason' and not(/f:name/f:family or /f:name/f:given or /f:name/f:text)) or (not(/f:name/f:extension/@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason') and (/f:name/f:family or /f:name/f:given or /f:name/f:text))"
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "Patient.name.family",
@@ -309,11 +304,6 @@
         "id": "Patient.telecom.value",
         "path": "Patient.telecom.value",
         "min": 1
-      },
-      {
-        "id": "Patient.birthDate",
-        "path": "Patient.birthDate",
-        "mustSupport": true
       },
       {
         "id": "Patient.address",

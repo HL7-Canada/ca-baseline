@@ -1,5 +1,6 @@
 This implementation guide defines a number of FHIR Profiles, ValueSets and CodeSets for Canadian Use and uses others from the base FHIR Specification directly without modification.
 
+
 ### <a href="artifacts.html">Canadian Artifacts</a>
 ### <a href="vitalsigns-profiles.html">Vital Signs Profiles</a>
 

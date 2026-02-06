@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-encounter",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-encounter",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "name": "EncounterProfile",
   "title": "Encounter Profile",
   "status": "draft",
-  "date": "2024-08-09",
+  "date": "2026-01-09",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {
@@ -66,21 +66,6 @@
         "definition": "The Encounter Profile is based upon the core FHIR Encounter Resource"
       },
       {
-        "id": "Encounter.identifier",
-        "path": "Encounter.identifier",
-        "mustSupport": true
-      },
-      {
-        "id": "Encounter.status",
-        "path": "Encounter.status",
-        "mustSupport": true
-      },
-      {
-        "id": "Encounter.class",
-        "path": "Encounter.class",
-        "mustSupport": true
-      },
-      {
         "id": "Encounter.type",
         "path": "Encounter.type",
         "comment": "The binding strength of this element is [Preferred](https://www.hl7.org/fhir/terminologies.html#strength), meaning that codes are encouraged to draw from the SNOMED CT code system for interoperability purposes but are not required to do so to be considered conformant.",
@@ -89,7 +74,6 @@
             "code": "CodeableConcept"
           }
         ],
-        "mustSupport": true,
         "binding": {
           "strength": "preferred",
           "description": "Valueset to describe the Encounter Type",
@@ -108,14 +92,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient"
             ]
           }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Encounter.participant",
-        "path": "Encounter.participant",
-        "short": "A list of Practitioners participating in the encounter",
-        "mustSupport": true
+        ]
       },
       {
         "id": "Encounter.participant.individual",
@@ -129,11 +106,6 @@
             ]
           }
         ]
-      },
-      {
-        "id": "Encounter.reasonCode",
-        "path": "Encounter.reasonCode",
-        "mustSupport": true
       },
       {
         "id": "Encounter.reasonReference",
@@ -151,11 +123,6 @@
         ]
       },
       {
-        "id": "Encounter.diagnosis",
-        "path": "Encounter.diagnosis",
-        "mustSupport": true
-      },
-      {
         "id": "Encounter.diagnosis.condition",
         "path": "Encounter.diagnosis.condition",
         "type": [
@@ -167,16 +134,6 @@
             ]
           }
         ]
-      },
-      {
-        "id": "Encounter.diagnosis.rank",
-        "path": "Encounter.diagnosis.rank",
-        "mustSupport": true
-      },
-      {
-        "id": "Encounter.hospitalization",
-        "path": "Encounter.hospitalization",
-        "mustSupport": true
       },
       {
         "id": "Encounter.hospitalization.origin",

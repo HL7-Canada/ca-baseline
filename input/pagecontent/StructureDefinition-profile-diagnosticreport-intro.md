@@ -12,17 +12,6 @@ Most elements in FHIR specification have a minimum cardinality of **0**, which m
 * status of the diagnostic report
 * code that describes the diagnostic report
 
-## Must Support Data Elements
-Some elements are labeled as MustSupport meaning that implementations that produce or consume resources SHALL provide "support" for the element in some meaningful way (see [Must Support](https://build.fhir.org/ig/HL7-Canada/ca-baseline/general-guidance.html#must-support) definition).
-
-Following elements are marked as Must Support in the Canadian DiagnosticReport profile to aid record matching in databases.
-
-**Must Support elements:**
-* code that describes the diagnostic report
-* subject of the report
-* healthcare event this report is about
-* Observations that are part of this report  
-
 ## Usage Note
 
 The following are example usage scenarios for the DiagnosticReport profile.

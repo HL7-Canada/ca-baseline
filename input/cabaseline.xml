@@ -473,7 +473,7 @@
       <exampleBoolean value="false"/>
       <groupingId value="terminology"/>
     </resource>
-    <resource>
+    <!--<resource>
       <reference>
         <reference value="ValueSet/prescriptiondrugform"/>
       </reference>
@@ -481,7 +481,7 @@
       <description value="The list of forms in which compounded drugs or active ingredients can be dispensed to the patient."/>
       <exampleBoolean value="false"/>
       <groupingId value="terminology"/>
-    </resource>
+    </resource>--> 
     <resource>
       <reference>
         <reference value="ValueSet/prescriptionmedicinalproduct"/>

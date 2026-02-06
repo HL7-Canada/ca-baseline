@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-observation",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-observation",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "name": "ObservationProfile",
   "title": "Observation Profile (General Use)",
   "status": "draft",
-  "date": "2024-08-09",
+  "date": "2026-01-09",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {
@@ -80,15 +80,9 @@
         "path": "Observation.status"
       },
       {
-        "id": "Observation.category",
-        "path": "Observation.category",
-        "mustSupport": true
-      },
-      {
         "id": "Observation.code",
         "path": "Observation.code",
         "comment": "The binding strength of this element is [Preferred](https://www.hl7.org/fhir/terminologies.html#strength), meaning that codes are encouraged to draw from the LOINC code system for interoperability purposes but are not required to do so to be considered conformant. *All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.",
-        "mustSupport": true,
         "binding": {
           "strength": "preferred",
           "description": "LOINC codes identifying names of simple observations.",
@@ -109,8 +103,7 @@
               "http://hl7.org/fhir/StructureDefinition/Location"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "Observation.effective[x]",
@@ -122,13 +115,7 @@
           {
             "code": "Period"
           }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.value[x]",
-        "path": "Observation.value[x]",
-        "mustSupport": true
+        ]
       },
       {
         "id": "Observation.dataAbsentReason",
@@ -144,21 +131,11 @@
         "id": "Observation.component.code",
         "path": "Observation.component.code",
         "comment": "The binding strength of this element is [Preferred](https://www.hl7.org/fhir/terminologies.html#strength), meaning that codes are encouraged to draw from the LOINC code system for interoperability purposes but are not required to do so to be considered conformant. *All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.",
-        "mustSupport": true,
         "binding": {
           "strength": "preferred",
           "description": "LOINC codes identifying names of simple observations.",
           "valueSet": "http://hl7.org/fhir/ValueSet/observation-codes"
         }
-      },
-      {
-        "id": "Observation.component.value[x]",
-        "path": "Observation.component.value[x]",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.component.dataAbsentReason",
-        "path": "Observation.component.dataAbsentReason"
       }
     ]
   }

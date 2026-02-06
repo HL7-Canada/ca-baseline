@@ -28,22 +28,6 @@ Most elements in the FHIR specification have a minimum cardinality of **0**, so 
 
 Note: if Observation.component is provided then Observation.component.value is mandatory.
 
-## Must Support Data Elements
-Some elements are marked as Must Support. This means that implementations generating, receiving, or otherwise using resources with Must Support elements SHALL provide support for those elements in some meaningful way (see [Must Support](https://build.fhir.org/ig/HL7-Canada/ca-baseline/general-guidance.html#must-support) definition).
-
-The following elements are marked as Must Support in the Observation (Laboratory Results) profile:
-
-**Must Support elements:**
-*	category
-*	category:laboratory
-*	code
-*	reference to a subject
-*	effective date
-* performer
-*	value
-*	component.code (if implementer supports component)
-*	component.value[x] (if implementer supports component)
-
 ### Data Absent Reason
 If the minimum cardinality of an element or attribute is 1 AND information is missing AND the Responder knows the precise reason for the absence of data, then Responders SHOULD send the reason for the missing information using values from the valueset where it exists by using the [DataAbsentReason](http://hl7.org/fhir/StructureDefinition/data-absent-reason) extension.
 

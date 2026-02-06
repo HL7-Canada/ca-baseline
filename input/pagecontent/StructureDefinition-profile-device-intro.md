@@ -25,22 +25,6 @@ Most elements in the FHIR specification have a minimum cardinality of 0, so most
 * The type of the device (Device.type)
 * A patient (Device.patient)
 
-## Must Support Data Elements
-Some elements are marked as Must Support. This means that implementations generating, receiving, or otherwise using resources with Must Support elements SHALL provide support for those elements in some meaningful way (see Must Support definition).
-
-The following elements are marked as Must Support in the Device (Implantable) profile:
-
-**Must Support elements:**
-* Unique Device Identifier (UDI) Barcode string
-* distinct identification string
-* device manufacturer
-* expiration date/time of the device
-* lot number of manufacture
-* serial number assigned by the manufacturer
-* name of the device
-* type of the device
-* version of the device
-* patient
 
 ## Usage Note
 The following are example usage scenarios for the implantable Device profile:

@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-medicationstatement",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-medicationstatement",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "name": "MedicationStatementProfile",
   "title": "MedicationStatement Profile",
   "status": "draft",
-  "date": "2024-12-13",
+  "date": "2026-01-09",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {
@@ -96,11 +96,6 @@
         ]
       },
       {
-        "id": "MedicationStatement.status",
-        "path": "MedicationStatement.status",
-        "mustSupport": true
-      },
-      {
         "id": "MedicationStatement.medication[x]",
         "path": "MedicationStatement.medication[x]",
         "type": [
@@ -114,7 +109,6 @@
             ]
           }
         ],
-        "mustSupport": true,
         "binding": {
           "strength": "preferred",
           "description": "TBD. This is a placeholder for a comprehensive valueset, consisting of all Manufactured Product (MP), Non-proprietary Therapeutic Product (NTP) and Therapeutic Moiety (TM) codes, which would be created and maintained by Canada Health Infoway. Medicinal products for prescribing and dispensing in Canada. The content of this subset only contains commonly used medicinal products that are available for prescribing and dispensing in Canada. This content will expand to include all human medicinal products over time.",
@@ -131,8 +125,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "MedicationStatement.context",
@@ -148,11 +141,6 @@
         ]
       },
       {
-        "id": "MedicationStatement.effective[x]",
-        "path": "MedicationStatement.effective[x]",
-        "mustSupport": true
-      },
-      {
         "id": "MedicationStatement.informationSource",
         "path": "MedicationStatement.informationSource",
         "type": [
@@ -166,8 +154,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-organization"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "MedicationStatement.derivedFrom",
@@ -199,16 +186,6 @@
             ]
           }
         ]
-      },
-      {
-        "id": "MedicationStatement.dosage",
-        "path": "MedicationStatement.dosage",
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.text",
-        "path": "MedicationStatement.dosage.text",
-        "mustSupport": true
       }
     ]
   }
