@@ -1,6 +1,7 @@
 # ca-baseline
  
 ### Canadian Baseline Implementation Guide
+
 This implementation guide is provided to support the use of FHIR®© in a Canadian context.
 
 This document is a working specification that is expected to be tested and referenced by FHIR®© system producers and implementation guide authors to enable feedback to improve the content of this guide.

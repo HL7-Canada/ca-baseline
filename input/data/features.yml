@@ -1,0 +1,6 @@
+---
+feedback:
+    - active: true
+      dashboard:
+        label: Propose a change
+        url: https://simplifier.net/CABaseline/~issues

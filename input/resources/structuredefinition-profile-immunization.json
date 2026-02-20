@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "profile-immunization",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-immunization",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "name": "ImmunizationProfile",
   "title": "Immunization Profile",
   "status": "draft",
@@ -69,19 +69,9 @@
         "path": "Immunization"
       },
       {
-        "id": "Immunization.status",
-        "path": "Immunization.status",
-        "mustSupport": true
-      },
-      {
         "id": "Immunization.statusReason",
         "path": "Immunization.statusReason",
         "comment": "CA Baseline Usage Notes: a reason should be provided if the status is \"not-done\"."
-      },
-      {
-        "id": "Immunization.vaccineCode",
-        "path": "Immunization.vaccineCode",
-        "mustSupport": true
       },
       {
         "id": "Immunization.vaccineCode.coding",
@@ -133,8 +123,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "Immunization.encounter",

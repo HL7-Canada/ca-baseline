@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-procedure",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-procedure",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "name": "ProcedureProfile",
   "title": "Procedure Profile",
   "status": "draft",
-  "date": "2024-12-13",
+  "date": "2026-01-09",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {
@@ -80,11 +80,6 @@
         ]
       },
       {
-        "id": "Procedure.status",
-        "path": "Procedure.status",
-        "mustSupport": true
-      },
-      {
         "id": "Procedure.code",
         "path": "Procedure.code",
         "definition": "Identification of the procedure or recording of \"absence of relevant procedures\" or of \"procedures unknown\".",
@@ -95,45 +90,27 @@
             "code": "CodeableConcept"
           }
         ],
-        "mustSupport": true,
         "binding": {
+        "extension": [
+            {
+            "extension": [
+              {
+              "url": "purpose",
+              "valueCode": "candidate"
+              },
+              {
+              "url": "valueSet",
+              "valueCanonical": "https://fhir.infoway-inforoute.ca/ValueSet/CCI"
+              },
+              {
+              "url": "documentation",
+              "valueMarkdown": "CCI Codes"
+              }
+              ],
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+              }],       
           "strength": "preferred",
-          "description": "Extensional Subset of SNOMED CT and SNOMED CT CA Extension Codes to describe Services/Activities performed by Primary Health Care Providers.",
-          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/interventioncode"
-        }
-      },
-      {
-        "id": "Procedure.code.coding",
-        "path": "Procedure.code.coding",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "$this"
-            }
-          ],
-          "description": "Discriminated by the bound value set",
-          "rules": "open"
-        }
-      },      
-      {
-        "id": "Procedure.code.coding:absentOrUnknownProcedure",
-        "path": "Procedure.code.coding",
-        "sliceName": "absentOrUnknownProcedure",
-        "short": "Code for absent problem or for unknown procedure",
-        "definition": "Code representing the statement \"absent problem\" or the statement \"procedures unknown\"",
-        "min": 0,
-        "max": "1",
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "absentOrUnknownProcedure"
-            }
-          ],
-          "strength": "required",
-          "description": "A code to identify absent or unknown procedures",
-          "valueSet": "http://hl7.org/fhir/uv/ips/ValueSet/absent-or-unknown-procedures-uv-ips"
+          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/procedurecode"
         }
       },
       {
@@ -148,8 +125,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient"
             ]
           }
-        ],
-        "mustSupport": true
+        ]      
       },
       {
         "id": "Procedure.encounter",
@@ -182,37 +158,6 @@
           },
           {
             "code": "Range"
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Procedure.performed[x].extension",
-        "path": "Procedure.performed[x].extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "rules": "open"
-        }
-      },
-      {
-        "id": "Procedure.performed[x].extension:data-absent-reason",
-        "path": "Procedure.performed[x].extension",
-        "sliceName": "data-absent-reason",
-        "short": "performed[x] absence reason",
-        "definition": "Provides a reason why the performed is missing.",
-        "comment": "Some Canadian implementations cannot guarantee that a procedure performed date will always be available in every instance of legacy data. Any implementors who do not require a performed date be available on every procedure need to be able to produce a dataAbsentReason extension",
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-            ]
           }
         ]
       },

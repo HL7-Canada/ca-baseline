@@ -65,3 +65,5 @@ The CA FHIR Baseline is a community developed specification that was made possib
 -----
 
 Contact: [hl7canada@infoway-inforoute.ca](mailto:hl7canada@infoway-inforoute.ca)
+
+Feedback may be provided on [Simplifier](https://simplifier.net/CABaseline/~issues).

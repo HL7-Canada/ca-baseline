@@ -12,23 +12,6 @@ Most elements in FHIR specification have a minimum cardinality of **0**, which m
 * status of the refence
 * document referenced
 
-## Must Support Data Elements
-Some elements are labeled as MustSupport meaning that implementations that produce or consume resources SHALL provide "support" for the element in some meaningful way (see [Must Support](https://build.fhir.org/ig/HL7-Canada/ca-baseline/general-guidance.html#must-support) definition).
-
-Following elements are marked as Must Support in the Canadian DocumentReference profile to aid record matching in databases.
-
-**Must Support elements:**
-* master version identifier
-* kind of document
-* categorization of document
-* subject of the document
-* document author
-* document authenticator
-* organization which maintains the document
-* the document itself or URL
-* context of the document content
-* practice settings
-* patient demographics
 
 ## Usage Note
 

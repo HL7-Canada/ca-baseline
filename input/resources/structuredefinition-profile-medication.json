@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-medication",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-medication",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "name": "MedicationProfile",
   "title": "Medication Profile",
   "status": "draft",
-  "date": "2024-12-27",
+  "date": "2026-01-09",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {
@@ -93,8 +93,7 @@
               "http://prescribeit.ca/fhir/StructureDefinition/ext-medication-strength-description"
             ]
           }
-        ],
-        "mustSupport": false
+        ]
       },
       {
         "id": "Medication.code",
@@ -153,7 +152,6 @@
             }
           }
         ],
-        "mustSupport": true,
         "binding": {
           "strength": "preferred",
           "description": "TBD. This is a placeholder for a comprehensive valueset, consisting of all Manufactured Product (MP), Non-proprietary Therapeutic Product (NTP) and Therapeutic Moiety (TM) codes, which would be created and maintained by Canada Health Infoway. Medicinal products for prescribing and dispensing in Canada. The content of this subset only contains commonly used medicinal products that are available for prescribing and dispensing in Canada. This content will expand to include all human medicinal products over time.",
@@ -176,8 +174,7 @@
       {
         "id": "Medication.code.coding",
         "path": "Medication.code.coding",
-        "comment": "CA Baseline Usage Notes: either text or at least one coding or both have to be present",
-        "mustSupport": true
+        "comment": "CA Baseline Usage Notes: either text or at least one coding or both have to be present"
       },
       {
         "id": "Medication.code.coding.extension:isRepresentative",
@@ -194,26 +191,22 @@
               "http://prescribeit.ca/fhir/StructureDefinition/ext-medication-code-representative"
             ]
           }
-        ],
-        "mustSupport": false
+        ]
       },
       {
         "id": "Medication.code.coding.system",
         "path": "Medication.code.coding.system",
-        "min": 1,
-        "mustSupport": true
+        "min": 1      
       },
       {
         "id": "Medication.code.coding.code",
         "path": "Medication.code.coding.code",
-        "min": 1,
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "Medication.code.text",
         "path": "Medication.code.text",
-        "comment": "CA Baseline Usage Notes: either text or at least one coding or both have to be present",
-        "mustSupport": true
+        "comment": "CA Baseline Usage Notes: either text or at least one coding or both have to be present"
       },
       {
         "id": "Medication.manufacturer",
