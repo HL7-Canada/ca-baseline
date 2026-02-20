@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-immunizationrecommendation",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-immunizationrecommendation",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "name": "ImmunizationRecommendationProfile",
   "title": "ImmunizationRecommendation Profile",
   "status": "draft",
-  "date": "2024-08-09",
+  "date": "2026-01-09",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {
@@ -75,13 +75,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient"
             ]
           }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "ImmunizationRecommendation.date",
-        "path": "ImmunizationRecommendation.date",
-        "mustSupport": true
+        ]
       },
       {
         "id": "ImmunizationRecommendation.authority",
@@ -96,15 +90,9 @@
         ]
       },
       {
-        "id": "ImmunizationRecommendation.recommendation",
-        "path": "ImmunizationRecommendation.recommendation",
-        "mustSupport": true
-      },
-      {
         "id": "ImmunizationRecommendation.recommendation.vaccineCode",
         "path": "ImmunizationRecommendation.recommendation.vaccineCode",
         "comment": "CA Core Usage Notes: the assumption is that ImmunizationRecommendation (forecast) is always on the level of a generic vaccine code and/or target disease. TBD: to confirm that there is no use case when an ImmunizationRecommendation needs to be on the vaccine tradename level (e.g. there is no sitation when a 2nd dose has to be of the same tradename as the 1st dose).",
-        "mustSupport": true,
         "binding": {
           "strength": "preferred",
           "valueSet": "https://cvc.canimmunize.ca/v3/ValueSet/Generic"
@@ -152,7 +140,6 @@
       {
         "id": "ImmunizationRecommendation.recommendation.targetDisease",
         "path": "ImmunizationRecommendation.recommendation.targetDisease",
-        "mustSupport": true,
         "binding": {
           "strength": "preferred",
           "valueSet": "https://cvc.canimmunize.ca/v3/ValueSet/Disease"
@@ -161,26 +148,10 @@
       {
         "id": "ImmunizationRecommendation.recommendation.forecastStatus",
         "path": "ImmunizationRecommendation.recommendation.forecastStatus",
-        "mustSupport": true,
         "binding": {
           "strength": "preferred",
           "valueSet": "https://cvc.canimmunize.ca/v3/ValueSet/ForecastStatus"
         }
-      },
-      {
-        "id": "ImmunizationRecommendation.recommendation.dateCriterion",
-        "path": "ImmunizationRecommendation.recommendation.dateCriterion",
-        "mustSupport": true
-      },
-      {
-        "id": "ImmunizationRecommendation.recommendation.dateCriterion.code",
-        "path": "ImmunizationRecommendation.recommendation.dateCriterion.code",
-        "mustSupport": true
-      },
-      {
-        "id": "ImmunizationRecommendation.recommendation.dateCriterion.value",
-        "path": "ImmunizationRecommendation.recommendation.dateCriterion.value",
-        "mustSupport": true
       },
       {
         "id": "ImmunizationRecommendation.recommendation.supportingImmunization",

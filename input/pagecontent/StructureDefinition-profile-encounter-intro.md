@@ -15,21 +15,6 @@ Most elements in the FHIR specification have a minimum cardinality of 0, so most
 * classification of the encounter (Encounter.class)
 * subject of the encounter (Encounter.subject)
 
-## Must Support Data Elements
-Some elements are marked as Must Support. This means that implementations generating, receiving, or otherwise using resources with Must Support elements SHALL provide support for those elements in some meaningful way (see [Must Support](https://build.fhir.org/ig/HL7-Canada/ca-baseline/general-guidance.html#cardinality-and-mustsupport-definitions) definition).
-
-The following elements are marked as Must Support in the Encounter profile:
-
-**Must Support elements:**
-* identifier
-* state of the encounter (Encounter.status)
-* classification of the encounter (Encounter.class)
-* reference to a subject (Encounter.subject)
-* responsible providers (Encounter.participant)
-* reasons (Encounter.reasonCode)
-* diagnosis relevant to the encounter (Encounter.diagnosis)
-* diagnosis rank
-* admission details (Encounter.hospitalization)
 
 ## Usage Note
 It is anticipated that many systems only need the current information of the encounter and therefore the Encounter resource represents the most recent information.

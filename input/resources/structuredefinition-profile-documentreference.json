@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-documentreference",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-documentreference",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "name": "DocumentReferenceProfile",
   "title": "DocumentReference Profile for metadata about the document",
   "status": "draft",
-  "date": "2024-08-09",
+  "date": "2026-01-09",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {
@@ -81,21 +81,6 @@
         "definition": "The DocumentReference Profile is based upon the core FHIR DocumentReference resource and created to define the minimal set of the document metadata required to discoverer and manage any kind of documents."
       },
       {
-        "id": "DocumentReference.masterIdentifier",
-        "path": "DocumentReference.masterIdentifier",
-        "mustSupport": true
-      },
-      {
-        "id": "DocumentReference.type",
-        "path": "DocumentReference.type",
-        "mustSupport": true
-      },
-      {
-        "id": "DocumentReference.category",
-        "path": "DocumentReference.category",
-        "mustSupport": true
-      },
-      {
         "id": "DocumentReference.subject",
         "path": "DocumentReference.subject",
         "type": [
@@ -107,8 +92,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-device"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "DocumentReference.author",
@@ -124,8 +108,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "DocumentReference.authenticator",
@@ -139,8 +122,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-organization"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "DocumentReference.custodian",
@@ -152,8 +134,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-organization"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "DocumentReference.content.attachment",
@@ -166,8 +147,7 @@
             "expression": "url.exists() or data.exists()",
             "xpath": "f:url or f:content"
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "DocumentReference.context.encounter",
@@ -179,15 +159,13 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-encounter"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "DocumentReference.context.practiceSetting",
         "path": "DocumentReference.context.practiceSetting",
         "short": "PractitionerSpecialty",
         "comment": "The binding strength of this element is [Preferred](https://www.hl7.org/fhir/terminologies.html#strength), meaning that codes are encouraged to draw from the PractitionerSpecialty code system for interoperability purposes but are not required to do so to be considered conformant.",
-        "mustSupport": true,
         "binding": {
           "strength": "preferred",
           "description": "Defines the clinical, medical, surgical or other healthcare-related service specialty of a practitioner who interacts, treats or provides such services to or for a patient.",
@@ -204,8 +182,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       }
     ]
   }

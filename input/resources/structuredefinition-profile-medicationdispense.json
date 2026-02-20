@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-medicationdispense",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-medicationdispense",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "name": "MedicationDispenseProfile",
   "title": "MedicationDispense Profile",
   "status": "draft",
-  "date": "2024-08-09",
+  "date": "2026-01-09",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {
@@ -131,11 +131,6 @@
         ]
       },
       {
-        "id": "MedicationDispense.status",
-        "path": "MedicationDispense.status",
-        "mustSupport": true
-      },
-      {
         "id": "MedicationDispense.medication[x]",
         "path": "MedicationDispense.medication[x]",
         "type": [
@@ -201,7 +196,6 @@
             }
           }
         ],
-        "mustSupport": true,
         "binding": {
           "strength": "preferred",
           "description": "TBD. This is a placeholder for a comprehensive valueset, consisting of all Manufactured Product (MP), Non-proprietary Therapeutic Product (NTP) and Therapeutic Moiety (TM) codes, which would be created and maintained by Canada Health Infoway. Medicinal products for prescribing and dispensing in Canada. The content of this subset only contains commonly used medicinal products that are available for prescribing and dispensing in Canada. This content will expand to include all human medicinal products over time.",
@@ -219,8 +213,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-patient"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "MedicationDispense.context",
@@ -250,8 +243,7 @@
               "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "MedicationDispense.location",
@@ -278,16 +270,6 @@
         ]
       },
       {
-        "id": "MedicationDispense.quantity",
-        "path": "MedicationDispense.quantity",
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationDispense.whenPrepared",
-        "path": "MedicationDispense.whenPrepared",
-        "mustSupport": true
-      },
-      {
         "id": "MedicationDispense.destination",
         "path": "MedicationDispense.destination",
         "type": [
@@ -311,11 +293,6 @@
             ]
           }
         ]
-      },
-      {
-        "id": "MedicationDispense.dosageInstruction",
-        "path": "MedicationDispense.dosageInstruction",
-        "mustSupport": true
       },
       {
         "id": "MedicationDispense.dosageInstruction.extension",
@@ -346,11 +323,6 @@
             ]
           }
         ]
-      },
-      {
-        "id": "MedicationDispense.dosageInstruction.text",
-        "path": "MedicationDispense.dosageInstruction.text",
-        "mustSupport": true
       },
       {
         "id": "MedicationDispense.substitution.responsibleParty",

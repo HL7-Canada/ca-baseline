@@ -7,9 +7,6 @@
     The cardinality on procedure.performed[x] has been constrained to 1..1. While this did not cause any Due Diligence Review Issues with IPS or US Core, we are seeking feedback from additional implementers on whether this cardinality restriction poses problems for their FHIR implementations.
     <br>
     <br>
-    This profile also socializes an example of a subset of SNOMED CT codes for procedures that is made available through the Infoway Terminology Gateway: https://fhir.infoway-inforoute.ca/ValueSet/interventioncode. This extensional value set was developed after initial review of the profiles but has been added in. We are seeking community feedback as to whether this subset is in use today by Canadian implementers or whether or not we should point to the larger value set of SNOMED CT codes contained in the IPS Value Set.
-    <br>
-    <br>
     Feedback can be provided using the <a href="https://simplifier.net/CanadianFHIRBaselineProfilesCA-Core/procedureprofile/~issues">Simplifier issue log for this profile</a>.
     </p>
 	</blockquote>
@@ -29,18 +26,6 @@ Most elements in FHIR specification have a minimum cardinality of **0**, which m
 * code to classify the procedure that is performed
 * reference to a subject
 * date procedure was performed
-
-## Must Support Data Elements
-Some elements are labeled as MustSupport meaning that implementations that produce or consume resources SHALL provide "support" for the element in some meaningful way (see [Must Support](https://build.fhir.org/ig/HL7-Canada/ca-baseline/general-guidance.html#must-support) definition).
-
-Following elements are marked as Must Support in the Procedure profile to aid record matching in databases with many pediatric records.
-
-**Must Support elements:**
-* status
-* code
-* reference to a subject
-* performed date
-* body site
 
 ## Usage Note
 This Procedure profile is used to provide summary information about the occurrence of current or historical procedures performed on or for a patient, and is not intended to provide real-time snapshots of a procedure as it unfolds.

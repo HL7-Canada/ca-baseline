@@ -6,7 +6,7 @@
   "name": "PractitionerRoleProfile",
   "title": "PractitionerRole Profile (General)",
   "status": "draft",
-  "date": "2024-08-09",
+  "date": "2026-01-09",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {
@@ -112,15 +112,6 @@
           "description": "Defines the clinical, medical, surgical or other healthcare-related service specialty of a practitioner who interacts, treats or provides such services to or for a patient.",
           "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/practitionerspecialty"
         }
-      },
-      {
-        "id": "PractitionerRole.telecom",
-        "path": "PractitionerRole.telecom"
-      },
-      {
-        "id": "PractitionerRole.telecom.system",
-        "path": "PractitionerRole.telecom.system",
-        "mustSupport": true
       },
       {
         "id": "PractitionerRole.telecom.value",

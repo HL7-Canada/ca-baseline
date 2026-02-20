@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "profile-servicerequest",
   "url": "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-servicerequest",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "name": "ServiceRequestProfile",
   "title": "ServiceRequest Profile for Results Reporting",
   "status": "draft",
-  "date": "2024-12-13",
+  "date": "2026-01-09",
   "publisher": "HL7 Canada - FHIR Implementation Work Group",
   "contact": [
     {
@@ -71,11 +71,6 @@
         "definition": "Service Request Profile is based upon the core FHIR ServiceRequest resource and created to define the minimal set of data required to request for service such as diagnostic investigations, treatments, or operations to be performed."
       },
       {
-        "id": "ServiceRequest.identifier",
-        "path": "ServiceRequest.identifier",
-        "mustSupport": true
-      },
-      {
         "id": "ServiceRequest.basedOn",
         "path": "ServiceRequest.basedOn",
         "type": [
@@ -101,26 +96,10 @@
         ]
       },
       {
-        "id": "ServiceRequest.requisition",
-        "path": "ServiceRequest.requisition",
-        "mustSupport": true
-      },
-      {
-        "id": "ServiceRequest.status",
-        "path": "ServiceRequest.status",
-        "mustSupport": true
-      },
-      {
-        "id": "ServiceRequest.intent",
-        "path": "ServiceRequest.intent",
-        "mustSupport": true
-      },
-      {
         "id": "ServiceRequest.category",
         "path": "ServiceRequest.category",
         "short": "Classification of service",
         "definition": "A code that classifies the service for searching, sorting and display purposes (e.g. Surgical Procedure).",
-        "mustSupport": true,
         "binding": {
           "strength": "preferred"
         }
@@ -142,8 +121,7 @@
           ],
           "rules": "open"
         },
-        "min": 0,
-        "mustSupport": true
+        "min": 0
       },
       {
         "id": "ServiceRequest.code.coding:LabOrder",
@@ -204,8 +182,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-device"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "ServiceRequest.encounter",
@@ -222,8 +199,7 @@
       {
         "id": "ServiceRequest.authoredOn",
         "path": "ServiceRequest.authoredOn",
-        "max": "1",
-        "mustSupport": true
+        "max": "1"
       },
       {
         "id": "ServiceRequest.requester",
@@ -241,8 +217,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-device"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "ServiceRequest.performer",
@@ -258,8 +233,7 @@
               "http://hl7.org/fhir/ca/baseline/StructureDefinition/profile-device"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "ServiceRequest.locationReference",
