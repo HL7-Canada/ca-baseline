@@ -144,7 +144,7 @@
         <reference value="StructureDefinition/ext-servicelanguage"/>
       </reference>
       <name value="Service Language"/>
-      <description value="Indentifies languages that that services are provided in."/>
+      <description value="Identifies languages that that services are provided in."/>
       <exampleBoolean value="false"/>
       <groupingId value="extensions"/>
     </resource>
@@ -202,7 +202,7 @@
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
-    <!--	Exceluded as per Issue #158 but retained for the historical purpose
+<!--	Excluded as per Issue #158 but retained for the historical purpose
     <resource>
       <reference>
         <reference value="StructureDefinition/profile-diagnosticreportnote"/>
@@ -451,7 +451,7 @@
         <reference value="ValueSet/encountertype"/>
       </reference>
       <name value="Encounter Type"/>
-      <description value="The type of encounter: a specific code indicating type of service provided. This value set includes codes from SNOMED CT decending from the concept 308335008 (Patient encounter procedure (procedure))"/>
+      <description value="The type of encounter: a specific code indicating type of service provided. This value set includes codes from SNOMED CT descending from the concept 308335008 (Patient encounter procedure (procedure))"/>
       <exampleBoolean value="false"/>
       <groupingId value="terminology"/>
     </resource>
@@ -530,6 +530,11 @@
       <page>
         <nameUrl value="security.html"/>
         <title value="Security"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="about.html"/>
+        <title value="About"/>
         <generation value="markdown"/>
       </page>
       <page>
