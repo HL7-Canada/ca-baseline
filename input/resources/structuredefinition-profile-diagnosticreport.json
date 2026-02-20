@@ -87,7 +87,7 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "pattern",
+              "type": "value",
               "path": "$this"
             }
           ],
@@ -115,7 +115,7 @@
         "id": "DiagnosticReport.category:LabResult.coding.system",
         "path": "DiagnosticReport.category.coding.system",
         "min": 1,
-        "fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0074"
+        "patternUri": "http://terminology.hl7.org/CodeSystem/v2-0074"
       },
       {
         "id": "DiagnosticReport.code",

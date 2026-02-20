@@ -81,7 +81,7 @@
             "human": "SHOULD use SNOMED CT for coded Results",
             "expression": "(component.value | value).ofType(Quantity).all(system = 'http://unitsofmeasure.org')"
           }
-        ]        
+        ]
       },
       {
         "id": "Observation.status",
@@ -94,7 +94,7 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "pattern",
+              "type": "value",
               "path": "$this"
             }
           ],
@@ -332,7 +332,7 @@
       {
         "id": "Observation.component.value[x]:valueQuantity",
         "path": "Observation.component.value[x]",
-        "sliceName": "valueQuantity",        
+        "sliceName": "valueQuantity",
         "type": [
           {
             "code": "Quantity"
