@@ -417,9 +417,10 @@
         "binding": {
           "strength": "preferred",
           "description": "A coded concept describing the route or physiological path of administration of a therapeutic agent into or onto the body of a subject.",
-          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/RouteOfAdministration"
+          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/routeofadministration"
         }
       }
     ]
   }
 }
+
