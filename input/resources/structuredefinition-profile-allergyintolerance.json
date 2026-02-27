@@ -65,7 +65,7 @@
             "severity": "error",
             "human": "AllergyIntolerance.verificationStatus SHALL be present if AllergyIntolerance.code represents NullFlavor concept",
             "expression": "code.coding.where(system = 'http://terminology.hl7.org/CodeSystem/v3-NullFlavor').exists() implies verificationStatus.exists()",
-            "xpath": "f:code/f:coding/f:system/@value='https://fhir.infoway-inforoute.ca/ValueSet/NullFlavor' implies exists(f:verificationStatus)"
+            "xpath": "f:code/f:coding/f:system/@value='https://fhir.infoway-inforoute.ca/ValueSet/nullflavor' implies exists(f:verificationStatus)"
           },
           {
             "key": "ca-baseline-allergy-notasked",
@@ -134,100 +134,12 @@
         "comment": "Some implementers may utilize value sets where category is readily distinguishable while others may not, and those that do not use those value sets should consider making category MS in their profiles"
       },
       {
-        "id": "AllergyIntolerance.code.coding",
-        "path": "AllergyIntolerance.code.coding",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "system"
-            }
-          ],
-          "rules": "closed"
-        },
-        "min": 0
-      },
-      {
-        "id": "AllergyIntolerance.code.coding:NotAsked",
-        "path": "AllergyIntolerance.code.coding",
-        "sliceName": "NotAsked",
-        "short": "Code for NOT asked or NOT possible to obtain information about allergy or intolerance",
-        "definition": "Code for the case when a patient has NOT been asked or it is NOT possible to obtain information about any history of allergy or intolerance.",
-        "comment": "The binding strength of this element is [Preferred](https://www.hl7.org/fhir/terminologies.html#strength), meaning that codes are encouraged to draw from the NullFlavor value set for interoperability purposes but are not required to do so to be considered conformant.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
+        "id": "AllergyIntolerance.code",
+        "path": "AllergyIntolerance.code",
         "binding": {
           "strength": "preferred",
-          "description": "Negation/exclusion codes for reporting no known allergies or not available data.",
-          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/NullFlavor"
-        }
-      },
-      {
-        "id": "AllergyIntolerance.code.coding:NotAsked.system",
-        "path": "AllergyIntolerance.code.coding.system",
-        "min": 1,
-        "patternUri": "http://terminology.hl7.org/fhir/v3/NullFlavor"
-      },
-      {
-        "id": "AllergyIntolerance.code.coding:NotAsked.code",
-        "path": "AllergyIntolerance.code.coding.code",
-        "min": 1
-      },
-      {
-        "id": "AllergyIntolerance.code.coding:NoAllergy",
-        "path": "AllergyIntolerance.code.coding",
-        "sliceName": "NoAllergy",
-        "short": "Code when a patient has been asked and has indicated no history of allergies or intolerance",
-        "definition": "Code for the case when a patient has been asked and has indicated no history of allergies or intolerance.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ]
-      },
-      {
-        "id": "AllergyIntolerance.code.coding:NoAllergy.system",
-        "path": "AllergyIntolerance.code.coding.system",
-        "min": 1,
-        "patternUri": "http://snomed.info/sct"
-      },
-      {
-        "id": "AllergyIntolerance.code.coding:NoAllergy.code",
-        "path": "AllergyIntolerance.code.coding.code",
-        "min": 1,
-        "patternCode": "716186003"
-      },
-      {
-        "id": "AllergyIntolerance.code.coding:@default",
-        "path": "AllergyIntolerance.code.coding",
-        "sliceName": "@default",
-        "definition": "Code for an allergy or intolerance statement. This may be a code for a substance or pharmaceutical product that is considered to be responsible for the adverse reaction risk, an allergy or intolerance condition.",
-        "comment": "The binding strength of this element is [Example](https://hl7.org/fhir/R4/terminologies.html#example), meaning that codes are not expected or even encouraged to draw from the specified value set to be conformant",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "AllergyIntoleranceCode"
-            }
-          ],
-          "strength": "example",
-          "description": "Type of the substance/product, allergy or intolerance condition.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/allergyintolerance-code"
-        }
+          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/pharmaceuticalbiologicproductandsubstancecode"
+        }        
       },
       {
         "id": "AllergyIntolerance.patient",
@@ -337,7 +249,7 @@
         "binding": {
           "strength": "preferred",
           "description": "Represents the specific non-drug allergen or other agent/substance to which the Client has an allergic reaction.",
-          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/NonDrugAllergenCode"
+          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/nondrugallergencode"
         }
       },
       {
@@ -417,7 +329,7 @@
         "binding": {
           "strength": "preferred",
           "description": "A coded concept describing the route or physiological path of administration of a therapeutic agent into or onto the body of a subject.",
-          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/RouteOfAdministration"
+          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/routeofadministration"
         }
       }
     ]
