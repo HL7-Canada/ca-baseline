@@ -1,4 +1,6 @@
 # ca-baseline
+
+[![DeepWiki](https://deepwiki.com/badge-maker?url=https%3A%2F%2Fdeepwiki.com%2FHL7-Canada%2Fca-baseline)](https://deepwiki.com/HL7-Canada/ca-baseline)
  
 ### Canadian Baseline Implementation Guide
 
@@ -19,6 +21,8 @@ This guide is a **living document** that includes notes and profiles that contin
 For information on where we are at in the working group review follow our progress in the [Infocentral FHIR Implementation Working Group page](https://infocentral.infoway-inforoute.ca/en/collaboration/wg/fhir-implementations)
 
 The [CI build for this guide can be found here](https://build.fhir.org/ig/HL7-Canada/ca-baseline/index.html).
+
+The [DeepWiki page for this guide can be found here](https://deepwiki.com/HL7-Canada/ca-baseline).
 
 ### Principles
 
