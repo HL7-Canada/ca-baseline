@@ -14,16 +14,7 @@ It identifies which core elements SHALL be present in the resource when using th
 This profile defines core localization concepts for use in the Canadian context.
 
 ## Mandatory Data Elements
-All elements or attributes within the FHIR specification have cardinality as part of their definition - a minimum number of required appearances and a maximum number of allowable appearances.
-
-Most elements in the FHIR specification have a minimum cardinality of 0, so most elements are not required and subsequently they may be missing from a resource when it is exchanged between systems.
-
-**Required elements in the Device (Implantable) profile:**
-* A Unique Device Identifier (UDI) numeric or alphanumeric code (Device.deviceIdentifier):
-  * either as the Human Readable Form (HRF) string representation of the barcode (Device.carrierHRF)
-  * or the Automatic Identification and Data Capture representation (Device.carrierAIDC)
-* The type of the device (Device.type)
-* A patient (Device.patient)
+{% include mandatoryguidance.xml %}
 
 
 ## Usage Note

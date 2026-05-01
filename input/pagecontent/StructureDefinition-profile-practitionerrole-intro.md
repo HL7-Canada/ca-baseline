@@ -15,13 +15,10 @@ The following differences are noted from the [US Core R4 PractitionerRole Profil
 * Terminology Differences: US Core binds PractitionerRole.code to their National Uniform Claim Committee (NUCC) Taxonomy, and binds PractitionerRole.specialty to their Healthcare Provider Taxonomy valueset. Both are expected to be realm specific.
 * Invariant Differences: US Core R4 PractitionerRole profile includes an additional invariant necessitating a reference to practitioner, org, healthcareService, or location be present
 
+
 ## Mandatory Data Elements
+{% include mandatoryguidance.xml %}
 
-All elements or attributes defined in FHIR have cardinality as part of their definition - a minimum number of required appearances and a maximum number.
-
-Most elements in FHIR specification have a minimum cardinality of **0**, which means that they may be missing from a resource when it is exchanged between systems.
-
-In this Canadian Baseline PractitionerRole Profile all elements are optional, i.e., there is no element with a minimum cardinality of **1**. However, some optional elements (e.g., identifier, telecom) have required components that MUST be present if that optional element is provided.
 
 ### Data Absent Reason
 

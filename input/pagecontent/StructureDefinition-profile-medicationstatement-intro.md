@@ -7,3 +7,7 @@ Key differences from [USCoreR4 MedicationStatement](https://build.fhir.org/ig/HL
   - CodeableConcept binding to ValueSet-prescriptionmedicinalproduct
   - Reference to profile-medication
 - MedicationStatement.subject reference updated to profile-patient
+
+## Mandatory Data Elements
+{% include mandatoryguidance.xml %}
+

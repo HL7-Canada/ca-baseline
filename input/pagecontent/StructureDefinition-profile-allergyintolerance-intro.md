@@ -4,12 +4,7 @@ This profile sets minimum expectations for the AllergyIntolerance resource to re
 This profile defines localization concepts for use in the Canadian context.  
 
 ## Mandatory Data Elements
-All elements or attributes within the FHIR specification have cardinality as part of their definition - a minimum number of required appearances and a maximum number of allowable appearances.
-
-Most elements in the FHIR specification have a minimum cardinality of 0, so most elements are not required and subsequently they may be missing from a resource when it is exchanged between systems.
-
-**Required elements in the AllergyIntolerance profile:**
-* subject who has the allergy or intolerance (AllergyIntolerance.patient)
+{% include mandatoryguidance.xml %}
 
 ## Usage Note
 The _AllergyIntolerance_ resource instance use could be clinical decision support applications to generate/display warnings about potentially harmful medications; any intolerance to other agents (e.g. intolerance to soaps, dressings, latex, etc.) more relevant for at the bedside care.

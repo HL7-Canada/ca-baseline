@@ -13,14 +13,7 @@ This profile sets minimum expectations for the Observation resource to represent
 This profile defines localization concepts for use in the Canadian context.
 
 ## Mandatory Data Elements
-All elements or attributes within the FHIR specification have cardinality as part of their definition - a minimum number of required appearances and a maximum number of allowable appearances.
-
-Most elements in the FHIR specification have a minimum cardinality of 0, so most elements are not required and subsequently they may be missing from a resource when it is exchanged between systems.
-
-**Required elements in the Observation (General Use) profile:**
-* status of the result value (Observation.status)
-* type of observation (Observation.code)
-* subject of the observation (Observation.subject)
+{% include mandatoryguidance.xml %}
 
 
 ## Usage Note

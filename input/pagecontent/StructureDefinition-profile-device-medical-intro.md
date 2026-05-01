@@ -5,12 +5,7 @@ It identifies which core elements SHALL be present in the resource when using th
 This profile defines core localization concepts for use in the Canadian context.
 
 ## Mandatory Data Elements
-All elements or attributes within the FHIR specification have cardinality as part of their definition - a minimum number of required appearances and a maximum number of allowable appearances.
-
-Most elements in the FHIR specification have a minimum cardinality of 0, so most elements are not required and subsequently they may be missing from a resource when it is exchanged between systems.
-
-**Required elements in the Device (Implantable) profile:**
-* The type of the device (Device.type)
+{% include mandatoryguidance.xml %}
 
 
 ## Usage Note

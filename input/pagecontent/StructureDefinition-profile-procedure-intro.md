@@ -16,16 +16,10 @@ This profile sets minimum expectations for the Procedure resource to record, sea
 
 This profile defines localization concepts for use in an Canadian context.
 
+
 ## Mandatory Data Elements
-All elements or attributes defined in FHIR have cardinality as part of their definition - a minimum number of required appearances and a maximum number.
+{% include mandatoryguidance.xml %}
 
-Most elements in FHIR specification have a minimum cardinality of **0**, which means that they may be missing from a resource when it is exchanged between systems.
-
-**Required elements:**
-* status specifying the state of the procedure (required in the base specification)
-* code to classify the procedure that is performed
-* reference to a subject
-* date procedure was performed
 
 ## Usage Note
 This Procedure profile is used to provide summary information about the occurrence of current or historical procedures performed on or for a patient, and is not intended to provide real-time snapshots of a procedure as it unfolds.

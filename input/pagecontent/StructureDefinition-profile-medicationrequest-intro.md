@@ -8,3 +8,8 @@ Key differences from [USCoreR4 MedicationRequest](https://build.fhir.org/ig/HL7/
   - Reference to profile-medication
 - MedicationRequest.subject reference updated to profile-patient
 - MedicationRequest.requester reference updated to profile-practitioner
+
+
+## Mandatory Data Elements
+{% include mandatoryguidance.xml %}
+

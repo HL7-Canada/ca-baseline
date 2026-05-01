@@ -17,13 +17,7 @@ This profile constrains the Condition resource to record a list of problems asso
 This profile defines localization concepts for use in a Canadian context.
 
 ## Mandatory Data Elements
-All elements or attributes defined in FHIR have cardinality as part of their definition - a minimum number of required appearances and a maximum number.
-
-Most elements in FHIR specification have a minimum cardinality of **0**, which means that they may be missing from a resource when it is exchanged between systems.
-
-**Required elements:**
-* code identifying the patient's relevant condition
-* reference to a subject
+{% include mandatoryguidance.xml %}
 
 
 ## Usage Note
