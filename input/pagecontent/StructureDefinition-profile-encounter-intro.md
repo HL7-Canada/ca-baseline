@@ -6,14 +6,7 @@ This Encounter profile represents an interaction between a patient and healthcar
 This profile defines localization concepts for use in the Canadian context.
 
 ## Mandatory Data Elements
-All elements or attributes within the FHIR specification have cardinality as part of their definition - a minimum number of required appearances and a maximum number of allowable appearances.
-
-Most elements in the FHIR specification have a minimum cardinality of 0, so most elements are not required and subsequently they may be missing from a resource when it is exchanged between systems.
-
-**Required elements in the Encounter profile:**
-* state of the encounter (Encounter.status)
-* classification of the encounter (Encounter.class)
-* subject of the encounter (Encounter.subject)
+{% include mandatoryguidance.xml %}
 
 
 ## Usage Note

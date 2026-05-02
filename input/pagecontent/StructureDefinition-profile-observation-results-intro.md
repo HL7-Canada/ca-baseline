@@ -14,19 +14,10 @@ This profile may represent a single value from a specific laboratory test (e.g. 
 
 The Observation (Laboratory Results) profile reflects localization concepts in the Canadian context. 
 
+
 ## Mandatory Data Elements
-All elements or attributes within the FHIR specification have cardinality as part of their definition - a minimum number of required appearances and a maximum number of allowable appearances.
+{% include mandatoryguidance.xml %}
 
-Most elements in the FHIR specification have a minimum cardinality of **0**, so most elements are not required and subsequently they may be missing from a resource when it is exchanged between systems.
-
-**Required elements:**
-*	status of the result value
-*	category to classify the general type of observation being made
-*	category: laboratory (mandatory child element of above)
-*	code to classify what was observed
-*	reference to a subject
-
-Note: if Observation.component is provided then Observation.component.value is mandatory.
 
 ### Data Absent Reason
 If the minimum cardinality of an element or attribute is 1 AND information is missing AND the Responder knows the precise reason for the absence of data, then Responders SHOULD send the reason for the missing information using values from the valueset where it exists by using the [DataAbsentReason](http://hl7.org/fhir/StructureDefinition/data-absent-reason) extension.

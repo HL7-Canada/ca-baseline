@@ -1,0 +1,9 @@
+<p>All elements or attributes defined in FHIR have cardinality as part of their definition - a minimum number of required appearances and a maximum number. </p>
+
+<p>Most elements in FHIR specification have a minimum cardinality of 0, which means that they may be missing from a resource when it is exchanged between systems.</p>
+
+<p><strong>Sub-element Cardinality May Be More Constrained Than the Parent</strong><br />
+A parent element may have a cardinality of <code>0..1</code> or <code>0..*</code>, while its sub-elements may be <code>1..1</code>.
+<ul>
+<li>If the parent appears in the instance, then the required sub-elements must be present as children of that element.</li>
+</ul></p>

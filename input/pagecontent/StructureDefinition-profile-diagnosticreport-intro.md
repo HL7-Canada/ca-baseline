@@ -4,13 +4,8 @@ This profile sets minimum expectations for the DiagnosticReport resource to reco
 This profile defines core localisation concepts for use in an Canadian context.
 
 ## Mandatory Data Elements
-All elements or attributes defined in FHIR have cardinality as part of their definition - a minimum number of required appearances and a maximum number.
+{% include mandatoryguidance.xml %}
 
-Most elements in FHIR specification have a minimum cardinality of **0**, which means that they may be missing from a resource when it is exchanged between systems.
-
-**Required elements:**
-* status of the diagnostic report
-* code that describes the diagnostic report
 
 ## Usage Note
 

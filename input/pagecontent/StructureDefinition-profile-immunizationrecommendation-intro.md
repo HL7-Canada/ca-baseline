@@ -1,1 +1,4 @@
-# CA Baseline ImmunizationRecommendation Profile
+## CA Baseline ImmunizationRecommendation Profile
+
+## Mandatory Data Elements
+{% include mandatoryguidance.xml %}

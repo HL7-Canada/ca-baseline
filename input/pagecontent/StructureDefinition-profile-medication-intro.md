@@ -13,3 +13,6 @@ Key differences from [PrescribeIT Medication Profile](https://specs.prescribeit.
 - medicationStrength, isRepresentative, and isActive extensions socialized in this profile and come from the PrescribeIT 2.0 specification
 - Medication.ingredient.item[x] is currently restricted in a manner consistent with the PrescribeIT Medication profile.  **<< Question for Implementors: Is this preferable to providing references to other Medication (and potentially Substance) resources?**
 - [ON DHDR](https://simplifier.net/ontariodigitalhealth/medication) and [HL7 v3 AdministerableMedicine](https://infocentral.infoway-inforoute.ca/extra/ca/mr0206-html/html/message.html?COCT_MT220200CA) appear to approach similar things differently than below.
+
+## Mandatory Data Elements
+{% include mandatoryguidance.xml %}

@@ -18,15 +18,7 @@ This profile further constrains the general purpose Practitioner profile and is 
 
 ## Mandatory Data Elements
 
-All elements or attributes defined in FHIR have cardinality as part of their definition - a minimum number of required appearances and a maximum number.
-
-Most elements in FHIR specification have a minimum cardinality of 0, which means that they may be missing from a resource when it is exchanged between systems.
-
-**Required elements:**
-* a identifier
-* a practitioner name
-
-In addition to that, some optional elements (e.g., _Practitioner.qualification_) have required components that MUST be present if that optional element is provided.
+{% include mandatoryguidance.xml %}
 
 ### Data Absent Reason
 
@@ -36,11 +28,11 @@ In situations where the minimum cardinality of an element or attribute is 1 and 
 
 ### Deceased Extension
 
-This Practitioner profile contains optional [[[Extension: Individual is deceased flag or date]]] to indicate if a practitioner is deceased or not.
+This Practitioner profile contains optional [[[http://hl7.org/fhir/ca/baseline/StructureDefinition/ext-deceased]]] to indicate if a practitioner is deceased or not.
 
 This extension was previously labeled as a modifier extension (because of its potential impacts on clinical processes if the practitioner is marked deceased), but was removed after further discussion on the nuances of making something a modifierExtension vs regular extension if it was expected to be picked up by registry implementation guides that collect deceased practitioner information but may or may not use it in ways that would align to HL7 FHIR R4 [definition](https://www.hl7.org/fhir/R4/backboneelement-definitions.html#BackboneElement.modifierExtension) and expectations for modifierExtension.
 
-Implementers should recognize that the determination of whether this should be considered a modifierExtension is ongoing. Since Modifier Extensions should have extreme caution in their application and are further nuanced by the use cases in the implementing registry systems, this extension has been shifted back to a regular extension to align to use in existing implementations. Implementers who are considering using this extension in their guidance might consider applying a Must Support flag on the extension, but those treating wanting to re-create it as a modifier extension are required to review the [FHIR Guidance on Modifier Extensions])(https://www.hl7.org/fhir/R4/extensibility.html#modifierExtension) before including this extension in their profile.  Implementers should also be aware of the Practitioner.deceased[x] R5 concept and that the CA Baseline is monitoring changes in the element to determine if the approach to this extension requires a shift.
+Implementers should recognize that the determination of whether this should be considered a modifierExtension is ongoing. Since Modifier Extensions should have extreme caution in their application and are further nuanced by the use cases in the implementing registry systems, this extension has been shifted back to a regular extension to align to use in existing implementations. Implementers who are considering using this extension in their guidance might consider applying a Must Support flag on the extension, but those treating wanting to re-create it as a modifier extension are required to review the [FHIR Guidance on Modifier Extensions](https://www.hl7.org/fhir/R4/extensibility.html#modifierExtension) before including this extension in their profile.  Implementers should also be aware of the Practitioner.deceased[x] R5 concept and that the CA Baseline is monitoring changes in the element to determine if the approach to this extension requires a shift.
 
 ## Usage Note
 

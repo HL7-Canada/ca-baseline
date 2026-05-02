@@ -106,7 +106,8 @@
             "valueCodeableConcept": {
               "coding": [
                 {
-                  "system": "http://hl7.org/fhir/NamingSystem/ca-hc-din"
+                  "code": "02422921",
+                  "system": "http://terminology.hl7.org/NamingSystem/ca-hc-din"
                 }
               ]
             }
@@ -116,6 +117,7 @@
             "valueCodeableConcept": {
               "coding": [
                 {
+                  "code": "80075245",
                   "system": "http://terminology.hl7.org/CodeSystem/v3-hc-npn"
                 }
               ]
@@ -126,6 +128,7 @@
             "valueCodeableConcept": {
               "coding": [
                 {
+                  "code": "02362783",
                   "system": "http://terminology.hl7.org/CodeSystem/hc-CCDD"
                 }
               ]
@@ -136,6 +139,7 @@
             "valueCodeableConcept": {
               "coding": [
                 {
+                  "code": "69008",
                   "system": "http://snomed.info/sct"
                 }
               ]
@@ -146,6 +150,7 @@
             "valueCodeableConcept": {
               "coding": [
                 {
+                  "code": "A01AA01",
                   "system": "http://www.whocc.no/atc"
                 }
               ]
