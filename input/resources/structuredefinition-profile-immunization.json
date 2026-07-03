@@ -74,45 +74,83 @@
         "comment": "CA Baseline Usage Notes: a reason should be provided if the status is \"not-done\"."
       },
       {
-        "id": "Immunization.vaccineCode.coding",
-        "path": "Immunization.vaccineCode.coding",
-        "slicing": {
-          "discriminator": [
+        "id": "Immunization.vaccineCode",
+        "path": "Immunization.vaccineCode",
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/vaccineadministeredtradenamecode",
+          "extension": [
             {
-              "type": "value",
-              "path": "system"
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding",
+              "extension": [
+                {
+                  "url": "purpose",
+                  "valueCode": "preferred"
+                },
+                {
+                  "url": "valueSet",
+                  "valueCanonical": "https://fhir.infoway-inforoute.ca/ValueSet/vaccinehistoricalnamecode"
+                },
+                {
+                  "url": "documentation",
+                  "valueMarkdown": "Recommended for use when conveying vaccine generic names for scenarios when brand name is not known or does not exist (e.g., immunization history where provider does not have detail of the trade name, the product has been discontinued and/or never licensed in Canada)."
+                }
+              ]
             },
             {
-              "type": "value",
-              "path": "code"
+              "extension": [
+                {
+                  "url": "purpose",
+                  "valueCode": "preferred"
+                },
+                {
+                  "url": "valueSet",
+                  "valueCanonical": "https://fhir.infoway-inforoute.ca/ValueSet/passiveadministeredimmunizingagentcode"
+                },
+                {
+                  "url": "documentation",
+                  "valueMarkdown": "per pCHDCF: Alternate value sets can be used when passive immunization products are used"
+                }
+              ],
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+            },
+            {
+              "extension": [
+                {
+                  "url": "purpose",
+                  "valueCode": "preferred"
+                },
+                {
+                  "url": "valueSet",
+                  "valueCanonical": "https://fhir.infoway-inforoute.ca/ValueSet/passivehistoricalimmunizingagentcode"
+                },
+                {
+                  "url": "documentation",
+                  "valueMarkdown": "per pCHDCF: Alternate value sets can be used when passive immunization products are used"
+                }
+              ],
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+            },
+            {
+              "extension": [
+                {
+                  "url": "purpose",
+                  "valueCode": "candidate"
+                },
+                {
+                  "url": "valueSet",
+                  "valueCanonical": "http://hl7.org/fhir/uv/ips/ValueSet/absent-or-unknown-immunizations-uv-ips"
+                },
+                {
+                  "url": "documentation",
+                  "valueMarkdown": "Absent or unknown codes"
+                }
+              ],
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
             }
-          ],
-          "rules": "open"
-        },
-        "comment": "CA Baseline Usage Notes: for immunization submission, a server should accept any code a client is able to provide: a Generic code, a Tradename code or both. For immunization retrieval, a Trade name is optional, but a Generic code has to be returned if it's known to the server or if it can be derived from the Tradename code. Supply of codings is preferred, however legacy, emergency vaccines, and recall use cases may present challenges to requiring codings. It is at the discretion of the implementer to strengthen the requirement further based on their needs and business context (e.g., requiring coding on all immunization records in their repository)."
-      },
-      {
-        "id": "Immunization.vaccineCode.coding:Generic",
-        "path": "Immunization.vaccineCode.coding",
-        "sliceName": "Generic",
-        "comment": "CA Baseline Usage Notes: either a Generic code or a Tradename code or both have to be present.",
-        "max": "1",
-        "binding": {
-          "strength": "preferred",
-          "valueSet": "https://cvc.canimmunize.ca/v3/ValueSet/Generic"
+          ]
         }
-      },
-      {
-        "id": "Immunization.vaccineCode.coding:Tradename",
-        "path": "Immunization.vaccineCode.coding",
-        "sliceName": "Tradename",
-        "comment": "CA Baseline Usage Notes: either a Generic code or a Tradename code or both have to be present.",
-        "max": "1",
-        "binding": {
-          "strength": "preferred",
-          "valueSet": "https://cvc.canimmunize.ca/v3/ValueSet/Tradename"
-        }
-      },
+      },      
       {
         "id": "Immunization.patient",
         "path": "Immunization.patient",
