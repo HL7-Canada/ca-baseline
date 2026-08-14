@@ -2,6 +2,12 @@
     "resourceType": "ValueSet",
     "id": "healthcareproviderroletype",
     "url": "https://fhir.infoway-inforoute.ca/ValueSet/healthcareproviderroletype",
+      "identifier" : [
+        {
+          "system" : "urn:ietf:rfc:3986",
+          "value" : "urn:oid:2.16.840.1.113883.2.20.3.48"
+        }
+      ],    
     "name": "HealthcareProviderRoleType",
     "title": "HealthcareProviderRoleType",
     "status": "active",

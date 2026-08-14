@@ -1,0 +1,42 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "VaccineHistoricalNameCode",
+  "id": "vaccinehistoricalnamecode",
+  "title": "Vaccine Historical Name Code",
+  "description": "The scope of this subset is vaccines that are currently licensed for use in Canada (generic description, i.e. no trade name), those obtained through special access programs (generic description), and vaccines that have been discontinued and/or never licensed in Canada (with trade name). This content is intended to be used when populating an immunization history when the client and /or provider does not have the detail of the trade name (brand name) of the vaccine administered OR the product has been discontinued and/or never licensed in Canada. This subset will include concepts represented by a generic description for a vaccine that was previously administered to the client as may be expressed by the client or provider for an immunization history and concepts represented by the trade name for products that have been discontinued and/or never licensed in Canada. This resource is an informative value set; a normative subset containing the expanded values can be found on Canada Health Infoway's [Terminology Server](https://infocentral.infoway-inforoute.ca/en/tools/standards-tools/terminology-server). Reviewers should anticipate that the representation of this valueSet will continue to evolve",
+  "url": "https://fhir.infoway-inforoute.ca/ValueSet/vaccinehistoricalnamecode",
+  "identifier" : [
+    {
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:oid:2.16.840.1.113883.2.20.3.48"
+    }
+  ],  
+  "experimental": false,
+  "publisher": "Canada Health Infoway",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "CA",
+          "system": "urn:iso:std:iso:3166"
+        }
+      ]
+    }
+  ],
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.infoway-inforoute.ca"
+        },
+        {
+          "system": "email",
+          "value": "standards@infoway-inforoute.ca"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright © 2025+ Canada Health Infoway. All rights reserved. [Terms of Use and License Agreements](https://ic.infoway-inforoute.ca/en/about/tou). [Privacy Policy](https://www.infoway-inforoute.ca/en/legal/privacy-policy)."
+}

@@ -493,6 +493,22 @@
     </resource>
     <resource>
       <reference>
+        <reference value="ValueSet/healthcareproviderroletype"/>
+      </reference>
+      <name value="Healthcare Provider Role Type"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="terminology"/>
+    </resource>   
+    <resource>
+      <reference>
+        <reference value="ValueSet/qualifiedroletype"/>
+      </reference>
+      <name value="Qualified Role Type"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="terminology"/>
+    </resource>       
+    <resource>
+      <reference>
         <reference value="ValueSet/vaccinecodes"/>
       </reference>
       <name value="Vaccine Codes"/>
@@ -508,6 +524,38 @@
       <exampleBoolean value="false"/>
       <groupingId value="terminology"/>
     </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/vaccineadministeredtradenamecode"/>
+      </reference>
+      <name value="Vaccine Administered Tradename Code"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="terminology"/>
+    </resource>    
+    <resource>
+      <reference>
+        <reference value="ValueSet/vaccinehistoricalnamecode"/>
+      </reference>
+      <name value="Vaccine Historical Name Code"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="terminology"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/passiveadministeredimmunizingagentcode"/>
+      </reference>
+      <name value="Passive Administered Immunizing Agent Code"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="terminology"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/passivehistoricalimmunizingagentcode"/>
+      </reference>
+      <name value="Passive Historical Immunizing Agent Code"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="terminology"/>
+    </resource>                
     <page>
       <nameUrl value="toc.html"/>
       <title value="Table of Contents"/>
@@ -633,6 +681,6 @@
     <parameter>
       <code value="path-expansion-params"/>
       <value value="../exp-params.json"/>
-    </parameter>
+    </parameter>  
   </definition>
 </ImplementationGuide>

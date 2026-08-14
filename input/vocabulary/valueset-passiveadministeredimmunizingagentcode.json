@@ -1,0 +1,52 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "PassiveAdministeredImmunizingAgentCode",
+  "id": "passiveadministeredimmunizingagentcode",
+  "title": "Passive Administered Immunizing Agent Code",
+  "description": "The scope of this subset is passive immunizing agents that are currently licensed for use in Canada and those obtained through special access programs. The subset includes concepts represented by the trade name (brand name) of the passive immunizing agent (immune globulin or antitoxin) that was administered to the client. Passive immunizing agents are used to facilitate protection against vaccine preventable infections, when vaccines are not available or are contraindicated or when vaccines have not been used before exposure to the infective agent. This content is intended to be used when populating a record at the point of administration. Reviewers should anticipate that the representation of this valueSet will continue to evolve. This resource is an informative value set; a normative subset containing the expanded values can be found on Canada Health Infoway's [Terminology Server](https://infocentral.infoway-inforoute.ca/en/tools/standards-tools/terminology-server).",
+  "url": "https://fhir.infoway-inforoute.ca/ValueSet/passiveadministeredimmunizingagentcode",
+  "identifier" : [
+    {
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:oid:2.16.840.1.113883.2.20.3.279"
+    }
+  ],   
+  "experimental": false,
+  "publisher": "Canada Health Infoway",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "CA",
+          "system": "urn:iso:std:iso:3166"
+        }
+      ]
+    }
+  ],
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.infoway-inforoute.ca"
+        },
+        {
+          "system": "email",
+          "value": "standards@infoway-inforoute.ca"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright © 2025+ Canada Health Infoway. All rights reserved. [Terms of Use and License Agreements](https://ic.infoway-inforoute.ca/en/about/tou). [Privacy Policy](https://www.infoway-inforoute.ca/en/legal/privacy-policy).",
+  "date": "2025-08-26",
+  "compose": {
+    "include": [
+      {
+        "valueSet": [
+          "http://snomed.info/sct?fhir_vs=refset/22041000087107"
+        ]
+      }
+    ]
+  }
+}
