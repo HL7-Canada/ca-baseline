@@ -177,24 +177,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/profile-device"/>
-      </reference>
-      <name value="Device Profile (Implantable)"/>
-      <description value="Proposed constraints on the Device resource for the minimal set of data to query and retrieve a patient's implantable device."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="profiles"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/profile-device-medical"/>
-      </reference>
-      <name value="Device Profile (Medical and Non-medical)"/>
-      <description value="Proposed constraints on the Device resource for the minimal set of data to query and retrieve a medical or non-medical device."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="profiles"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/profile-diagnosticreport"/>
       </reference>
       <name value="DiagnosticReport Profile for Laboratory Results Reporting"/>
@@ -572,6 +554,11 @@
         <title value="Downloads"/>
         <generation value="markdown"/>
       </page>
+      <page>
+        <nameUrl value="changelog.html"/>
+        <title value="Change Log"/>
+        <generation value="markdown"/>
+      </page>      
       <page>
         <nameUrl value="allartifacts.html"/>
         <title value="FHIR Artifacts"/>

@@ -17,7 +17,6 @@ All artifacts in this specification are assigned a “Maturity Level”, known a
 | AllergyIntolerance Profile | 1 | Complete | Ontario eReferral, IPS |
 | Condition Profile | 1 | Complete | Ontario eReferral, IPS |
 | Device Profile (Implantable) | 0 | Partial - Paused until SME available | Not Complete |
-| Device Profile (Medical and Non-medical) | 0 | Partial - Paused until SME available | Attempted against IPS profile, pausing until similarly scoped profile available |
 | DiagnosticReport Profile | 0 | Complete, 2nd Review Round review will resume after DDR | PHI Access, IPS |
 | DiagnosticReport for Report and Note Profile | 0 | Complete | IPS |
 | Document Reference Profile | 0 | Complete | Not Complete |
