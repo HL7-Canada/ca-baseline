@@ -66,21 +66,6 @@
         "definition": "The Encounter Profile is based upon the core FHIR Encounter Resource"
       },
       {
-        "id": "Encounter.type",
-        "path": "Encounter.type",
-        "comment": "The binding strength of this element is [Preferred](https://www.hl7.org/fhir/terminologies.html#strength), meaning that codes are encouraged to draw from the SNOMED CT code system for interoperability purposes but are not required to do so to be considered conformant.",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "binding": {
-          "strength": "preferred",
-          "description": "Valueset to describe the Encounter Type",
-          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/encountertype"
-        }
-      },
-      {
         "id": "Encounter.subject",
         "path": "Encounter.subject",
         "short": "The patient present at the encounter",

@@ -221,23 +221,6 @@
             ]
           }
         ]
-      },
-      {
-        "id": "DiagnosticReport.conclusionCode",
-        "path": "DiagnosticReport.conclusionCode",
-        "short": "CHI identification of the condition, problem or diagnosis",
-        "definition": "The code that represents relevant clinical problems, conditions, diagnoses, symptoms, findings and complaints taken from [CHI Health Concern Code](https://fhir.infoway-inforoute.ca/ValueSet/healthconcerncode)",
-        "comment": "The binding strength of this element is [Example](https://www.hl7.org/fhir/terminologies.html#strength), meaning that the Canada Health Infoway Health Concern Code value set provides examples of the types of concepts intended to be included",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "binding": {
-          "strength": "example",
-          "description": "Represents the patient's relevant clinical problems, conditions, diagnoses, symptoms, findings and complaints, as interpreted by the provider.",
-          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/healthconcerncode"
-        }
       }
     ]
   }

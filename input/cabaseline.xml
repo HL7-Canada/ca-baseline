@@ -448,28 +448,10 @@
     </resource>
     <resource>
       <reference>
-        <reference value="ValueSet/encountertype"/>
-      </reference>
-      <name value="Encounter Type"/>
-      <description value="The type of encounter: a specific code indicating type of service provided. This value set includes codes from SNOMED CT descending from the concept 308335008 (Patient encounter procedure (procedure))"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="terminology"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="ValueSet/ethnicitycode"/>
       </reference>
       <name value="Ethnicity Code"/>
       <description value="Codes representing a self-reported ethnic group. This should not be confused with citizenship or nationality."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="terminology"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="ValueSet/healthconcerncode"/>
-      </reference>
-      <name value="Health Concern Codes"/>
-      <description value="Clinical problems, conditions, diagnoses, symptoms, findings and complaints, as interpreted by the provider."/>
       <exampleBoolean value="false"/>
       <groupingId value="terminology"/>
     </resource>
@@ -657,10 +639,6 @@
     <parameter>
       <code value="special-url"/>
       <value value="https://fhir.infoway-inforoute.ca/ValueSet/aboriginalidentityindicator"/>
-    </parameter>
-    <parameter>
-      <code value="special-url"/>
-      <value value="https://fhir.infoway-inforoute.ca/ValueSet/encountertype"/>
     </parameter>
     <parameter>
       <code value="special-url"/>
